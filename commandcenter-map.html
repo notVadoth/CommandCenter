@@ -46,9 +46,16 @@
   table.stats td:first-child{color:var(--muted);width:92px;white-space:nowrap}
   .ctrl-box{border:1px solid #e03131;background:#e0313114;border-radius:6px;padding:6px 8px;margin-top:6px}
   .ctrl-box .t{color:#ff8787;font-weight:600}
-  #drawer{position:absolute;top:0;right:0;bottom:0;width:400px;max-width:92vw;z-index:900;background:var(--panel);border-left:1px solid var(--line);
-          box-shadow:-6px 0 18px rgba(0,0,0,.35);overflow-y:auto;transform:translateX(105%);transition:transform .2s ease}
-  #drawer.open{transform:none}
+  /* country drawer: a column between the map and the Headlines panel (the news shifts right, it is never covered) */
+  #drawer{display:none;flex:none;width:380px;max-width:40vw;background:var(--panel);border-left:1px solid var(--line);overflow-y:auto;position:relative}
+  #drawer.open{display:block}
+  #drawer .dstrip{display:none}
+  #drawer.open.collapsed{width:30px;overflow:hidden;cursor:pointer}
+  #drawer.collapsed > :not(.dstrip){display:none}
+  #drawer.collapsed .dstrip{display:flex;flex-direction:column;align-items:center;gap:8px;width:100%;height:100%;background:none;border:0;color:var(--text);cursor:pointer;padding:10px 0;font:inherit}
+  #drawer.collapsed .dstrip:hover{background:#1d2330}
+  #drawer .dstrip .nm{writing-mode:vertical-rl;font-size:12px;letter-spacing:.04em;white-space:nowrap;overflow:hidden;max-height:calc(100% - 40px)}
+  #drawer .dmin{position:absolute;right:34px;top:8px;background:none;border:1px solid var(--line);color:var(--muted);border-radius:5px;cursor:pointer;font:inherit;padding:1px 7px}
   #drawer header{position:sticky;top:0;background:var(--panel);padding:12px 14px 8px;border-bottom:1px solid var(--line);z-index:2}
   #drawer .x{position:absolute;right:10px;top:8px;background:none;border:0;color:var(--muted);font-size:20px;cursor:pointer}
   #drawer .dsec{padding:10px 14px;border-bottom:1px solid var(--line)}
@@ -73,7 +80,9 @@
   #news .nh{display:flex;align-items:center;justify-content:space-between}
   #news h2{margin:0;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
   #news .nh button,#news-open{background:none;border:1px solid var(--line);color:var(--muted);border-radius:5px;cursor:pointer;font:inherit;padding:1px 7px}
-  #news-open{position:absolute;right:10px;top:10px;z-index:850;background:var(--panel);color:var(--text);display:none}
+  #news-open{flex:none;width:30px;background:var(--panel);color:var(--text);display:none;border:0 !important;border-left:1px solid var(--line) !important;border-radius:0 !important;
+             writing-mode:vertical-rl;padding:10px 0 !important;letter-spacing:.04em;font-size:12px;text-align:left}
+  #news-open:hover{background:#1d2330}
   #app.news-hidden #news{display:none} #app.news-hidden #news-open{display:block}
   #news .seg{display:flex;gap:4px;margin-top:6px} #news .seg button{flex:1;background:#0e1219;border:1px solid var(--line);color:var(--muted);border-radius:5px;padding:3px;cursor:pointer;font:inherit;font-size:11px}
   #news .seg button.on{color:var(--text);border-color:var(--accent)}
@@ -170,6 +179,7 @@
     </div>
   </aside>
   <div id="map"></div>
+  <aside id="drawer" aria-label="Country details"></aside>
   <aside id="news" aria-label="Headlines">
     <header>
       <div class="nh"><h2>Headlines</h2><button id="news-collapse" title="Hide panel">»</button></div>
@@ -195,7 +205,6 @@
   <button id="news-open" title="Show headlines">« Headlines</button>
 </div>
 <div id="hover"></div>
-<aside id="drawer" aria-label="Country details"></aside>
 <div id="status">Loading countries…</div>
 <!-- optional: occupied areas written by update_occupied.py or saved from a source (defines window.OCCUPIED_AREAS) -->
 <script src="data/occupied.js" onerror="void 0"></script>
@@ -895,10 +904,10 @@ map.on("mouseout", ()=> hoverEl.style.display="none");
 map.on("click", e=>{
   const h = hitAt(e.latlng);
   if (!h.country && !h.adm1 && !h.control?.length && !h.occupied?.length && !h.dmz?.length){ closeDrawer(); return; }
-  drawerHit = h; renderDrawer(h); drawerEl.classList.add("open");
-  const newsW = appEl.classList.contains("news-hidden") ? 0 : document.getElementById("news").offsetWidth;
-  const pt = map.latLngToContainerPoint(e.latlng), free = map.getSize().x - Math.max(0, drawerEl.offsetWidth - newsW);   // keep the clicked spot visible
-  if (pt.x > free - 40) map.panBy([pt.x - free/2, 0]);
+  drawerHit = h; renderDrawer(h);
+  const wasOpen = drawerEl.classList.contains("open") && !drawerEl.classList.contains("collapsed");
+  drawerEl.classList.add("open"); drawerEl.classList.remove("collapsed");
+  if (!wasOpen) mapResized(e.latlng);      // the map narrows; keep the clicked spot in view
   hoverEl.style.display="none";
   if (h.country){ loadSeries(h.country); loadLegislature(h.country); }
 });
@@ -910,7 +919,9 @@ map.on("click", e=>{
    CLICK DRAWER — charts, figures, legislature
    ========================================================================= */
 const drawerEl = document.getElementById("drawer");
-function closeDrawer(){ drawerEl.classList.remove("open"); drawerHit=null; }
+function mapResized(keep){ map.invalidateSize({pan:false}); if (keep) map.panInside(keep, {padding:[60,60], animate:false}); }
+function closeDrawer(){ if (!drawerEl.classList.contains("open")) return; drawerEl.classList.remove("open","collapsed"); drawerHit=null; mapResized(); }
+function collapseDrawer(on){ drawerEl.classList.toggle("collapsed", on); mapResized(); }
 document.addEventListener("keydown", e=>{ if (e.key==="Escape") closeDrawer(); });
 const SERIES = {};       // ISO3 -> {status, gdp:[{yr,v}], pop:[{yr,v}]}
 const LEG = {};          // ISO3 -> {status, chambers:[...]}
@@ -1106,8 +1117,10 @@ function chamberHtml(ch){
 
 function renderDrawer(h){
   const c = h.country;
-  let html = `<header><button class="x" aria-label="Close" onclick="closeDrawer()">×</button>`;
-  html += `<div class="path" style="padding-right:24px">${[c?.name, h.adm1?.name, h.adm2?.name].filter(Boolean).map(esc).join(" › ")}</div>`;
+  const title = [c?.name, h.adm1?.name, h.adm2?.name].filter(Boolean).join(" › ");
+  let html = `<button class="dstrip" title="Show details" onclick="collapseDrawer(false)">«<span class="nm">${esc(title)}</span></button>`;
+  html += `<header><button class="dmin" title="Collapse panel" aria-label="Collapse" onclick="collapseDrawer(true)">»</button><button class="x" aria-label="Close" onclick="closeDrawer()">×</button>`;
+  html += `<div class="path" style="padding-right:60px">${[c?.name, h.adm1?.name, h.adm2?.name].filter(Boolean).map(esc).join(" › ")}</div>`;
   if (c){
     const blocs = Object.values(GROUPINGS).filter(g=>g.set.has(c.code));
     if (blocs.length) html += `<div class="chips">${blocs.map(g=>`<span class="chip" style="border-color:${g.color};color:#e6e9ef;background:${g.color}33">${esc(g.name)}</span>`).join("")}</div>`;
@@ -1193,8 +1206,8 @@ newsEl.addEventListener("mouseleave", ()=>newsHL.clearLayers());
 document.getElementById("nv-view").onclick = ()=>{ newsMode="view"; document.getElementById("nv-view").classList.add("on"); document.getElementById("nv-all").classList.remove("on"); renderNews(); };
 document.getElementById("nv-all").onclick  = ()=>{ newsMode="all";  document.getElementById("nv-all").classList.add("on");  document.getElementById("nv-view").classList.remove("on"); renderNews(); };
 const appEl = document.getElementById("app");
-document.getElementById("news-collapse").onclick = ()=>{ appEl.classList.add("news-hidden"); setTimeout(()=>map.invalidateSize(),50); };
-document.getElementById("news-open").onclick = ()=>{ appEl.classList.remove("news-hidden"); setTimeout(()=>map.invalidateSize(),50); };
+document.getElementById("news-collapse").onclick = ()=>{ appEl.classList.add("news-hidden"); mapResized(); };
+document.getElementById("news-open").onclick = ()=>{ appEl.classList.remove("news-hidden"); mapResized(); };
 let nrt; map.on("moveend", ()=>{ clearTimeout(nrt); nrt=setTimeout(()=>{ if (countries.length) renderNews(); }, 200); });
 
 /* =========================================================================
