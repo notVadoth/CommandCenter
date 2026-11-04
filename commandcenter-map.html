@@ -85,6 +85,9 @@
   #mkt .rng button.on{color:var(--text);border-color:var(--accent)}
   #mkt .mv{margin-top:5px;display:flex;align-items:baseline;gap:8px} #mkt .mv b{font-size:17px;font-weight:600}
   #mkt .mv .ch{font-size:11.5px} #mkt .mv .ch.up{color:#69db7c} #mkt .mv .ch.dn{color:#ff8787}
+  #mkt .mode{display:flex;gap:4px;margin-top:5px} #mkt .mode button{background:none;border:none;border-bottom:2px solid transparent;color:var(--muted);cursor:pointer;font:inherit;font-size:10.5px;padding:1px 2px}
+  #mkt .mode button.on{color:var(--text);border-bottom-color:var(--accent)}
+  #mkt-live{flex:1;min-height:120px;margin-top:4px;display:none} #mkt.live #mkt-live{display:block} #mkt.live #mkt-chart,#mkt.live #mkt-val{display:none}
   #mkt-chart{flex:1;position:relative;min-height:90px} #mkt-chart svg{position:absolute;inset:0;width:100%;height:100%}
   #mkt-tip{position:absolute;pointer-events:none;background:#0e1219;border:1px solid var(--line);border-radius:4px;padding:2px 6px;font-size:10.5px;white-space:nowrap;display:none}
   #mkt .msrc{font-size:10px;color:var(--muted);margin-top:2px} #mkt .msrc a{color:#74c0fc}
@@ -179,9 +182,11 @@
           <optgroup label="Indices"><option value="DJIA">Dow Jones</option><option value="SPX">S&amp;P 500</option><option value="HSI">Hang Seng</option><option value="SENSEX">BSE Sensex</option></optgroup>
           <optgroup label="Commodities"><option value="GOLD">Gold</option><option value="BRENT">Brent crude</option></optgroup>
         </select>
-        <span class="rng"><button data-d="31">1M</button><button data-d="92" class="on">3M</button><button data-d="366">1Y</button></span>
+        <span class="rng"><button data-r="1D">1D</button><button data-r="1M">1M</button><button data-r="3M" class="on">3M</button><button data-r="12M">1Y</button></span>
       </div>
+      <div class="mode"><button data-m="live" class="on" title="Live chart from TradingView">Live</button><button data-m="daily" title="Daily closes saved by the daily job (works offline)">Daily close</button></div>
       <div class="mv" id="mkt-val"></div>
+      <div id="mkt-live" class="tradingview-widget-container"></div>
       <div id="mkt-chart"><div id="mkt-tip"></div></div>
       <div class="msrc" id="mkt-src"></div>
     </section>
@@ -1195,14 +1200,37 @@ let nrt; map.on("moveend", ()=>{ clearTimeout(nrt); nrt=setTimeout(()=>{ if (cou
 /* =========================================================================
    MARKETS: data/markets.js, written daily by markets.py (FRED + optional free key)
    ========================================================================= */
-const mkt = { key: "SPX", days: 92 };
-try { const saved = JSON.parse(localStorage.getItem("cc_mkt")||"null"); if (saved) Object.assign(mkt, saved); } catch(e){}
+// TradingView symbols that display in embedded widgets (checked 2026-11-04). Dow and S&P are the FOREX.com CFDs that track
+// the index (the index feeds themselves only show on tradingview.com); Hang Seng and Sensex are end-of-day in widgets.
+const TV_SYMBOLS = { DJIA:"FOREXCOM:DJI", SPX:"FOREXCOM:SPXUSD", HSI:"HSI:HSI", SENSEX:"BSE:SENSEX", GOLD:"OANDA:XAUUSD", BRENT:"TVC:UKOIL" };
+const TV_NOTE = { DJIA:"Dow CFD (FOREX.com), tracks the index", SPX:"S&P 500 CFD (FOREX.com), tracks the index", HSI:"end-of-day in embedded charts", SENSEX:"end-of-day in embedded charts", GOLD:"spot, OANDA", BRENT:"Brent CFD" };
+const RANGE_DAYS = { "1D":7, "1M":31, "3M":92, "12M":366 };
+const mkt = { key: "SPX", range: "3M", mode: "live" };
+try { const saved = JSON.parse(localStorage.getItem("cc_mkt")||"null"); if (saved){ Object.assign(mkt, saved); if (!RANGE_DAYS[mkt.range]) mkt.range = "3M"; delete mkt.days; } } catch(e){}
+let tvFailed = false, tvKey = "";
+function renderLive(){
+  const box = document.getElementById("mkt-live"), src = document.getElementById("mkt-src");
+  const k = mkt.key + "|" + mkt.range; if (tvKey === k && box.firstChild) return; tvKey = k;
+  box.innerHTML = '<div class="tradingview-widget-container__widget" style="height:100%;width:100%"></div>';
+  const sc = document.createElement("script");
+  sc.src = "https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"; sc.async = true;
+  sc.text = JSON.stringify({ symbol: TV_SYMBOLS[mkt.key], width: "100%", height: "100%", locale: "en", dateRange: mkt.range,
+                             colorTheme: "dark", isTransparent: true, autosize: true, largeChartUrl: "", chartOnly: false, noTimeScale: false });
+  sc.onerror = ()=>{ tvFailed = true; tvKey = ""; renderMarket(); };   // offline or blocked: fall back to the daily closes
+  box.appendChild(sc);
+  src.innerHTML = `Live chart by <a href="https://www.tradingview.com/" target="_blank" rel="noopener nofollow">TradingView</a> · ${esc(TV_NOTE[mkt.key])}`;
+}
 const mktSel = document.getElementById("mkt-sel"), mktChart = document.getElementById("mkt-chart"), mktTip = document.getElementById("mkt-tip");
 const fmtN = (v,u)=> (u&&u.startsWith("USD")?"$":"") + v.toLocaleString(undefined,{minimumFractionDigits:2, maximumFractionDigits:2});
 function renderMarket(){
-  const M = window.CC_MARKETS, S = M && M.series && M.series[mkt.key];
   mktSel.value = mkt.key;
-  document.querySelectorAll("#mkt .rng button").forEach(b=>b.classList.toggle("on", +b.dataset.d===mkt.days));
+  document.querySelectorAll("#mkt .rng button").forEach(b=>b.classList.toggle("on", b.dataset.r===mkt.range));
+  const live = mkt.mode === "live" && !tvFailed && navigator.onLine !== false;
+  document.querySelectorAll("#mkt .mode button").forEach(b=>b.classList.toggle("on", b.dataset.m === (live ? "live" : "daily")));
+  document.getElementById("mkt").classList.toggle("live", live);
+  if (live) return renderLive();
+  mkt.days = RANGE_DAYS[mkt.range];
+  const M = window.CC_MARKETS, S = M && M.series && M.series[mkt.key];
   const val = document.getElementById("mkt-val"), src = document.getElementById("mkt-src");
   mktChart.querySelector("svg")?.remove(); mktTip.style.display="none";
   if (!M){ val.innerHTML=""; src.innerHTML = "No market data yet. It appears after the daily run (or double-click trawler\\run_trawler.bat)."; return; }
@@ -1211,8 +1239,8 @@ function renderMarket(){
     src.innerHTML = esc(S?.note||"") + (S?.page ? ` <a href="${esc(S.page)}" target="_blank" rel="noopener">Official page ↗</a>` : ""); return; }
   const lastD = new Date(all[all.length-1][0]); const cut = new Date(lastD - mkt.days*864e5).toISOString().slice(0,10);
   const pts = all.filter(p=>p[0]>=cut); const first = pts[0][1], last = pts[pts.length-1][1], ch = (last/first-1)*100;
-  val.innerHTML = `<b>${fmtN(last,S.unit)}</b><span class="small">${esc(S.unit)}</span><span class="ch ${ch>=0?"up":"dn"}">${ch>=0?"▲":"▼"} ${Math.abs(ch).toFixed(2)}% <span class="small">over ${mkt.days<40?"1 month":mkt.days<100?"3 months":"1 year"}</span></span>`;
-  src.innerHTML = `Close on ${esc(all[all.length-1][0])} · <a href="${esc(S.source_url||S.page)}" target="_blank" rel="noopener">${esc(S.source)}</a>` + (S.note ? ` · <span style="color:#ff922b">${esc(S.note)}</span>` : "");
+  val.innerHTML = `<b>${fmtN(last,S.unit)}</b><span class="small">${esc(S.unit)}</span><span class="ch ${ch>=0?"up":"dn"}">${ch>=0?"▲":"▼"} ${Math.abs(ch).toFixed(2)}% <span class="small">over ${mkt.days<10?"1 week":mkt.days<40?"1 month":mkt.days<100?"3 months":"1 year"}</span></span>`;
+  src.innerHTML = `Daily close on ${esc(all[all.length-1][0])} · <a href="${esc(S.source_url||S.page)}" target="_blank" rel="noopener">${esc(S.source)}</a>` + (S.note ? ` · <span style="color:#ff922b">${esc(S.note)}</span>` : "") + (tvFailed && mkt.mode==="live" ? ` · live chart unavailable` : "");
   const W = mktChart.clientWidth || 300, H = mktChart.clientHeight || 100, pl = 4, pr = 44, pt = 6, pb = 16;
   let lo = Math.min(...pts.map(p=>p[1])), hi = Math.max(...pts.map(p=>p[1])); const pad = (hi-lo)*0.08 || 1; lo -= pad; hi += pad;
   const x = i => pl + (W-pl-pr) * (pts.length>1 ? i/(pts.length-1) : .5), y = v => pt + (H-pt-pb) * (1-(v-lo)/(hi-lo));
@@ -1238,10 +1266,11 @@ function renderMarket(){
   };
   svg.onmouseleave = ()=>{ xl.setAttribute("visibility","hidden"); dot.setAttribute("visibility","hidden"); mktTip.style.display="none"; };
 }
-function saveMkt(){ try { localStorage.setItem("cc_mkt", JSON.stringify(mkt)); } catch(e){} renderMarket(); }
+function saveMkt(){ try { localStorage.setItem("cc_mkt", JSON.stringify({key:mkt.key, range:mkt.range, mode:mkt.mode})); } catch(e){} renderMarket(); }
 mktSel.onchange = ()=>{ mkt.key = mktSel.value; saveMkt(); };
-document.querySelectorAll("#mkt .rng button").forEach(b=>b.onclick = ()=>{ mkt.days = +b.dataset.d; saveMkt(); });
-new ResizeObserver(()=>renderMarket()).observe(mktChart);
+document.querySelectorAll("#mkt .rng button").forEach(b=>b.onclick = ()=>{ mkt.range = b.dataset.r; saveMkt(); });
+document.querySelectorAll("#mkt .mode button").forEach(b=>b.onclick = ()=>{ mkt.mode = b.dataset.m; if (mkt.mode==="live") tvFailed = false; saveMkt(); });
+new ResizeObserver(()=>{ if (!document.getElementById("mkt").classList.contains("live")) renderMarket(); }).observe(mktChart);
 renderMarket();
 
 /* =========================================================================

@@ -6,7 +6,8 @@ CommandCenter market charts: free daily closes for the Headlines panel.
   Hang Seng, BSE Sensex, Gold      ->  EODHD free plan (20 calls/day), only if you add a key
 
 To turn on the three optional series, get a free key at https://eodhd.com/register and save
-it in trawler/keys.json as  {"eodhd": "YOUR_KEY"}.  The key stays on your PC: it is never
+it in trawler/keys.json as  {"eodhd": "YOUR_KEY"}  (or, on GitHub, as a repository secret named
+EODHD_KEY).  The key stays on your PC: it is never
 written into the page or data/markets.js. Without a key those series show "no free source
 configured" plus a link to the official index page.
 
@@ -14,7 +15,7 @@ configured" plus a link to the official index page.
 """
 from __future__ import annotations
 
-import argparse, csv, datetime as dt, io, json, sys
+import argparse, csv, datetime as dt, io, json, os, sys
 from pathlib import Path
 
 import trawler as T
@@ -47,6 +48,7 @@ def eodhd(sym: str, since: dt.date, key: str) -> list[list]:
 def run(args):
     since = TODAY - dt.timedelta(days=int(args.days))
     keys = T.read_json(HERE / "keys.json", {}) or {}
+    if os.environ.get("EODHD_KEY"): keys["eodhd"] = os.environ["EODHD_KEY"]   # GitHub Actions secret
     old = {}
     prev = HERE / "markets.json"
     if prev.exists(): old = (T.read_json(prev, {}) or {}).get("series", {})

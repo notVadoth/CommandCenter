@@ -1,0 +1,51 @@
+# Command Centre
+
+A web app to interactively analyse geopolitics with Current affairs, Blocs and macroeconomic figures available at the user's discretion.
+
+Open `commandcenter-map.html` (or `index.html`) in a browser. No build step and no server are needed.
+
+## What's in it
+
+- **World map** (Leaflet). Toggle national, province/state and county/district boundaries, plus bloc overlays (EU, NATO, BRICS and more).
+- **Country hover card and click drawer:**
+  - GDP, GDP per capita and Gini (World Bank).
+  - Paramount leader and cabinet (Wikidata/Wikipedia).
+  - GDP and population growth charts.
+  - Legislature composition, with the governing coalition highlighted.
+- **Contested control layers:** areas held by non-state actors, occupied territory, DMZs and ceasefire lines, and disputed territories. Sources are listed in [`CONTROL_SOURCES.md`](CONTROL_SOURCES.md).
+- **Headlines panel:**
+  - Market charts (Dow, S&P 500, Hang Seng, BSE Sensex, Gold, Brent): live from TradingView, with a "Daily close" view from the daily job that also works offline.
+  - A "Global diplomacy" section.
+  - Daily headlines for the 20 largest countries by population and by GDP, plus other major stories. Each story links up to 3 outlets from different sides.
+
+## Hosting (GitHub Pages)
+
+1. **Settings → General → Danger Zone → Change visibility → Public.** Pages is free only for public repos.
+2. **Settings → Pages → Build and deployment → Source: Deploy from a branch → `main` / `(root)` → Save.**
+3. After a minute or so the site is live at `https://notvadoth.github.io/CommandCenter/`.
+
+## Daily data update on GitHub (no PC needed)
+
+`.github/workflows/daily.yml` runs every morning at 6:41 am Toronto time (7:41 am in summer). It runs the three scripts below and commits the new `data/` files; Pages then republishes on its own.
+- To run it now: **Actions → Daily data update → Run workflow**.
+- If a run can't push, set **Settings → Actions → General → Workflow permissions** to **Read and write**.
+- Optional: add a repository secret `EODHD_KEY` (**Settings → Secrets and variables → Actions**) to fill the Daily close charts for the Hang Seng, Sensex and Gold. The live charts don't need it.
+
+## Daily data update on your PC
+
+`trawler/` holds the free daily job (Python standard library only, no API keys required). It runs three scripts:
+- `trawler.py` writes bloc memberships.
+- `news.py` writes headlines.
+- `markets.py` writes market closes.
+
+All three write into `data/`. Locally on Windows, run `trawler\setup_daily_task.bat` once to schedule it every morning, or run `trawler\run_trawler.bat` by hand. See [`trawler/README.md`](trawler/README.md).
+
+If GitHub runs the job, you can switch the PC task off with `trawler\remove_daily_task.bat`; `git pull` brings the latest data down. A local EODHD key goes in `trawler/keys.json`, which is git-ignored; never commit it.
+
+## Data and licences
+
+- Boundaries: Natural Earth (public domain) and geoBoundaries (CC BY 4.0).
+- Live figures: World Bank, Wikidata and Wikipedia.
+- Markets: live charts embedded from TradingView (free widget, attribution kept); daily closes from FRED.
+- Headlines link to the original outlets; only titles are stored.
+- ISW/CTP maps are not included (their licence requires written consent).

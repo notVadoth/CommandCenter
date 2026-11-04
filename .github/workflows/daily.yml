@@ -1,0 +1,63 @@
+# Runs the free daily data job on GitHub's servers and commits the results,
+# so the hosted map (GitHub Pages) stays current without your PC being on.
+name: Daily data update
+
+on:
+  schedule:
+    - cron: "41 11 * * *"     # 11:41 UTC = 6:41 am Toronto (7:41 am in summer)
+  workflow_dispatch:           # "Run workflow" button on the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # The Wikidata cache is regenerated, not committed; keep it between runs
+      - uses: actions/cache@v4
+        with:
+          path: trawler/trawler_cache/wikidata_cache.json
+          key: wikidata-${{ github.run_id }}
+          restore-keys: wikidata-
+
+      - name: Bloc memberships (trawler.py)
+        working-directory: trawler
+        run: python trawler.py run
+        continue-on-error: true
+
+      - name: Headlines (news.py)
+        working-directory: trawler
+        run: python news.py
+        continue-on-error: true
+
+      - name: Market closes (markets.py)
+        working-directory: trawler
+        env:
+          EODHD_KEY: ${{ secrets.EODHD_KEY }}   # optional; leave unset to use FRED only
+        run: python markets.py
+        continue-on-error: true
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898+github-actions[bot]@users.noreply.github.com"
+          git add data/ trawler/groupings.json trawler/stories.json trawler/markets.json trawler/trawler_cache/claims.json trawler/trawler_cache/focus_countries.json
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "Daily data update $(date -u +%Y-%m-%d)"
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
+            git push
+          fi
