@@ -1,0 +1,178 @@
+{
+ "EU": {
+  "name": "European Union",
+  "color": "#2f6fdf",
+  "members": "AUT BEL BGR HRV CYP CZE DNK EST FIN FRA DEU GRC HUN IRL ITA LVA LTU LUX MLT NLD POL PRT ROU SVK SVN ESP SWE",
+  "aliases": [
+   "European Union",
+   "EU",
+   "E.U."
+  ],
+  "qid": "Q458"
+ },
+ "NATO": {
+  "name": "NATO",
+  "color": "#0b3d91",
+  "members": "ALB BEL BGR CAN HRV CZE DNK EST FIN FRA DEU GRC HUN ISL ITA LVA LTU LUX MNE NLD MKD NOR POL PRT ROU SVK SVN ESP SWE TUR GBR USA",
+  "aliases": [
+   "NATO",
+   "North Atlantic Treaty Organization",
+   "North Atlantic Treaty Organisation",
+   "Nato"
+  ],
+  "qid": "Q7184"
+ },
+ "BRICS": {
+  "name": "BRICS (full members)",
+  "color": "#d9480f",
+  "members": "BRA RUS IND CHN ZAF EGY ETH IRN ARE IDN",
+  "aliases": [
+   "BRICS",
+   "Brics"
+  ],
+  "partners": [
+   "BLR",
+   "BOL",
+   "KAZ",
+   "CUB",
+   "MYS",
+   "NGA",
+   "THA",
+   "UGA",
+   "UZB",
+   "VNM"
+  ],
+  "wikidata_search": "BRICS",
+  "note": "Saudi Arabia was invited in 2023 but its membership is still not formally confirmed, so it is left out here."
+ },
+ "G7": {
+  "name": "G7",
+  "color": "#7048e8",
+  "members": "CAN FRA DEU ITA JPN GBR USA",
+  "aliases": [
+   "G7",
+   "Group of Seven",
+   "G-7"
+  ],
+  "wikidata_search": "Group of Seven"
+ },
+ "G20": {
+  "name": "G20 (countries)",
+  "color": "#9c36b5",
+  "members": "ARG AUS BRA CAN CHN FRA DEU IND IDN ITA JPN KOR MEX RUS SAU ZAF TUR GBR USA",
+  "aliases": [
+   "G20",
+   "Group of 20",
+   "Group of Twenty",
+   "G-20"
+  ],
+  "wikidata_search": "G20",
+  "note": "The EU and African Union are also G20 members."
+ },
+ "ASEAN": {
+  "name": "ASEAN",
+  "color": "#0ca678",
+  "members": "BRN KHM IDN LAO MYS MMR PHL SGP THA VNM TLS",
+  "aliases": [
+   "ASEAN",
+   "Association of Southeast Asian Nations",
+   "Asean"
+  ],
+  "qid": "Q7768"
+ },
+ "SCO": {
+  "name": "Shanghai Cooperation Org.",
+  "color": "#c92a2a",
+  "members": "CHN IND KAZ KGZ PAK RUS TJK UZB IRN BLR",
+  "aliases": [
+   "SCO",
+   "Shanghai Cooperation Organisation",
+   "Shanghai Cooperation Organization"
+  ],
+  "wikidata_search": "Shanghai Cooperation Organisation"
+ },
+ "CSTO": {
+  "name": "CSTO",
+  "color": "#862e2e",
+  "members": "ARM BLR KAZ KGZ RUS TJK",
+  "aliases": [
+   "CSTO",
+   "Collective Security Treaty Organization",
+   "Collective Security Treaty Organisation"
+  ],
+  "wikidata_search": "Collective Security Treaty Organization",
+  "note": "Armenia has frozen its participation."
+ },
+ "AU": {
+  "name": "African Union",
+  "color": "#2b8a3e",
+  "members": "DZA AGO BEN BWA BFA BDI CPV CMR CAF TCD COM COG COD CIV DJI EGY GNQ ERI SWZ ETH GAB GMB GHA GIN GNB KEN LSO LBR LBY MDG MWI MLI MRT MUS MAR MOZ NAM NER NGA RWA ESH STP SEN SYC SLE SOM ZAF SSD SDN TZA TGO TUN UGA ZMB ZWE",
+  "aliases": [
+   "African Union"
+  ],
+  "qid": "Q7159",
+  "note": "Includes members currently suspended."
+ },
+ "GCC": {
+  "name": "Gulf Cooperation Council",
+  "color": "#e8590c",
+  "members": "BHR KWT OMN QAT SAU ARE",
+  "aliases": [
+   "GCC",
+   "Gulf Cooperation Council"
+  ],
+  "wikidata_search": "Gulf Cooperation Council"
+ },
+ "OPEC": {
+  "name": "OPEC",
+  "color": "#5c3d2e",
+  "members": "DZA COG GNQ GAB IRN IRQ KWT LBY NGA SAU ARE VEN",
+  "aliases": [
+   "OPEC",
+   "Organization of the Petroleum Exporting Countries"
+  ],
+  "qid": "Q7795"
+ },
+ "USMCA": {
+  "name": "USMCA",
+  "color": "#1971c2",
+  "members": "CAN MEX USA",
+  "aliases": [
+   "USMCA",
+   "CUSMA",
+   "United States-Mexico-Canada Agreement"
+  ],
+  "wikidata_search": "United States–Mexico–Canada Agreement"
+ },
+ "MERCOSUR": {
+  "name": "Mercosur (full)",
+  "color": "#099268",
+  "members": "ARG BRA PRY URY BOL",
+  "aliases": [
+   "Mercosur",
+   "MERCOSUR",
+   "Mercosul"
+  ],
+  "wikidata_search": "Mercosur",
+  "note": "Venezuela is suspended."
+ },
+ "FVEY": {
+  "name": "Five Eyes",
+  "color": "#495057",
+  "members": "AUS CAN NZL GBR USA",
+  "aliases": [
+   "Five Eyes"
+  ],
+  "wikidata_search": "Five Eyes"
+ },
+ "QUAD": {
+  "name": "Quad",
+  "color": "#e64980",
+  "members": "AUS IND JPN USA",
+  "aliases": [
+   "Quad",
+   "Quadrilateral Security Dialogue"
+  ],
+  "wikidata_search": "Quadrilateral Security Dialogue"
+ }
+}

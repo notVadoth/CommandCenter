@@ -1,0 +1,372 @@
+{
+ "_about": "Outlets for the headline panel. 'camp' groups outlets that tend to share a perspective; each story shows up to 3 different camps. 'home' = countries the camp speaks for (used to pick both sides of a story). Edit freely; 'verified' just records whether the feed URL was checked on 2026-11-04.",
+ "camps": {
+  "western": {
+   "label": "Western",
+   "home": [
+    "USA",
+    "GBR",
+    "CAN",
+    "FRA",
+    "DEU",
+    "AUS",
+    "ITA",
+    "ESP",
+    "NLD",
+    "POL",
+    "SWE",
+    "NOR",
+    "BEL",
+    "AUT",
+    "IRL",
+    "NZL"
+   ]
+  },
+  "ukraine": {
+   "label": "Ukrainian",
+   "home": [
+    "UKR"
+   ]
+  },
+  "russia-state": {
+   "label": "Russian state",
+   "home": [
+    "RUS",
+    "BLR"
+   ]
+  },
+  "russia-independent": {
+   "label": "Russian independent (exile)",
+   "home": [
+    "RUS"
+   ]
+  },
+  "china-state": {
+   "label": "Chinese state",
+   "home": [
+    "CHN"
+   ]
+  },
+  "asia-pacific": {
+   "label": "Asia-Pacific",
+   "home": [
+    "JPN",
+    "KOR",
+    "TWN",
+    "PHL",
+    "SGP"
+   ]
+  },
+  "israel": {
+   "label": "Israeli",
+   "home": [
+    "ISR"
+   ]
+  },
+  "arab": {
+   "label": "Arab / Gulf",
+   "home": [
+    "PSE",
+    "QAT",
+    "SAU",
+    "ARE",
+    "EGY",
+    "JOR",
+    "LBN",
+    "SYR",
+    "IRQ",
+    "YEM",
+    "KWT",
+    "BHR",
+    "OMN"
+   ]
+  },
+  "iran-state": {
+   "label": "Iranian state",
+   "home": [
+    "IRN"
+   ]
+  },
+  "turkey-state": {
+   "label": "Turkish state",
+   "home": [
+    "TUR"
+   ]
+  },
+  "india": {
+   "label": "Indian",
+   "home": [
+    "IND"
+   ]
+  },
+  "pakistan": {
+   "label": "Pakistani",
+   "home": [
+    "PAK"
+   ]
+  },
+  "africa": {
+   "label": "African",
+   "home": [
+    "NGA",
+    "ZAF",
+    "KEN",
+    "ETH",
+    "GHA",
+    "SDN",
+    "SSD",
+    "COD",
+    "SOM",
+    "MLI",
+    "BFA",
+    "NER",
+    "SEN",
+    "CMR",
+    "UGA",
+    "TZA"
+   ]
+  },
+  "latam": {
+   "label": "Latin American",
+   "home": [
+    "BRA",
+    "ARG",
+    "MEX",
+    "CHL",
+    "COL",
+    "PER",
+    "VEN",
+    "URY",
+    "PRY",
+    "BOL",
+    "ECU",
+    "CUB"
+   ]
+  },
+  "multilateral": {
+   "label": "UN / multilateral",
+   "home": []
+  }
+ },
+ "outlets": [
+  {
+   "name": "BBC News",
+   "camp": "western",
+   "ownership": "UK public broadcaster",
+   "domain": "bbc.com",
+   "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+  },
+  {
+   "name": "The Guardian",
+   "camp": "western",
+   "ownership": "UK private (trust-owned)",
+   "domain": "theguardian.com",
+   "url": "https://www.theguardian.com/world/rss"
+  },
+  {
+   "name": "DW",
+   "camp": "western",
+   "ownership": "German public broadcaster",
+   "domain": "dw.com",
+   "url": "https://rss.dw.com/rdf/rss-en-world"
+  },
+  {
+   "name": "France 24",
+   "camp": "western",
+   "ownership": "French public broadcaster",
+   "domain": "france24.com",
+   "url": "https://www.france24.com/en/rss"
+  },
+  {
+   "name": "NPR",
+   "camp": "western",
+   "ownership": "US public radio",
+   "domain": "npr.org",
+   "url": "https://feeds.npr.org/1004/rss.xml"
+  },
+  {
+   "name": "CBC News",
+   "camp": "western",
+   "ownership": "Canadian public broadcaster",
+   "domain": "cbc.ca",
+   "url": "https://www.cbc.ca/webfeed/rss/rss-world"
+  },
+  {
+   "name": "Kyiv Independent",
+   "camp": "ukraine",
+   "ownership": "Ukrainian independent",
+   "domain": "kyivindependent.com",
+   "url": "https://kyivindependent.com/news-archive/rss/",
+   "verified": true
+  },
+  {
+   "name": "Ukrainska Pravda",
+   "camp": "ukraine",
+   "ownership": "Ukrainian private",
+   "domain": "pravda.com.ua",
+   "url": "https://www.pravda.com.ua/eng/rss/",
+   "verified": true
+  },
+  {
+   "name": "RT",
+   "camp": "russia-state",
+   "ownership": "Russian state-funded",
+   "domain": "rt.com",
+   "url": "https://rt-english.com/rss/news/",
+   "verified": true
+  },
+  {
+   "name": "TASS",
+   "camp": "russia-state",
+   "ownership": "Russian state agency",
+   "domain": "tass.com",
+   "url": "https://tass.com/rss/v2.xml",
+   "verified": true
+  },
+  {
+   "name": "Meduza",
+   "camp": "russia-independent",
+   "ownership": "Russian independent, in exile",
+   "domain": "meduza.io",
+   "url": "https://meduza.io/rss/en/all",
+   "verified": true
+  },
+  {
+   "name": "Global Times",
+   "camp": "china-state",
+   "ownership": "Chinese state (People's Daily)",
+   "domain": "globaltimes.cn",
+   "url": "https://www.globaltimes.cn/rss/outbrain.xml",
+   "verified": true
+  },
+  {
+   "name": "CGTN",
+   "camp": "china-state",
+   "ownership": "Chinese state broadcaster",
+   "domain": "cgtn.com",
+   "url": "https://www.cgtn.com/subscribe/rss/section/world.xml",
+   "verified": true
+  },
+  {
+   "name": "South China Morning Post",
+   "camp": "asia-pacific",
+   "ownership": "Hong Kong private (Alibaba)",
+   "domain": "scmp.com",
+   "url": "https://www.scmp.com/rss/91/feed",
+   "verified": true
+  },
+  {
+   "name": "Japan Times",
+   "camp": "asia-pacific",
+   "ownership": "Japanese private",
+   "domain": "japantimes.co.jp",
+   "url": "https://www.japantimes.co.jp/feed/"
+  },
+  {
+   "name": "Yonhap",
+   "camp": "asia-pacific",
+   "ownership": "South Korean state-funded agency",
+   "domain": "yna.co.kr",
+   "url": "https://en.yna.co.kr/RSS/news.xml"
+  },
+  {
+   "name": "Times of Israel",
+   "camp": "israel",
+   "ownership": "Israeli private",
+   "domain": "timesofisrael.com",
+   "url": "https://www.timesofisrael.com/feed/",
+   "verified": true
+  },
+  {
+   "name": "Al Jazeera",
+   "camp": "arab",
+   "ownership": "Qatari state-funded",
+   "domain": "aljazeera.com",
+   "url": "https://www.aljazeera.com/xml/rss/all.xml"
+  },
+  {
+   "name": "Middle East Eye",
+   "camp": "arab",
+   "ownership": "UK-based private",
+   "domain": "middleeasteye.net",
+   "url": "https://www.middleeasteye.net/rss",
+   "verified": true
+  },
+  {
+   "name": "Arab News",
+   "camp": "arab",
+   "ownership": "Saudi private (SRMG)",
+   "domain": "arabnews.com",
+   "url": "https://www.arabnews.com/rss.xml",
+   "verified": true
+  },
+  {
+   "name": "Tehran Times",
+   "camp": "iran-state",
+   "ownership": "Iranian state-aligned",
+   "domain": "tehrantimes.com",
+   "url": "https://www.tehrantimes.com/rss",
+   "verified": true
+  },
+  {
+   "name": "Anadolu Agency",
+   "camp": "turkey-state",
+   "ownership": "Turkish state agency",
+   "domain": "aa.com.tr",
+   "url": "https://www.aa.com.tr/en/rss/default?cat=world",
+   "verified": true
+  },
+  {
+   "name": "The Hindu",
+   "camp": "india",
+   "ownership": "Indian private",
+   "domain": "thehindu.com",
+   "url": "https://www.thehindu.com/news/international/feeder/default.rss"
+  },
+  {
+   "name": "Dawn",
+   "camp": "pakistan",
+   "ownership": "Pakistani private",
+   "domain": "dawn.com",
+   "url": "https://www.dawn.com/feeds/home",
+   "verified": true
+  },
+  {
+   "name": "Africanews",
+   "camp": "africa",
+   "ownership": "Pan-African (Euronews group)",
+   "domain": "africanews.com",
+   "url": "https://www.africanews.com/feed/rss"
+  },
+  {
+   "name": "Premium Times",
+   "camp": "africa",
+   "ownership": "Nigerian private",
+   "domain": "premiumtimesng.com",
+   "url": "https://www.premiumtimesng.com/feed"
+  },
+  {
+   "name": "MercoPress",
+   "camp": "latam",
+   "ownership": "Uruguay-based private",
+   "domain": "mercopress.com",
+   "url": "https://en.mercopress.com/rss"
+  },
+  {
+   "name": "UN News",
+   "camp": "multilateral",
+   "ownership": "United Nations",
+   "domain": "news.un.org",
+   "url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml",
+   "verified": true
+  },
+  {
+   "name": "ReliefWeb",
+   "camp": "multilateral",
+   "ownership": "UN OCHA",
+   "domain": "reliefweb.int",
+   "url": "https://reliefweb.int/updates/rss.xml",
+   "verified": true
+  }
+ ]
+}
