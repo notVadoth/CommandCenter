@@ -1,6 +1,6 @@
 // written by news.py — loaded automatically by commandcenter-map.html
 window.CC_STORIES = {
- "generated": "2026-11-04T21:05:54.647070+00:00",
+ "generated": "2026-11-04T21:44:15.701373+00:00",
  "focus": [
   "IND",
   "CHN",
@@ -29,23 +29,21 @@ window.CC_STORIES = {
   "ARG"
  ],
  "diplomacy": [
-  "48d0485c38",
   "1027e67cb1",
-  "fc62682439",
-  "7f6ef76eb0"
+  "f1c1041826"
  ],
  "by_country": {
   "USA": [
+   "5164774f8f",
    "6f17732e22",
    "7bb8998eca",
-   "66e742e238",
-   "2f401e8609"
+   "fc979da296"
   ],
   "IRN": [
+   "5164774f8f",
    "6f17732e22",
    "5904df7092",
-   "cc4a4a4d0e",
-   "11fee7c132"
+   "cc4a4a4d0e"
   ],
   "RUS": [
    "7bb8998eca",
@@ -53,11 +51,9 @@ window.CC_STORIES = {
    "c7fa392666",
    "1b94071d55"
   ],
-  "CHN": [
-   "85a5a729ff",
-   "309eed7e7e",
-   "66a6b6965c",
-   "962950a8c6"
+  "ETH": [
+   "5b5b491c89",
+   "fbe1615cf1"
   ],
   "COD": [
    "4e302aa30a"
@@ -70,46 +66,38 @@ window.CC_STORIES = {
   "CAN": [
    "bf706bb08b",
    "2323dc1d3a",
-   "8fa8c8ed8a",
+   "6266f00bac",
    "aac5733e43"
   ],
-  "AUS": [
-   "03ca8dc25a",
-   "3916d612db",
-   "9157bdea35",
-   "f255fc5dd7"
-  ],
-  "JPN": [
-   "e794a0119d",
-   "1cfee06dad",
-   "de8d2cee63",
-   "5a9fcabec5"
-  ],
   "PAK": [
-   "da67dddf13",
+   "7a8886a4b9",
    "c6e85c06e4",
    "83fc46e62e",
    "bd59493103"
   ],
+  "NGA": [
+   "adc66e2fa7",
+   "9329ce48f0",
+   "de8eb184f7",
+   "07100190db"
+  ],
+  "JPN": [
+   "e794a0119d",
+   "de8d2cee63",
+   "5a9fcabec5",
+   "16cc034625"
+  ],
   "DEU": [
    "7ecdf22efa",
+   "3cd7baa680",
    "f3fd954208",
-   "e95f3e26fb",
-   "aac5733e43"
+   "e95f3e26fb"
   ],
-  "ETH": [
-   "f1d4ccb648",
-   "fbe1615cf1"
-  ],
-  "IND": [
-   "68325fcc5d",
-   "4c2fc7c7fd",
-   "944ee4bc98",
-   "4200417654"
-  ],
-  "ARG": [
-   "c65b060d81",
-   "7377b739ba"
+  "CHN": [
+   "66a6b6965c",
+   "80710c4986",
+   "962950a8c6",
+   "6e4d944df3"
   ],
   "FRA": [
    "ca70ab29b2",
@@ -117,11 +105,11 @@ window.CC_STORIES = {
    "8489055164",
    "db52a87356"
   ],
-  "NGA": [
-   "9329ce48f0",
-   "de8eb184f7",
-   "07100190db",
-   "dd265f11f6"
+  "AUS": [
+   "3916d612db",
+   "03ca8dc25a",
+   "9157bdea35",
+   "f255fc5dd7"
   ],
   "BGD": [
    "bde93d983b",
@@ -135,12 +123,19 @@ window.CC_STORIES = {
   ],
   "TUR": [
    "2c5944dee8",
+   "cafabc71b0",
    "a029684f68",
    "e30718b9a7"
   ],
   "EGY": [
    "3ef6b05f75",
    "70d32f7ffb"
+  ],
+  "IND": [
+   "4c2fc7c7fd",
+   "944ee4bc98",
+   "4200417654",
+   "fabb9fdbd0"
   ],
   "PHL": [
    "8d8877ad44",
@@ -150,25 +145,121 @@ window.CC_STORIES = {
   "THA": [
    "e273e1ab53"
   ],
+  "ARG": [
+   "1f4d64cf22",
+   "7377b739ba"
+  ],
   "MEX": [
    "55a63bd53f"
   ]
  },
  "other": [
-  "932e5368b9",
+  "4752ae9d0b",
+  "1c6667c34e",
   "d8decf644a",
-  "4e4295387f",
   "19d86bd3cf",
-  "812f6529ab",
+  "d60a443a54",
   "b936b17de1",
   "f18222aa48",
   "f1f1d78250",
+  "728d6d2876",
   "21c874cf14",
   "1b9cb43e45",
-  "c8c874bead",
-  "1506ae0fec"
+  "c8c874bead"
  ],
  "stories": {
+  "1c6667c34e": {
+   "bodies": [],
+   "id": "1c6667c34e",
+   "headline": "NASA's Swift space telescope plunges to Earth after 22 years in orbit",
+   "countries": [
+    "KOR"
+   ],
+   "score": 19.99,
+   "outlets": 4,
+   "camps": 4,
+   "updated": "2026-11-04T21:35:06+00:00",
+   "sources": [
+    {
+     "outlet": "Yonhap",
+     "camp": "asia-pacific",
+     "camp_label": "Asia-Pacific",
+     "ownership": "South Korean state-funded agency",
+     "title": "S. Korea will not be affected by NASA's Swift telescope crashing back to earth: KASA",
+     "url": "https://en.yna.co.kr/view/AEN20261104008500320",
+     "date": "2026-11-04T07:34:07+00:00"
+    },
+    {
+     "outlet": "CBC News",
+     "camp": "western",
+     "camp_label": "Western",
+     "ownership": "Canadian public broadcaster",
+     "title": "NASA's Swift space telescope plunges to Earth after 22 years in orbit",
+     "url": "https://www.cbc.ca/news/science/swift-space-telescope-9.7409515?cmp=rss",
+     "date": "2026-11-04T21:35:06+00:00"
+    },
+    {
+     "outlet": "Dawn",
+     "camp": "pakistan",
+     "camp_label": "Pakistani",
+     "ownership": "Pakistani private",
+     "title": "Nasa's Swift satellite telescope heads for fiery re-entry 22 years after launch",
+     "url": "https://www.dawn.com/news/2042049/nasas-swift-satellite-telescope-heads-for-fiery-re-entry-22-years-after-launch",
+     "date": "2026-11-04T06:12:43+00:00"
+    }
+   ],
+   "missing": []
+  },
+  "adc66e2fa7": {
+   "bodies": [],
+   "id": "adc66e2fa7",
+   "headline": "Pezeshkian receives credentials of five new ambassadors, calls for stronger ties and regional peace",
+   "countries": [
+    "NGA",
+    "USA",
+    "IRN"
+   ],
+   "score": 9.98,
+   "outlets": 2,
+   "camps": 2,
+   "updated": "2026-11-04T21:32:51+00:00",
+   "sources": [
+    {
+     "outlet": "Premium Times",
+     "camp": "africa",
+     "camp_label": "African",
+     "ownership": "Nigerian private",
+     "title": "US seeks stronger trade ties with Nigeria",
+     "url": "https://www.premiumtimesng.com/news/more-news/922781-us-seeks-stronger-trade-ties-with-nigeria.html",
+     "date": "2026-11-04T21:32:51+00:00"
+    },
+    {
+     "outlet": "Tehran Times",
+     "camp": "iran-state",
+     "camp_label": "Iranian state",
+     "ownership": "Iranian state-aligned",
+     "title": "Pezeshkian receives credentials of five new ambassadors, calls for stronger ties and regional peace",
+     "url": "https://www.tehrantimes.com/news/531842/Pezeshkian-receives-credentials-of-five-new-ambassadors-calls",
+     "date": "2026-11-04T17:05:45+00:00"
+    }
+   ],
+   "missing": [
+    {
+     "camp": "western",
+     "label": "Western",
+     "search": [
+      {
+       "outlet": "BBC News",
+       "url": "https://duckduckgo.com/?q=site%3Abbc.com%20stronger%20ties%20seek%20trade%20nigeria"
+      },
+      {
+       "outlet": "The Guardian",
+       "url": "https://duckduckgo.com/?q=site%3Atheguardian.com%20stronger%20ties%20seek%20trade%20nigeria"
+      }
+     ]
+    }
+   ]
+  },
   "6f17732e22": {
    "bodies": [],
    "id": "6f17732e22",
@@ -178,10 +269,10 @@ window.CC_STORIES = {
     "IRN",
     "ISR"
    ],
-   "score": 82.99,
-   "outlets": 22,
-   "camps": 13,
-   "updated": "2026-11-04T21:00:00+00:00",
+   "score": 54.98,
+   "outlets": 14,
+   "camps": 9,
+   "updated": "2026-11-04T21:31:17+00:00",
    "sources": [
     {
      "outlet": "The Guardian",
@@ -190,7 +281,365 @@ window.CC_STORIES = {
      "ownership": "UK private (trust-owned)",
      "title": "US midterm elections 2026 live: Democrats hope for more wins in tight races as Trump downplays his role in blue wave",
      "url": "https://www.theguardian.com/us-news/live/2026/nov/04/midterm-elections-results-senate-house-michigan-maine-mississippi-latest-updates",
-     "date": "2026-11-04T20:47:40+00:00"
+     "date": "2026-11-04T21:25:44+00:00"
+    },
+    {
+     "outlet": "TASS",
+     "camp": "russia-state",
+     "camp_label": "Russian state",
+     "ownership": "Russian state agency",
+     "title": "Trump says he will end war with Iran whenever he wants, but it must be done right",
+     "url": "https://tass.com/world/2212997",
+     "date": "2026-11-04T20:49:48+00:00"
+    },
+    {
+     "outlet": "The Hindu",
+     "camp": "india",
+     "camp_label": "Indian",
+     "ownership": "Indian private",
+     "title": "Democrats win U.S. Congress in midterm rout of U.S. President Donald Trump",
+     "url": "https://www.thehindu.com/news/international/us-midterm-elections-2026-senate-governor-races-winners-losers-trump-republicans-democrats-news/article71663818.ece",
+     "date": "2026-11-04T19:50:03+00:00"
+    }
+   ],
+   "missing": [
+    {
+     "camp": "iran-state",
+     "label": "Iranian state",
+     "search": [
+      {
+       "outlet": "Tehran Times",
+       "url": "https://duckduckgo.com/?q=site%3Atehrantimes.com%20trump%20midterm%20election%20democrat%20iran"
+      }
+     ]
+    }
+   ]
+  },
+  "4752ae9d0b": {
+   "bodies": [],
+   "id": "4752ae9d0b",
+   "headline": "Netanyahu claims 'serious concerns' of foreign spending to sway Israeli election",
+   "countries": [
+    "ISR",
+    "PSE"
+   ],
+   "score": 30.98,
+   "outlets": 8,
+   "camps": 5,
+   "updated": "2026-11-04T21:26:53+00:00",
+   "sources": [
+    {
+     "outlet": "The Hindu",
+     "camp": "india",
+     "camp_label": "Indian",
+     "ownership": "Indian private",
+     "title": "Israel President urges compromise after divisive election",
+     "url": "https://www.thehindu.com/news/international/israel-president-urges-compromise-after-divisive-election/article71667417.ece",
+     "date": "2026-11-04T21:19:20+00:00"
+    },
+    {
+     "outlet": "France 24",
+     "camp": "western",
+     "camp_label": "Western",
+     "ownership": "French public broadcaster",
+     "title": "Netanyahu claims 'serious concerns' of foreign spending to sway Israeli election",
+     "url": "https://www.france24.com/en/middle-east/20261104-netanyahu-claims-serious-concerns-of-foreign-spending-to-sway-israeli-election",
+     "date": "2026-11-04T21:26:53+00:00"
+    },
+    {
+     "outlet": "Dawn",
+     "camp": "pakistan",
+     "camp_label": "Pakistani",
+     "ownership": "Pakistani private",
+     "title": "Israel president urges compromise after divisive election",
+     "url": "https://www.dawn.com/news/2042120/israel-president-urges-compromise-after-divisive-election",
+     "date": "2026-11-04T20:44:32+00:00"
+    }
+   ],
+   "missing": [
+    {
+     "camp": "israel",
+     "label": "Israeli",
+     "search": [
+      {
+       "outlet": "Times of Israel",
+       "url": "https://duckduckgo.com/?q=site%3Atimesofisrael.com%20election%20israel%20fraud%20netanyahu%20claim"
+      }
+     ]
+    },
+    {
+     "camp": "arab",
+     "label": "Arab / Gulf",
+     "search": [
+      {
+       "outlet": "Al Jazeera",
+       "url": "https://duckduckgo.com/?q=site%3Aaljazeera.com%20election%20israel%20fraud%20netanyahu%20claim"
+      },
+      {
+       "outlet": "Middle East Eye",
+       "url": "https://duckduckgo.com/?q=site%3Amiddleeasteye.net%20election%20israel%20fraud%20netanyahu%20claim"
+      }
+     ]
+    }
+   ]
+  },
+  "5b5b491c89": {
+   "bodies": [],
+   "id": "5b5b491c89",
+   "headline": "South Africans vote in key municipal elections",
+   "countries": [
+    "ZAF",
+    "ETH",
+    "SDN"
+   ],
+   "score": 30.97,
+   "outlets": 8,
+   "camps": 5,
+   "updated": "2026-11-04T21:26:13+00:00",
+   "sources": [
+    {
+     "outlet": "Africanews",
+     "camp": "africa",
+     "camp_label": "African",
+     "ownership": "Pan-African (Euronews group)",
+     "title": "South Africans vote in local elections with ANC missteps in sharp focus",
+     "url": "http://www.africanews.com/2026/11/04/south-africans-vote-in-local-elections-with-anc-missteps-in-sharp-focus/",
+     "date": "2026-11-04T16:01:52+00:00"
+    },
+    {
+     "outlet": "France 24",
+     "camp": "western",
+     "camp_label": "Western",
+     "ownership": "French public broadcaster",
+     "title": "South Africans vote in key municipal elections",
+     "url": "https://www.france24.com/en/south-africans-vote-in-key-municipal-elections",
+     "date": "2026-11-04T21:26:13+00:00"
+    },
+    {
+     "outlet": "CGTN",
+     "camp": "china-state",
+     "camp_label": "Chinese state",
+     "ownership": "Chinese state broadcaster",
+     "title": "Campaigns end ahead of South Africa’s local elections",
+     "url": "https://newsaf.cgtn.com/news/2026-11-03/Campaigns-end-ahead-of-South-Africa-s-local-elections-1RLQFGe33Ww/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
+     "date": "2026-11-03T11:39:54+00:00"
+    }
+   ],
+   "missing": []
+  },
+  "1027e67cb1": {
+   "bodies": [
+    "EU"
+   ],
+   "id": "1027e67cb1",
+   "headline": "Winners, losers, the EU: Five takeaways from the US midterms",
+   "countries": [
+    "USA",
+    "KOR",
+    "CHN"
+   ],
+   "score": 44.97,
+   "outlets": 12,
+   "camps": 7,
+   "updated": "2026-11-04T21:24:00+00:00",
+   "sources": [
+    {
+     "outlet": "DW",
+     "camp": "western",
+     "camp_label": "Western",
+     "ownership": "German public broadcaster",
+     "title": "Winners, losers, the EU: Five takeaways from the US midterms",
+     "url": "https://www.dw.com/en/winners-losers-the-eu-five-takeaways-from-the-us-midterms/a-79858901?maca=en-rss-en-world-4025-rdf",
+     "date": "2026-11-04T20:27:00+00:00"
+    },
+    {
+     "outlet": "South China Morning Post",
+     "camp": "asia-pacific",
+     "camp_label": "Asia-Pacific",
+     "ownership": "Hong Kong private (Alibaba)",
+     "title": "Five takeaways from US midterms as Democrats sweep Congress and Trump faces Iran reckoning",
+     "url": "https://www.scmp.com/news/us/us-elections/article/3373318/five-takeaways-us-midterms-democrats-sweep-congress-and-trump-faces-iran-reckoning",
+     "date": "2026-11-04T21:24:00+00:00"
+    },
+    {
+     "outlet": "Al Jazeera",
+     "camp": "arab",
+     "camp_label": "Arab / Gulf",
+     "ownership": "Qatari state-funded",
+     "title": "Social media reacts to Democrats’ takeover of US Congress",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/11/4/social-media-reacts-to-democrats-takeover-of-us-congress?traffic_source=rss",
+     "date": "2026-11-04T21:21:58+00:00"
+    }
+   ],
+   "missing": []
+  },
+  "3cd7baa680": {
+   "bodies": [],
+   "id": "3cd7baa680",
+   "headline": "Germany’s Free Voters party chief found dead in Berlin hotel",
+   "countries": [
+    "DEU"
+   ],
+   "score": 4.96,
+   "outlets": 1,
+   "camps": 1,
+   "updated": "2026-11-04T21:14:15+00:00",
+   "sources": [
+    {
+     "outlet": "Anadolu Agency",
+     "camp": "turkey-state",
+     "camp_label": "Turkish state",
+     "ownership": "Turkish state agency",
+     "title": "Germany’s Free Voters party chief found dead in Berlin hotel",
+     "url": "https://www.aa.com.tr/en/europe/germany-s-free-voters-party-chief-found-dead-in-berlin-hotel/4112084",
+     "date": "2026-11-04T21:14:15+00:00"
+    }
+   ],
+   "missing": [
+    {
+     "camp": "western",
+     "label": "Western",
+     "search": [
+      {
+       "outlet": "BBC News",
+       "url": "https://duckduckgo.com/?q=site%3Abbc.com%20germany%20free%20voter%20party%20chief"
+      },
+      {
+       "outlet": "The Guardian",
+       "url": "https://duckduckgo.com/?q=site%3Atheguardian.com%20germany%20free%20voter%20party%20chief"
+      }
+     ]
+    }
+   ]
+  },
+  "d60a443a54": {
+   "bodies": [],
+   "id": "d60a443a54",
+   "headline": "United Nations report says genocide continues in Gaza",
+   "countries": [
+    "ISR",
+    "PSE"
+   ],
+   "score": 9.96,
+   "outlets": 2,
+   "camps": 2,
+   "updated": "2026-11-04T21:13:56+00:00",
+   "sources": [
+    {
+     "outlet": "Al Jazeera",
+     "camp": "arab",
+     "camp_label": "Arab / Gulf",
+     "ownership": "Qatari state-funded",
+     "title": "Israel restricting treatment for 1,100 child amputees in Gaza: NGO",
+     "url": "https://www.aljazeera.com/news/2026/11/4/israel-restricting-treatment-for-1100-child-amputees-in-gaza-ngo?traffic_source=rss",
+     "date": "2026-11-04T21:13:56+00:00"
+    },
+    {
+     "outlet": "The Hindu",
+     "camp": "india",
+     "camp_label": "Indian",
+     "ownership": "Indian private",
+     "title": "United Nations report says genocide continues in Gaza",
+     "url": "https://www.thehindu.com/news/international/united-nations-report-says-genocide-continues-in-gaza/article71666146.ece",
+     "date": "2026-11-04T17:26:00+00:00"
+    }
+   ],
+   "missing": [
+    {
+     "camp": "israel",
+     "label": "Israeli",
+     "search": [
+      {
+       "outlet": "Times of Israel",
+       "url": "https://duckduckgo.com/?q=site%3Atimesofisrael.com%20gaza%20israel%20restricting%20treatment%20child"
+      }
+     ]
+    }
+   ]
+  },
+  "f1c1041826": {
+   "bodies": [
+    "EU"
+   ],
+   "id": "f1c1041826",
+   "headline": "Zelensky discusses preparations for Abu Dhabi talks with Witkoff, Kushner",
+   "countries": [
+    "UKR",
+    "USA",
+    "RUS"
+   ],
+   "score": 16.96,
+   "outlets": 4,
+   "camps": 3,
+   "updated": "2026-11-04T21:13:30+00:00",
+   "sources": [
+    {
+     "outlet": "Kyiv Independent",
+     "camp": "ukraine",
+     "camp_label": "Ukrainian",
+     "ownership": "Ukrainian independent",
+     "title": "Ukraine, partners coordinate peace efforts ahead of Abu Dhabi talks with Russia",
+     "url": "https://kyivindependent.com/ukraine-partners-coordinate-peace-efforts-ahead-of-abu-dhabi-talks-with-russia-2/",
+     "date": "2026-11-04T20:32:32+00:00"
+    },
+    {
+     "outlet": "TASS",
+     "camp": "russia-state",
+     "camp_label": "Russian state",
+     "ownership": "Russian state agency",
+     "title": "Zelensky discusses preparations for Abu Dhabi talks with Witkoff, Kushner",
+     "url": "https://tass.com/world/2213009",
+     "date": "2026-11-04T21:13:30+00:00"
+    },
+    {
+     "outlet": "Meduza",
+     "camp": "russia-independent",
+     "camp_label": "Russian independent (exile)",
+     "ownership": "Russian independent, in exile",
+     "title": "EU drafts ‘more cautious’ roadmap for Ukraine’s accession, with no timeline for membership, Politico reports",
+     "url": "https://meduza.io/en/feature/2026/11/04/eu-drafts-more-cautious-roadmap-for-ukraine-s-accession-with-no-timeline-for-membership-politico-reports",
+     "date": "2026-11-04T16:24:36+00:00"
+    }
+   ],
+   "missing": [
+    {
+     "camp": "western",
+     "label": "Western",
+     "search": [
+      {
+       "outlet": "BBC News",
+       "url": "https://duckduckgo.com/?q=site%3Abbc.com%20ukraine%20accession%20zelensky%20talk%20peace"
+      },
+      {
+       "outlet": "The Guardian",
+       "url": "https://duckduckgo.com/?q=site%3Atheguardian.com%20ukraine%20accession%20zelensky%20talk%20peace"
+      }
+     ]
+    }
+   ]
+  },
+  "5164774f8f": {
+   "bodies": [],
+   "id": "5164774f8f",
+   "headline": "JD Vance blames Iran war for midterm thumping. Is he really blaming Trump?",
+   "countries": [
+    "USA",
+    "IRN",
+    "ISR"
+   ],
+   "score": 61.95,
+   "outlets": 16,
+   "camps": 10,
+   "updated": "2026-11-04T21:10:44+00:00",
+   "sources": [
+    {
+     "outlet": "CBC News",
+     "camp": "western",
+     "camp_label": "Western",
+     "ownership": "Canadian public broadcaster",
+     "title": "JD Vance blames Iran war for midterm thumping. Is he really blaming Trump?",
+     "url": "https://www.cbc.ca/news/world/trump-midterms-jd-vance-iran-war-9.7409264?cmp=rss",
+     "date": "2026-11-04T20:27:48+00:00"
     },
     {
      "outlet": "Tehran Times",
@@ -206,9 +655,9 @@ window.CC_STORIES = {
      "camp": "russia-state",
      "camp_label": "Russian state",
      "ownership": "Russian state agency",
-     "title": "Trump says he will end war with Iran whenever he wants, but it must be done right",
-     "url": "https://tass.com/world/2212997",
-     "date": "2026-11-04T20:49:48+00:00"
+     "title": "Trump acknowledges Republicans’ election defeat was due to war with Iran",
+     "url": "https://tass.com/world/2212995",
+     "date": "2026-11-04T20:44:01+00:00"
     }
    ],
    "missing": []
@@ -220,7 +669,7 @@ window.CC_STORIES = {
    "countries": [
     "AUS"
    ],
-   "score": 4.98,
+   "score": 4.93,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T20:54:10+00:00",
@@ -252,50 +701,6 @@ window.CC_STORIES = {
     }
    ]
   },
-  "812f6529ab": {
-   "bodies": [],
-   "id": "812f6529ab",
-   "headline": "Israel's president begins consultations with parties after election deadlock",
-   "countries": [
-    "ISR"
-   ],
-   "score": 9.97,
-   "outlets": 2,
-   "camps": 2,
-   "updated": "2026-11-04T20:44:32+00:00",
-   "sources": [
-    {
-     "outlet": "Dawn",
-     "camp": "pakistan",
-     "camp_label": "Pakistani",
-     "ownership": "Pakistani private",
-     "title": "Israel president urges compromise after divisive election",
-     "url": "https://www.dawn.com/news/2042120/israel-president-urges-compromise-after-divisive-election",
-     "date": "2026-11-04T20:44:32+00:00"
-    },
-    {
-     "outlet": "BBC News",
-     "camp": "western",
-     "camp_label": "Western",
-     "ownership": "UK public broadcaster",
-     "title": "Israel's president begins consultations with parties after election deadlock",
-     "url": "https://www.bbc.co.uk/news/articles/c6z98z5z91ppo?at_medium=RSS&at_campaign=rss",
-     "date": "2026-11-04T16:18:21+00:00"
-    }
-   ],
-   "missing": [
-    {
-     "camp": "israel",
-     "label": "Israeli",
-     "search": [
-      {
-       "outlet": "Times of Israel",
-       "url": "https://duckduckgo.com/?q=site%3Atimesofisrael.com%20israel%20president%20election%20urge%20compromise"
-      }
-     ]
-    }
-   ]
-  },
   "b936b17de1": {
    "bodies": [],
    "id": "b936b17de1",
@@ -304,7 +709,7 @@ window.CC_STORIES = {
     "ISR",
     "PSE"
    ],
-   "score": 9.96,
+   "score": 9.91,
    "outlets": 2,
    "camps": 2,
    "updated": "2026-11-04T20:37:17+00:00",
@@ -350,7 +755,7 @@ window.CC_STORIES = {
     "CAN",
     "SWE"
    ],
-   "score": 14.96,
+   "score": 14.91,
    "outlets": 3,
    "camps": 3,
    "updated": "2026-11-04T20:36:33+00:00",
@@ -392,7 +797,7 @@ window.CC_STORIES = {
    "countries": [
     "PAK"
    ],
-   "score": 4.96,
+   "score": 4.9,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T20:34:26+00:00",
@@ -409,52 +814,6 @@ window.CC_STORIES = {
    ],
    "missing": []
   },
-  "48d0485c38": {
-   "bodies": [
-    "EU"
-   ],
-   "id": "48d0485c38",
-   "headline": "Ukraine, partners coordinate peace efforts ahead of Abu Dhabi talks with Russia",
-   "countries": [
-    "UKR",
-    "RUS",
-    "USA"
-   ],
-   "score": 21.95,
-   "outlets": 5,
-   "camps": 4,
-   "updated": "2026-11-04T20:32:32+00:00",
-   "sources": [
-    {
-     "outlet": "Kyiv Independent",
-     "camp": "ukraine",
-     "camp_label": "Ukrainian",
-     "ownership": "Ukrainian independent",
-     "title": "Ukraine, partners coordinate peace efforts ahead of Abu Dhabi talks with Russia",
-     "url": "https://kyivindependent.com/ukraine-partners-coordinate-peace-efforts-ahead-of-abu-dhabi-talks-with-russia-2/",
-     "date": "2026-11-04T20:32:32+00:00"
-    },
-    {
-     "outlet": "TASS",
-     "camp": "russia-state",
-     "camp_label": "Russian state",
-     "ownership": "Russian state agency",
-     "title": "EU, UK, US meeting on Ukraine in Brussels ends without results — TASS",
-     "url": "https://tass.com/world/2212975",
-     "date": "2026-11-04T18:47:56+00:00"
-    },
-    {
-     "outlet": "Meduza",
-     "camp": "russia-independent",
-     "camp_label": "Russian independent (exile)",
-     "ownership": "Russian independent, in exile",
-     "title": "EU drafts ‘more cautious’ roadmap for Ukraine’s accession, with no timeline for membership, Politico reports",
-     "url": "https://meduza.io/en/feature/2026/11/04/eu-drafts-more-cautious-roadmap-for-ukraine-s-accession-with-no-timeline-for-membership-politico-reports",
-     "date": "2026-11-04T16:24:36+00:00"
-    }
-   ],
-   "missing": []
-  },
   "7bb8998eca": {
    "bodies": [],
    "id": "7bb8998eca",
@@ -464,7 +823,7 @@ window.CC_STORIES = {
     "UKR",
     "USA"
    ],
-   "score": 35.95,
+   "score": 35.9,
    "outlets": 9,
    "camps": 6,
    "updated": "2026-11-04T20:31:56+00:00",
@@ -514,57 +873,40 @@ window.CC_STORIES = {
     }
    ]
   },
-  "1027e67cb1": {
-   "bodies": [
-    "EU"
-   ],
-   "id": "1027e67cb1",
-   "headline": "Winners, losers, the EU: Five takeaways from the US midterms",
+  "80710c4986": {
+   "bodies": [],
+   "id": "80710c4986",
+   "headline": "How Chinese AI is censoring the controversy around Mbappé’s Chairman Mao comments",
    "countries": [
-    "USA",
-    "IRN"
+    "CHN"
    ],
-   "score": 14.95,
-   "outlets": 3,
-   "camps": 3,
-   "updated": "2026-11-04T20:27:00+00:00",
+   "score": 4.89,
+   "outlets": 1,
+   "camps": 1,
+   "updated": "2026-11-04T20:28:09+00:00",
    "sources": [
     {
-     "outlet": "DW",
+     "outlet": "France 24",
      "camp": "western",
      "camp_label": "Western",
-     "ownership": "German public broadcaster",
-     "title": "Winners, losers, the EU: Five takeaways from the US midterms",
-     "url": "https://www.dw.com/en/winners-losers-the-eu-five-takeaways-from-the-us-midterms/a-79858901?maca=en-rss-en-world-4025-rdf",
-     "date": "2026-11-04T20:27:00+00:00"
-    },
-    {
-     "outlet": "Al Jazeera",
-     "camp": "arab",
-     "camp_label": "Arab / Gulf",
-     "ownership": "Qatari state-funded",
-     "title": "The biggest winners and losers of the 2026 US midterms",
-     "url": "https://www.aljazeera.com/news/2026/11/4/the-biggest-winners-and-losers-of-the-2026-us-midterms?traffic_source=rss",
-     "date": "2026-11-04T18:52:25+00:00"
-    },
-    {
-     "outlet": "South China Morning Post",
-     "camp": "asia-pacific",
-     "camp_label": "Asia-Pacific",
-     "ownership": "Hong Kong private (Alibaba)",
-     "title": "US midterm takeaways: Trump’s blame game, Elon’s space lasers and the rest of the world",
-     "url": "https://www.scmp.com/news/china/diplomacy/article/3373270/us-midterm-takeaways-trumps-blame-game-elons-space-lasers-and-rest-world",
-     "date": "2026-11-04T10:00:22+00:00"
+     "ownership": "French public broadcaster",
+     "title": "How Chinese AI is censoring the controversy around Mbappé’s Chairman Mao comments",
+     "url": "https://www.france24.com/en/asia-pacific/20261104-how-chinese-ai-is-censoring-the-controversy-around-mbappes-chairman-mao-comments",
+     "date": "2026-11-04T20:28:09+00:00"
     }
    ],
    "missing": [
     {
-     "camp": "iran-state",
-     "label": "Iranian state",
+     "camp": "china-state",
+     "label": "Chinese state",
      "search": [
       {
-       "outlet": "Tehran Times",
-       "url": "https://duckduckgo.com/?q=site%3Atehrantimes.com%20midterm%20winner%20loser%20takeaway%20biggest"
+       "outlet": "Global Times",
+       "url": "https://duckduckgo.com/?q=site%3Aglobaltimes.cn%20chinese%20censoring%20controversy%20around%20mbapp"
+      },
+      {
+       "outlet": "CGTN",
+       "url": "https://duckduckgo.com/?q=site%3Acgtn.com%20chinese%20censoring%20controversy%20around%20mbapp"
       }
      ]
     }
@@ -578,7 +920,7 @@ window.CC_STORIES = {
     "IRN",
     "USA"
    ],
-   "score": 9.94,
+   "score": 9.89,
    "outlets": 2,
    "camps": 2,
    "updated": "2026-11-04T20:25:50+00:00",
@@ -615,50 +957,6 @@ window.CC_STORIES = {
     }
    ]
   },
-  "66e742e238": {
-   "bodies": [],
-   "id": "66e742e238",
-   "headline": "Israeli president accepts certified election results after commission denies voter fraud",
-   "countries": [
-    "ISR",
-    "USA",
-    "PSE"
-   ],
-   "score": 31.92,
-   "outlets": 7,
-   "camps": 6,
-   "updated": "2026-11-04T20:11:18+00:00",
-   "sources": [
-    {
-     "outlet": "Times of Israel",
-     "camp": "israel",
-     "camp_label": "Israeli",
-     "ownership": "Israeli private",
-     "title": "Israel Voted. Can Eisenkot or Netanyahu form a government? - Sponsored Content",
-     "url": "https://toi.li/BF3GTw",
-     "date": "2026-11-04T16:02:19+00:00"
-    },
-    {
-     "outlet": "CBC News",
-     "camp": "western",
-     "camp_label": "Western",
-     "ownership": "Canadian public broadcaster",
-     "title": "Israeli president accepts certified election results after commission denies voter fraud",
-     "url": "https://www.cbc.ca/news/world/israel-election-fraud-netanyahu-herzog-9.7408670?cmp=rss",
-     "date": "2026-11-04T14:58:05+00:00"
-    },
-    {
-     "outlet": "The Hindu",
-     "camp": "india",
-     "camp_label": "Indian",
-     "ownership": "Indian private",
-     "title": "Israel’s President accepts certified election results in a blow to Netanyahu’s claim of vote fraud",
-     "url": "https://www.thehindu.com/news/international/israels-president-accepts-certified-election-results-in-a-blow-to-netanyahus-claim-of-vote-fraud/article71666124.ece",
-     "date": "2026-11-04T16:05:14+00:00"
-    }
-   ],
-   "missing": []
-  },
   "4e302aa30a": {
    "bodies": [],
    "id": "4e302aa30a",
@@ -668,7 +966,7 @@ window.CC_STORIES = {
     "GBR",
     "COG"
    ],
-   "score": 19.92,
+   "score": 19.87,
    "outlets": 4,
    "camps": 4,
    "updated": "2026-11-04T20:09:43+00:00",
@@ -708,24 +1006,15 @@ window.CC_STORIES = {
    "id": "03ca8dc25a",
    "headline": "Food grown in illegal West Bank settlements being sold in Australia as ‘produce of Israel’",
    "countries": [
-    "PSE",
     "AUS",
+    "PSE",
     "ISR"
    ],
-   "score": 9.91,
-   "outlets": 2,
-   "camps": 2,
+   "score": 4.86,
+   "outlets": 1,
+   "camps": 1,
    "updated": "2026-11-04T20:00:43+00:00",
    "sources": [
-    {
-     "outlet": "Middle East Eye",
-     "camp": "arab",
-     "camp_label": "Arab / Gulf",
-     "ownership": "UK-based private",
-     "title": "Israeli settlers seize eight homes in occupied West Bank village west of Jericho",
-     "url": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-settlers-seize-eight-homes-occupied-west-bank-village-west",
-     "date": "2026-11-04T17:06:31+00:00"
-    },
     {
      "outlet": "The Guardian",
      "camp": "western",
@@ -736,31 +1025,22 @@ window.CC_STORIES = {
      "date": "2026-11-04T20:00:43+00:00"
     }
    ],
-   "missing": []
-  },
-  "8fa8c8ed8a": {
-   "bodies": [],
-   "id": "8fa8c8ed8a",
-   "headline": "Mother and daughter killed in grizzly bear attack, Canadian authorities confirm",
-   "countries": [
-    "CAN"
-   ],
-   "score": 4.88,
-   "outlets": 1,
-   "camps": 1,
-   "updated": "2026-11-04T19:42:47+00:00",
-   "sources": [
+   "missing": [
     {
-     "outlet": "The Guardian",
-     "camp": "western",
-     "camp_label": "Western",
-     "ownership": "UK private (trust-owned)",
-     "title": "Mother and daughter killed in grizzly bear attack, Canadian authorities confirm",
-     "url": "https://www.theguardian.com/world/2026/nov/04/canada-bear-attack-mother-daughter-killed",
-     "date": "2026-11-04T19:42:47+00:00"
+     "camp": "arab",
+     "label": "Arab / Gulf",
+     "search": [
+      {
+       "outlet": "Al Jazeera",
+       "url": "https://duckduckgo.com/?q=site%3Aaljazeera.com%20australia%20food%20grown%20illegal%20west"
+      },
+      {
+       "outlet": "Middle East Eye",
+       "url": "https://duckduckgo.com/?q=site%3Amiddleeasteye.net%20australia%20food%20grown%20illegal%20west"
+      }
+     ]
     }
-   ],
-   "missing": []
+   ]
   },
   "962950a8c6": {
    "bodies": [],
@@ -769,7 +1049,7 @@ window.CC_STORIES = {
    "countries": [
     "CHN"
    ],
-   "score": 4.86,
+   "score": 4.81,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T19:25:27+00:00",
@@ -808,7 +1088,7 @@ window.CC_STORIES = {
    "countries": [
     "ESP"
    ],
-   "score": 9.85,
+   "score": 9.79,
    "outlets": 2,
    "camps": 2,
    "updated": "2026-11-04T19:14:58+00:00",
@@ -834,59 +1114,40 @@ window.CC_STORIES = {
    ],
    "missing": []
   },
-  "4e4295387f": {
+  "6e4d944df3": {
    "bodies": [],
-   "id": "4e4295387f",
-   "headline": "UK: Police arrest Palestine Action supporters outside Supreme Court",
+   "id": "6e4d944df3",
+   "headline": "Chinese scientists make a toothbrush that uses mild electric shocks to reduce plaque",
    "countries": [
-    "GBR",
-    "PSE"
+    "CHN"
    ],
-   "score": 14.8,
-   "outlets": 3,
-   "camps": 3,
-   "updated": "2026-11-04T18:43:31+00:00",
+   "score": 4.77,
+   "outlets": 1,
+   "camps": 1,
+   "updated": "2026-11-04T19:00:08+00:00",
    "sources": [
     {
-     "outlet": "Middle East Eye",
-     "camp": "arab",
-     "camp_label": "Arab / Gulf",
-     "ownership": "UK-based private",
-     "title": "UK: Dozens arrested outside Supreme Court hearing on Palestine Action ban",
-     "url": "https://www.middleeasteye.net/live-blog/live-blog-update/uk-dozens-arrested-outside-supreme-court-hearing-palestine-action-ban",
-     "date": "2026-11-04T18:43:31+00:00"
-    },
-    {
-     "outlet": "Africanews",
-     "camp": "africa",
-     "camp_label": "African",
-     "ownership": "Pan-African (Euronews group)",
-     "title": "UK: Police arrest Palestine Action supporters outside Supreme Court",
-     "url": "http://www.africanews.com/2026/11/04/uk-police-arrest-palestine-action-supporters-outside-supreme-court/",
-     "date": "2026-11-04T16:48:40+00:00"
-    },
-    {
-     "outlet": "Times of Israel",
-     "camp": "israel",
-     "camp_label": "Israeli",
-     "ownership": "Israeli private",
-     "title": "UK’s top court mulls appeal against terrorism label for Palestine Action group",
-     "url": "https://www.timesofisrael.com/uks-top-court-mulls-appeal-of-terrorism-label-for-palestine-action-group/",
-     "date": "2026-11-04T15:52:44+00:00"
+     "outlet": "South China Morning Post",
+     "camp": "asia-pacific",
+     "camp_label": "Asia-Pacific",
+     "ownership": "Hong Kong private (Alibaba)",
+     "title": "Chinese scientists make a toothbrush that uses mild electric shocks to reduce plaque",
+     "url": "https://www.scmp.com/news/china/science/article/3373278/chinese-scientists-make-toothbrush-uses-mild-electric-shocks-reduce-plaque",
+     "date": "2026-11-04T19:00:08+00:00"
     }
    ],
    "missing": [
     {
-     "camp": "western",
-     "label": "Western",
+     "camp": "china-state",
+     "label": "Chinese state",
      "search": [
       {
-       "outlet": "BBC News",
-       "url": "https://duckduckgo.com/?q=site%3Abbc.com%20palestine%20action%20outside%20supreme%20court"
+       "outlet": "Global Times",
+       "url": "https://duckduckgo.com/?q=site%3Aglobaltimes.cn%20chinese%20scientist%20make%20toothbrush%20uses"
       },
       {
-       "outlet": "The Guardian",
-       "url": "https://duckduckgo.com/?q=site%3Atheguardian.com%20palestine%20action%20outside%20supreme%20court"
+       "outlet": "CGTN",
+       "url": "https://duckduckgo.com/?q=site%3Acgtn.com%20chinese%20scientist%20make%20toothbrush%20uses"
       }
      ]
     }
@@ -901,7 +1162,7 @@ window.CC_STORIES = {
     "UKR",
     "RUS"
    ],
-   "score": 9.79,
+   "score": 9.74,
    "outlets": 2,
    "camps": 2,
    "updated": "2026-11-04T18:36:40+00:00",
@@ -956,50 +1217,6 @@ window.CC_STORIES = {
     }
    ]
   },
-  "2f401e8609": {
-   "bodies": [],
-   "id": "2f401e8609",
-   "headline": "Elon Musk gets little bang for his buck in U.S. midterms, with possible Democratic investigations to come",
-   "countries": [
-    "USA",
-    "KOR",
-    "PSE"
-   ],
-   "score": 29.78,
-   "outlets": 6,
-   "camps": 6,
-   "updated": "2026-11-04T18:28:27+00:00",
-   "sources": [
-    {
-     "outlet": "CBC News",
-     "camp": "western",
-     "camp_label": "Western",
-     "ownership": "Canadian public broadcaster",
-     "title": "Elon Musk gets little bang for his buck in U.S. midterms, with possible Democratic investigations to come",
-     "url": "https://www.cbc.ca/news/world/us-midterms-elon-musk-9.7409000?cmp=rss",
-     "date": "2026-11-04T18:28:27+00:00"
-    },
-    {
-     "outlet": "Yonhap",
-     "camp": "asia-pacific",
-     "camp_label": "Asia-Pacific",
-     "ownership": "South Korean state-funded agency",
-     "title": "S. Korean won slightly weakens after Democrats retake U.S. Congress in midterm elections",
-     "url": "https://en.yna.co.kr/view/AEN20261104009700320",
-     "date": "2026-11-04T07:37:25+00:00"
-    },
-    {
-     "outlet": "Anadolu Agency",
-     "camp": "turkey-state",
-     "camp_label": "Turkish state",
-     "ownership": "Turkish state agency",
-     "title": "FACTBOX - How will Democrats and Republicans share power in US Congress after midterms?",
-     "url": "https://www.aa.com.tr/en/features/factbox-how-will-democrats-and-republicans-share-power-in-us-congress-after-midterms/4111692",
-     "date": "2026-11-04T14:40:17+00:00"
-    }
-   ],
-   "missing": []
-  },
   "9329ce48f0": {
    "bodies": [],
    "id": "9329ce48f0",
@@ -1007,7 +1224,7 @@ window.CC_STORIES = {
    "countries": [
     "NGA"
    ],
-   "score": 4.77,
+   "score": 4.72,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T18:23:51+00:00",
@@ -1024,18 +1241,18 @@ window.CC_STORIES = {
    ],
    "missing": []
   },
-  "da67dddf13": {
+  "7a8886a4b9": {
    "bodies": [],
-   "id": "da67dddf13",
-   "headline": "U.S. judge temporarily blocks deportation of detained Afghans to Afghanistan or Pakistan",
+   "id": "7a8886a4b9",
+   "headline": "Afghan children face narrowing path to education, UN agencies report",
    "countries": [
     "AFG",
     "PAK",
     "GBR"
    ],
-   "score": 9.75,
-   "outlets": 2,
-   "camps": 2,
+   "score": 14.69,
+   "outlets": 3,
+   "camps": 3,
    "updated": "2026-11-04T18:04:37+00:00",
    "sources": [
     {
@@ -1046,6 +1263,15 @@ window.CC_STORIES = {
      "title": "Pakistan, UK express concern at threat posed by terrorist groups operating in and from Afghanistan: FO",
      "url": "https://www.dawn.com/news/2042085/pakistan-uk-express-concern-at-threat-posed-by-terrorist-groups-operating-in-and-from-afghanistan-fo",
      "date": "2026-11-04T12:17:28+00:00"
+    },
+    {
+     "outlet": "UN News",
+     "camp": "multilateral",
+     "camp_label": "UN / multilateral",
+     "ownership": "United Nations",
+     "title": "Afghan children face narrowing path to education, UN agencies report",
+     "url": "https://news.un.org/feed/view/en/story/2026/11/1168732",
+     "date": "2026-11-04T12:00:00+00:00"
     },
     {
      "outlet": "The Hindu",
@@ -1068,7 +1294,7 @@ window.CC_STORIES = {
     "USA",
     "CHN"
    ],
-   "score": 6.75,
+   "score": 6.69,
    "outlets": 2,
    "camps": 1,
    "updated": "2026-11-04T18:02:31+00:00",
@@ -1092,7 +1318,7 @@ window.CC_STORIES = {
    "countries": [
     "DNK"
    ],
-   "score": 9.73,
+   "score": 9.68,
    "outlets": 2,
    "camps": 2,
    "updated": "2026-11-04T17:54:48+00:00",
@@ -1118,44 +1344,81 @@ window.CC_STORIES = {
    ],
    "missing": []
   },
-  "932e5368b9": {
+  "fc979da296": {
    "bodies": [],
-   "id": "932e5368b9",
-   "headline": "ANC faces anger over poor services as South Africans vote in local elections",
+   "id": "fc979da296",
+   "headline": "Midterms: How Abdul El-Sayed used 'humour and hope' to rebuff racism",
    "countries": [
-    "ZAF"
+    "USA",
+    "ISR"
    ],
-   "score": 23.72,
-   "outlets": 6,
-   "camps": 4,
-   "updated": "2026-11-04T17:44:54+00:00",
+   "score": 28.67,
+   "outlets": 7,
+   "camps": 5,
+   "updated": "2026-11-04T17:46:35+00:00",
    "sources": [
     {
-     "outlet": "Africanews",
-     "camp": "africa",
-     "camp_label": "African",
-     "ownership": "Pan-African (Euronews group)",
-     "title": "South Africans vote in local elections with ANC missteps in sharp focus",
-     "url": "http://www.africanews.com/2026/11/04/south-africans-vote-in-local-elections-with-anc-missteps-in-sharp-focus/",
-     "date": "2026-11-04T16:01:52+00:00"
-    },
-    {
-     "outlet": "The Guardian",
+     "outlet": "France 24",
      "camp": "western",
      "camp_label": "Western",
-     "ownership": "UK private (trust-owned)",
-     "title": "ANC faces anger over poor services as South Africans vote in local elections",
-     "url": "https://www.theguardian.com/world/2026/nov/04/anc-south-africa-local-elections-water-outages-power-cuts",
-     "date": "2026-11-04T14:50:47+00:00"
+     "ownership": "French public broadcaster",
+     "title": "Midterms: How Abdul El-Sayed used 'humour and hope' to rebuff racism",
+     "url": "https://www.france24.com/en/video/20261104-midterms-how-abdul-el-sayed-used-humour-and-hope-to-rebuff-racism",
+     "date": "2026-11-04T14:25:15+00:00"
     },
     {
      "outlet": "The Hindu",
      "camp": "india",
      "camp_label": "Indian",
      "ownership": "Indian private",
-     "title": "South Africa votes as ANC faces further losses and coalition rule looms",
-     "url": "https://www.thehindu.com/news/international/south-africa-votes-as-anc-faces-further-losses-and-coalition-rule-looms/article71667127.ece",
-     "date": "2026-11-04T17:44:54+00:00"
+     "title": "Who is Abdul El-Sayed, first Muslim U.S. Senator-elect?",
+     "url": "https://www.thehindu.com/news/international/who-is-abdul-el-sayed-first-muslim-us-senator-elect-united-states-us-midterm-elections-2026/article71664610.ece",
+     "date": "2026-11-04T12:18:28+00:00"
+    },
+    {
+     "outlet": "Tehran Times",
+     "camp": "iran-state",
+     "camp_label": "Iranian state",
+     "ownership": "Iranian state-aligned",
+     "title": "Senator-elect El-Sayed says US tax dollars should not fund Israel’s ‘genocidal war’",
+     "url": "https://www.tehrantimes.com/news/531846/Senator-elect-El-Sayed-says-US-tax-dollars-should-not-fund-Israel-s",
+     "date": "2026-11-04T17:46:35+00:00"
+    }
+   ],
+   "missing": [
+    {
+     "camp": "israel",
+     "label": "Israeli",
+     "search": [
+      {
+       "outlet": "Times of Israel",
+       "url": "https://duckduckgo.com/?q=site%3Atimesofisrael.com%20el-sayed%20abdul%20senator-elect%20israel%20michigan"
+      }
+     ]
+    }
+   ]
+  },
+  "6266f00bac": {
+   "bodies": [],
+   "id": "6266f00bac",
+   "headline": "Senior Democratic congressman says party 'going to put an end' to Trump's tariffs",
+   "countries": [
+    "USA",
+    "CAN"
+   ],
+   "score": 4.66,
+   "outlets": 1,
+   "camps": 1,
+   "updated": "2026-11-04T17:40:27+00:00",
+   "sources": [
+    {
+     "outlet": "CBC News",
+     "camp": "western",
+     "camp_label": "Western",
+     "ownership": "Canadian public broadcaster",
+     "title": "Senior Democratic congressman says party 'going to put an end' to Trump's tariffs",
+     "url": "https://www.cbc.ca/news/politics/trump-midterms-democrats-victory-carney-trade-9.7408838?cmp=rss",
+     "date": "2026-11-04T17:40:27+00:00"
     }
    ],
    "missing": []
@@ -1168,7 +1431,7 @@ window.CC_STORIES = {
     "USA",
     "IRN"
    ],
-   "score": 19.71,
+   "score": 19.66,
    "outlets": 4,
    "camps": 4,
    "updated": "2026-11-04T17:36:37+00:00",
@@ -1210,7 +1473,7 @@ window.CC_STORIES = {
    "countries": [
     "BGD"
    ],
-   "score": 4.7,
+   "score": 4.65,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T17:32:31+00:00",
@@ -1234,7 +1497,7 @@ window.CC_STORIES = {
    "countries": [
     "BRA"
    ],
-   "score": 4.7,
+   "score": 4.65,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T17:30:20+00:00",
@@ -1271,7 +1534,7 @@ window.CC_STORIES = {
     "ESP",
     "TUR"
    ],
-   "score": 4.68,
+   "score": 4.62,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T17:13:39+00:00",
@@ -1310,7 +1573,7 @@ window.CC_STORIES = {
    "countries": [
     "PAK"
    ],
-   "score": 4.67,
+   "score": 4.62,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T17:07:36+00:00",
@@ -1334,7 +1597,7 @@ window.CC_STORIES = {
    "countries": [
     "AND"
    ],
-   "score": 14.67,
+   "score": 14.61,
    "outlets": 3,
    "camps": 3,
    "updated": "2026-11-04T17:05:12+00:00",
@@ -1376,7 +1639,7 @@ window.CC_STORIES = {
    "countries": [
     "NGA"
    ],
-   "score": 4.66,
+   "score": 4.61,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T17:01:45+00:00",
@@ -1400,7 +1663,7 @@ window.CC_STORIES = {
    "countries": [
     "NGA"
    ],
-   "score": 4.65,
+   "score": 4.6,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T16:54:26+00:00",
@@ -1426,7 +1689,7 @@ window.CC_STORIES = {
     "USA",
     "UKR"
    ],
-   "score": 19.64,
+   "score": 19.59,
    "outlets": 4,
    "camps": 4,
    "updated": "2026-11-04T16:49:58+00:00",
@@ -1476,30 +1739,6 @@ window.CC_STORIES = {
     }
    ]
   },
-  "dd265f11f6": {
-   "bodies": [],
-   "id": "dd265f11f6",
-   "headline": "2027: Obuebite defends defection to APC, addresses past criticisms",
-   "countries": [
-    "NGA"
-   ],
-   "score": 4.64,
-   "outlets": 1,
-   "camps": 1,
-   "updated": "2026-11-04T16:48:18+00:00",
-   "sources": [
-    {
-     "outlet": "Premium Times",
-     "camp": "africa",
-     "camp_label": "African",
-     "ownership": "Nigerian private",
-     "title": "2027: Obuebite defends defection to APC, addresses past criticisms",
-     "url": "https://www.premiumtimesng.com/news/922723-2027-obuebite-defends-defection-to-apc-addresses-past-criticisms.html",
-     "date": "2026-11-04T16:48:18+00:00"
-    }
-   ],
-   "missing": []
-  },
   "bd59493103": {
    "bodies": [],
    "id": "bd59493103",
@@ -1507,7 +1746,7 @@ window.CC_STORIES = {
    "countries": [
     "PAK"
    ],
-   "score": 4.63,
+   "score": 4.58,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T16:42:52+00:00",
@@ -1524,56 +1763,6 @@ window.CC_STORIES = {
    ],
    "missing": []
   },
-  "11fee7c132": {
-   "bodies": [],
-   "id": "11fee7c132",
-   "headline": "Photos: Iran marks US embassy takeover with rallies against US, Israel",
-   "countries": [
-    "IRN",
-    "USA",
-    "ISR"
-   ],
-   "score": 9.63,
-   "outlets": 2,
-   "camps": 2,
-   "updated": "2026-11-04T16:37:49+00:00",
-   "sources": [
-    {
-     "outlet": "Tehran Times",
-     "camp": "iran-state",
-     "camp_label": "Iranian state",
-     "ownership": "Iranian state-aligned",
-     "title": "Iran's Students’ Day rallies resound with defiance: ‘pledge to martyrs, battle against arrogance’",
-     "url": "https://www.tehrantimes.com/news/531837/Iran-s-students-day-rallies-resound-with-defiance-pledge-to",
-     "date": "2026-11-04T16:15:59+00:00"
-    },
-    {
-     "outlet": "Al Jazeera",
-     "camp": "arab",
-     "camp_label": "Arab / Gulf",
-     "ownership": "Qatari state-funded",
-     "title": "Photos: Iran marks US embassy takeover with rallies against US, Israel",
-     "url": "https://www.aljazeera.com/gallery/2026/11/4/photos-iran-marks-us-embassy-takeover-with-rallies-against-america-israel?traffic_source=rss",
-     "date": "2026-11-04T16:37:49+00:00"
-    }
-   ],
-   "missing": [
-    {
-     "camp": "western",
-     "label": "Western",
-     "search": [
-      {
-       "outlet": "BBC News",
-       "url": "https://duckduckgo.com/?q=site%3Abbc.com%20iran%20rallie%20photo%20mark%20embassy"
-      },
-      {
-       "outlet": "The Guardian",
-       "url": "https://duckduckgo.com/?q=site%3Atheguardian.com%20iran%20rallie%20photo%20mark%20embassy"
-      }
-     ]
-    }
-   ]
-  },
   "3ef6b05f75": {
    "bodies": [],
    "id": "3ef6b05f75",
@@ -1583,7 +1772,7 @@ window.CC_STORIES = {
     "IRN",
     "USA"
    ],
-   "score": 4.63,
+   "score": 4.57,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T16:36:57+00:00",
@@ -1632,7 +1821,7 @@ window.CC_STORIES = {
    "countries": [
     "IND"
    ],
-   "score": 4.62,
+   "score": 4.57,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T16:32:20+00:00",
@@ -1656,7 +1845,7 @@ window.CC_STORIES = {
    "countries": [
     "FRA"
    ],
-   "score": 8.61,
+   "score": 8.56,
    "outlets": 3,
    "camps": 1,
    "updated": "2026-11-04T16:26:15+00:00",
@@ -1679,12 +1868,12 @@ window.CC_STORIES = {
    "headline": "Cyprus: From ties with Russia to a strategic alignment with the US",
    "countries": [
     "RUS",
-    "CHN",
-    "USA"
+    "USA",
+    "CHN"
    ],
-   "score": 24.56,
+   "score": 21.51,
    "outlets": 5,
-   "camps": 5,
+   "camps": 4,
    "updated": "2026-11-04T15:48:01+00:00",
    "sources": [
     {
@@ -1715,22 +1904,42 @@ window.CC_STORIES = {
      "date": "2026-11-04T13:00:09+00:00"
     }
    ],
-   "missing": [
+   "missing": []
+  },
+  "728d6d2876": {
+   "bodies": [],
+   "id": "728d6d2876",
+   "headline": "South Korea, Turkey agree to deepen nuclear energy, defence ties",
+   "countries": [
+    "KOR",
+    "CHE",
+    "POL"
+   ],
+   "score": 9.43,
+   "outlets": 2,
+   "camps": 2,
+   "updated": "2026-11-04T14:53:25+00:00",
+   "sources": [
     {
-     "camp": "china-state",
-     "label": "Chinese state",
-     "search": [
-      {
-       "outlet": "Global Times",
-       "url": "https://duckduckgo.com/?q=site%3Aglobaltimes.cn%20putin%20russia%20meeting%20china%20pose"
-      },
-      {
-       "outlet": "CGTN",
-       "url": "https://duckduckgo.com/?q=site%3Acgtn.com%20putin%20russia%20meeting%20china%20pose"
-      }
-     ]
+     "outlet": "Yonhap",
+     "camp": "asia-pacific",
+     "camp_label": "Asia-Pacific",
+     "ownership": "South Korean state-funded agency",
+     "title": "Diaz takes center stage in Lions' Korean Series win with big hits, error",
+     "url": "https://en.yna.co.kr/view/AEN20261104011700315",
+     "date": "2026-11-04T14:53:25+00:00"
+    },
+    {
+     "outlet": "The Hindu",
+     "camp": "india",
+     "camp_label": "Indian",
+     "ownership": "Indian private",
+     "title": "South Korea, Turkey agree to deepen nuclear energy, defence ties",
+     "url": "https://www.thehindu.com/news/international/south-korea-turkey-agree-to-deepen-nuclear-energy-defence-ties/article71662518.ece",
+     "date": "2026-11-03T17:37:23+00:00"
     }
-   ]
+   ],
+   "missing": []
   },
   "944ee4bc98": {
    "bodies": [],
@@ -1740,7 +1949,7 @@ window.CC_STORIES = {
     "USA",
     "IND"
    ],
-   "score": 4.4,
+   "score": 4.35,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T13:53:31+00:00",
@@ -1781,7 +1990,7 @@ window.CC_STORIES = {
     "DEU",
     "HUN"
    ],
-   "score": 9.37,
+   "score": 9.32,
    "outlets": 2,
    "camps": 2,
    "updated": "2026-11-04T13:34:23+00:00",
@@ -1815,7 +2024,7 @@ window.CC_STORIES = {
     "IND",
     "CHN"
    ],
-   "score": 4.37,
+   "score": 4.31,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T13:30:36+00:00",
@@ -1857,82 +2066,18 @@ window.CC_STORIES = {
     }
    ]
   },
-  "f1d4ccb648": {
-   "bodies": [],
-   "id": "f1d4ccb648",
-   "headline": "Ethiopia orders 6 Sudanese diplomatic officials to leave, closes consulate: Reports",
-   "countries": [
-    "ETH",
-    "SDN"
-   ],
-   "score": 9.34,
-   "outlets": 2,
-   "camps": 2,
-   "updated": "2026-11-04T13:12:58+00:00",
-   "sources": [
-    {
-     "outlet": "Anadolu Agency",
-     "camp": "turkey-state",
-     "camp_label": "Turkish state",
-     "ownership": "Turkish state agency",
-     "title": "Ethiopia orders 6 Sudanese diplomatic officials to leave, closes consulate: Reports",
-     "url": "https://www.aa.com.tr/en/africa/ethiopia-orders-6-sudanese-diplomatic-officials-to-leave-closes-consulate-reports/4111564",
-     "date": "2026-11-04T13:12:58+00:00"
-    },
-    {
-     "outlet": "CGTN",
-     "camp": "china-state",
-     "camp_label": "Chinese state",
-     "ownership": "Chinese state broadcaster",
-     "title": "WHO warns fighting threatens northern Ethiopia's fragile health system",
-     "url": "https://newsaf.cgtn.com/news/2026-11-03/WHO-warns-fighting-threatens-northern-Ethiopia-s-fragile-health-system-1RLLWCVUgOk/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-     "date": "2026-11-03T10:46:04+00:00"
-    }
-   ],
-   "missing": [
-    {
-     "camp": "africa",
-     "label": "African",
-     "search": [
-      {
-       "outlet": "Africanews",
-       "url": "https://duckduckgo.com/?q=site%3Aafricanews.com%20ethiopia%20order%20sudanese%20diplomatic%20official"
-      },
-      {
-       "outlet": "Premium Times",
-       "url": "https://duckduckgo.com/?q=site%3Apremiumtimesng.com%20ethiopia%20order%20sudanese%20diplomatic%20official"
-      }
-     ]
-    },
-    {
-     "camp": "africa",
-     "label": "African",
-     "search": [
-      {
-       "outlet": "Africanews",
-       "url": "https://duckduckgo.com/?q=site%3Aafricanews.com%20ethiopia%20order%20sudanese%20diplomatic%20official"
-      },
-      {
-       "outlet": "Premium Times",
-       "url": "https://duckduckgo.com/?q=site%3Apremiumtimesng.com%20ethiopia%20order%20sudanese%20diplomatic%20official"
-      }
-     ]
-    }
-   ]
-  },
-  "fc62682439": {
+  "cafabc71b0": {
    "bodies": [
     "COP"
    ],
-   "id": "fc62682439",
-   "headline": "World: A just transition must put people and the planet first, Caritas says ahead of COP31",
+   "id": "cafabc71b0",
+   "headline": "Upcoming COP31 summit crucial to turning climate ambitions into global action, ECB chief says",
    "countries": [
-    "ETH",
     "TUR"
    ],
-   "score": 14.34,
-   "outlets": 3,
-   "camps": 3,
+   "score": 4.29,
+   "outlets": 1,
+   "camps": 1,
    "updated": "2026-11-04T13:10:31+00:00",
    "sources": [
     {
@@ -1943,42 +2088,9 @@ window.CC_STORIES = {
      "title": "Upcoming COP31 summit crucial to turning climate ambitions into global action, ECB chief says",
      "url": "https://www.aa.com.tr/en/world/upcoming-cop31-summit-crucial-to-turning-climate-ambitions-into-global-action-ecb-chief-says/4111558",
      "date": "2026-11-04T13:10:31+00:00"
-    },
-    {
-     "outlet": "ReliefWeb",
-     "camp": "multilateral",
-     "camp_label": "UN / multilateral",
-     "ownership": "UN OCHA",
-     "title": "World: A just transition must put people and the planet first, Caritas says ahead of COP31",
-     "url": "https://reliefweb.int/report/world/just-transition-must-put-people-and-planet-first-caritas-says-ahead-cop31",
-     "date": "2026-11-04T12:03:07+00:00"
-    },
-    {
-     "outlet": "France 24",
-     "camp": "western",
-     "camp_label": "Western",
-     "ownership": "French public broadcaster",
-     "title": "Ethiopia expands hydropower ambitions",
-     "url": "https://www.france24.com/en/video/20261104-ethiopia-expands-hydropower-ambitions",
-     "date": "2026-11-04T11:19:36+00:00"
     }
    ],
-   "missing": [
-    {
-     "camp": "africa",
-     "label": "African",
-     "search": [
-      {
-       "outlet": "Africanews",
-       "url": "https://duckduckgo.com/?q=site%3Aafricanews.com%20cop%20climate%20ambition%20ahead%20upcoming"
-      },
-      {
-       "outlet": "Premium Times",
-       "url": "https://duckduckgo.com/?q=site%3Apremiumtimesng.com%20cop%20climate%20ambition%20ahead%20upcoming"
-      }
-     ]
-    }
-   ]
+   "missing": []
   },
   "8d8877ad44": {
    "bodies": [],
@@ -1987,7 +2099,7 @@ window.CC_STORIES = {
    "countries": [
     "PHL"
    ],
-   "score": 4.32,
+   "score": 4.26,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T12:54:44+00:00",
@@ -2013,7 +2125,7 @@ window.CC_STORIES = {
     "RUS",
     "SGP"
    ],
-   "score": 16.31,
+   "score": 16.26,
    "outlets": 4,
    "camps": 3,
    "updated": "2026-11-04T12:52:00+00:00",
@@ -2071,7 +2183,7 @@ window.CC_STORIES = {
     "SGP",
     "IDN"
    ],
-   "score": 4.3,
+   "score": 4.25,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T12:43:32+00:00",
@@ -2096,7 +2208,7 @@ window.CC_STORIES = {
     "USA",
     "DEU"
    ],
-   "score": 4.29,
+   "score": 4.24,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T12:36:03+00:00",
@@ -2142,46 +2254,6 @@ window.CC_STORIES = {
     }
    ]
   },
-  "1cfee06dad": {
-   "bodies": [],
-   "id": "1cfee06dad",
-   "headline": "Mozambique learns from Japan’s expertise in disaster risk reduction",
-   "countries": [
-    "MOZ",
-    "JPN"
-   ],
-   "score": 4.29,
-   "outlets": 1,
-   "camps": 1,
-   "updated": "2026-11-04T12:33:10+00:00",
-   "sources": [
-    {
-     "outlet": "ReliefWeb",
-     "camp": "multilateral",
-     "camp_label": "UN / multilateral",
-     "ownership": "UN OCHA",
-     "title": "Mozambique learns from Japan’s expertise in disaster risk reduction",
-     "url": "https://reliefweb.int/report/mozambique/mozambique-learns-japans-expertise-disaster-risk-reduction",
-     "date": "2026-11-04T12:33:10+00:00"
-    }
-   ],
-   "missing": [
-    {
-     "camp": "asia-pacific",
-     "label": "Asia-Pacific",
-     "search": [
-      {
-       "outlet": "South China Morning Post",
-       "url": "https://duckduckgo.com/?q=site%3Ascmp.com%20mozambique%20learn%20japan%20expertise%20disaster"
-      },
-      {
-       "outlet": "Japan Times",
-       "url": "https://duckduckgo.com/?q=site%3Ajapantimes.co.jp%20mozambique%20learn%20japan%20expertise%20disaster"
-      }
-     ]
-    }
-   ]
-  },
   "21c874cf14": {
    "bodies": [],
    "id": "21c874cf14",
@@ -2189,7 +2261,7 @@ window.CC_STORIES = {
    "countries": [
     "GBR"
    ],
-   "score": 9.28,
+   "score": 9.22,
    "outlets": 2,
    "camps": 2,
    "updated": "2026-11-04T12:26:05+00:00",
@@ -2230,66 +2302,6 @@ window.CC_STORIES = {
     }
    ]
   },
-  "68325fcc5d": {
-   "bodies": [],
-   "id": "68325fcc5d",
-   "headline": "Somalia | Simplified Early Action Protocol Cholera (EAP №: sEAP2025SO02, Operation №: MDRSO023), 17 October 2026",
-   "countries": [
-    "SOM",
-    "IND",
-    "IRN"
-   ],
-   "score": 9.27,
-   "outlets": 2,
-   "camps": 2,
-   "updated": "2026-11-04T12:23:21+00:00",
-   "sources": [
-    {
-     "outlet": "ReliefWeb",
-     "camp": "multilateral",
-     "camp_label": "UN / multilateral",
-     "ownership": "UN OCHA",
-     "title": "Somalia | Simplified Early Action Protocol Cholera (EAP №: sEAP2025SO02, Operation №: MDRSO023), 17 October 2026",
-     "url": "https://reliefweb.int/report/somalia/somalia-simplified-early-action-protocol-cholera-eap-no-seap2025so02-operation-no-mdrso023-17-october-2026",
-     "date": "2026-11-04T12:23:21+00:00"
-    },
-    {
-     "outlet": "NPR",
-     "camp": "western",
-     "camp_label": "Western",
-     "ownership": "US public radio",
-     "title": "Indian navy rescues 20 crew from Iranian fishing boat hijacked off Somalia",
-     "url": "https://www.npr.org/2026/11/03/g-s1-151468/indian-navy-rescues-20-crew-from-iranian-fishing-boat-hijacked-off-somalia",
-     "date": "2026-11-03T14:13:58+00:00"
-    }
-   ],
-   "missing": [
-    {
-     "camp": "africa",
-     "label": "African",
-     "search": [
-      {
-       "outlet": "Africanews",
-       "url": "https://duckduckgo.com/?q=site%3Aafricanews.com%20somalia%20october%20logistic%20cluster%20sub-national"
-      },
-      {
-       "outlet": "Premium Times",
-       "url": "https://duckduckgo.com/?q=site%3Apremiumtimesng.com%20somalia%20october%20logistic%20cluster%20sub-national"
-      }
-     ]
-    },
-    {
-     "camp": "india",
-     "label": "Indian",
-     "search": [
-      {
-       "outlet": "The Hindu",
-       "url": "https://duckduckgo.com/?q=site%3Athehindu.com%20somalia%20october%20logistic%20cluster%20sub-national"
-      }
-     ]
-    }
-   ]
-  },
   "1b9cb43e45": {
    "bodies": [],
    "id": "1b9cb43e45",
@@ -2299,7 +2311,7 @@ window.CC_STORIES = {
     "GBR",
     "SLE"
    ],
-   "score": 9.26,
+   "score": 9.21,
    "outlets": 2,
    "camps": 2,
    "updated": "2026-11-04T12:12:39+00:00",
@@ -2340,40 +2352,6 @@ window.CC_STORIES = {
     }
    ]
   },
-  "309eed7e7e": {
-   "bodies": [],
-   "id": "309eed7e7e",
-   "headline": "Hong Kong’s No 2 official credits government for success in university rankings",
-   "countries": [
-    "HKG",
-    "CHN"
-   ],
-   "score": 9.24,
-   "outlets": 2,
-   "camps": 2,
-   "updated": "2026-11-04T12:00:37+00:00",
-   "sources": [
-    {
-     "outlet": "CGTN",
-     "camp": "china-state",
-     "camp_label": "Chinese state",
-     "ownership": "Chinese state broadcaster",
-     "title": "Foreign leaders to attend China International Import Expo in Shanghai",
-     "url": "https://news.cgtn.com/news/2026-11-03/Foreign-leaders-to-attend-China-International-Import-Expo-in-Shanghai-1RLQKxMRzwY/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
-     "date": "2026-11-03T09:13:03+00:00"
-    },
-    {
-     "outlet": "South China Morning Post",
-     "camp": "asia-pacific",
-     "camp_label": "Asia-Pacific",
-     "ownership": "Hong Kong private (Alibaba)",
-     "title": "Hong Kong’s No 2 official credits government for success in university rankings",
-     "url": "https://www.scmp.com/news/hong-kong/education/article/3373290/hong-kongs-no-2-official-credits-government-success-university-rankings",
-     "date": "2026-11-04T12:00:37+00:00"
-    }
-   ],
-   "missing": []
-  },
   "a029684f68": {
    "bodies": [],
    "id": "a029684f68",
@@ -2382,7 +2360,7 @@ window.CC_STORIES = {
     "TUR",
     "RUS"
    ],
-   "score": 4.24,
+   "score": 4.18,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T11:55:27+00:00",
@@ -2432,7 +2410,7 @@ window.CC_STORIES = {
     "CHN",
     "THA"
    ],
-   "score": 4.24,
+   "score": 4.18,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T11:55:09+00:00",
@@ -2471,7 +2449,7 @@ window.CC_STORIES = {
    "countries": [
     "FRA"
    ],
-   "score": 4.2,
+   "score": 4.15,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T11:28:51+00:00",
@@ -2503,6 +2481,31 @@ window.CC_STORIES = {
     }
    ]
   },
+  "fabb9fdbd0": {
+   "bodies": [],
+   "id": "fabb9fdbd0",
+   "headline": "Jaishankar highlights importance of digital public infrastructure at Commonwealth meet in Antigua and Barbuda",
+   "countries": [
+    "ATG",
+    "IND"
+   ],
+   "score": 4.14,
+   "outlets": 1,
+   "camps": 1,
+   "updated": "2026-11-04T11:27:56+00:00",
+   "sources": [
+    {
+     "outlet": "The Hindu",
+     "camp": "india",
+     "camp_label": "Indian",
+     "ownership": "Indian private",
+     "title": "Jaishankar highlights importance of digital public infrastructure at Commonwealth meet in Antigua and Barbuda",
+     "url": "https://www.thehindu.com/news/international/jaishankar-highlights-importance-of-digital-public-infrastructure-at-commonwealth-meet-in-antigua-and-barbuda/article71665005.ece",
+     "date": "2026-11-04T11:27:56+00:00"
+    }
+   ],
+   "missing": []
+  },
   "de8d2cee63": {
    "bodies": [],
    "id": "de8d2cee63",
@@ -2510,7 +2513,7 @@ window.CC_STORIES = {
    "countries": [
     "JPN"
    ],
-   "score": 4.16,
+   "score": 4.11,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T11:04:00+00:00",
@@ -2527,30 +2530,6 @@ window.CC_STORIES = {
    ],
    "missing": []
   },
-  "7f6ef76eb0": {
-   "bodies": [
-    "COP"
-   ],
-   "id": "7f6ef76eb0",
-   "headline": "World: COP31 : l’IFRC appelle à des investissements urgents pour protéger les populations les plus vulnérables du monde",
-   "countries": [],
-   "score": 4.16,
-   "outlets": 1,
-   "camps": 1,
-   "updated": "2026-11-04T11:03:50+00:00",
-   "sources": [
-    {
-     "outlet": "ReliefWeb",
-     "camp": "multilateral",
-     "camp_label": "UN / multilateral",
-     "ownership": "UN OCHA",
-     "title": "World: COP31 : l’IFRC appelle à des investissements urgents pour protéger les populations les plus vulnérables du monde",
-     "url": "https://reliefweb.int/report/world/cop31-lifrc-appelle-des-investissements-urgents-pour-proteger-les-populations-les-plus-vulnerables-du-monde",
-     "date": "2026-11-04T11:03:50+00:00"
-    }
-   ],
-   "missing": []
-  },
   "e95f3e26fb": {
    "bodies": [],
    "id": "e95f3e26fb",
@@ -2559,7 +2538,7 @@ window.CC_STORIES = {
     "KEN",
     "DEU"
    ],
-   "score": 4.15,
+   "score": 4.1,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T10:53:00+00:00",
@@ -2599,7 +2578,7 @@ window.CC_STORIES = {
     "IND",
     "BGD"
    ],
-   "score": 4.06,
+   "score": 4.01,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T09:50:16+00:00",
@@ -2623,7 +2602,7 @@ window.CC_STORIES = {
    "countries": [
     "JPN"
    ],
-   "score": 4.04,
+   "score": 3.99,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T09:38:00+00:00",
@@ -2640,29 +2619,20 @@ window.CC_STORIES = {
    ],
    "missing": []
   },
-  "c65b060d81": {
+  "1f4d64cf22": {
    "bodies": [],
-   "id": "c65b060d81",
-   "headline": "The Pope arrives in an Argentina where bishops are among Milei’s firmest critics",
+   "id": "1f4d64cf22",
+   "headline": "‘I trusted Argentina, but it deceived me’: Tougher immigration rules and soaring costs are making Russian émigrés rethink their new lives in South America",
    "countries": [
     "ARG",
     "RUS",
     "USA"
    ],
-   "score": 9.01,
-   "outlets": 2,
-   "camps": 2,
+   "score": 3.95,
+   "outlets": 1,
+   "camps": 1,
    "updated": "2026-11-04T09:11:50+00:00",
    "sources": [
-    {
-     "outlet": "MercoPress",
-     "camp": "latam",
-     "camp_label": "Latin American",
-     "ownership": "Uruguay-based private",
-     "title": "The Pope arrives in an Argentina where bishops are among Milei’s firmest critics",
-     "url": "https://en.mercopress.com/2026/11/03/the-pope-arrives-in-an-argentina-where-bishops-are-among-milei-s-firmest-critics?utm_source=feed&utm_medium=rss&utm_content=main&utm_campaign=rss",
-     "date": "2026-11-03T09:29:00+00:00"
-    },
     {
      "outlet": "Meduza",
      "camp": "russia-independent",
@@ -2675,16 +2645,26 @@ window.CC_STORIES = {
    ],
    "missing": [
     {
+     "camp": "latam",
+     "label": "Latin American",
+     "search": [
+      {
+       "outlet": "MercoPress",
+       "url": "https://duckduckgo.com/?q=site%3Amercopress.com%20trusted%20argentina%20deceived%20tougher%20immigration"
+      }
+     ]
+    },
+    {
      "camp": "russia-state",
      "label": "Russian state",
      "search": [
       {
        "outlet": "RT",
-       "url": "https://duckduckgo.com/?q=site%3Art.com%20argentina%20trusted%20deceived%20tougher%20immigration"
+       "url": "https://duckduckgo.com/?q=site%3Art.com%20trusted%20argentina%20deceived%20tougher%20immigration"
       },
       {
        "outlet": "TASS",
-       "url": "https://duckduckgo.com/?q=site%3Atass.com%20argentina%20trusted%20deceived%20tougher%20immigration"
+       "url": "https://duckduckgo.com/?q=site%3Atass.com%20trusted%20argentina%20deceived%20tougher%20immigration"
       }
      ]
     }
@@ -2698,7 +2678,7 @@ window.CC_STORIES = {
     "CAN",
     "DEU"
    ],
-   "score": 3.99,
+   "score": 3.94,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T09:00:00+00:00",
@@ -2723,7 +2703,7 @@ window.CC_STORIES = {
     "GBR",
     "AUS"
    ],
-   "score": 3.97,
+   "score": 3.92,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T08:43:50+00:00",
@@ -2769,6 +2749,46 @@ window.CC_STORIES = {
     }
    ]
   },
+  "16cc034625": {
+   "bodies": [],
+   "id": "16cc034625",
+   "headline": "Talk of Germany joining GCAP fighter program grows, but Japanese concerns persist",
+   "countries": [
+    "JPN",
+    "DEU"
+   ],
+   "score": 3.9,
+   "outlets": 1,
+   "camps": 1,
+   "updated": "2026-11-04T08:35:00+00:00",
+   "sources": [
+    {
+     "outlet": "Japan Times",
+     "camp": "asia-pacific",
+     "camp_label": "Asia-Pacific",
+     "ownership": "Japanese private",
+     "title": "Talk of Germany joining GCAP fighter program grows, but Japanese concerns persist",
+     "url": "https://www.japantimes.co.jp/news/2026/11/04/japan/germany-japan-gcap-fighter-jet/",
+     "date": "2026-11-04T08:35:00+00:00"
+    }
+   ],
+   "missing": [
+    {
+     "camp": "western",
+     "label": "Western",
+     "search": [
+      {
+       "outlet": "BBC News",
+       "url": "https://duckduckgo.com/?q=site%3Abbc.com%20talk%20germany%20joining%20gcap%20fighter"
+      },
+      {
+       "outlet": "The Guardian",
+       "url": "https://duckduckgo.com/?q=site%3Atheguardian.com%20talk%20germany%20joining%20gcap%20fighter"
+      }
+     ]
+    }
+   ]
+  },
   "66a6b6965c": {
    "bodies": [],
    "id": "66a6b6965c",
@@ -2778,7 +2798,7 @@ window.CC_STORIES = {
     "USA",
     "IRN"
    ],
-   "score": 8.95,
+   "score": 8.9,
    "outlets": 2,
    "camps": 2,
    "updated": "2026-11-04T08:30:07+00:00",
@@ -2828,7 +2848,7 @@ window.CC_STORIES = {
     "CHN",
     "PHL"
    ],
-   "score": 3.95,
+   "score": 3.89,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T08:26:37+00:00",
@@ -2868,7 +2888,7 @@ window.CC_STORIES = {
     "AUS",
     "CHL"
    ],
-   "score": 3.9,
+   "score": 3.85,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T07:54:05+00:00",
@@ -2917,7 +2937,7 @@ window.CC_STORIES = {
    "countries": [
     "ESP"
    ],
-   "score": 8.89,
+   "score": 8.83,
    "outlets": 2,
    "camps": 2,
    "updated": "2026-11-04T07:44:00+00:00",
@@ -2958,39 +2978,6 @@ window.CC_STORIES = {
     }
    ]
   },
-  "1506ae0fec": {
-   "bodies": [],
-   "id": "1506ae0fec",
-   "headline": "Nasa's Swift satellite telescope heads for fiery re-entry 22 years after launch",
-   "countries": [
-    "KOR"
-   ],
-   "score": 8.87,
-   "outlets": 2,
-   "camps": 2,
-   "updated": "2026-11-04T07:34:07+00:00",
-   "sources": [
-    {
-     "outlet": "Yonhap",
-     "camp": "asia-pacific",
-     "camp_label": "Asia-Pacific",
-     "ownership": "South Korean state-funded agency",
-     "title": "S. Korea will not be affected by NASA's Swift telescope crashing back to earth: KASA",
-     "url": "https://en.yna.co.kr/view/AEN20261104008500320",
-     "date": "2026-11-04T07:34:07+00:00"
-    },
-    {
-     "outlet": "Dawn",
-     "camp": "pakistan",
-     "camp_label": "Pakistani",
-     "ownership": "Pakistani private",
-     "title": "Nasa's Swift satellite telescope heads for fiery re-entry 22 years after launch",
-     "url": "https://www.dawn.com/news/2042049/nasas-swift-satellite-telescope-heads-for-fiery-re-entry-22-years-after-launch",
-     "date": "2026-11-04T06:12:43+00:00"
-    }
-   ],
-   "missing": []
-  },
   "d6f651b723": {
    "bodies": [],
    "id": "d6f651b723",
@@ -2998,7 +2985,7 @@ window.CC_STORIES = {
    "countries": [
     "IDN"
    ],
-   "score": 3.78,
+   "score": 3.72,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T06:24:05+00:00",
@@ -3022,7 +3009,7 @@ window.CC_STORIES = {
    "countries": [
     "FRA"
    ],
-   "score": 3.51,
+   "score": 3.46,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T03:16:00+00:00",
@@ -3063,7 +3050,7 @@ window.CC_STORIES = {
     "MEX",
     "JPN"
    ],
-   "score": 3.5,
+   "score": 3.44,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T03:04:00+00:00",
@@ -3110,7 +3097,7 @@ window.CC_STORIES = {
     "GBR",
     "ESP"
    ],
-   "score": 18.36,
+   "score": 18.31,
    "outlets": 4,
    "camps": 4,
    "updated": "2026-11-04T01:24:00+00:00",
@@ -3152,7 +3139,7 @@ window.CC_STORIES = {
    "countries": [
     "FRA"
    ],
-   "score": 3.33,
+   "score": 3.28,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-04T01:03:44+00:00",
@@ -3193,7 +3180,7 @@ window.CC_STORIES = {
     "RUS",
     "DEU"
    ],
-   "score": 3.02,
+   "score": 2.96,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-03T21:18:30+00:00",
@@ -3243,7 +3230,7 @@ window.CC_STORIES = {
     "BRA",
     "ARG"
    ],
-   "score": 2.93,
+   "score": 2.88,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-03T20:16:00+00:00",
@@ -3267,7 +3254,7 @@ window.CC_STORIES = {
    "countries": [
     "EGY"
    ],
-   "score": 2.56,
+   "score": 2.5,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-03T15:46:30+00:00",
@@ -3308,7 +3295,7 @@ window.CC_STORIES = {
     "MMR",
     "PHL"
    ],
-   "score": 2.52,
+   "score": 2.46,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-03T15:17:19+00:00",
@@ -3332,7 +3319,7 @@ window.CC_STORIES = {
    "countries": [
     "BRA"
    ],
-   "score": 2.33,
+   "score": 2.27,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-03T13:00:07+00:00",
@@ -3367,7 +3354,7 @@ window.CC_STORIES = {
    "countries": [
     "ETH"
    ],
-   "score": 2.23,
+   "score": 2.18,
    "outlets": 1,
    "camps": 1,
    "updated": "2026-11-03T11:52:59+00:00",
@@ -3434,7 +3421,7 @@ window.CC_STORIES = {
   {
    "outlet": "TASS",
    "ok": true,
-   "items": 57
+   "items": 59
   },
   {
    "outlet": "Meduza",
@@ -3449,7 +3436,7 @@ window.CC_STORIES = {
   {
    "outlet": "CGTN",
    "ok": true,
-   "items": 21
+   "items": 19
   },
   {
    "outlet": "South China Morning Post",
@@ -3468,8 +3455,8 @@ window.CC_STORIES = {
   },
   {
    "outlet": "Times of Israel",
-   "ok": true,
-   "items": 15
+   "ok": false,
+   "error": "HTTP Error 403: Forbidden"
   },
   {
    "outlet": "Al Jazeera",
@@ -3478,8 +3465,8 @@ window.CC_STORIES = {
   },
   {
    "outlet": "Middle East Eye",
-   "ok": true,
-   "items": 20
+   "ok": false,
+   "error": "not well-formed (invalid token): line 1, column 0"
   },
   {
    "outlet": "Arab News",
@@ -3494,7 +3481,7 @@ window.CC_STORIES = {
   {
    "outlet": "Anadolu Agency",
    "ok": true,
-   "items": 21
+   "items": 22
   },
   {
    "outlet": "The Hindu",
@@ -3509,7 +3496,7 @@ window.CC_STORIES = {
   {
    "outlet": "Africanews",
    "ok": true,
-   "items": 44
+   "items": 42
   },
   {
    "outlet": "Premium Times",
@@ -3519,17 +3506,17 @@ window.CC_STORIES = {
   {
    "outlet": "MercoPress",
    "ok": true,
-   "items": 8
+   "items": 6
   },
   {
    "outlet": "UN News",
-   "ok": false,
-   "error": "not well-formed (invalid token): line 1, column 0"
+   "ok": true,
+   "items": 8
   },
   {
    "outlet": "ReliefWeb",
-   "ok": true,
-   "items": 20
+   "ok": false,
+   "error": "no element found: line 1, column 0"
   }
  ],
  "note": "Headlines and links only; each story lists up to 3 outlets from different camps."

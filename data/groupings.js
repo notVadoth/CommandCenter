@@ -1,6 +1,6 @@
 // written by trawler.py — loaded automatically by commandcenter-map.html
 window.TRAWLER_GROUPINGS = {
- "generated": "2026-11-04T21:05:38.385199+00:00",
+ "generated": "2026-11-04T21:44:07.366179+00:00",
  "extractor": "rules",
  "verification": {
   "wikidata": true,
@@ -13,7 +13,7 @@ window.TRAWLER_GROUPINGS = {
    "conflict": "Wikidata contradicts the claim — review"
   }
  },
- "articles_in_store": 173,
+ "articles_in_store": 186,
  "blocs": {
   "EU": {
    "name": "European Union",
@@ -49,6 +49,7 @@ window.TRAWLER_GROUPINGS = {
    ],
    "partners": [],
    "applicants": [
+    "HRV",
     "SRB"
    ],
    "note": null,
@@ -56,18 +57,13 @@ window.TRAWLER_GROUPINGS = {
     "qid": "Q458",
     "label": null
    },
-   "baseline_audit": {
-    "in_wikidata_not_baseline": [],
-    "in_baseline_not_wikidata": [
-     "NLD"
-    ]
-   },
+   "baseline_audit": null,
    "changes": [
     {
      "country": "HRV",
      "action": "applied",
-     "status": "conflict",
-     "wikidata": "disagrees",
+     "status": "single-source",
+     "wikidata": "unknown",
      "independent_outlets": 1,
      "evidence": [
       {
@@ -234,13 +230,7 @@ window.TRAWLER_GROUPINGS = {
     "qid": "Q7184",
     "label": null
    },
-   "baseline_audit": {
-    "in_wikidata_not_baseline": [],
-    "in_baseline_not_wikidata": [
-     "DNK",
-     "NLD"
-    ]
-   },
+   "baseline_audit": null,
    "changes": [
     {
      "country": "CYP",
@@ -661,8 +651,8 @@ window.TRAWLER_GROUPINGS = {
    "group": "European Union",
    "country": "HRV",
    "action": "applied",
-   "status": "conflict",
-   "wikidata": "disagrees",
+   "status": "single-source",
+   "wikidata": "unknown",
    "independent_outlets": 1,
    "evidence": [
     {
