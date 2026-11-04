@@ -80,10 +80,22 @@
   #news .nh{display:flex;align-items:center;justify-content:space-between}
   #news h2{margin:0;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
   #news .nh button,#news-open{background:none;border:1px solid var(--line);color:var(--muted);border-radius:5px;cursor:pointer;font:inherit;padding:1px 7px}
-  #news-open{flex:none;width:30px;background:var(--panel);color:var(--text);display:none;border:0 !important;border-left:1px solid var(--line) !important;border-radius:0 !important;
-             writing-mode:vertical-rl;padding:10px 0 !important;letter-spacing:.04em;font-size:12px;text-align:left}
-  #news-open:hover{background:#1d2330}
+  /* collapsed panels leave a thin strip you click to reopen */
+  .vstrip{flex:none;width:30px;background:var(--panel);color:var(--text);display:none;border:0 !important;border-radius:0 !important;cursor:pointer;
+          writing-mode:vertical-rl;padding:10px 0 !important;letter-spacing:.04em;font:inherit;font-size:12px;text-align:left}
+  .vstrip:hover{background:#1d2330}
+  #news-open{border-left:1px solid var(--line) !important} #side-open{border-right:1px solid var(--line) !important}
+  .pbtn{position:absolute;right:10px;top:12px;background:none;border:1px solid var(--line);color:var(--muted);border-radius:5px;cursor:pointer;font:inherit;padding:1px 7px}
   #app.news-hidden #news{display:none} #app.news-hidden #news-open{display:block}
+  #app.side-hidden #side{display:none} #app.side-hidden #side-open{display:block}
+  /* phones and narrow windows: panels float over the map instead of squeezing it, one at a time */
+  @media (max-width:760px){
+    #side,#news,#drawer.open:not(.collapsed){position:absolute;top:0;bottom:0;width:min(340px,88vw);max-width:none;box-shadow:0 0 24px rgba(0,0,0,.5)}
+    #side,#news{z-index:1200} #side{left:0} #news{right:0} #drawer.open:not(.collapsed){right:0;z-index:1210}   /* above Leaflet's controls (1000) */
+    #mkt{min-height:170px}
+    #status{max-width:55vw;font-size:10px;bottom:28px}
+    .pbtn,#news .nh button,#drawer .dmin{padding:4px 10px} #drawer .x{font-size:24px}
+  }
   #news .seg{display:flex;gap:4px;margin-top:6px} #news .seg button{flex:1;background:#0e1219;border:1px solid var(--line);color:var(--muted);border-radius:5px;padding:3px;cursor:pointer;font:inherit;font-size:11px}
   #news .seg button.on{color:var(--text);border-color:var(--accent)}
   #news-list{overflow-y:auto;flex:1;padding:4px 0 16px}
@@ -121,7 +133,8 @@
 <body>
 <div id="app">
   <aside id="side">
-    <header>
+    <header style="position:relative">
+      <button id="side-collapse" class="pbtn" title="Hide layers panel" aria-label="Hide layers panel">«</button>
       <h1>Command<span>Center</span></h1>
       <div class="sub">Physical world map · admin boundaries · blocs</div>
     </header>
@@ -178,6 +191,7 @@
       </section>
     </div>
   </aside>
+  <button id="side-open" class="vstrip" title="Show layers panel">Layers »</button>
   <div id="map"></div>
   <aside id="drawer" aria-label="Country details"></aside>
   <aside id="news" aria-label="Headlines">
@@ -202,7 +216,7 @@
     </section>
     <div id="news-list"></div>
   </aside>
-  <button id="news-open" title="Show headlines">« Headlines</button>
+  <button id="news-open" class="vstrip" title="Show headlines">« Headlines</button>
 </div>
 <div id="hover"></div>
 <div id="status">Loading countries…</div>
@@ -265,6 +279,14 @@ const BASEMAPS = {
 /* =========================================================================
    MAP SETUP
    ========================================================================= */
+// Panels: phones start with both side panels collapsed; on wider screens the last layout is remembered
+const NARROW = matchMedia("(max-width:760px)");
+(function(){
+  const app = document.getElementById("app");
+  let saved = null; try { saved = JSON.parse(localStorage.getItem("cc_panels")||"null"); } catch(e){}
+  const side = NARROW.matches ? true : !!saved?.side, news = NARROW.matches ? true : !!saved?.news;
+  app.classList.toggle("side-hidden", side); app.classList.toggle("news-hidden", news);
+})();
 const map = L.map("map",{worldCopyJump:true, minZoom:2, maxZoom:14, zoomSnap:0.5}).setView([25,10],2.5);
 const PANES = {blocs:405, adm2:420, adm1:430, adm0:440, occ:442, disp:443, ctrl:446, dmz:448, sel:450, labels:460};
 const R = {};
@@ -903,10 +925,15 @@ map.on("mousemove", e=>{
 map.on("mouseout", ()=> hoverEl.style.display="none");
 map.on("click", e=>{
   const h = hitAt(e.latlng);
-  if (!h.country && !h.adm1 && !h.control?.length && !h.occupied?.length && !h.dmz?.length){ closeDrawer(); return; }
+  if (!h.country && !h.adm1 && !h.control?.length && !h.occupied?.length && !h.dmz?.length){
+    closeDrawer();
+    if (NARROW.matches && !(appEl.classList.contains("side-hidden") && appEl.classList.contains("news-hidden"))){ appEl.classList.add("side-hidden","news-hidden"); mapResized(); }
+    return;
+  }
   drawerHit = h; renderDrawer(h);
   const wasOpen = drawerEl.classList.contains("open") && !drawerEl.classList.contains("collapsed");
   drawerEl.classList.add("open"); drawerEl.classList.remove("collapsed");
+  if (NARROW.matches){ appEl.classList.add("side-hidden"); appEl.classList.add("news-hidden"); }
   if (!wasOpen) mapResized(e.latlng);      // the map narrows; keep the clicked spot in view
   hoverEl.style.display="none";
   if (h.country){ loadSeries(h.country); loadLegislature(h.country); }
@@ -1206,8 +1233,20 @@ newsEl.addEventListener("mouseleave", ()=>newsHL.clearLayers());
 document.getElementById("nv-view").onclick = ()=>{ newsMode="view"; document.getElementById("nv-view").classList.add("on"); document.getElementById("nv-all").classList.remove("on"); renderNews(); };
 document.getElementById("nv-all").onclick  = ()=>{ newsMode="all";  document.getElementById("nv-all").classList.add("on");  document.getElementById("nv-view").classList.remove("on"); renderNews(); };
 const appEl = document.getElementById("app");
-document.getElementById("news-collapse").onclick = ()=>{ appEl.classList.add("news-hidden"); mapResized(); };
-document.getElementById("news-open").onclick = ()=>{ appEl.classList.remove("news-hidden"); mapResized(); };
+function setPanel(which, show){
+  appEl.classList.toggle(which + "-hidden", !show);
+  if (show && NARROW.matches){          // on a phone only one panel at a time
+    appEl.classList.toggle(which === "side" ? "news-hidden" : "side-hidden", true);
+    if (drawerEl.classList.contains("open")) drawerEl.classList.add("collapsed");
+  }
+  if (!NARROW.matches) try { localStorage.setItem("cc_panels", JSON.stringify({side: appEl.classList.contains("side-hidden"), news: appEl.classList.contains("news-hidden")})); } catch(e){}
+  mapResized();
+  if (which === "news" && show) renderNews();
+}
+document.getElementById("news-collapse").onclick = ()=>setPanel("news", false);
+document.getElementById("news-open").onclick     = ()=>setPanel("news", true);
+document.getElementById("side-collapse").onclick = ()=>setPanel("side", false);
+document.getElementById("side-open").onclick     = ()=>setPanel("side", true);
 let nrt; map.on("moveend", ()=>{ clearTimeout(nrt); nrt=setTimeout(()=>{ if (countries.length) renderNews(); }, 200); });
 
 /* =========================================================================
