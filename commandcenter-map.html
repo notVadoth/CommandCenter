@@ -1073,8 +1073,12 @@ function parseGroups(td, seatsText){
     const color = ((sw.getAttribute("style")||"").match(/background(?:-color)?\s*:\s*([^;]+)/i)||[])[1]?.trim() || "#888";
     const block = sw.closest("dd, li");   // a row whose own block holds further swatches is an alliance/aggregate of the rows inside it
     const nested = !!block && block.querySelectorAll(":scope dl .legend-color, :scope ul .legend-color, :scope ol .legend-color").length > 0;
+    // ...and so is a row whose line is followed straight away by a list of parties (e.g. "INDIA (64)" then INC, AITC, …)
+    const line = sw.closest("p, dd, li"), after = line && line.nextElementSibling;
+    const header = !!after && /^(UL|OL|DL)$/.test(after.tagName) && !!after.querySelector(".legend-color");
+    let depth = 0; for (let a = sw.parentElement; a && a !== td; a = a.parentElement) if (/^(UL|OL|DL)$/.test(a.tagName)) depth++;
     const name = m[1].trim();
-    items.push({name, n:+m[2].replace(/,/g,""), color, href: /^vacan/i.test(name) ? null : href, section, role: sectionRole(section), drop:nested});
+    items.push({name, n:+m[2].replace(/,/g,""), color, href: /^vacan/i.test(name) ? null : href, section, role: sectionRole(section), drop:nested||header, depth});
   }
   if (!items.length){   // no swatches: plain "Party (123)" lines
     for (const m of td.textContent.matchAll(/([^\n()]{2,60}?)\s*\(\s*([\d,]+)\s*\)/g)) items.push({name:m[1].trim(), n:+m[2].replace(/,/g,""), color:"#888"});
@@ -1083,7 +1087,8 @@ function parseGroups(td, seatsText){
   // infoboxes sometimes list the same seats several ways (by faction, by coalition…): keep the first full breakdown
   const total = +(String(seatsText||"").match(/\d[\d,]*/)?.[0]||"0").replace(/,/g,"");
   if (total && out.reduce((a,g)=>a+g.n,0) > total){   // over-counted: drop alliance rows equal to the sum of the rows right after them (e.g. NDA = BJP + TDP + …)
-    for (let i=0;i<out.length;i++){ let sum=0; for (let k=i+1;k<out.length && sum<out[i].n;k++){ sum+=out[k].n; if (sum===out[i].n && k>i+1){ out[i].agg=true; break; } } }
+    // only when the rows it adds up are nested under it: same-level rows that happen to sum up (TDP 4 = SHS 2 + AGP 1 + JSP 1) are real parties
+    for (let i=0;i<out.length;i++){ let sum=0; for (let k=i+1;k<out.length && sum<out[i].n && out[k].depth>out[i].depth;k++){ sum+=out[k].n; if (sum===out[i].n && k>i+1){ out[i].agg=true; break; } } }
     out = out.filter(x=>!x.agg);
   }
   if (total){ let run=0, cut=out.length; for (let i=0;i<out.length;i++){ run+=out[i].n; if (run>=total){ cut=i+1; break; } } out = out.slice(0,cut); }
