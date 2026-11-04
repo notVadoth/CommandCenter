@@ -176,7 +176,7 @@
         <div id="blocs"></div>
         <div class="bl-actions"><a id="bl-none">Clear all</a><a id="trawl-btn" onclick="document.getElementById('trawl-file').click()">Load groupings.json…</a></div>
         <input type="file" id="trawl-file" accept=".json" hidden>
-        <div class="small" id="trawl-meta" style="margin-top:4px">Solid fill = member · dashed = pending / unverified</div>
+        <div class="small" id="trawl-meta" style="margin-top:4px">Solid fill = member · dashed = joining/applying, reported by 2+ independent outlets</div>
       </section>
 
       <section id="info">
@@ -521,8 +521,13 @@ function loadTrawlerOutput(data){
   const G = {}; EVIDENCE = {};
   const note = (iso, rec) => (EVIDENCE[iso] ||= []).push(rec);
   for (const [k,b] of Object.entries(data.blocs||{})){
-    const pending = new Set([...(b.applicants||[]),
-      ...(b.changes||[]).filter(c=>c.action==="joined" && c.status!=="confirmed" && c.status!=="conflict").map(c=>c.country)]);
+    // dashed "pending" outline only for claims backed by 2+ independent outlets; single-outlet and hedged
+    // ("could join", "supporters of…") claims stay in the review list and never colour the map
+    const members = new Set(b.members);
+    const solid = c => c.status==="confirmed" || c.status==="corroborated";
+    const pending = new Set([...(b.changes||[]).filter(c=>(c.action==="joined"||c.action==="applied") && solid(c) && c.status!=="confirmed").map(c=>c.country),
+                             ...(b.changes||[]).filter(c=>c.action==="applied" && c.status==="confirmed").map(c=>c.country)]
+                            .filter(c=>!members.has(c)));
     G[k] = {name:b.name, color:b.color, members:b.members.join(" "), note:b.note, pending};
     if (b.partners?.length) G[k+"_P"] = {name:b.name.replace(/\s*\(.*\)/,"")+" partners", color:"#f08c00", members:b.partners.join(" ")};
     for (const c of b.changes||[]) note(c.country, {group:b.name, action:c.action, status:c.status, evidence:c.evidence});
@@ -539,7 +544,7 @@ function loadTrawlerOutput(data){
   buildBlocUI(countriesFC);
   const ageH = (Date.now() - new Date(data.generated)) / 36e5;
   const meta = document.getElementById("trawl-meta");
-  meta.innerHTML = `Trawler run ${esc(new Date(data.generated).toLocaleString())} · ${data.articles_in_store} articles · ${(data.review||[]).length} to review`
+  meta.innerHTML = `Trawler run ${esc(new Date(data.generated).toLocaleString())} · ${data.articles_in_store} articles · ${(data.review||[]).length} to review<br>Solid fill = member · dashed = joining/applying, reported by 2+ independent outlets`
     + (ageH > 36 ? ` <span style="color:#ff922b">· ${Math.round(ageH/24)} day(s) old: check the daily task</span>` : "");
 }
 document.getElementById("trawl-file").onchange = e=>{

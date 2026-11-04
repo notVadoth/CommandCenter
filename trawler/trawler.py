@@ -480,6 +480,9 @@ def run(args):
             # drop no-op claims (e.g. "NATO member Poland joined talks") that only restate baseline
             if act == "joined" and in_baseline and not hedged_only:
                 continue
+            # "applied" for a country that is already a member is a misread (e.g. a mention of Croatia's 2011 talks)
+            if act == "applied" and in_baseline:
+                continue
             w = wikidata_says(act, (wdm or {}).get(wd_iso(iso)), wdm is not None)
             st = status_for(w, n, hedged_only)
             changes.append({"country": iso, "action": act, "status": st, "wikidata": w, "independent_outlets": n, "evidence": ev})
@@ -488,7 +491,8 @@ def run(args):
                 if act == "joined" and iso not in members: members.append(iso)
                 if act == "left" and iso in members: members.remove(iso)
                 if act == "partner" and iso not in partners: partners.append(iso)
-            if act == "applied" and st != "conflict": applicants.append(iso)
+            # only well-supported applications go on the map; one-outlet or hedged claims stay in the review list
+            if act == "applied" and st in ("confirmed", "corroborated"): applicants.append(iso)
             if st in ("corroborated", "single-source", "conflict"): review.append({"group": b["name"], **changes[-1]})
         # baseline vs Wikidata audit (separate data disagreeing with your list)
         audit = None
