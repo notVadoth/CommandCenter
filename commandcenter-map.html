@@ -1229,7 +1229,8 @@ const liveEl = document.getElementById("live-news");
 const GN_EDITION = {CAN:"CA",GBR:"GB",IRL:"IE",AUS:"AU",NZL:"NZ",IND:"IN",PAK:"PK",BGD:"BD",LKA:"LK",SGP:"SG",MYS:"MY",PHL:"PH",ZAF:"ZA",NGA:"NG",KEN:"KE",
                     GHA:"GH",UGA:"UG",TZA:"TZ",ZWE:"ZW",NAM:"NA",BWA:"BW",ETH:"ET",ISR:"IL",ARE:"AE",SAU:"SA",LBN:"LB",EGY:"EG",HKG:"HK",USA:"US"};
 let liveReq = null; const liveCache = new Map();
-function relayURL(){ let u = ""; try { u = localStorage.getItem("cc_news_relay") || ""; } catch(e){} return (u || window.CC_CONFIG?.newsRelay || "").replace(/\/+$/,""); }
+const DEFAULT_RELAY = "https://cc-news.sid-vadoth.workers.dev";   // used when data/config.js is missing or empty
+function relayURL(){ let u = ""; try { u = localStorage.getItem("cc_news_relay") || ""; } catch(e){} return (u || window.CC_CONFIG?.newsRelay || DEFAULT_RELAY).replace(/\/+$/,""); }
 function clearLiveNews(){ liveReq?.abort(); liveReq = null; liveEl.hidden = true; liveEl.innerHTML = ""; }
 function liveNewsFor(h){
   const c = h.country; if (!c) return clearLiveNews();
