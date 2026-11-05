@@ -905,10 +905,12 @@ function provinceCard(country, adm1){
   const hog = rec && newest(rec.hog), exec = rec?.exec?.[0];
   const pend = st==="loading" || !st ? '<span class="small">loading…</span>' : st==="error" ? '<span class="small">Wikidata unavailable</span>' : null;
   let h = `<div class="card-h">${link(rec?.article, esc(adm1.name))} <span class="small">${esc(adm1.iso||"")}</span></div><table class="stats">`;
-  h += statRow("GDP", g ? link(src, money(g.v,g.unit))+yr(g.date) : pend);
-  h += statRow("GDP / capita", p ? link(src, money(p.v,p.unit))+yr(p.date)+' <span class="small" title="GDP ÷ population, both from Wikidata">calc.</span>' : pend);
-  h += statRow("Gini", gi ? link(src, gi.v.toFixed(1))+yr(gi.date) : pend);
-  h += statRow("Leader", hog ? `${link(hog.url||wikiSearch(hog.name), esc(hog.name))} <span class="small">Head of government</span>` : pend);
+  // provinces: rows with no data are left out rather than shown as "n/a" (still shown while loading or if Wikidata is down)
+  const optRow = (label, v) => v == null ? "" : statRow(label, v);
+  h += optRow("GDP", g ? link(src, money(g.v,g.unit))+yr(g.date) : pend);
+  h += optRow("GDP / capita", p ? link(src, money(p.v,p.unit))+yr(p.date)+' <span class="small" title="GDP ÷ population, both from Wikidata">calc.</span>' : pend);
+  h += optRow("Gini", gi ? link(src, gi.v.toFixed(1))+yr(gi.date) : pend);
+  h += optRow("Leader", hog ? `${link(hog.url||wikiSearch(hog.name), esc(hog.name))} <span class="small">Head of government</span>` : pend);
   h += statRow("Cabinet", exec ? link(exec.url||wikiSearch(exec.name), esc(exec.name))
                                   : link(wikiSearch("Executive Council of "+adm1.name), "Search Wikipedia"));
   return h + `</table>`;
