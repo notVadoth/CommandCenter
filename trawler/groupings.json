@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T21:44:07.366179+00:00",
+ "generated": "2026-11-05T14:58:00.478139+00:00",
  "extractor": "rules",
  "verification": {
   "wikidata": true,
@@ -12,7 +12,7 @@
    "conflict": "Wikidata contradicts the claim — review"
   }
  },
- "articles_in_store": 186,
+ "articles_in_store": 286,
  "blocs": {
   "EU": {
    "name": "European Union",
@@ -47,56 +47,19 @@
     "SWE"
    ],
    "partners": [],
-   "applicants": [
-    "HRV",
-    "SRB"
-   ],
+   "applicants": [],
    "note": null,
    "wikidata": {
     "qid": "Q458",
     "label": null
    },
-   "baseline_audit": null,
+   "baseline_audit": {
+    "in_wikidata_not_baseline": [],
+    "in_baseline_not_wikidata": [
+     "NLD"
+    ]
+   },
    "changes": [
-    {
-     "country": "HRV",
-     "action": "applied",
-     "status": "single-source",
-     "wikidata": "unknown",
-     "independent_outlets": 1,
-     "evidence": [
-      {
-       "source": "The Guardian World",
-       "domain": "theguardian.com",
-       "title": "Zelenskyy says 40 now confirmed dead after ‘insane’ Russian attack on school – as it happened",
-       "url": "https://www.theguardian.com/world/live/2026/nov/04/eu-ukraine-russia-france-germany-us-nato-europe-latest-news",
-       "date": "2026-11-04T16:09:19+00:00",
-       "sentence": "“For ​the first ‌time since ‌2011, when the EU ‌closed accession negotiations with Croatia, the EU is in a position to soon close accession negotiations with another ‌candidate country, Montenegro,” the EU’s executive said in its ​annual enlargement policy report.",
-       "hedged": false,
-       "syndicated_copy": false
-      },
-      {
-       "source": "The Guardian World",
-       "domain": "theguardian.com",
-       "title": "Zelenskyy says 40 now confirmed dead after ‘insane’ Russian attack on school – as it happened",
-       "url": "https://www.theguardian.com/world/live/2026/nov/04/eu-ukraine-russia-france-germany-us-nato-europe-latest-news",
-       "date": "2026-11-04T16:09:19+00:00",
-       "sentence": "“For ​the first ‌time since ‌2011, when the EU ‌closed accession negotiations with Croatia, the EU is in a position to soon close accession negotiations with another ‌candidate country, Montenegro,” the EU’s executive said in its ​annual enlargement policy report.",
-       "hedged": false,
-       "syndicated_copy": true
-      },
-      {
-       "source": "The Guardian World",
-       "domain": "theguardian.com",
-       "title": "Zelenskyy says 40 now confirmed dead after ‘insane’ Russian attack on school – as it happened",
-       "url": "https://www.theguardian.com/world/live/2026/nov/04/eu-ukraine-russia-france-germany-us-nato-europe-latest-news",
-       "date": "2026-11-04T16:09:19+00:00",
-       "sentence": "“For ​the first ‌time since ‌2011, when the EU ‌closed accession negotiations with Croatia, the EU is in a position to soon close accession negotiations with another ‌candidate country, Montenegro,” the EU’s executive said in its ​annual enlargement policy report.",
-       "hedged": false,
-       "syndicated_copy": true
-      }
-     ]
-    },
     {
      "country": "SRB",
      "action": "applied",
@@ -178,6 +141,25 @@
        "url": "https://www.theguardian.com/world/live/2026/nov/04/eu-ukraine-russia-france-germany-us-nato-europe-latest-news",
        "date": "2026-11-04T16:09:19+00:00",
        "sentence": "“I also know that in both chambers – and within both parties – there are staunch supporters of Ukraine who clearly recognise that this Russian war of aggression threatens not only security and freedom in Europe but also in the United States.”\nThe European Union could ⁠conclude accession negotiations with Montenegro by the end ⁠of this ⁠year ​and could sign an accession treaty with ⁠the country as ",
+       "hedged": true,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
+     "country": "SRB",
+     "action": "joined",
+     "status": "speculative",
+     "wikidata": "unknown",
+     "independent_outlets": 0,
+     "evidence": [
+      {
+       "source": "Al Jazeera",
+       "domain": "aljazeera.com",
+       "title": "Serbian officers arrested for using ‘excessive force’ against protesters",
+       "url": "https://www.aljazeera.com/news/2026/11/5/serbian-officers-arrested-for-using-excessive-force-against-protesters?traffic_source=rss",
+       "date": "2026-11-05T10:34:42+00:00",
+       "sentence": "Hopes that Belgrade would join the European Union have increased since October’s elections as the bloc offered to hold further accession talks if Serbia’s new government strengthens democracy.",
        "hedged": true,
        "syndicated_copy": false
       }
@@ -389,9 +371,7 @@
     "BLR"
    ],
    "partners": [],
-   "applicants": [
-    "IND"
-   ],
+   "applicants": [],
    "note": null,
    "wikidata": {
     "qid": "Q485207",
@@ -399,27 +379,7 @@
     "description": "Eurasian political, economic, and security alliance"
    },
    "baseline_audit": null,
-   "changes": [
-    {
-     "country": "IND",
-     "action": "applied",
-     "status": "single-source",
-     "wikidata": "unknown",
-     "independent_outlets": 1,
-     "evidence": [
-      {
-       "source": "The Guardian World",
-       "domain": "theguardian.com",
-       "title": "The private creative world of Rabindranath Tagore, the man Yeats called ‘greater than any of us’",
-       "url": "https://www.theguardian.com/world/2026/nov/03/rabindranath-tagore-yeats-nobel-prize-india",
-       "date": "2026-11-03T15:24:53+00:00",
-       "sentence": "Politics | India has invited Pakistan to attend the Shanghai Cooperation Organisation’s Civilisational Dialogue Forum in New Delhi later this month, the Indian Express reported.",
-       "hedged": false,
-       "syndicated_copy": false
-      }
-     ]
-    }
-   ]
+   "changes": []
   },
   "CSTO": {
    "name": "CSTO",
@@ -644,48 +604,57 @@
    "changes": []
   }
  },
- "new_groupings": [],
- "review": [
+ "new_groupings": [
   {
-   "group": "European Union",
-   "country": "HRV",
-   "action": "applied",
+   "name": "the Mecca Agreement",
    "status": "single-source",
-   "wikidata": "unknown",
-   "independent_outlets": 1,
-   "evidence": [
+   "wikidata": null,
+   "color": "#824505",
+   "members": [
     {
-     "source": "The Guardian World",
-     "domain": "theguardian.com",
-     "title": "Zelenskyy says 40 now confirmed dead after ‘insane’ Russian attack on school – as it happened",
-     "url": "https://www.theguardian.com/world/live/2026/nov/04/eu-ukraine-russia-france-germany-us-nato-europe-latest-news",
-     "date": "2026-11-04T16:09:19+00:00",
-     "sentence": "“For ​the first ‌time since ‌2011, when the EU ‌closed accession negotiations with Croatia, the EU is in a position to soon close accession negotiations with another ‌candidate country, Montenegro,” the EU’s executive said in its ​annual enlargement policy report.",
-     "hedged": false,
-     "syndicated_copy": false
+     "country": "OMN",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "action": "joined",
+     "independent_outlets": 1,
+     "hedged_only": false,
+     "evidence": [
+      {
+       "source": "Al Jazeera",
+       "domain": "aljazeera.com",
+       "title": "Can Iran’s new supreme leader make peace from behind the scenes?",
+       "url": "https://www.aljazeera.com/opinions/2026/11/5/can-irans-new-supreme-leader-make-peace-from-behind-the-scenes?traffic_source=rss",
+       "date": "2026-11-05T14:45:46+00:00",
+       "sentence": "Where the earlier backchannel ran through Oman, today mediation involves Qatar and the countries of the Mecca Agreement, signed on August 7.",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
     },
     {
-     "source": "The Guardian World",
-     "domain": "theguardian.com",
-     "title": "Zelenskyy says 40 now confirmed dead after ‘insane’ Russian attack on school – as it happened",
-     "url": "https://www.theguardian.com/world/live/2026/nov/04/eu-ukraine-russia-france-germany-us-nato-europe-latest-news",
-     "date": "2026-11-04T16:09:19+00:00",
-     "sentence": "“For ​the first ‌time since ‌2011, when the EU ‌closed accession negotiations with Croatia, the EU is in a position to soon close accession negotiations with another ‌candidate country, Montenegro,” the EU’s executive said in its ​annual enlargement policy report.",
-     "hedged": false,
-     "syndicated_copy": true
-    },
-    {
-     "source": "The Guardian World",
-     "domain": "theguardian.com",
-     "title": "Zelenskyy says 40 now confirmed dead after ‘insane’ Russian attack on school – as it happened",
-     "url": "https://www.theguardian.com/world/live/2026/nov/04/eu-ukraine-russia-france-germany-us-nato-europe-latest-news",
-     "date": "2026-11-04T16:09:19+00:00",
-     "sentence": "“For ​the first ‌time since ‌2011, when the EU ‌closed accession negotiations with Croatia, the EU is in a position to soon close accession negotiations with another ‌candidate country, Montenegro,” the EU’s executive said in its ​annual enlargement policy report.",
-     "hedged": false,
-     "syndicated_copy": true
+     "country": "QAT",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "action": "joined",
+     "independent_outlets": 1,
+     "hedged_only": false,
+     "evidence": [
+      {
+       "source": "Al Jazeera",
+       "domain": "aljazeera.com",
+       "title": "Can Iran’s new supreme leader make peace from behind the scenes?",
+       "url": "https://www.aljazeera.com/opinions/2026/11/5/can-irans-new-supreme-leader-make-peace-from-behind-the-scenes?traffic_source=rss",
+       "date": "2026-11-05T14:45:46+00:00",
+       "sentence": "Where the earlier backchannel ran through Oman, today mediation involves Qatar and the countries of the Mecca Agreement, signed on August 7.",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
     }
    ]
-  },
+  }
+ ],
+ "review": [
   {
    "group": "European Union",
    "country": "SRB",
@@ -707,20 +676,28 @@
    ]
   },
   {
-   "group": "Shanghai Cooperation Org.",
-   "country": "IND",
-   "action": "applied",
+   "group": "the Mecca Agreement",
+   "country": "OMN,QAT",
+   "action": "new grouping",
    "status": "single-source",
-   "wikidata": "unknown",
-   "independent_outlets": 1,
    "evidence": [
     {
-     "source": "The Guardian World",
-     "domain": "theguardian.com",
-     "title": "The private creative world of Rabindranath Tagore, the man Yeats called ‘greater than any of us’",
-     "url": "https://www.theguardian.com/world/2026/nov/03/rabindranath-tagore-yeats-nobel-prize-india",
-     "date": "2026-11-03T15:24:53+00:00",
-     "sentence": "Politics | India has invited Pakistan to attend the Shanghai Cooperation Organisation’s Civilisational Dialogue Forum in New Delhi later this month, the Indian Express reported.",
+     "source": "Al Jazeera",
+     "domain": "aljazeera.com",
+     "title": "Can Iran’s new supreme leader make peace from behind the scenes?",
+     "url": "https://www.aljazeera.com/opinions/2026/11/5/can-irans-new-supreme-leader-make-peace-from-behind-the-scenes?traffic_source=rss",
+     "date": "2026-11-05T14:45:46+00:00",
+     "sentence": "Where the earlier backchannel ran through Oman, today mediation involves Qatar and the countries of the Mecca Agreement, signed on August 7.",
+     "hedged": false,
+     "syndicated_copy": false
+    },
+    {
+     "source": "Al Jazeera",
+     "domain": "aljazeera.com",
+     "title": "Can Iran’s new supreme leader make peace from behind the scenes?",
+     "url": "https://www.aljazeera.com/opinions/2026/11/5/can-irans-new-supreme-leader-make-peace-from-behind-the-scenes?traffic_source=rss",
+     "date": "2026-11-05T14:45:46+00:00",
+     "sentence": "Where the earlier backchannel ran through Oman, today mediation involves Qatar and the countries of the Mecca Agreement, signed on August 7.",
      "hedged": false,
      "syndicated_copy": false
     }

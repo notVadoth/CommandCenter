@@ -1487,6 +1487,806 @@
    "date": "2026-11-04T17:40:27+00:00",
    "seen": "2026-11-04T21:44:07.366179+00:00",
    "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/crz98zqkz7z0o?at_medium=RSS&at_campaign=rss": {
+   "title": "Vance walks Trump tightrope with scathing election critique blaming Iran war",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-05T03:47:56+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cq1kdgnn2xdeo?at_medium=RSS&at_campaign=rss": {
+   "title": "What Democrats can and can't do with their new power after taking Congress",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-04T18:01:27+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/ckx2qzv835pgo?at_medium=RSS&at_campaign=rss": {
+   "title": "France holds new strikes and protests as unions demand immediate answers",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-05T14:42:29+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/sport/football/articles/ckn9rwr2zzpvo?at_medium=RSS&at_campaign=rss": {
+   "title": "A bitter end for Ronaldo - the icon who transformed Portugal",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-05T14:29:40+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cwp9g3rlp8jlo?at_medium=RSS&at_campaign=rss": {
+   "title": "Joshua Wong, face of Hong Kong's pro-democracy protests, jailed for 10 years",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-05T13:51:03+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cw33kgj7nkemo?at_medium=RSS&at_campaign=rss": {
+   "title": "Typhoons batter East Asia as El Niño makes Pacific 'burn with fever'",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-04T23:12:47+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cm0e035n13ylo?at_medium=RSS&at_campaign=rss": {
+   "title": "Pope Leo hosts Bob Dylan at official residence in Rome",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-05T02:09:23+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cm93zv62v1n7o?at_medium=RSS&at_campaign=rss": {
+   "title": "India's costliest film retells a beloved Hindu epic - but divides critics",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-05T09:04:42+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cqvgry8k5d01o?at_medium=RSS&at_campaign=rss": {
+   "title": "Mother and daughter die after suspected grizzly bear attack in Canada",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-04T23:50:40+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/videos/c9dr8713zjgyo?at_medium=RSS&at_campaign=rss": {
+   "title": "Watch: How rapist Brand was never far from controversy",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-05T14:28:21+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/videos/cmvg9yy8wpweo?at_medium=RSS&at_campaign=rss": {
+   "title": "Was an Italian chef really fired over refusal to put pineapple on pizza?",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-05T10:33:21+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cm0rlxq08ejko?at_medium=RSS&at_campaign=rss": {
+   "title": "Why a US-funded vaccine trial on babies was cancelled in Guinea-Bissau",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-05T00:30:37+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/world/2026/nov/05/unsung-heroes-behind-lula-surprise-election-triumph-brazil-runoff-bolsonaro": {
+   "title": "How elderly ‘unsung heroes’ powered Lula’s historic fightback in Brazil",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T11:00:21+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/world/2026/nov/05/hong-kong-joshua-wong-sentenced-national-security-case": {
+   "title": "Hong Kong pro-democracy activist Joshua Wong sentenced to 10 years in prison in national security case",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T07:56:21+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/world/2026/nov/05/uk-dangerously-reliant-on-china-critical-minerals-military-ai-renewable-energy": {
+   "title": "UK found to be ‘dangerously’ reliant on China for critical minerals needed for defence and AI",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T05:00:55+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/world/2026/nov/05/south-korea-to-expand-anti-piracy-unit-strait-of-hormuz": {
+   "title": "South Korea says it will expand naval operations closer to strait of Hormuz",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T04:22:49+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/australia-news/2026/nov/06/one-nation-sydney-fundraiser-pauline-hanson-nda-ntwnfb": {
+   "title": "One Nation asks donors at $3,000-a-head Sydney fundraiser to accept ‘non-disclosure agreement’",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T14:00:26+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/australia-news/2026/nov/06/ai-datacentre-boom-could-be-political-kryptonite-australia": {
+   "title": "Australians are yet to see the benefits of AI and datacentres – and US midterms show they could be political kryptonite",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T14:00:26+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/australia-news/live/2026/nov/05/beau-lamarre-condon-trial-former-police-accused-murder-case-jesse-baird-luke-davies-ntwnfb": {
+   "title": "Accused double murderer gives evidence in high-profile case – as it happened",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T06:58:33+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/australia-news/2026/nov/05/beau-lamarre-condon-witness-trial-ntwnfb": {
+   "title": "Beau Lamarre-Condon tells double murder trial he went through Jesse Baird’s phone and poured water into his fuel tank",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T06:56:01+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/australia-news/2026/nov/05/pauline-hanson-to-appeal-mehreen-faruqi-racial-discrimination-ruling-high-court-ntwnfb": {
+   "title": "‘Bring it on’: Pauline Hanson to appeal Mehreen Faruqi racial discrimination ruling in high court",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T05:03:08+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/world/live/2026/nov/05/aer-lingus-plane-bomb-threat-europe-latest-news-updates": {
+   "title": "Multiple planes diverted as bomb threats to commercial flights reported across Europe – live",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T14:45:49+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/world/2026/nov/05/protesters-france-march-strikes-education-cost-of-living": {
+   "title": "Protesters join street demonstrations across France on day of strike action",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T14:00:13+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/us-news/2026/nov/05/republican-wipeout-donald-trump-us-midterms-europe-far-right-message": {
+   "title": "Europe’s far right has a Trump problem after Republican US midterms wipeout",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T13:36:31+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/world/2026/nov/05/what-can-britain-learn-dutch-slavery-apology": {
+   "title": "What can Britain learn from backlash to Dutch slavery apology?",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T12:00:23+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/world/2026/nov/05/hubert-aiwanger-dead-german-politician-berlin-hotel": {
+   "title": "Hubert Aiwanger, prominent German politician, found dead in Berlin hotel",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T00:53:19+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/world/2026/nov/05/yemen-president-sacks-ministers-and-officers-houthis": {
+   "title": "Yemen’s president sacks ministers and officers in attempt to turn tide of war",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T13:47:00+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/politics/live/2026/nov/05/uk-politics-latest-news-updates-andy-burnham-eu-brexit-labour": {
+   "title": "Burnham says long-awaited 10-year plan may be delayed until January – UK politics live",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T14:47:43+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/business/2026/nov/05/bt-cuts-jobs-cost-saving-programme-profit-share-price": {
+   "title": "BT cuts almost 8,000 jobs amid sweeping cost-saving programme",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T14:40:48+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/media/2026/nov/05/misogyny-and-sexism-of-russell-brand-case-have-not-gone-away-say-tv-insiders": {
+   "title": "Misogyny and sexism of Russell Brand case have not gone away, say TV insiders",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T14:39:47+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/world/2026/nov/05/uk-and-us-condemn-second-jail-term-handed-to-hong-kong-activist-joshua-wong": {
+   "title": "UK and US condemn ‘cruel’ second jail term handed to Hong Kong activist Joshua Wong",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T14:38:37+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/culture/2026/nov/05/russell-brand-found-guilty-rape-sexual-assault": {
+   "title": "Russell Brand found guilty of rape and sexual assault",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T14:26:33+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/business/2026/nov/05/amtrak-workers-union-passengers-guns": {
+   "title": "Amtrak workers’ union denounces plan to let passengers bring guns on trains: ‘Sheer lunacy’",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T14:34:44+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/us-news/live/2026/nov/05/midterm-elections-live-latest-updates-mississippi-senate-race": {
+   "title": "US midterm elections 2026 live: Democrats eye historic upset in Mississippi Senate race as Republican blame game begins",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T14:29:06+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/environment/2026/nov/05/lancaster-california-transformed-highway-leafy-oasis": {
+   "title": "‘It’s kind of a melting pot’: how one US city transformed a highway into a leafy oasis",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T14:07:12+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/us-news/2026/nov/05/six-people-dead-brooklyn-fire": {
+   "title": "Six people dead and seven injured after fire at Brooklyn home",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T13:18:45+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/us-news/2026/nov/05/midterms-science-doctors-maha": {
+   "title": "‘Revenge of the nerds’: US midterms deliver a win for science – and a rebuke of Maha",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T13:00:24+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/opinions/2026/11/5/can-irans-new-supreme-leader-make-peace-from-behind-the-scenes?traffic_source=rss": {
+   "title": "Can Iran’s new supreme leader make peace from behind the scenes?",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T14:45:46+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 2
+  },
+  "https://www.aljazeera.com/news/2026/11/5/russell-brand-found-guilty-of-rape-and-sexual-assault-by-uk-court?traffic_source=rss": {
+   "title": "Russell Brand found guilty of rape and sexual assault by UK court",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T14:43:09+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/5/healthcare-not-bombs-how-gaza-shaped-adam-hamawys-path-to-us-congress?traffic_source=rss": {
+   "title": "‘Healthcare not bombs’: How Gaza shaped Adam Hamawy’s path to US Congress",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T14:30:37+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/5/could-the-us-midterms-further-isolate-israel-in-washington?traffic_source=rss": {
+   "title": "Could the US midterms further isolate Israel in Washington?",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T14:19:25+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/features/2026/11/5/burning-rubbish-chokes-besieged-yemeni-city-of-taiz?traffic_source=rss": {
+   "title": "Burning rubbish chokes besieged Yemeni city of Taiz",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T14:17:34+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/5/joint-list-says-it-will-back-eisenkot-to-form-israels-next-government?traffic_source=rss": {
+   "title": "Joint List says it will back Eisenkot to form Israel’s next government",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T14:15:52+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/5/what-can-democrats-do-in-congress-under-president-trump?traffic_source=rss": {
+   "title": "What can Democrats do in Congress under President Trump?",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T13:43:56+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/5/indonesia-rushes-thousands-of-troops-to-jakarta-amid-wiretap-scandal?traffic_source=rss": {
+   "title": "Indonesia rushes thousands of troops to Jakarta amid wiretap scandal",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T13:41:24+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/5/police-bodycam-captures-moments-before-deadly-russian-strike-in-ukraine?traffic_source=rss": {
+   "title": "Police bodycam captures moments before deadly Russian strike in Ukraine",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T13:28:12+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/5/padels-olympic-ambition?traffic_source=rss": {
+   "title": "Padel’s Olympic ambition",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T13:25:01+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/5/four-people-including-a-child-killed-in-israeli-attacks-on-gaza?traffic_source=rss": {
+   "title": "Four people, including a child, killed in Israeli attacks on Gaza",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T13:04:52+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/5/3000-tarantulas-hidden-inside-luggage-seized-at-peruvian-airport?traffic_source=rss": {
+   "title": "3,000 tarantulas hidden inside luggage seized at Peruvian airport",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T12:56:10+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/5/cristiano-ronaldo-announces-international-retirement?traffic_source=rss": {
+   "title": "Cristiano Ronaldo announces international retirement",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T12:32:36+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/5/new-yorkers-rally-against-gun-violence-after-ghanaian-teens-killing?traffic_source=rss": {
+   "title": "New Yorkers rally against gun violence after Ghanaian teen’s killing",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T12:25:28+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/5/workers-strike-across-france-hundreds-of-thousands-expected-to-protest?traffic_source=rss": {
+   "title": "Workers strike across France, hundreds of thousands expected to protest",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T12:21:13+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/5/security-%e2%81%a0officer-killed-in-stabbing-attack-in-jordans-capital?traffic_source=rss": {
+   "title": "Security ⁠officer killed in stabbing attack in Jordan’s capital",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T12:04:00+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/5/why-more-investment-is-not-making-housing-affordable-in-ghana?traffic_source=rss": {
+   "title": "Why more investment is not making housing affordable in Ghana",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T11:42:29+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/5/palantir-mines-battlefield-intelligence-but-is-ukraine-paying-with-blood?traffic_source=rss": {
+   "title": "Palantir harvests battlefield data that Ukraine pays for ‘with blood’",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T11:34:29+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/5/knives-out-will-congress-impeach-pete-hegseth-after-gop-midterms-loss?traffic_source=rss": {
+   "title": "‘Knives out’: Will Congress impeach Pete Hegseth after GOP midterms loss?",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T11:33:38+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/5/iran-gaza-ukraine-what-will-us-midterm-results-mean-for-these-conflicts?traffic_source=rss": {
+   "title": "Iran, Gaza, Ukraine: What will US midterm results mean for these conflicts?",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T11:32:40+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/5/visualising-how-the-us-midterms-turned-the-map-blue?traffic_source=rss": {
+   "title": "Visualising how the US midterms turned the map blue",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T11:09:58+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/sports/2026/11/5/cristiano-ronaldo-announces-retirement-from-international-football?traffic_source=rss": {
+   "title": "Cristiano Ronaldo announces retirement from international football",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T10:57:26+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/5/serbian-officers-arrested-for-using-excessive-force-against-protesters?traffic_source=rss": {
+   "title": "Serbian officers arrested for using ‘excessive force’ against protesters",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T10:34:42+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 1
+  },
+  "https://www.aljazeera.com/features/2026/11/5/helpless-the-families-facing-winter-in-tents-on-the-beach-in-gaza?traffic_source=rss": {
+   "title": "‘Helpless’: The families facing winter in tents on the beach in Gaza",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T10:25:28+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/5/congress-defeat-how-trumps-allies-are-distancing-themselves-from-iran-war?traffic_source=rss": {
+   "title": "Congress defeat: How Trump’s allies are distancing themselves from Iran war",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T10:24:14+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.dw.com/en/what-does-trump-s-midterm-elections-loss-mean-for-strained-us-india-ties/a-79865777?maca=en-rss-en-world-4025-rdf": {
+   "title": "What does Trump's midterm elections loss mean for strained US-India ties?",
+   "source": "DW World",
+   "domain": "dw.com",
+   "date": "2026-11-05T13:34:00+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.dw.com/en/north-korea-tells-eu-to-mind-its-own-business-on-human-rights/a-79862196?maca=en-rss-en-world-4025-rdf": {
+   "title": "North Korea tells EU to 'mind its own business' on human rights",
+   "source": "DW World",
+   "domain": "dw.com",
+   "date": "2026-11-05T11:14:00+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.dw.com/en/several-european-flights-receive-bomb-threats-some-divert/a-79861216?maca=en-rss-en-world-4025-rdf": {
+   "title": "Several European flights receive bomb threats, some divert",
+   "source": "DW World",
+   "domain": "dw.com",
+   "date": "2026-11-05T10:10:00+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.dw.com/en/south-korea-tests-arctic-shipping-route-amid-russia-west-row/a-79853907?maca=en-rss-en-world-4025-rdf": {
+   "title": "South Korea tests Arctic shipping route amid Russia-West row",
+   "source": "DW World",
+   "domain": "dw.com",
+   "date": "2026-11-05T09:45:00+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/middle-east/20261105-israel-main-arab-list-backs-eisenkot-to-form-government-after-election": {
+   "title": "Israel's main Arab list backs Eisenkot to form government after election",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T14:43:59+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/tv-shows/entre-nous/20261105-bringing-the-magic-of-harry-potter-to-life-through-music": {
+   "title": "Bringing the magic of Harry Potter to life through music",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T14:30:51+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/europe/20261105-british-comedian-russell-brand-found-guilty-of-rape-sexual-assault": {
+   "title": "British comedian Russell Brand found guilty of rape, sexual assault",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T14:26:40+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/france-faces-new-protests-as-government-seeks-to-prevent-violence": {
+   "title": "France faces new protests as government seeks to prevent violence",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T14:19:53+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/cyberattack-french-bank-says-online-hacking-stole-around-100-million": {
+   "title": "Cyberattack: French bank says online hacking stole around $100 million",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T14:09:56+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/tv-shows/arts24/20261105-south-african-star-zolani-mahola-from-waka-waka-with-shakira-to-people-power": {
+   "title": "South African star Zolani Mahola: From 'Waka Waka' with Shakira to 'People Power'",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T13:34:12+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/tv-shows/perspective/20261105-it-s-fascinating-to-see-a-human-becoming-a-person-author-cl%C3%A9mentine-goldszal": {
+   "title": "'It's fascinating to see a human becoming a person': Author Clémentine Goldszal",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T13:17:45+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/tv-shows/focus/20261105-bent-on-leaving-his-mark-trump-s-proposed-triumphal-arch-sparks-backlash": {
+   "title": "Bent on leaving his mark: Trump's proposed 'Triumphal Arch' sparks backlash",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T12:55:53+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/video/20261105-what-comes-next-for-democrats-after-midterm-election-victory": {
+   "title": "What comes next for Democrats after midterm election victory?",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T12:54:51+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/video/20261105-multiple-flights-in-europe-diverted-because-of-bomb-threats-after-earlier-hoaxes": {
+   "title": "Multiple flights in Europe diverted because of bomb threats after earlier hoaxes",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T12:52:44+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/video/20261105-france-high-schools-blocked-again-as-students-reject-government-responses-as-meaningless": {
+   "title": "France: High schools blocked again as students reject government responses as 'meaningless'",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T12:51:04+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/tv-shows/press-review/20261105-farewell-botox-heels-and-big-hair-is-this-the-end-of-maga-women": {
+   "title": "Farewell Botox, heels and big hair: Is this the end of MAGA women?",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T12:15:19+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/video/20261105-bomb-threats-cause-major-flight-disruptions-across-europe": {
+   "title": "Bomb threats cause major flight disruptions across Europe",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T11:32:13+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/video/20261105-us-midterms-elon-musk-fails-440-million-bet-as-republicans-lose": {
+   "title": "US midterms: Elon Musk fails $440 million bet as Republicans lose",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T11:29:35+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/video/20261105-hong-kong-activist-jailed-for-10-more-years-for-collusion-with-foreign-forces": {
+   "title": "Hong Kong activist jailed for 10 more years for collusion with foreign forces",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T11:29:09+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/video/20261105-route-du-rhum-2026-sailors-forced-to-abandon-race-for-various-reasons": {
+   "title": "Route du Rhum 2026: Sailors forced to abandon race for various reasons",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T11:25:52+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/video/20261105-us-midterms-democrats-say-ready-to-negotiate-and-promise-big-changes": {
+   "title": "US Midterms: Democrats say ready to negotiate and promise big changes",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T11:22:34+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/middle-east/20261105-houthi-missiles-fired-at-medina-intercepted-saudi-coalition-says": {
+   "title": "Houthi missiles fired at Medina intercepted, Saudi coalition says",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T11:07:22+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/sport/20261105-football-legend-cristiano-ronaldo-announces-international-retirement": {
+   "title": "Football legend Cristiano Ronaldo announces international retirement",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T10:48:42+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/video/20261105-south-africans-eager-to-vote-as-local-elections-put-failing-services-in-focus": {
+   "title": "South Africans eager to vote as local elections put failing services in focus",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T10:48:38+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/video/20261105-sudan-accuses-ethiopia-of-allowing-rsf-drone-launches-from-its-territory": {
+   "title": "Sudan accuses Ethiopia of allowing RSF drone launches from its territory",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T10:42:55+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/video/20261105-ethiopian-families-fleeing-conflict-face-difficulties-with-food-access": {
+   "title": "Ethiopian families fleeing conflict face difficulties with food access",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T10:38:41+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/video/20261105-dozens-dead-and-missing-after-russian-strike-on-ukrainian-aid-centre": {
+   "title": "Dozens dead and missing after Russian strike on Ukrainian aid centre",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T10:34:55+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.npr.org/2026/11/05/g-s1-152046/up-first-newsletter-democrats-congress-control-house-senate-trump-reaction": {
+   "title": "What's next for Democrats after the midterms. And, a look at the outstanding races",
+   "source": "NPR World",
+   "domain": "npr.org",
+   "date": "2026-11-05T12:02:24+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.npr.org/2026/11/05/g-s1-152035/vatican-pope-bob-dylan": {
+   "title": "Bob Dylan comes knockin' on pope's door as Leo welcomes legend to Vatican",
+   "source": "NPR World",
+   "domain": "npr.org",
+   "date": "2026-11-05T07:02:12+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.npr.org/2026/11/05/g-s1-152032/hong-kong-activist-wong-sentenced": {
+   "title": "Hong Kong activist Joshua Wong sentenced to 10 years in prison",
+   "source": "NPR World",
+   "domain": "npr.org",
+   "date": "2026-11-05T05:29:56+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/world/europe-bomb-threats-czechia-poland-france-9.7410169?cmp=rss": {
+   "title": "Bomb threats affect at least 25 flights, leading to emergency landings at several European airports",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-05T10:53:33+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/world/texas-ohio-midterm-results-9.7409481?cmp=rss": {
+   "title": "Ohio and Texas went from red to blue in the midterms, but may not stay that way in 2028",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-05T05:04:53+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/world/melania-trump-oleshky-ceasefire-meeting-9.7409316?cmp=rss": {
+   "title": "Melania Trump is preparing to host officials from Russia and Ukraine. Just what's behind her peace push?",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-05T09:00:00+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/world/france-protests-macron-government-9.7410318?cmp=rss": {
+   "title": "French police clash with protesters in Lyon amid nationwide rallies, public workers' strike",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-05T14:31:39+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/world/joshua-wong-second-sentence-9.7410128?cmp=rss": {
+   "title": "Prominent Hong Kong activist Joshua Wong sentenced to 10 years in 2nd national security case",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-05T03:53:54+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/world/wnba-valkyries-championship-parade-9.7410088?cmp=rss": {
+   "title": "Valkyries celebrate WNBA championship with San Francisco and Oakland fans",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-05T03:41:54+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/player/play/9.7409351?cmp=rss": {
+   "title": "Trump lost Congress. 3 presidents before him did, too",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-04T20:39:59+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/player/play/9.7409899?cmp=rss": {
+   "title": "Midterms ‘bluenami’: The exact moment Trump lost control of Congress | About That",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-04T23:58:58+00:00",
+   "seen": "2026-11-05T14:58:00.478139+00:00",
+   "n_claims": 0
   }
  },
  "claims": [
@@ -1645,6 +2445,45 @@
    "source": "The Guardian World",
    "title": "Serbia detains police officers over alleged use of force against protesters",
    "date": "2026-11-04T20:42:14+00:00"
+  },
+  {
+   "kind": "new",
+   "group": "the Mecca Agreement",
+   "country": "OMN",
+   "action": "joined",
+   "hedged": false,
+   "sentence": "Where the earlier backchannel ran through Oman, today mediation involves Qatar and the countries of the Mecca Agreement, signed on August 7.",
+   "url": "https://www.aljazeera.com/opinions/2026/11/5/can-irans-new-supreme-leader-make-peace-from-behind-the-scenes?traffic_source=rss",
+   "domain": "aljazeera.com",
+   "source": "Al Jazeera",
+   "title": "Can Iran’s new supreme leader make peace from behind the scenes?",
+   "date": "2026-11-05T14:45:46+00:00"
+  },
+  {
+   "kind": "new",
+   "group": "the Mecca Agreement",
+   "country": "QAT",
+   "action": "joined",
+   "hedged": false,
+   "sentence": "Where the earlier backchannel ran through Oman, today mediation involves Qatar and the countries of the Mecca Agreement, signed on August 7.",
+   "url": "https://www.aljazeera.com/opinions/2026/11/5/can-irans-new-supreme-leader-make-peace-from-behind-the-scenes?traffic_source=rss",
+   "domain": "aljazeera.com",
+   "source": "Al Jazeera",
+   "title": "Can Iran’s new supreme leader make peace from behind the scenes?",
+   "date": "2026-11-05T14:45:46+00:00"
+  },
+  {
+   "kind": "bloc",
+   "group": "EU",
+   "country": "SRB",
+   "action": "joined",
+   "hedged": true,
+   "sentence": "Hopes that Belgrade would join the European Union have increased since October’s elections as the bloc offered to hold further accession talks if Serbia’s new government strengthens democracy.",
+   "url": "https://www.aljazeera.com/news/2026/11/5/serbian-officers-arrested-for-using-excessive-force-against-protesters?traffic_source=rss",
+   "domain": "aljazeera.com",
+   "source": "Al Jazeera",
+   "title": "Serbian officers arrested for using ‘excessive force’ against protesters",
+   "date": "2026-11-05T10:34:42+00:00"
   }
  ]
 }
