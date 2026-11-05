@@ -2287,6 +2287,414 @@
    "date": "2026-11-04T23:58:58+00:00",
    "seen": "2026-11-05T14:58:00.478139+00:00",
    "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cmpqg08nz3pqo?at_medium=RSS&at_campaign=rss": {
+   "title": "Hoax bomb threats target European airlines and airports for second time in a week",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-05T17:39:48+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/c6p9g39vln3yo?at_medium=RSS&at_campaign=rss": {
+   "title": "Paraguay President Santiago Peña resigns after bank collapse",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-05T17:40:40+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cq4g1r42jx00o?at_medium=RSS&at_campaign=rss": {
+   "title": "The Pitt and ER are similar enough for lawsuit to proceed, judge rules",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-05T11:21:35+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/c6vgx8q09gg4o?at_medium=RSS&at_campaign=rss": {
+   "title": "Russell Brand is being investigated over two new rape complaints, police say",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-05T15:44:49+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cw62yq9vp7yyo?at_medium=RSS&at_campaign=rss": {
+   "title": "Would you take a test to see if your life will be cut short? I did - and it changed me",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-05T00:32:09+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/world/2026/nov/05/meghan-sussex-thomas-markle-jr-philippines-child-sexual-abuse-inquiry": {
+   "title": "Duchess of Sussex’s estranged half-brother ‘person of interest’ in child sexual abuse inquiry",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T17:37:27+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/music/2026/nov/05/k-pop-group-newjeans-contract": {
+   "title": "K-pop group NewJeans’s contract omitted rights to ‘sleep and free choice’ – report",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T17:08:29+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/world/2026/nov/05/bomb-threats-disrupt-flights-across-europe-and-renew-hybrid-warfare-fears": {
+   "title": "Bomb threats disrupt at least 25 flights across Europe, raising hybrid war fears",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T18:17:36+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/society/2026/nov/05/beware-cosmetic-surgery-tourism-packages-experts-advise": {
+   "title": "Beware ‘sun, sea and surgery’ cosmetic tourism packages, experts advise",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T17:17:00+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/world/2026/nov/05/eu-seeks-firmer-pledge-from-uk-discounted-university-tuition-fees": {
+   "title": "EU presses UK to guarantee discounted university tuition fees for European students",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T16:58:54+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 2
+  },
+  "https://www.theguardian.com/world/2026/nov/05/herzog-netanyahu-eisenkot-israel-election-decision": {
+   "title": "Herzog to meet Israeli election rivals as decision nears on path to power",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T18:13:01+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/society/2026/nov/05/nhs-england-cancer-diagnoses-record-high-1000-people-diagnosed-every-day": {
+   "title": "NHS England cancer diagnoses at record high with 1,000 people diagnosed every day",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T18:49:25+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/business/2026/nov/05/bank-of-england-raises-interest-rates-first-increase-for-more-than-three-years": {
+   "title": "Bank of England raises interest rates to 4%, the first increase for more than three years",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T18:00:28+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/law/2026/nov/05/henry-nowak-killer-vickrum-digwa-should-have-had-longer-sentence-court-of-appeal-hears": {
+   "title": "Henry Nowak’s killer has sentence extended by court of appeal",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T17:29:25+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/us-news/2026/nov/05/republicans-cruz-desantis-vance-midterm-rout": {
+   "title": "Republicans hoping to succeed Trump in 2028 dissect midterm rout",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T18:51:47+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/business/2026/nov/05/nasdaq-heading-for-worst-day-in-18-months-as-wall-street-sustains-widespread-losses": {
+   "title": "US tech shares fall sharply as investors bet on AI slowdown after Democrats’ election triumph",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T18:44:25+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/us-news/2026/nov/05/executions-florida-alabama-indiana": {
+   "title": "Indiana puts man to death as three US executions to be carried out on same day",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T18:27:22+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/us-news/2026/nov/05/harmeet-dhillon-doj-resignation": {
+   "title": "Harmeet Dhillon, controversial head of DoJ’s civil rights division, steps down",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-05T17:44:41+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/5/division-among-us-democrats-over-schumers-leadership-role?traffic_source=rss": {
+   "title": "Division among US Democrats over Schumer’s leadership role",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T18:53:04+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/5/iran-says-tankers-struck-in-hormuz-amid-fears-of-new-us-attack?traffic_source=rss": {
+   "title": "Iran says tankers struck in Hormuz amid fears of new US attack",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T18:47:10+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/5/arab-party-backs-eisenkot-in-bid-to-form-israels-next-government?traffic_source=rss": {
+   "title": "Arab party backs Eisenkot in bid to form Israel’s next government",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T18:30:09+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/5/could-football-change-after-jesus-de-miguels-death?traffic_source=rss": {
+   "title": "Could Football Change After Jesus de Miguel’s Death?",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T18:22:16+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/economy/2026/11/5/ai-stocks-plunge-after-election-driving-down-us-markets?traffic_source=rss": {
+   "title": "AI stocks plunge after US election, driving down markets",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T17:56:17+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/5/jordanian-officer-killed-in-stabbing-attack-in-amman?traffic_source=rss": {
+   "title": "Jordanian officer killed in stabbing attack in Amman",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T17:08:45+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/economy/2026/11/5/paraguay-president-pena-resigns-in-wake-of-bank-collapse?traffic_source=rss": {
+   "title": "Paraguay President Pena resigns in wake of bank collapse",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T17:08:19+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/5/aje-onl-nf_us-election-deals-a-blow-to-warmongers-051126?traffic_source=rss": {
+   "title": "Bishara: US election deals a blow to warmongers",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T16:48:53+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/5/gaza-holds-final-of-tournament-honouring-more-than-1000-slain-athletes?traffic_source=rss": {
+   "title": "Gaza holds final of tournament honouring more than 1,000 slain athletes",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T16:46:34+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/gallery/2026/11/5/photos-spain-mourns-jesus-de-miguel-who-died-after-on-pitch-collision?traffic_source=rss": {
+   "title": "Photos: Spain mourns Jesus de Miguel, who died after on-pitch collision",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T16:12:37+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/5/vance-eyes-2028-reset-as-republicans-mull-pivot-after-us-midterms-drubbing?traffic_source=rss": {
+   "title": "Vance eyes 2028 reset, as Republicans mull pivot after US midterms drubbing",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T16:12:35+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/gallery/2026/11/5/photos-thousands-rally-in-france-over-rising-costs-and-economic-struggles?traffic_source=rss": {
+   "title": "Photos: Thousands rally in France over rising costs and economic struggles",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T16:07:56+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/sports/2026/11/5/top-japan-fa-official-to-stand-against-infantino-for-fifa-presidency?traffic_source=rss": {
+   "title": "Top Japan FA official to stand against Infantino for FIFA presidency",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T15:52:15+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/sports/2026/11/5/why-has-cristiano-ronaldo-retired-from-international-football?traffic_source=rss": {
+   "title": "Why has Cristiano Ronaldo retired from international football?",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T15:14:05+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/5/jerusalem-daily-settler-pogroms-in-hebron?traffic_source=rss": {
+   "title": "Jerusalem Daily: Settler pogroms in Hebron",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T15:10:42+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/sports/2026/11/5/ronaldo-in-records-international-milestones-from-the-football-icon?traffic_source=rss": {
+   "title": "Ronaldo in records: International milestones from the football icon",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T15:09:31+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/5/why-guinea-bissau-halted-a-controversial-hepatitis-vaccine-trial-for-babies?traffic_source=rss": {
+   "title": "Why Guinea-Bissau halted a controversial hepatitis vaccine trial for babies",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-05T15:01:35+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.dw.com/en/after-the-landslide-victory-of-the-students-list-serbia-s-judiciary-springs-into-life-after-years-of-stalled-and-unresolved-cases-and-investigations/a-79868652?maca=en-rss-en-world-4025-rdf": {
+   "title": "After the landslide victory of the Students' List, Serbia's judiciary springs into life after years of stalled and unresolved cases and investigations",
+   "source": "DW World",
+   "domain": "dw.com",
+   "date": "2026-11-05T17:00:00+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.dw.com/en/iran-signals-satisfaction-skepticism-after-us-midterm-vote/a-79867149?maca=en-rss-en-world-4025-rdf": {
+   "title": "Iran signals satisfaction, skepticism after US midterm vote",
+   "source": "DW World",
+   "domain": "dw.com",
+   "date": "2026-11-05T15:04:00+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.dw.com/en/bomb-threats-disrupt-several-flights-across-europe/a-79861216?maca=en-rss-en-world-4025-rdf": {
+   "title": "Bomb threats disrupt several flights across Europe",
+   "source": "DW World",
+   "domain": "dw.com",
+   "date": "2026-11-05T10:10:00+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/video/20261105-portugal-cristiano-ronaldo-announces-his-international-retirement": {
+   "title": "Portugal: Cristiano Ronaldo announces his international retirement",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T18:16:53+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/asia-pacific/20261105-myanmar-civilians-under-fire-from-military-junta": {
+   "title": "Myanmar: Civilians under fire from military junta",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T17:58:28+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/france-needs-more-public-services-salaries-are-too-low-schools-are-in-very-very-bad-shape": {
+   "title": "France needs 'more public services', 'salaries are too low', 'schools are in very, very bad shape'",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T17:36:48+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/americas/20261105-paraguay-s-president-pe%C3%B1a-impeached-moments-after-resigning-amid-banking-scandal": {
+   "title": "Paraguay's president Peña impeached moments after resigning over banking scandal",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T17:33:53+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/france/20261105-live-france-nationwide-strikes-living-costs": {
+   "title": "🔴 Live: Interior ministry says 600,000 protest across France as unions claim 'close to 1.6 million'",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T17:05:44+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/navi-pillay-fighting-violence-with-justice": {
+   "title": "Navi Pillay: Fighting violence with justice",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T16:12:59+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/video/20261105-us-midterms-donald-trump-s-wings-have-been-more-than-clipped": {
+   "title": "US midterms: 'Donald Trump's wings have been more than clipped'",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T15:46:48+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/tv-shows/people-profit/20261105-global-travel-sector-grows-despite-headwinds": {
+   "title": "Global travel sector grows despite headwinds",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T15:43:09+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/video/20261105-europe-dozens-of-flights-diverted-following-bomb-threats": {
+   "title": "Europe: Dozens of flights diverted following bomb threats",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T15:40:50+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/identity-crisis-can-democrats-deliver-following-their-historic-once-in-a-generation-victory": {
+   "title": "'Identity crisis': Can Democrats 'deliver' following their 'historic', once in a generation victory?",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-05T15:27:11+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.npr.org/2026/11/05/nx-s1-6030842/paraguay-president-impeached-bank-collapse": {
+   "title": "Paraguay's president is impeached minutes after resigning following a bank collapse",
+   "source": "NPR World",
+   "domain": "npr.org",
+   "date": "2026-11-05T18:30:16+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.npr.org/2026/11/05/nx-s1-6030720/russell-brand-rape-sexual-assault-prison": {
+   "title": "Russell Brand is convicted of rape, and judge says he'll get a prison term",
+   "source": "NPR World",
+   "domain": "npr.org",
+   "date": "2026-11-05T16:15:02+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/canada/mexican-judge-bribe-ryan-wedding-9.7410789?cmp=rss": {
+   "title": "Mexican judge arrested over alleged $2M bribe to release Ryan Wedding's second-in-command",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-05T18:18:16+00:00",
+   "seen": "2026-11-05T18:57:44.515203+00:00",
+   "n_claims": 0
   }
  },
  "claims": [
@@ -2484,6 +2892,32 @@
    "source": "Al Jazeera",
    "title": "Serbian officers arrested for using ‘excessive force’ against protesters",
    "date": "2026-11-05T10:34:42+00:00"
+  },
+  {
+   "kind": "bloc",
+   "group": "EU",
+   "country": "GBR",
+   "action": "applied",
+   "hedged": false,
+   "sentence": "Failure to agree lower fees for EU citizens studying in UK should delay prized food and drink deal, members say\nUK politics live – latest updates\nThe EU is seeking a firmer pledge from the British government to guarantee European students discounted rates on university tuition fees before a much-anticipated summit this month.",
+   "url": "https://www.theguardian.com/world/2026/nov/05/eu-seeks-firmer-pledge-from-uk-discounted-university-tuition-fees",
+   "domain": "theguardian.com",
+   "source": "The Guardian World",
+   "title": "EU presses UK to guarantee discounted university tuition fees for European students",
+   "date": "2026-11-05T16:58:54+00:00"
+  },
+  {
+   "kind": "bloc",
+   "group": "EU",
+   "country": "GBR",
+   "action": "applied",
+   "hedged": false,
+   "sentence": "Failure to agree lower fees for EU citizens studying in UK should delay prized food and drink deal, members say\nUK politics live – latest updates\nThe EU is seeking a firmer pledge from the British government to guarantee European students discounted rates on university tuition fees before a much-anticipated summit this month.",
+   "url": "https://www.theguardian.com/world/2026/nov/05/eu-seeks-firmer-pledge-from-uk-discounted-university-tuition-fees",
+   "domain": "theguardian.com",
+   "source": "The Guardian World",
+   "title": "EU presses UK to guarantee discounted university tuition fees for European students",
+   "date": "2026-11-05T16:58:54+00:00"
   }
  ]
 }
