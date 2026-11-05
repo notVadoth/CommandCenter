@@ -108,6 +108,10 @@
   #mkt .mv .ch{font-size:11.5px} #mkt .mv .ch.up{color:#69db7c} #mkt .mv .ch.dn{color:#ff8787}
   #mkt .mode{display:flex;gap:4px;margin-top:5px} #mkt .mode button{background:none;border:none;border-bottom:2px solid transparent;color:var(--muted);cursor:pointer;font:inherit;font-size:10.5px;padding:1px 2px}
   #mkt .mode button.on{color:var(--text);border-bottom-color:var(--accent)}
+  #mkt-q{flex:1;min-width:0;margin-left:8px;background:#0e1219;color:var(--text);border:1px solid var(--line);border-radius:5px;font:inherit;font-size:11px;padding:2px 6px}
+  #mkt-place{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px;font-size:10.5px;color:var(--muted)} #mkt-place:empty{display:none}
+  #mkt-place button{background:#0e1219;border:1px solid var(--line);color:var(--text);border-radius:10px;cursor:pointer;font:inherit;font-size:10.5px;padding:0 7px}
+  #mkt-place button.on{border-color:var(--accent);color:var(--accent)}
   #mkt-live{flex:1;min-height:120px;margin-top:4px;display:none} #mkt.live #mkt-live{display:block} #mkt.live #mkt-chart,#mkt.live #mkt-val{display:none}
   #mkt-chart{flex:1;position:relative;min-height:90px} #mkt-chart svg{position:absolute;inset:0;width:100%;height:100%}
   #mkt-tip{position:absolute;pointer-events:none;background:#0e1219;border:1px solid var(--line);border-radius:4px;padding:2px 6px;font-size:10.5px;white-space:nowrap;display:none}
@@ -214,7 +218,9 @@
         </select>
         <span class="rng"><button data-r="1D">1D</button><button data-r="1M">1M</button><button data-r="3M" class="on">3M</button><button data-r="12M">1Y</button></span>
       </div>
-      <div class="mode"><button data-m="live" class="on" title="Live chart from TradingView">Live</button><button data-m="daily" title="Daily closes saved by the daily job (works offline)">Daily close</button></div>
+      <div class="mode"><button data-m="live" class="on" title="Live chart from TradingView">Live</button><button data-m="daily" title="Daily closes saved by the daily job (works offline)">Daily close</button>
+        <input id="mkt-q" list="mkt-list" placeholder="Any chart: coffee, AAPL, NSE:TCS…" aria-label="Search for any chart" autocomplete="off"><datalist id="mkt-list"></datalist></div>
+      <div id="mkt-place"></div>
       <div class="mv" id="mkt-val"></div>
       <div id="mkt-live" class="tradingview-widget-container"></div>
       <div id="mkt-chart"><div id="mkt-tip"></div></div>
@@ -233,6 +239,8 @@
 <script src="data/groupings.js" onerror="void 0"></script>
 <!-- optional: daily headline digest (written by news.py; defines window.CC_STORIES) -->
 <script src="data/stories.js" onerror="void 0"></script>
+<!-- which TradingView charts suit each country / region -->
+<script src="data/market_catalog.js" onerror="void 0"></script>
 <!-- settings (news relay address) -->
 <script src="data/config.js" onerror="void 0"></script>
 <!-- optional: daily market closes (written by markets.py; defines window.CC_MARKETS) -->
@@ -946,6 +954,7 @@ map.on("click", e=>{
   }
   drawerHit = h; renderDrawer(h);
   liveNewsFor(h);
+  chartsForPlace(h);
   const wasOpen = drawerEl.classList.contains("open") && !drawerEl.classList.contains("collapsed");
   drawerEl.classList.add("open"); drawerEl.classList.remove("collapsed");
   if (NARROW.matches){ appEl.classList.add("side-hidden"); appEl.classList.add("news-hidden"); }
@@ -1328,17 +1337,55 @@ const RANGE_DAYS = { "1D":7, "1M":31, "3M":92, "12M":366 };
 const mkt = { key: "SPX", range: "3M", mode: "live" };
 try { const saved = JSON.parse(localStorage.getItem("cc_mkt")||"null"); if (saved){ Object.assign(mkt, saved); if (!RANGE_DAYS[mkt.range]) mkt.range = "3M"; delete mkt.days; } } catch(e){}
 let tvFailed = false, tvKey = "";
+const CAT = window.CC_MARKET_CATALOG || { SYMBOLS:{}, forPlace:()=>({keys:[],why:[]}) };
+const DEFAULT_KEYS = Object.keys(TV_SYMBOLS);
+let placeCharts = { label:"", keys:[], why:[] };
+let customCharts = []; try { customCharts = JSON.parse(localStorage.getItem("cc_mkt_custom")||"[]"); } catch(e){}
+const tvSymbol = k => TV_SYMBOLS[k] || CAT.SYMBOLS[k]?.tv || (k.startsWith("TV:") ? k.slice(3) : k);
+const mktLabel = k => ({DJIA:"Dow Jones",SPX:"S&P 500",HSI:"Hang Seng",SENSEX:"BSE Sensex",GOLD:"Gold",BRENT:"Brent crude"})[k] || CAT.SYMBOLS[k]?.label || (k.startsWith("TV:") ? k.slice(3) : k);
+const mktNote = k => TV_NOTE[k] || CAT.SYMBOLS[k]?.note || (k.startsWith("TV:") ? "your search" : "");
+function rebuildMktSelect(){
+  mktSel.querySelectorAll("optgroup.dyn").forEach(g=>g.remove());
+  const add = (label, keys)=>{ if (!keys.length) return; const g = document.createElement("optgroup"); g.className = "dyn"; g.label = label;
+    g.innerHTML = keys.map(k=>`<option value="${esc(k)}">${esc(mktLabel(k))}</option>`).join(""); mktSel.prepend(g); };
+  add("My charts", customCharts);
+  if (placeCharts.keys.length) add("For " + placeCharts.label, placeCharts.keys);
+  const pl = document.getElementById("mkt-place");
+  pl.innerHTML = placeCharts.keys.length ? `<span title="${esc(placeCharts.why.join("; "))}">${esc(placeCharts.label)}:</span>` +
+    placeCharts.keys.map(k=>`<button data-k="${esc(k)}" class="${k===mkt.key?"on":""}" title="${esc(mktNote(k))}">${esc(mktLabel(k).replace(/\s*\(.*\)$/,""))}</button>`).join("") : "";
+  document.getElementById("mkt-list").innerHTML = [...DEFAULT_KEYS, ...Object.keys(CAT.SYMBOLS)].map(k=>`<option value="${esc(mktLabel(k))}">`).join("");
+}
+function chartsForPlace(h){
+  const c = h.country; if (!c) return;
+  const r = CAT.forPlace(c.code, [h.adm2?.name, h.adm1?.name]);
+  placeCharts = { label: h.adm2?.name || h.adm1?.name || c.name, keys: r.keys, why: r.why };
+  if (r.keys.length){ mkt.key = r.keys[0]; tvKey = ""; }
+  rebuildMktSelect(); renderMarket();
+}
+function searchChart(text){
+  const t = text.trim(); if (!t) return;
+  const low = t.toLowerCase();
+  let key = [...DEFAULT_KEYS, ...Object.keys(CAT.SYMBOLS)].find(k => mktLabel(k).toLowerCase() === low)
+         || [...DEFAULT_KEYS, ...Object.keys(CAT.SYMBOLS)].find(k => mktLabel(k).toLowerCase().includes(low) || tvSymbol(k).toLowerCase() === low);
+  if (!key){ key = "TV:" + t.toUpperCase().replace(/\s+/g,""); }
+  if (!DEFAULT_KEYS.includes(key) && !placeCharts.keys.includes(key)){
+    customCharts = [key, ...customCharts.filter(k=>k!==key)].slice(0, 8);
+    try { localStorage.setItem("cc_mkt_custom", JSON.stringify(customCharts)); } catch(e){}
+  }
+  mkt.key = key; tvKey = ""; mkt.mode = "live"; tvFailed = false; rebuildMktSelect(); saveMkt();
+}
 function renderLive(){
   const box = document.getElementById("mkt-live"), src = document.getElementById("mkt-src");
   const k = mkt.key + "|" + mkt.range; if (tvKey === k && box.firstChild) return; tvKey = k;
   box.innerHTML = '<div class="tradingview-widget-container__widget" style="height:100%;width:100%"></div>';
   const sc = document.createElement("script");
   sc.src = "https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"; sc.async = true;
-  sc.text = JSON.stringify({ symbol: TV_SYMBOLS[mkt.key], width: "100%", height: "100%", locale: "en", dateRange: mkt.range,
+  sc.text = JSON.stringify({ symbol: tvSymbol(mkt.key), width: "100%", height: "100%", locale: "en", dateRange: mkt.range,
                              colorTheme: "dark", isTransparent: true, autosize: true, largeChartUrl: "", chartOnly: false, noTimeScale: false });
   sc.onerror = ()=>{ tvFailed = true; tvKey = ""; renderMarket(); };   // offline or blocked: fall back to the daily closes
   box.appendChild(sc);
-  src.innerHTML = `Live chart by <a href="https://www.tradingview.com/" target="_blank" rel="noopener nofollow">TradingView</a> · ${esc(TV_NOTE[mkt.key])}`;
+  src.innerHTML = `Live chart by <a href="https://www.tradingview.com/" target="_blank" rel="noopener nofollow">TradingView</a> · ${esc(mktLabel(mkt.key))}${mktNote(mkt.key) ? " · " + esc(mktNote(mkt.key)) : ""}`;
+  document.querySelectorAll("#mkt-place button").forEach(b=>b.classList.toggle("on", b.dataset.k===mkt.key));
 }
 const mktSel = document.getElementById("mkt-sel"), mktChart = document.getElementById("mkt-chart"), mktTip = document.getElementById("mkt-tip");
 const fmtN = (v,u)=> (u&&u.startsWith("USD")?"$":"") + v.toLocaleString(undefined,{minimumFractionDigits:2, maximumFractionDigits:2});
@@ -1353,6 +1400,8 @@ function renderMarket(){
   const M = window.CC_MARKETS, S = M && M.series && M.series[mkt.key];
   const val = document.getElementById("mkt-val"), src = document.getElementById("mkt-src");
   mktChart.querySelector("svg")?.remove(); mktTip.style.display="none";
+  if (!DEFAULT_KEYS.includes(mkt.key)){ val.innerHTML = `<span class="small">${esc(mktLabel(mkt.key))}</span>`;
+    src.innerHTML = tvFailed ? "The live chart couldn't load (offline?). Daily closes are kept only for the six default series." : "Daily closes are kept only for the six default series. Switch to Live for this chart."; return; }
   if (!M){ val.innerHTML=""; src.innerHTML = "No market data yet. It appears after the daily run (or double-click trawler\\run_trawler.bat)."; return; }
   const all = (S && S.points) || [];
   if (!all.length){ val.innerHTML = `<span class="small">${esc(S?.label||mkt.key)}: no data</span>`;
@@ -1388,6 +1437,10 @@ function renderMarket(){
 }
 function saveMkt(){ try { localStorage.setItem("cc_mkt", JSON.stringify({key:mkt.key, range:mkt.range, mode:mkt.mode})); } catch(e){} renderMarket(); }
 mktSel.onchange = ()=>{ mkt.key = mktSel.value; saveMkt(); };
+document.getElementById("mkt-q").addEventListener("change", e=>{ searchChart(e.target.value); e.target.value = ""; e.target.blur(); });
+document.getElementById("mkt-place").addEventListener("click", e=>{ const k = e.target.closest("button")?.dataset.k; if (k){ mkt.key = k; saveMkt(); } });
+if (!DEFAULT_KEYS.includes(mkt.key) && !customCharts.includes(mkt.key)) mkt.key = "SPX";   // a place chart from last visit
+rebuildMktSelect();
 document.querySelectorAll("#mkt .rng button").forEach(b=>b.onclick = ()=>{ mkt.range = b.dataset.r; saveMkt(); });
 document.querySelectorAll("#mkt .mode button").forEach(b=>b.onclick = ()=>{ mkt.mode = b.dataset.m; if (mkt.mode==="live") tvFailed = false; saveMkt(); });
 new ResizeObserver(()=>{ if (!document.getElementById("mkt").classList.contains("live")) renderMarket(); }).observe(mktChart);

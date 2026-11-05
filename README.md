@@ -53,6 +53,14 @@ Clicking a country or province shows its top Google News headlines from the last
 
 The relay only answers pages served from `notvadoth.github.io` or opened from your PC (edit `ALLOWED_ORIGINS` if you rename the repo or use another host). It caches each place for 15 minutes; Cloudflare's free plan allows 100,000 requests a day. If the relay isn't set up, the panel says so and nothing else changes.
 
+## Charts for the place you click, and chart search
+
+Clicking a place adds its own charts to the market panel (the six defaults stay in the drop-down). For example, Wayanad shows coffee, Kerala tea planters, the Sensex and the rupee; Texas shows oil, gas, cattle and cotton. The choices come from [`data/market_catalog.js`](data/market_catalog.js): add a region there with a name pattern and its chart keys.
+
+TradingView's free embedded charts don't show every market. Exchange feeds like the Nikkei, FTSE, ICE coffee futures, palm oil, rubber and iron ore futures only display on tradingview.com, so the catalog uses index CFDs, US-listed country ETFs and producer stocks (e.g. Vale for Brazilian iron ore) instead. There is no embeddable tea price, so tea regions use tea-grower stocks, labelled as such.
+
+The search box next to Live / Daily close takes any TradingView symbol (`AAPL`, `NSE:TCS`, `FX_IDC:USDJPY`) or a catalog name (`coffee`, `copper`). The last 8 searches are kept under "My charts".
+
 ## Data and licences
 
 - Boundaries: Natural Earth (public domain) and geoBoundaries (CC BY 4.0).
