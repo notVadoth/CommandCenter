@@ -1259,7 +1259,7 @@ function showLive(head, d, label){
   const items = d.items || [];
   liveEl.innerHTML = head + (items.length
     ? items.map(it => `<a class="li" href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.title)}<span class="m">${esc(it.source||"")} · ${esc(ago(it.published))}</span></a>`).join("")
-      + `<div class="lnote">Google News search for ${esc(label)}, past 24 hours.</div>`
+      + `<div class="lnote">${esc(d.provider||"Google News")} search for ${esc(label)}, past 24 hours.</div>`
     : `<div class="lnote">No stories about ${esc(label)} in the last 24 hours.</div>`);
 }
 function setRelay(){
