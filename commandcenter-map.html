@@ -1351,9 +1351,9 @@ function rebuildMktSelect(){
   const add = (label, keys)=>{ if (!keys.length) return; const g = document.createElement("optgroup"); g.className = "dyn"; g.label = label;
     g.innerHTML = keys.map(k=>`<option value="${esc(k)}">${esc(mktLabel(k))}</option>`).join(""); mktSel.prepend(g); };
   add("My charts", customCharts);
-  if (placeCharts.keys.length) add("For " + placeCharts.label, placeCharts.keys);
+  if (placeCharts.keys.length) add("Recommended", placeCharts.keys);
   const pl = document.getElementById("mkt-place");
-  pl.innerHTML = placeCharts.keys.length ? `<span title="${esc(placeCharts.why.join("; "))}">${esc(placeCharts.label)}:</span>` +
+  pl.innerHTML = placeCharts.keys.length ? `<span title="${esc(["For " + placeCharts.label, ...placeCharts.why].join(" · "))}">Recommended:</span>` +
     placeCharts.keys.map(k=>`<button data-k="${esc(k)}" class="${k===mkt.key?"on":""}" title="${esc(mktNote(k))}">${esc(mktLabel(k).replace(/\s*\(.*\)$/,""))}</button>`).join("") : "";
   document.getElementById("mkt-list").innerHTML = [...DEFAULT_KEYS, ...Object.keys(CAT.SYMBOLS)].map(k=>`<option value="${esc(mktLabel(k))}">`).join("");
 }
