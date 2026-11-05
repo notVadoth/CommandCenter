@@ -42,10 +42,21 @@ All three write into `data/`. Locally on Windows, run `trawler\setup_daily_task.
 
 If GitHub runs the job, you can switch the PC task off with `trawler\remove_daily_task.bat`; `git pull` brings the latest data down. A local EODHD key goes in `trawler/keys.json`, which is git-ignored; never commit it.
 
+## Live headlines when you click a place (free relay)
+
+Clicking a country or province shows its top Google News headlines from the last 24 hours at the top of the Headlines panel; × goes back to the daily headlines. Browsers can't read Google News directly, so a tiny free relay sits in between:
+
+1. Sign in (or sign up, free) at [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages → Create → Create Worker**.
+2. Name it `cc-news` → **Deploy** → **Edit code**.
+3. Replace everything with the contents of [`relay/news-relay.js`](relay/news-relay.js) → **Deploy**.
+4. Copy the worker's address (`https://cc-news.<your-name>.workers.dev`) into `data/config.js` as `newsRelay`, and commit it.
+
+The relay only answers pages served from `notvadoth.github.io` or opened from your PC (edit `ALLOWED_ORIGINS` if you rename the repo or use another host). It caches each place for 15 minutes; Cloudflare's free plan allows 100,000 requests a day. If the relay isn't set up, the panel says so and nothing else changes.
+
 ## Data and licences
 
 - Boundaries: Natural Earth (public domain) and geoBoundaries (CC BY 4.0).
 - Live figures: World Bank, Wikidata and Wikipedia.
 - Markets: live charts embedded from TradingView (free widget, attribution kept); daily closes from FRED.
-- Headlines link to the original outlets; only titles are stored.
+- Headlines link to the original outlets; only titles are stored. Live place headlines come from Google News search via your own relay.
 - ISW/CTP maps are not included (their licence requires written consent).

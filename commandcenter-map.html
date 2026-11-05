@@ -115,6 +115,12 @@
   .ncountry.diplo{color:#b197fc} .story .tag{display:inline-block;font-size:9.5px;border:1px solid #4c3f7a;color:#b197fc;border-radius:3px;padding:0 4px;margin-right:4px;vertical-align:1px}
   .ncountry{padding:8px 14px 2px;font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;cursor:pointer}
   .story{padding:6px 14px;border-bottom:1px solid #1f2532;cursor:pointer}
+  #live-news{border-bottom:1px solid var(--line);background:#141924}
+  #live-news .lh{display:flex;align-items:center;gap:6px;padding:7px 14px 3px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#ffd43b}
+  #live-news .lh .x2{margin-left:auto;background:none;border:0;color:var(--muted);cursor:pointer;font-size:15px;line-height:1}
+  #live-news .li{display:block;padding:5px 14px;border-top:1px solid #1f2532;color:var(--text);text-decoration:none;font-size:12.5px;line-height:1.35}
+  #live-news .li:hover{background:#1d2330} #live-news .li .m{display:block;font-size:10.5px;color:var(--muted);margin-top:1px}
+  #live-news .lnote{padding:4px 14px 8px;font-size:11px;color:var(--muted)} #live-news .lnote a,#live-news .lnote button{color:#74c0fc;background:none;border:0;padding:0;font:inherit;cursor:pointer}
   .story:hover{background:#1d2330}
   .story .hl{font-size:12.5px;line-height:1.35}
   .story .sm{font-size:10.5px;color:var(--muted);margin-top:2px}
@@ -214,6 +220,7 @@
       <div id="mkt-chart"><div id="mkt-tip"></div></div>
       <div class="msrc" id="mkt-src"></div>
     </section>
+    <div id="live-news" hidden></div>
     <div id="news-list"></div>
   </aside>
   <button id="news-open" class="vstrip" title="Show headlines">« Headlines</button>
@@ -226,6 +233,8 @@
 <script src="data/groupings.js" onerror="void 0"></script>
 <!-- optional: daily headline digest (written by news.py; defines window.CC_STORIES) -->
 <script src="data/stories.js" onerror="void 0"></script>
+<!-- settings (news relay address) -->
+<script src="data/config.js" onerror="void 0"></script>
 <!-- optional: daily market closes (written by markets.py; defines window.CC_MARKETS) -->
 <script src="data/markets.js" onerror="void 0"></script>
 
@@ -936,6 +945,7 @@ map.on("click", e=>{
     return;
   }
   drawerHit = h; renderDrawer(h);
+  liveNewsFor(h);
   const wasOpen = drawerEl.classList.contains("open") && !drawerEl.classList.contains("collapsed");
   drawerEl.classList.add("open"); drawerEl.classList.remove("collapsed");
   if (NARROW.matches){ appEl.classList.add("side-hidden"); appEl.classList.add("news-hidden"); }
@@ -952,7 +962,7 @@ map.on("click", e=>{
    ========================================================================= */
 const drawerEl = document.getElementById("drawer");
 function mapResized(keep){ map.invalidateSize({pan:false}); if (keep) map.panInside(keep, {padding:[60,60], animate:false}); }
-function closeDrawer(){ if (!drawerEl.classList.contains("open")) return; drawerEl.classList.remove("open","collapsed"); drawerHit=null; mapResized(); }
+function closeDrawer(){ if (!drawerEl.classList.contains("open")) return; drawerEl.classList.remove("open","collapsed"); drawerHit=null; mapResized(); clearLiveNews(); }
 function collapseDrawer(on){ drawerEl.classList.toggle("collapsed", on); mapResized(); }
 document.addEventListener("keydown", e=>{ if (e.key==="Escape") closeDrawer(); });
 const SERIES = {};       // ISO3 -> {status, gdp:[{yr,v}], pop:[{yr,v}]}
@@ -1211,6 +1221,53 @@ function storyHtml(s){
       ${(s.missing||[]).map(m=>`<div class="miss">No ${esc(m.label)} coverage in today's feeds. Search: ${m.search.map(q=>`<a href="${esc(q.url)}" target="_blank" rel="noopener">${esc(q.outlet)}</a>`).join(" · ")}</div>`).join("")}
     </div></div>`;
 }
+/* =========================================================================
+   LIVE HEADLINES for the clicked place: top stories from the last 24 h (Google News, via the free relay in relay/)
+   ========================================================================= */
+const liveEl = document.getElementById("live-news");
+// English Google News editions for countries that have one (better local coverage); everything else uses the US edition
+const GN_EDITION = {CAN:"CA",GBR:"GB",IRL:"IE",AUS:"AU",NZL:"NZ",IND:"IN",PAK:"PK",BGD:"BD",LKA:"LK",SGP:"SG",MYS:"MY",PHL:"PH",ZAF:"ZA",NGA:"NG",KEN:"KE",
+                    GHA:"GH",UGA:"UG",TZA:"TZ",ZWE:"ZW",NAM:"NA",BWA:"BW",ETH:"ET",ISR:"IL",ARE:"AE",SAU:"SA",LBN:"LB",EGY:"EG",HKG:"HK",USA:"US"};
+let liveReq = null; const liveCache = new Map();
+function relayURL(){ let u = ""; try { u = localStorage.getItem("cc_news_relay") || ""; } catch(e){} return (u || window.CC_CONFIG?.newsRelay || "").replace(/\/+$/,""); }
+function clearLiveNews(){ liveReq?.abort(); liveReq = null; liveEl.hidden = true; liveEl.innerHTML = ""; }
+function liveNewsFor(h){
+  const c = h.country; if (!c) return clearLiveNews();
+  const prov = h.adm1?.name, label = prov ? `${prov}, ${c.name}` : c.name;
+  const q = prov ? `"${prov}" ${c.name}` : `"${c.name}"`;
+  const gl = GN_EDITION[c.code] || "US", key = gl + "|" + q;
+  if (!NARROW.matches && appEl.classList.contains("news-hidden")) setPanel("news", true);   // make sure the headlines are visible
+  liveEl.hidden = false; liveEl.dataset.key = key;
+  const head = `<div class="lh">Top headlines · ${esc(label)} · last 24 h<button class="x2" title="Back to the daily headlines" onclick="clearLiveNews()">×</button></div>`;
+  const relay = relayURL();
+  if (!relay){
+    liveEl.innerHTML = head + `<div class="lnote">Live headlines need the free news relay: see <b>relay/news-relay.js</b> for the 5-minute setup, then <button onclick="setRelay()">paste its address</button>.</div>`;
+    return;
+  }
+  const hit = liveCache.get(key);
+  if (hit && Date.now() - hit.t < 10*60e3) return showLive(head, hit.d, label);
+  liveEl.innerHTML = head + `<div class="lnote">Loading…</div>`;
+  liveReq?.abort(); const ctl = liveReq = new AbortController();
+  fetch(`${relay}/?q=${encodeURIComponent(q)}&ceid=${gl}:en`, {signal: ctl.signal})
+    .then(r => r.ok ? r.json() : r.json().catch(()=>({})).then(j => { throw new Error(j.error || ("relay returned " + r.status)); }))
+    .then(d => { liveCache.set(key, {t: Date.now(), d}); if (liveEl.dataset.key === key) showLive(head, d, label); })
+    .catch(e => { if (e.name !== "AbortError" && liveEl.dataset.key === key) liveEl.innerHTML = head + `<div class="lnote">Couldn't load headlines (${esc(e.message)}). <button onclick="setRelay()">Check relay address</button></div>`; });
+}
+function ago(iso){ const m = Math.max(1, Math.round((Date.now() - Date.parse(iso)) / 60e3)); return m < 60 ? `${m} min ago` : `${Math.round(m/60)} h ago`; }
+function showLive(head, d, label){
+  const items = d.items || [];
+  liveEl.innerHTML = head + (items.length
+    ? items.map(it => `<a class="li" href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.title)}<span class="m">${esc(it.source||"")} · ${esc(ago(it.published))}</span></a>`).join("")
+      + `<div class="lnote">Google News search for ${esc(label)}, past 24 hours.</div>`
+    : `<div class="lnote">No stories about ${esc(label)} in the last 24 hours.</div>`);
+}
+function setRelay(){
+  const u = prompt("Address of your news relay (e.g. https://cc-news.yourname.workers.dev). Leave empty to use data/config.js.", relayURL());
+  if (u === null) return;
+  try { if (u.trim()) localStorage.setItem("cc_news_relay", u.trim()); else localStorage.removeItem("cc_news_relay"); } catch(e){}
+  liveCache.clear(); if (drawerHit) liveNewsFor(drawerHit);
+}
+
 function renderNews(){
   const D = window.CC_STORIES;
   if (!D){ newsEl.innerHTML = `<div class="small" style="padding:12px 14px">No headlines yet. They appear after the daily trawler run (or double-click trawler\\run_trawler.bat).</div>`; return; }
