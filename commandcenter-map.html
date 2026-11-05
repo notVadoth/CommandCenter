@@ -1351,6 +1351,7 @@ function rebuildMktSelect(){
   const add = (label, keys)=>{ if (!keys.length) return; const g = document.createElement("optgroup"); g.className = "dyn"; g.label = label;
     g.innerHTML = keys.map(k=>`<option value="${esc(k)}">${esc(mktLabel(k))}</option>`).join(""); mktSel.prepend(g); };
   add("My charts", customCharts);
+  if (customCharts.length) mktSel.querySelector("optgroup.dyn").insertAdjacentHTML("beforeend", `<option value="__clear">✕ Clear my charts</option>`);
   if (placeCharts.keys.length) add("Recommended", placeCharts.keys);
   const pl = document.getElementById("mkt-place");
   pl.innerHTML = placeCharts.keys.length ? `<span title="${esc(["For " + placeCharts.label, ...placeCharts.why].join(" · "))}">Recommended:</span>` +
@@ -1438,7 +1439,14 @@ function renderMarket(){
   svg.onmouseleave = ()=>{ xl.setAttribute("visibility","hidden"); dot.setAttribute("visibility","hidden"); mktTip.style.display="none"; };
 }
 function saveMkt(){ try { localStorage.setItem("cc_mkt", JSON.stringify({key:mkt.key, range:mkt.range, mode:mkt.mode})); } catch(e){} renderMarket(); }
-mktSel.onchange = ()=>{ mkt.key = mktSel.value; saveMkt(); };
+mktSel.onchange = ()=>{
+  if (mktSel.value === "__clear"){
+    if (customCharts.includes(mkt.key)) mkt.key = "SPX";
+    customCharts = []; try { localStorage.removeItem("cc_mkt_custom"); } catch(e){}
+    rebuildMktSelect(); return saveMkt();
+  }
+  mkt.key = mktSel.value; saveMkt();
+};
 document.getElementById("mkt-q").addEventListener("change", e=>{ searchChart(e.target.value); e.target.value = ""; e.target.blur(); });
 document.getElementById("mkt-place").addEventListener("click", e=>{ const k = e.target.closest("button")?.dataset.k; if (k){ mkt.key = k; saveMkt(); } });
 if (!DEFAULT_KEYS.includes(mkt.key) && !customCharts.includes(mkt.key)) mkt.key = "SPX";   // a place chart from last visit
