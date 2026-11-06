@@ -1,6 +1,6 @@
-// CommandCenter news relay: a free Cloudflare Worker that fetches Google News search results for a
-// place (falling back to Bing News if Google refuses) and returns the top headlines from the last
-// 24 hours as JSON the map page can read.
+// CommandCenter news relay (v1.2): a free Cloudflare Worker that searches Google News and Bing News at
+// the same time for a place, merges the results and returns the top headlines from the last 24 hours
+// as JSON the map page can read.
 // Browsers can't read Google News directly (no CORS), so this small relay sits in between.
 //
 // Setup (about 5 minutes, free, no card):
@@ -9,8 +9,8 @@
 //   3. Replace everything with this file, click Deploy
 //   4. Copy the address it shows (https://cc-news.<you>.workers.dev) into data/config.js
 //
-// Request:  GET https://cc-news.<you>.workers.dev/?q=Ontario%20Canada&ceid=CA:en
-// Response: {"query":"…","provider":"Google News|Bing News","fetched":"…","items":[{"title","source","url","published"}]}
+// Request:  GET https://cc-news.<you>.workers.dev/?q=%22Michigan%22||Michigan%20news&ceid=US:en   (up to 3 phrasings, ||-separated)
+// Response: {"query":[…],"provider":"Google News + Bing News","fetched":"…","items":[{"title","source","url","published"}]}
 //
 // The free plan allows 100,000 requests a day; results are cached for 15 minutes per place.
 
@@ -22,7 +22,7 @@ const ALLOWED_ORIGINS = [
   "http://localhost",
   "http://127.0.0.1",
 ];
-const MAX_ITEMS = 12;
+const MAX_ITEMS = 15;
 const CACHE_SECONDS = 900;
 
 export default {
@@ -38,23 +38,35 @@ export default {
     if (!allowed) return json({ error: "origin not allowed" }, 403, cors);
 
     const url = new URL(request.url);
-    const q = (url.searchParams.get("q") || "").trim().slice(0, 120);
+    // up to 3 search phrasings separated by "||" (e.g. "Michigan"||Michigan news); all are run at once and merged
+    const queries = (url.searchParams.get("q") || "").split("||").map(x => x.trim().slice(0, 120)).filter(Boolean).slice(0, 3);
     const ceid = /^[A-Z]{2}:[a-z]{2}$/.test(url.searchParams.get("ceid") || "") ? url.searchParams.get("ceid") : "US:en";
-    if (!q) return json({ error: "missing q" }, 400, cors);
+    if (!queries.length) return json({ error: "missing q" }, 400, cors);
 
     const [gl, hl] = ceid.split(":");
-    const cacheKey = new Request(`https://relay.cache/?q=${encodeURIComponent(q)}&ceid=${ceid}`);
     const cache = caches.default;
+    const cacheKey = new Request(`https://relay.cache/v2?q=${encodeURIComponent(queries.join("||"))}&ceid=${ceid}`);
     let res = await cache.match(cacheKey);
     if (!res) {
-      // Google News first; it sometimes refuses cloud servers (HTTP 503), so fall back to Bing News
-      let items = [], provider = "", errors = [];
-      for (const [name, getter] of [["Google News", googleNews], ["Bing News", bingNews]]) {
-        try { items = await getter(q, gl, hl); provider = name; if (items.length) break; }
-        catch (e) { errors.push(`${name}: ${e.message}`); }
-      }
-      if (!provider) return json({ error: errors.join("; ") }, 502, cors);
-      res = json({ query: q, ceid, provider, fetched: new Date().toISOString(), items }, 200, { "Cache-Control": `public, max-age=${CACHE_SECONDS}` });
+      // Google refuses Cloudflare's servers some of the time (HTTP 503); after a refusal it is skipped for 30 minutes
+      const googleDown = !!(await cache.match(GOOGLE_DOWN));
+      const jobs = [];
+      if (!googleDown) jobs.push(["Google News", 0, googleNews(queries[0], gl, hl)]);
+      queries.forEach((q, i) => jobs.push(["Bing News", i, bingNews(q, gl, hl)]));
+      const settled = await Promise.allSettled(jobs.map(j => withTimeout(j[2], 6000)));
+      const lists = [], providers = new Set(), errors = [];
+      settled.forEach((r, i) => {
+        const [name] = jobs[i];
+        if (r.status === "fulfilled") { lists.push(r.value); if (r.value.length) providers.add(name); }
+        else {
+          errors.push(`${name}: ${r.reason?.message || r.reason}`);
+          if (name === "Google News") ctx.waitUntil(cache.put(GOOGLE_DOWN, new Response("1", { headers: { "Cache-Control": "max-age=1800" } })));
+        }
+      });
+      if (!lists.length) return json({ error: errors.join("; ") }, 502, cors);
+      const items = mergeRanked(lists).slice(0, MAX_ITEMS);
+      res = json({ query: queries, ceid, provider: [...providers].join(" + ") || "none", fetched: new Date().toISOString(), items },
+                 200, { "Cache-Control": `public, max-age=${CACHE_SECONDS}` });
       ctx.waitUntil(cache.put(cacheKey, res.clone()));
     }
     const out = new Response(res.body, res);
@@ -62,6 +74,23 @@ export default {
     return out;
   },
 };
+
+const GOOGLE_DOWN = new Request("https://relay.cache/google-down");
+
+function withTimeout(p, ms) {
+  return Promise.race([p, new Promise((_, rej) => setTimeout(() => rej(new Error(`timed out after ${ms / 1000}s`)), ms))]);
+}
+
+// Merge several ranked result lists: a story ranks by its best position in any list; near-identical titles are merged
+function mergeRanked(lists) {
+  const best = new Map();
+  lists.forEach(list => list.forEach((it, pos) => {
+    const k = it.title.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().slice(0, 70);
+    const cur = best.get(k);
+    if (!cur || pos < cur.pos) best.set(k, { ...it, pos });
+  }));
+  return [...best.values()].sort((a, b) => a.pos - b.pos || Date.parse(b.published) - Date.parse(a.published)).map(({ pos, ...it }) => it);
+}
 
 const UA = "Mozilla/5.0 (compatible; CommandCenter-news-relay/1.1)";
 const DAY = 24 * 3600 * 1000;

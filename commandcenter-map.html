@@ -948,6 +948,7 @@ map.on("mousemove", e=>{
   const now=performance.now(); if (now-lastHover<60) return; lastHover=now;
   const h = hitAt(e.latlng);
   if (!h.country && !h.adm1 && !h.dmz?.length){ hoverEl.style.display="none"; lastHit=null; return; }
+  if (h.country !== lastHit?.country || h.adm1 !== lastHit?.adm1) prefetchLive(h);
   lastHit = h; renderHover(h);
   hoverEl.style.display="block";
   const x=e.originalEvent.clientX, y=e.originalEvent.clientY, W=innerWidth, H=innerHeight, bw=hoverEl.offsetWidth, bh=hoverEl.offsetHeight;
@@ -1247,39 +1248,59 @@ const liveEl = document.getElementById("live-news");
 // English Google News editions for countries that have one (better local coverage); everything else uses the US edition
 const GN_EDITION = {CAN:"CA",GBR:"GB",IRL:"IE",AUS:"AU",NZL:"NZ",IND:"IN",PAK:"PK",BGD:"BD",LKA:"LK",SGP:"SG",MYS:"MY",PHL:"PH",ZAF:"ZA",NGA:"NG",KEN:"KE",
                     GHA:"GH",UGA:"UG",TZA:"TZ",ZWE:"ZW",NAM:"NA",BWA:"BW",ETH:"ET",ISR:"IL",ARE:"AE",SAU:"SA",LBN:"LB",EGY:"EG",HKG:"HK",USA:"US"};
-let liveReq = null; const liveCache = new Map();
+const liveCache = new Map();
 const DEFAULT_RELAY = "https://cc-news.sid-vadoth.workers.dev";   // used when data/config.js is missing or empty
 function relayURL(){ let u = ""; try { u = localStorage.getItem("cc_news_relay") || ""; } catch(e){} return (u || window.CC_CONFIG?.newsRelay || DEFAULT_RELAY).replace(/\/+$/,""); }
-function clearLiveNews(){ liveReq?.abort(); liveReq = null; liveEl.hidden = true; liveEl.innerHTML = ""; }
+function clearLiveNews(){ liveEl.hidden = true; liveEl.innerHTML = ""; liveEl.dataset.key = ""; }
+// Search phrasings for a place. The country name is only added when the province name alone is ambiguous
+// ("Punjab", "Georgia", "Central"): local outlets rarely write "Michigan, United States", so adding it hid most stories.
+const AMBIGUOUS = /^(punjab|georgia|victoria|washington|c[oó]rdoba|santa cruz|la rioja|limburg|luxembourg|m[eé]xico|distrito federal|capital|national capital|federal capital)$|^(central|northern|southern|eastern|western|north|south|east|west|greater|upper|lower)\b/i;
+function liveQuery(h){
+  const c = h.country; if (!c) return null;
+  const prov = h.adm1?.name, gl = GN_EDITION[c.code] || "US";
+  const clash = prov && (AMBIGUOUS.test(prov) || prov.length < 5 || countries.some(o => o.code !== c.code && o.name.toLowerCase() === prov.toLowerCase()));
+  const qs = !prov ? [`"${c.name}"`] : clash ? [`"${prov}" ${c.name}`] : [`"${prov}"`, `"${prov}" ${c.name}`];
+  return { qs, gl, key: gl + "|" + qs.join("||"), label: prov ? `${prov}, ${c.name}` : c.name };
+}
+// one request per place: hover prefetch and click share it; results are kept for 10 minutes
+function fetchLive(L){
+  const hit = liveCache.get(L.key);
+  if (hit && (hit.p || Date.now() - hit.t < 10*60e3)) return hit.p || Promise.resolve(hit.d);
+  const relay = relayURL(); if (!relay) return Promise.reject(new Error("no relay"));
+  const ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), 15000);
+  const p = fetch(`${relay}/?q=${encodeURIComponent(L.qs.join("||"))}&ceid=${L.gl}:en`, {signal: ctl.signal})
+    .then(r => r.ok ? r.json() : r.json().catch(()=>({})).then(j => { throw new Error(j.error || ("relay returned " + r.status)); }))
+    .then(d => { liveCache.set(L.key, {t: Date.now(), d}); return d; })
+    .catch(e => { liveCache.delete(L.key); throw (e.name === "AbortError" ? new Error("the news search took over 15 seconds") : e); })
+    .finally(() => clearTimeout(timer));
+  liveCache.set(L.key, {t: Date.now(), p});
+  return p;
+}
+let prefetchT = null;
+function prefetchLive(h){ clearTimeout(prefetchT); const L = liveQuery(h); if (!L || !relayURL()) return;
+  prefetchT = setTimeout(() => fetchLive(L).catch(()=>{}), 700); }   // resting on a place for 0.7 s starts its search early
 function liveNewsFor(h){
-  const c = h.country; if (!c) return clearLiveNews();
-  const prov = h.adm1?.name, label = prov ? `${prov}, ${c.name}` : c.name;
-  const q = prov ? `"${prov}" ${c.name}` : `"${c.name}"`;
-  const gl = GN_EDITION[c.code] || "US", key = gl + "|" + q;
+  const L = liveQuery(h); if (!L) return clearLiveNews();
   if (!NARROW.matches && appEl.classList.contains("news-hidden")) setPanel("news", true);   // make sure the headlines are visible
-  liveEl.hidden = false; liveEl.dataset.key = key;
-  const head = `<div class="lh">Top headlines · ${esc(label)} · last 24 h<button class="x2" title="Back to the daily headlines" onclick="clearLiveNews()">×</button></div>`;
-  const relay = relayURL();
-  if (!relay){
+  liveEl.hidden = false; liveEl.dataset.key = L.key;
+  const head = `<div class="lh">Top headlines · ${esc(L.label)} · last 24 h<button class="x2" title="Back to the daily headlines" onclick="clearLiveNews()">×</button></div>`;
+  if (!relayURL()){
     liveEl.innerHTML = head + `<div class="lnote">Live headlines need the free news relay: see <b>relay/news-relay.js</b> for the 5-minute setup, then <button onclick="setRelay()">paste its address</button>.</div>`;
     return;
   }
-  const hit = liveCache.get(key);
-  if (hit && Date.now() - hit.t < 10*60e3) return showLive(head, hit.d, label);
-  liveEl.innerHTML = head + `<div class="lnote">Loading…</div>`;
-  liveReq?.abort(); const ctl = liveReq = new AbortController();
-  fetch(`${relay}/?q=${encodeURIComponent(q)}&ceid=${gl}:en`, {signal: ctl.signal})
-    .then(r => r.ok ? r.json() : r.json().catch(()=>({})).then(j => { throw new Error(j.error || ("relay returned " + r.status)); }))
-    .then(d => { liveCache.set(key, {t: Date.now(), d}); if (liveEl.dataset.key === key) showLive(head, d, label); })
-    .catch(e => { if (e.name !== "AbortError" && liveEl.dataset.key === key) liveEl.innerHTML = head + `<div class="lnote">Couldn't load headlines (${esc(e.message)}). <button onclick="setRelay()">Check relay address</button></div>`; });
+  const hit = liveCache.get(L.key);
+  if (!(hit?.d)) liveEl.innerHTML = head + `<div class="lnote">Searching Google News and Bing News…</div>`;
+  fetchLive(L)
+    .then(d => { if (liveEl.dataset.key === L.key) showLive(head, d, L.label); })
+    .catch(e => { if (liveEl.dataset.key === L.key) liveEl.innerHTML = head + `<div class="lnote">Couldn't load headlines (${esc(e.message)}). <button onclick="liveNewsFor(drawerHit)">Try again</button> · <button onclick="setRelay()">Check relay address</button></div>`; });
 }
 function ago(iso){ const m = Math.max(1, Math.round((Date.now() - Date.parse(iso)) / 60e3)); return m < 60 ? `${m} min ago` : `${Math.round(m/60)} h ago`; }
 function showLive(head, d, label){
   const items = d.items || [];
   liveEl.innerHTML = head + (items.length
     ? items.map(it => `<a class="li" href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.title)}<span class="m">${esc(it.source||"")} · ${esc(ago(it.published))}</span></a>`).join("")
-      + `<div class="lnote">${esc(d.provider||"Google News")} search for ${esc(label)}, past 24 hours.</div>`
-    : `<div class="lnote">No stories about ${esc(label)} in the last 24 hours.</div>`);
+      + `<div class="lnote">${esc(d.provider||"News")} search for ${esc(label)}, past 24 hours.</div>`
+    : `<div class="lnote">No stories about ${esc(label)} found in the last 24 hours${/Google/.test(d.provider||"") ? "" : " (Bing only; Google wasn't answering)"}.</div>`);
 }
 function setRelay(){
   const u = prompt("Address of your news relay (e.g. https://cc-news.yourname.workers.dev). Leave empty to use data/config.js.", relayURL());
