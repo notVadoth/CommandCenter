@@ -21,7 +21,7 @@ district being captured, as candidates to add to wars.json. Nothing is mapped fo
 """
 from __future__ import annotations
 
-import argparse, collections, datetime as dt, json, math, re, sys, time, unicodedata, urllib.parse
+import argparse, collections, datetime as dt, json, math, re, sys, time, unicodedata, urllib.error, urllib.parse
 from pathlib import Path
 
 import trawler as T
@@ -74,6 +74,16 @@ def district_at(iso, lvl, lon, lat):
     return None
 
 # ---------------------------------------------------------------- geocoding (Wikidata, cached)
+def wd_get(params):
+    """Wikidata API call; waits and retries when rate-limited (HTTP 429)."""
+    url = "https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode(params)
+    for wait in (5, 20, 60, None):
+        try:
+            return json.loads(T.http_get(url))
+        except urllib.error.HTTPError as e:
+            if e.code != 429 or wait is None: raise
+            time.sleep(int(e.headers.get("Retry-After") or wait))
+
 def geocode(name, countries, cache, offline=False):
     """All settlements called `name` in `countries` (ISO3) on Wikidata: [{qid, iso, lat, lon}], cached."""
     key = name + "|" + ",".join(sorted(countries))
@@ -82,18 +92,16 @@ def geocode(name, countries, cache, offline=False):
     want = {WD_COUNTRY[c]: c for c in countries if c in WD_COUNTRY}
     found = []
     try:
-        q = urllib.parse.urlencode({"action": "wbsearchentities", "search": name, "language": "en", "type": "item", "limit": 12, "format": "json"})
-        ids = [h["id"] for h in json.loads(T.http_get("https://www.wikidata.org/w/api.php?" + q))["search"]]
+        ids = [h["id"] for h in wd_get({"action": "wbsearchentities", "search": name, "language": "en", "type": "item", "limit": 12, "format": "json"})["search"]]
         if ids:
-            q = urllib.parse.urlencode({"action": "wbgetentities", "ids": "|".join(ids), "props": "claims", "format": "json"})
-            ents = json.loads(T.http_get("https://www.wikidata.org/w/api.php?" + q))["entities"]
+            ents = wd_get({"action": "wbgetentities", "ids": "|".join(ids), "props": "claims", "format": "json"})["entities"]
             for i in ids:
                 cl = ents.get(i, {}).get("claims", {})
                 c17 = [c["mainsnak"].get("datavalue", {}).get("value", {}).get("id") for c in cl.get("P17", [])]
                 iso = next((want[c] for c in c17 if c in want), None)
                 coord = next((c["mainsnak"].get("datavalue", {}).get("value") for c in cl.get("P625", []) if c["mainsnak"].get("datavalue")), None)
                 if iso and coord: found.append({"qid": i, "iso": iso, "lat": coord["latitude"], "lon": coord["longitude"]})
-        time.sleep(0.3)   # be gentle with Wikidata
+        time.sleep(1)     # be gentle with Wikidata
     except Exception as e:
         print(f"  ! geocode {name}: {e}", file=sys.stderr)
         return []         # don't cache failures
@@ -125,6 +133,10 @@ def resolve(place, text, war, gcache, offline):
     for iso, lvl in war["countries"].items():
         for f in boundaries(iso, lvl):
             if norm(f["properties"]["shapeName"]) == norm(place): return iso, lvl, f
+    # a whole region ("Crimea", "Donetsk region") is too broad to mark one district
+    for iso, lvl in war["countries"].items():
+        if lvl != "ADM1" and REGION_ALIASES.get(norm(place), norm(place)) in {norm(f["properties"]["shapeName"]) for f in boundaries(iso, "ADM1")}:
+            return None
     # 2. a settlement: Wikidata coordinates -> district; region names in the text settle duplicates
     spots = []
     for g in geocode(place, list(war["countries"]), gcache, offline):
