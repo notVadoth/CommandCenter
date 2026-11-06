@@ -13,7 +13,7 @@ Command Centre is a single-page world map that brings together political geograp
 - National, province/state and county/district boundaries, loaded per country as you zoom.
 - Bloc overlays: EU, NATO, BRICS and partners, G7, G20, ASEAN, SCO, CSTO, African Union, GCC, OPEC, USMCA, Mercosur, Five Eyes, Quad and the Mecca Joint Defence Agreement.
 - Contested-control layers: areas held by non-state actors, occupied territory, DMZs and ceasefire lines, and disputed territory. Each area shows its source and date.
-- Active wars: for each tracked war (Russia–Ukraine, Yemen, Sudan, Myanmar, eastern Congo, the Sahel, Somalia, Gaza and Israel–Hezbollah), provinces are shaded where fighting is going on or where part of the province has been taken in the current round of fighting. Provinces held by one side since before that (Crimea, Sanaa) or fully controlled by their government (Kyiv) are not shaded. Clicking or hovering names the belligerents, with links to the sources and to front-line maps such as DeepStateMap and Military Summary.
+- Active wars: for each tracked war (Russia–Ukraine, Yemen, Sudan, Myanmar, eastern Congo, the Sahel, Somalia, Gaza and Israel–Hezbollah), provinces are shaded where fighting is going on or where part of the province has been taken since the previous ceasefire or settlement. Provinces held by one side since before that (Crimea, Sanaa) or fully controlled by their government (Kyiv) are not shaded. Clicking or hovering names the belligerents, with links to the sources and to front-line maps such as DeepStateMap and Military Summary.
 
 **Place details**
 - Hover card with GDP, GDP per capita, Gini, leader and cabinet for countries; leader and government for provinces and states.

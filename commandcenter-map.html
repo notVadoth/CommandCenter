@@ -559,7 +559,7 @@ const frontLayer = L.geoJSON(null,{renderer:R.front, pane:"front", interactive:f
 const FRONT = window.CC_FRONTLINE || null;
 function fmtDay(d){ return d ? new Date(d).toLocaleDateString(undefined,{day:"numeric",month:"short"}) : ""; }
 const sidesOf = w => (w.belligerents||[]).map(b=>b.short||b.side).join(" vs ");
-const WAR_DISCLAIMER = "Shaded: fighting is going on here, or part of it has been taken in the current round of fighting. Not a map of who controls what; front lines move daily.";
+const WAR_DISCLAIMER = "Shading indicates an active war in this province; it does not reflect who controls the ground.";
 const trackerLinks = w => (w.trackers||[]).length ? `<div class="small" style="margin-top:4px">Front-line maps: ${w.trackers.map(t=>`<a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.label)}</a>`).join(" · ")}</div>` : "";
 if (FRONT){
   for (const w of FRONT.wars||[]) for (const f of w.features||[]){
