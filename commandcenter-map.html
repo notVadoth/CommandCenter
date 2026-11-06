@@ -555,7 +555,8 @@ if (window.OCCUPIED_AREAS) addOccupied(window.OCCUPIED_AREAS, "data/occupied.js"
 // --- active wars (trawler/frontline.py): provinces where a tracked war is being fought ---
 const frontRecs = [];
 const frontLayer = L.geoJSON(null,{renderer:R.front, pane:"front", interactive:false,
-  style:{color:"#cc5de8", weight:1.4, opacity:.9, fillColor:"#cc5de8", fillOpacity:.22}});
+  style:f=>f.properties.basis==="ceasefire" ? {color:"#cc5de8", weight:1.4, opacity:.9, dashArray:"5 4", fillColor:"#cc5de8", fillOpacity:.08}
+                                            : {color:"#cc5de8", weight:1.4, opacity:.9, fillColor:"#cc5de8", fillOpacity:.22}});
 const FRONT = window.CC_FRONTLINE || null;
 function fmtDay(d){ return d ? new Date(/^\d{4}-\d\d-\d\d$/.test(d) ? d+"T12:00" : d).toLocaleDateString(undefined,{day:"numeric",month:"short"}) : ""; }
 const sidesOf = w => (w.belligerents||[]).map(b=>b.short||b.side).join(" vs ");
@@ -575,14 +576,14 @@ function truceLine(w, box){
   const c = w.ceasefire; if (!c) return "";
   const src = (c.reports||[]).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.outlet)}</a>`).join(", ");
   const txt = c.status==="verified"
-    ? `Ceasefire since ${fmtDay(c.since)}, held 4+ days (${c.outlets} outlets): provinces no longer shaded.`
+    ? `Ceasefire since ${fmtDay(c.since)}, held 4+ days (${c.outlets} outlets): only areas still held by a side stay marked (dashed).`
     : `Ceasefire reported ${fmtDay(c.since)} by ${c.outlets} outlets; shading stays until it has held to ${fmtDay(c.verify_by)}.`;
   return `<div class="${box?"small":"war-sides"}" style="color:#8ce99a">${txt}${box&&src?` Sources: ${src}`:""}</div>`;
 }
 function renderWars(){
   if (!FRONT) return;
   const other = FRONT.other_fighting||[];
-  document.getElementById("wars").innerHTML = (FRONT.wars||[]).map(w=>`<div class="war"><a onclick="zoomWar('${esc(w.id)}')">${esc(w.name)}</a><span class="hint">${w.ceasefire?.status==="verified" ? "ceasefire" : `${(w.features||[]).length} province${(w.features||[]).length===1?"":"s"}`}</span></div><div class="war-sides">${esc(sidesOf(w))}</div>${truceLine(w)}`).join("")
+  document.getElementById("wars").innerHTML = (FRONT.wars||[]).map(w=>`<div class="war"><a onclick="zoomWar('${esc(w.id)}')">${esc(w.name)}</a><span class="hint">${w.ceasefire?.status==="verified" ? `ceasefire · ${(w.features||[]).length} held` : `${(w.features||[]).length} province${(w.features||[]).length===1?"":"s"}`}</span></div><div class="war-sides">${esc(sidesOf(w))}</div>${truceLine(w)}`).join("")
     + (other.length ? `<details class="small other"><summary>Other fighting in the news (not mapped)</summary>${other.map(o=>`<div>${esc(byCode[o.iso]?.name||o.iso)} <span class="hint">${Array.isArray(o.outlets)?o.outlets.length:o.outlets} outlets</span>${(o.examples||[]).slice(0,2).map(x=>`<div class="ex"><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a> <span class="hint">${esc(x.outlet||"")}</span></div>`).join("")}</div>`).join("")}</details>` : "");
 }
 function zoomWar(id){
@@ -592,10 +593,12 @@ function zoomWar(id){
 document.getElementById("lyr-front").onchange = e => e.target.checked ? frontLayer.addTo(map) : map.removeLayer(frontLayer);
 function frontBox(r){
   const p=r.props, w=r.war;
-  const why = p.basis==="front"
+  const why = p.basis==="ceasefire"
+    ? `Under a ceasefire since ${fmtDay(w.ceasefire?.since)}. ${esc(p.label||"")}: shown until the front-line lists are updated for any withdrawal.`
+    : p.basis==="front"
     ? `On the front line as of ${esc(w.front_as_of||"")}${(w.front_sources||[]).length?` (${w.front_sources.map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">source</a>`).join(", ")})`:""}.`
     : `Added from the news: ${p.outlets} outlets reported ground fighting here in the last ${FRONT.window_days} days.`;
-  return `<div class="ctrl-box" style="border-color:#cc5de8;background:#cc5de81a"><div class="t" style="color:#e5b3fe">⚔ Active war zone</div>`
+  return `<div class="ctrl-box" style="border-color:#cc5de8;background:#cc5de81a"><div class="t" style="color:#e5b3fe">${p.basis==="ceasefire" ? "⚐ Held under ceasefire" : "⚔ Active war zone"}</div>`
     + `<div>${esc(w.name)}</div>`
     + `<div class="small" style="margin-top:4px"><b>Belligerents</b></div>`
     + (w.belligerents||[]).map(b=>`<div class="small">· ${esc(b.side)}${b.detail?` <span class="hint">${esc(b.detail)}</span>`:""}</div>`).join("")
@@ -605,7 +608,7 @@ function frontBox(r){
     + (w.note?`<div class="small" style="margin-top:4px">${esc(w.note)}</div>`:"")
     + truceLine(w, true)
     + trackerLinks(w)
-    + `<div class="small war-disc">${WAR_DISCLAIMER}</div></div>`;
+    + `<div class="small war-disc">${p.basis==="ceasefire" ? "Dashed outline: a ceasefire is in force, but part of this province is still held by one side. It does not show where." : WAR_DISCLAIMER}</div></div>`;
 }
 
 // --- DMZs, UN buffer zones and ceasefire / control lines (Natural Earth 10m) ---
@@ -1089,8 +1092,8 @@ function renderHover(h){
   const path = [h.country?.name, h.adm1?.name, h.adm2?.name].filter(Boolean).map(esc).join(" › ");
   const ctrl = (h.control||[]).map(r=>`<div class="ctrl-box" style="padding:3px 6px"><span class="t">⚑ ${esc(r.props.name)}</span>${r.props.actor?` <span class="small">${esc(r.props.actor)}</span>`:""}</div>`).join("")
              + (h.occupied||[]).map(r=>`<div class="ctrl-box" style="padding:3px 6px;border-color:#d6336c;background:#a61e4d22"><span class="t" style="color:#f783ac">▣ ${esc(r.props.name)}</span>${r.props.occupier?` <span class="small">held by ${esc(r.props.occupier)}</span>`:""}</div>`).join("")
-             + (h.front||[]).map(r=>`<div class="ctrl-box" style="padding:4px 7px;border-color:#cc5de8;background:#cc5de81a"><span class="t" style="color:#e5b3fe">⚔ ${esc(r.war.name)}</span> <span class="small">${esc(sidesOf(r.war))}</span>`
-                 + `<div class="small war-disc">${WAR_DISCLAIMER}</div>${trackerLinks(r.war)}</div>`).join("")
+             + (h.front||[]).map(r=>`<div class="ctrl-box" style="padding:4px 7px;border-color:#cc5de8;background:#cc5de81a"><span class="t" style="color:#e5b3fe">${r.props.basis==="ceasefire"?"⚐":"⚔"} ${esc(r.war.name)}</span> <span class="small">${esc(r.props.basis==="ceasefire" ? `ceasefire · ${r.props.label}` : sidesOf(r.war))}</span>`
+                 + `<div class="small war-disc">${r.props.basis==="ceasefire" ? "Ceasefire in force; part of this province is still held by one side." : WAR_DISCLAIMER}</div>${trackerLinks(r.war)}</div>`).join("")
              + (h.dmz||[]).map(r=>`<div class="small" style="color:#99e9f2">╳ ${esc(r.props.name)}</div>`).join("")
              + (h.disputed||[]).map(r=>`<div class="small" style="color:#ffc078">◇ Disputed: ${esc(r.props.name)}</div>`).join("");
   hoverEl.innerHTML = `<div class="path">${path}</div>${ctrl}${statsHtml(h)}<div class="small" style="margin-top:4px">${NARROW.matches ? "" : "Click for charts, legislature and links"}</div>`;

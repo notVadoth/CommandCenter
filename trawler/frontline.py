@@ -349,6 +349,15 @@ def run(args):
             if r["war"] == war["id"] and when(r) >= recent: by[(r["iso"], norm(r["province"]))].append(r)
         cf = ceasefire_status(war, state, cfg)
         feats = []
+        if cf and cf["status"] == "verified":           # under a verified ceasefire: keep only provinces still (partly) held by the other side
+            after = war.get("after_ceasefire", {})
+            for iso, ps in after.get("provinces", {}).items():
+                keep = {norm(x) for x in ps}
+                for f in boundaries(iso, "ADM1"):
+                    if norm(f["properties"]["shapeName"]) in keep:
+                        feats.append({"type": "Feature", "geometry": light(f["geometry"]), "properties": {
+                            "war": war["id"], "province": f["properties"]["shapeName"], "iso": iso, "basis": "ceasefire",
+                            "label": after.get("label", ""), "outlets": 0, "places": [], "last": None, "reports": []}})
         for iso in (war["countries"] if not (cf and cf["status"] == "verified") else []):
             for f in boundaries(iso, "ADM1"):
                 key = (iso, norm(f["properties"]["shapeName"]))

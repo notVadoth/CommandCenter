@@ -1,5 +1,5 @@
 {
-  "_note": "Wars tracked on the map. A province is shaded when fighting is going on there, or when any part of it has been taken by the other side since the previous ceasefire or settlement (since the last ceasefire broke down). It is not shaded when it has been held by one side since before that (e.g. Crimea, Sanaa), or when its government controls all of it, even if it has been attacked (e.g. Kyiv). 'front' lists the shaded provinces, checked against 'front_sources' on 'front_as_of'; edit it when the front moves. The daily news check can add a province (3+ outlets, at least one not run by a party to the war, reporting ground fighting there within 'window_days') but never removes one. 'held' provinces are never shaded. Province names must match geoBoundaries ADM1 names. A war stops being shaded once a front-wide ceasefire, reported by 3+ outlets (1+ not run by a party to the war), has held for 'ceasefire_hold_days'; local, humanitarian, prisoner-exchange or holiday truces are ignored. Set \"ceasefire_check\": false on a war to turn this off.",
+  "_note": "Wars tracked on the map. A province is shaded when fighting is going on there, or when any part of it has been taken by the other side since the previous ceasefire or settlement (since the last ceasefire broke down). It is not shaded when it has been held by one side since before that (e.g. Crimea, Sanaa), or when its government controls all of it, even if it has been attacked (e.g. Kyiv). 'front' lists the shaded provinces, checked against 'front_sources' on 'front_as_of'; edit it when the front moves. The daily news check can add a province (3+ outlets, at least one not run by a party to the war, reporting ground fighting there within 'window_days') but never removes one. 'held' provinces are never shaded. Province names must match geoBoundaries ADM1 names. A war stops being shaded once a front-wide ceasefire, reported by 3+ outlets (1+ not run by a party to the war), has held for 'ceasefire_hold_days'; local, humanitarian, prisoner-exchange or holiday truces are ignored. Set \"ceasefire_check\": false on a war to turn this off. 'after_ceasefire' lists provinces still partly held by the other side (or divided between the sides); they stay marked, in a lighter 'held under ceasefire' style, once a ceasefire is verified. Update it if a ceasefire comes with withdrawals.",
   "min_outlets": 3,
   "window_days": 14,
   "ceasefire_hold_days": 4,
@@ -98,7 +98,22 @@
           "url": "https://liveuamap.com/"
         }
       ],
-      "note": "Crimea and Sevastopol have been held by Russia since 2014 and are shown under Occupied territory instead. Mykolaiv Oblast is shaded for the Russian-held Kinburn Spit."
+      "note": "Crimea and Sevastopol have been held by Russia since 2014 and are shown under Occupied territory instead. Mykolaiv Oblast is shaded for the Russian-held Kinburn Spit.",
+      "after_ceasefire": {
+        "label": "Partly held by Russia",
+        "provinces": {
+          "UKR": [
+            "Donetsk Oblast",
+            "Luhansk Oblast",
+            "Zaporizhia Oblast",
+            "Kherson Oblast",
+            "Kharkiv Oblast",
+            "Sumy Oblast",
+            "Dnipropetrovsk Oblast",
+            "Mykolaiv Oblast"
+          ]
+        }
+      }
     },
     {
       "id": "yemen",
@@ -201,7 +216,21 @@
           "url": "https://yemen.liveuamap.com/"
         }
       ],
-      "note": "Sanaa and the north-west have been held by the Houthis since 2014-15; Aden and the east by government-aligned forces."
+      "note": "Sanaa and the north-west have been held by the Houthis since 2014-15; Aden and the east by government-aligned forces.",
+      "after_ceasefire": {
+        "label": "Divided between the Houthis and the government",
+        "provinces": {
+          "YEM": [
+            "Ta'izz Governorate",
+            "Lahij Governorate",
+            "Al Jawf Governorate",
+            "Ma'rib Governorate",
+            "Al Hudaydah Governorate",
+            "Ad Dali' Governorate",
+            "Al Bayda' Governorate"
+          ]
+        }
+      }
     },
     {
       "id": "sudan",
@@ -290,7 +319,20 @@
           "url": "https://sudan.liveuamap.com/"
         }
       ],
-      "note": "The army retook Khartoum and Gezira in 2025; Darfur is almost entirely RSF-held after El Fasher fell in Oct 2025. Northern State is shaded for the RSF-held border triangle with Libya and Egypt (since June 2025)."
+      "note": "The army retook Khartoum and Gezira in 2025; Darfur is almost entirely RSF-held after El Fasher fell in Oct 2025. Northern State is shaded for the RSF-held border triangle with Libya and Egypt (since June 2025).",
+      "after_ceasefire": {
+        "label": "Divided between the army and the RSF",
+        "provinces": {
+          "SDN": [
+            "North Kordofan",
+            "West Kordofan",
+            "South Kordofan",
+            "North Darfur",
+            "Blue Nile",
+            "Northern"
+          ]
+        }
+      }
     },
     {
       "id": "myanmar",
@@ -390,7 +432,26 @@
           "url": "https://myanmar.liveuamap.com/"
         }
       ],
-      "note": "Control is patchy: resistance groups hold much of the borderlands, the military holds the cities and the Irrawaddy delta."
+      "note": "Control is patchy: resistance groups hold much of the borderlands, the military holds the cities and the Irrawaddy delta.",
+      "after_ceasefire": {
+        "label": "Divided between the military and resistance forces",
+        "provinces": {
+          "MMR": [
+            "Kachin",
+            "Chin",
+            "Kayah",
+            "Kayin",
+            "Saigang",
+            "Magway",
+            "Mandalay",
+            "Shan",
+            "Rakhine",
+            "Bago",
+            "Mon",
+            "Tanitharyi"
+          ]
+        }
+      }
     },
     {
       "id": "drc-m23",
@@ -454,7 +515,16 @@
           "url": "https://drcongo.liveuamap.com/"
         }
       ],
-      "note": "Ituri's separate violence (ADF, CODECO) is not part of this war and is not shaded."
+      "note": "Ituri's separate violence (ADF, CODECO) is not part of this war and is not shaded.",
+      "after_ceasefire": {
+        "label": "Partly held by AFC/M23",
+        "provinces": {
+          "COD": [
+            "North Kivu",
+            "South Kivu"
+          ]
+        }
+      }
     },
     {
       "id": "sahel",
@@ -718,7 +788,15 @@
           "url": "https://israelpalestine.liveuamap.com/"
         }
       ],
-      "note": "A ceasefire has held loosely since Oct 2025, with Israeli troops occupying part of the Strip and continued strikes. The West Bank, occupied since 1967, is shown under Occupied territory."
+      "note": "A ceasefire has held loosely since Oct 2025, with Israeli troops occupying part of the Strip and continued strikes. The West Bank, occupied since 1967, is shown under Occupied territory.",
+      "after_ceasefire": {
+        "label": "Partly held by Israel",
+        "provinces": {
+          "PSE": [
+            "Gaza"
+          ]
+        }
+      }
     },
     {
       "id": "israel-lebanon",
@@ -784,7 +862,16 @@
           "url": "https://lebanon.liveuamap.com/"
         }
       ],
-      "note": "Israeli troops hold villages in the south despite the June 2026 ceasefire; strikes and Hezbollah attacks continue."
+      "note": "Israeli troops hold villages in the south despite the June 2026 ceasefire; strikes and Hezbollah attacks continue.",
+      "after_ceasefire": {
+        "label": "Partly held by Israel",
+        "provinces": {
+          "LBN": [
+            "Liban-Sud",
+            "Nabatîyé"
+          ]
+        }
+      }
     }
   ]
 }
