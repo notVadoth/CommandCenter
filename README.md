@@ -13,6 +13,7 @@ Command Centre is a single-page world map that brings together political geograp
 - National, province/state and county/district boundaries, loaded per country as you zoom.
 - Bloc overlays: EU, NATO, BRICS and partners, G7, G20, ASEAN, SCO, CSTO, African Union, GCC, OPEC, USMCA, Mercosur, Five Eyes, Quad and the Mecca Joint Defence Agreement.
 - Contested-control layers: areas held by non-state actors, occupied territory, DMZs and ceasefire lines, and disputed territory. Each area shows its source and date.
+- Active war fronts: for each tracked war (currently Russia–Ukraine and Yemen), districts where three or more outlets report ground forces taking or entering a place in the last 30 days are shaded as contested, with the articles listed. A side list shows other fighting in the news that is not yet tracked.
 
 **Place details**
 - Hover card with GDP, GDP per capita, Gini, leader and cabinet for countries; leader and government for provinces and states.
@@ -47,6 +48,7 @@ GitHub Actions (daily)                        Browser
 ──────────────────────                        ───────
 trawler/trawler.py ─► data/groupings.js  ─┐
 trawler/news.py    ─► data/stories.js    ─┼─► commandcenter-map.html ◄─ World Bank, Wikidata, Wikipedia (live)
+trawler/frontline.py ─► data/frontline.js ┤
 trawler/markets.py ─► data/markets.js    ─┘          │                ◄─ TradingView widgets (live)
                                                      ├─► relay/news-relay.js (Cloudflare Worker) ─► Bing News
                                                      └─► Open-Meteo (weather, live)
@@ -54,6 +56,7 @@ trawler/markets.py ─► data/markets.js    ─┘          │                
 
 - **`trawler.py`** reads news feeds for claims that a country joined, left or applied to a bloc. Each claim is checked against Wikidata and against independent outlets. A change appears on the map only when two or more independent outlets report it.
 - **`news.py`** groups the day's headlines from about 30 outlets into stories. For each story it picks sources from different perspectives and assigns it to a country or to the diplomacy section.
+- **`frontline.py`** tracks the wars listed in `trawler/wars.json`. It reads headlines from the outlet feeds and from Bing News searches for each war, looking for sentences in which one side captures, enters or retakes a named place. Air, drone and missile strikes, and attacks reported as repelled or failed, are ignored. Each place is located with Wikidata and assigned to a district from geoBoundaries; if the name is ambiguous, the report is dropped. A district is shaded only when at least three different outlets report fighting there within 30 days, and at least one of them is not run by a party to the war (for example, TASS or Ukrinform alone are never enough).
 - **`markets.py`** stores daily Brent closes for the offline "Daily close" view.
 - **`relay/news-relay.js`** is a small Cloudflare Worker. It fetches Bing News search results for a clicked place, because browsers cannot read the feed directly.
 - **Weather** comes straight from Open-Meteo in the browser, for the exact spot clicked, and is cached for 15 minutes.
@@ -70,8 +73,8 @@ data/                      data files loaded by the app
   config.js                news relay address
   market_catalog.js        TradingView symbols and place-to-chart rules
   *.geojson                contested-control, disputed-area and DMZ layers
-  groupings.js, stories.js, markets.js   written by the daily job
-trawler/                   daily job: trawler.py, news.py, markets.py, and their settings
+  groupings.js, stories.js, frontline.js, markets.js   written by the daily job
+trawler/                   daily job: trawler.py, news.py, frontline.py, markets.py, and their settings
 relay/news-relay.js        Cloudflare Worker for place headlines
 .github/workflows/daily.yml   schedule for the daily job
 CONTROL_SOURCES.md         sources for each contested-control layer
@@ -119,6 +122,7 @@ The relay only answers requests from the origins listed in `ALLOWED_ORIGINS`, an
 | `commandcenter-map.html` → `GROUPINGS` | Built-in bloc members and colours |
 | `trawler/blocs.json` | Blocs the trawler tracks, with aliases and Wikidata lookup |
 | `trawler/feeds.json` | Feeds the bloc trawler reads |
+| `trawler/wars.json` | Wars tracked on the map: countries, the belligerents' names, outlets run by a party to the war, search terms, and the outlet threshold |
 | `trawler/news_sources.json` | Outlets and the perspective ("camp") each represents |
 | `data/market_catalog.js` | Chart symbols and which places they are recommended for |
 | `data/config.js` | News relay address |
@@ -140,6 +144,7 @@ The app's left panel lists every source with its licence. In summary:
 | Leaders and cabinets | Wikidata | CC0 |
 | Legislature seats | Wikipedia infoboxes | CC BY-SA 4.0 |
 | Contested-control layers | Per layer; see [`CONTROL_SOURCES.md`](CONTROL_SOURCES.md) | Per source |
+| War fronts | Headlines from outlets' RSS feeds and Bing News; places from Wikidata; districts from geoBoundaries | Titles and links only; CC0; CC BY 4.0 |
 | Headlines | Outlets' RSS feeds; Bing News search | Titles and links only |
 | Weather | Open-Meteo.com | CC BY 4.0 (free for non-commercial use) |
 | Weather icons | "Weather elements" set by Dewanto (`icons/weather/`) | Per the set's licence |
@@ -149,10 +154,12 @@ The app's left panel lists every source with its licence. In summary:
 **Not included:**
 - Daily data for the S&P 500 and Dow Jones. On FRED these series are copyrighted by S&P Dow Jones Indices and may not be republished, so they appear only as live charts.
 - ISW/CTP conflict maps, which require written consent.
+- DeepStateMap data. Its terms do not allow republishing or redistributing the data, so the app links to DeepStateMap.live for comparison instead.
 
 ## Limitations
 
-- Contested-control outlines are approximate and can lag events. The current Ukraine front line is not included because no openly licensed source was found.
+- Contested-control outlines are approximate and can lag events. The current Ukraine front line is not drawn because no openly licensed source was found.
+- War-front shading is district-level and comes from news reports, so it marks where fighting for ground has been reported, not who holds it. It lags events by about a day and misses places the press doesn't name.
 - Economic figures are national only; provinces and states show their leader and government.
 - TradingView's embedded charts do not display some exchange feeds (Nikkei, FTSE, several futures). The catalogue uses CFDs, country ETFs or producer stocks instead, and labels them as such.
 - Place headlines rely on Bing News search coverage.

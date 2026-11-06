@@ -24,6 +24,9 @@ echo. >> "%LOG%"
 echo [%DATE% %TIME%] building headline panel >> "%LOG%"
 %PY% news.py >> "%LOG%" 2>&1
 if errorlevel 1 set RC=%ERRORLEVEL%
+echo [%DATE% %TIME%] updating war fronts >> "%LOG%"
+%PY% frontline.py >> "%LOG%" 2>&1
+if errorlevel 1 set RC=%ERRORLEVEL%
 echo [%DATE% %TIME%] updating market charts >> "%LOG%"
 %PY% markets.py >> "%LOG%" 2>&1
 if errorlevel 1 set RC=%ERRORLEVEL%

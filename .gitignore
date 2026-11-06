@@ -12,3 +12,6 @@ trawler/trawler_cache/wikidata_cache.json
 # Python
 __pycache__/
 *.pyc
+
+# Boundary files downloaded by frontline.py (re-downloaded when missing)
+trawler/trawler_cache/geo_*.geojson

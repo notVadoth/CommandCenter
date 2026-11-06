@@ -1,0 +1,33 @@
+{
+  "_note": "Wars whose front-line movements are tracked. A district is marked contested only when 3+ independent outlets (at least one not partisan to either side) report ground control changing there. Add a war by adding an entry: its countries (with the boundary level to mark), the sides and the words news uses for them, outlets that speak for a side, and a few news searches.",
+  "min_outlets": 3,
+  "window_days": 30,
+  "wars": [
+    {
+      "id": "russia-ukraine",
+      "name": "Russia–Ukraine war",
+      "since": "24 Feb 2022",
+      "countries": {"UKR": "ADM2", "RUS": "ADM1"},
+      "sides": {
+        "Russia": ["Russian", "Russia", "Russia's", "Moscow", "Kremlin"],
+        "Ukraine": ["Ukrainian", "Ukraine", "Ukraine's", "Kyiv"]
+      },
+      "partisan": ["TASS", "RT", "RIA Novosti", "Ukrinform", "tass.com", "rt.com", "ria.ru", "ukrinform.net", "mil.gov.ua"],
+      "queries": ["Russian forces captured village Ukraine", "Russia claims capture of village", "Ukrainian forces liberated village", "Ukraine recaptured village"],
+      "reference": {"label": "DeepStateMap.live front line", "url": "https://deepstatemap.live/en"}
+    },
+    {
+      "id": "yemen",
+      "name": "Yemeni civil war",
+      "since": "Sep 2014; renewed fighting since Jul 2026",
+      "countries": {"YEM": "ADM2"},
+      "sides": {
+        "Houthis": ["Houthi", "Houthis", "Ansar Allah", "Ansarallah"],
+        "Government": ["government forces", "Yemeni government", "Yemeni army", "Yemeni forces", "Giants Brigades", "pro-government", "Southern Transitional Council", "STC forces", "National Resistance"]
+      },
+      "partisan": ["Saba", "Al Masirah", "saba.ye", "sabanew.net", "almasirah.net", "almasirah.net.ye", "26sepnews.net"],
+      "queries": ["Houthis seized Yemen", "Houthis captured district Yemen", "Yemeni government forces recaptured", "Yemen forces regained control"],
+      "reference": null
+    }
+  ]
+}
