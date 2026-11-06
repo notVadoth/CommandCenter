@@ -2,71 +2,152 @@
 
 A web app to interactively analyse geopolitics with Current affairs, Blocs and macroeconomic figures available at the user's discretion.
 
-Open `commandcenter-map.html` (or `index.html`) in a browser. No build step and no server are needed.
+**Live site:** https://notvadoth.github.io/CommandCenter/
 
-## What's in it
+Command Centre is a single-page world map that brings together political geography, economic indicators, contested territory, multilateral blocs, market data and daily news. It runs entirely in the browser; a scheduled job refreshes its data files once a day.
 
-- **World map** (Leaflet). Toggle national, province/state and county/district boundaries, plus bloc overlays (EU, NATO, BRICS and more).
-- **Country hover card and click drawer:**
-  - GDP, GDP per capita and Gini (World Bank).
-  - Paramount leader and cabinet (Wikidata/Wikipedia).
-  - GDP and population growth charts.
-  - Legislature composition, with the governing coalition highlighted.
-- **Contested control layers:** areas held by non-state actors, occupied territory, DMZs and ceasefire lines, and disputed territories. Sources are listed in [`CONTROL_SOURCES.md`](CONTROL_SOURCES.md).
-- **Headlines panel:**
-  - Market charts (Dow, S&P 500, Hang Seng, BSE Sensex, Gold, Brent): live from TradingView, with a "Daily close" view from the daily job that also works offline.
-  - A "Global diplomacy" section.
-  - Daily headlines for the 20 largest countries by population and by GDP, plus other major stories. Each story links up to 3 outlets from different sides.
+## Features
 
-## Hosting (GitHub Pages)
+**Map**
+- Physical, topographic, satellite and bathymetric base maps.
+- National, province/state and county/district boundaries, loaded per country as you zoom.
+- Bloc overlays: EU, NATO, BRICS and partners, G7, G20, ASEAN, SCO, CSTO, African Union, GCC, OPEC, USMCA, Mercosur, Five Eyes, Quad and the Mecca Joint Defence Agreement.
+- Contested-control layers: areas held by non-state actors, occupied territory, DMZs and ceasefire lines, and disputed territory. Each area shows its source and date.
 
-1. **Settings → General → Danger Zone → Change visibility → Public.** Pages is free only for public repos.
-2. **Settings → Pages → Build and deployment → Source: Deploy from a branch → `main` / `(root)` → Save.**
-3. After a minute or so the site is live at `https://notvadoth.github.io/CommandCenter/`.
+**Country and province details**
+- Hover card with GDP, GDP per capita, Gini, leader and cabinet.
+- Click panel with GDP-growth and population-growth charts, and the legislature's composition with the governing coalition highlighted.
 
-## Daily data update on GitHub (no PC needed)
+**Headlines panel**
+- Market chart: Dow Jones, S&P 500, Hang Seng, BSE Sensex, gold and Brent by default.
+  - Clicking a place adds recommended charts for it, e.g. coffee and tea growers for Wayanad, oil and cattle for Texas.
+  - A search box opens any TradingView symbol.
+- Top headlines from the last 24 hours for the place you click.
+- Daily headlines:
+  - A "Global diplomacy" section for summits and multilateral bodies.
+  - Stories for the 20 largest countries by population and by GDP.
+  - Each story is linked to up to three outlets from different sides of the issue.
 
-`.github/workflows/daily.yml` runs every morning at 6:41 am Toronto time (7:41 am in summer). It runs the three scripts below and commits the new `data/` files; Pages then republishes on its own.
-- To run it now: **Actions → Daily data update → Run workflow**.
-- If a run can't push, set **Settings → Actions → General → Workflow permissions** to **Read and write**.
-- Optional: add a repository secret `EODHD_KEY` (**Settings → Secrets and variables → Actions**) to fill the Daily close charts for the Hang Seng, Sensex and Gold. The live charts don't need it.
+**Layout**
+- The layers, country and headlines panels each collapse to a side strip.
+- On phones the panels open over the map, one at a time.
 
-## Daily data update on your PC
+## How it works
 
-`trawler/` holds the free daily job (Python standard library only, no API keys required). It runs three scripts:
-- `trawler.py` writes bloc memberships.
-- `news.py` writes headlines.
-- `markets.py` writes market closes.
+```
+GitHub Actions (daily)                        Browser
+──────────────────────                        ───────
+trawler/trawler.py ─► data/groupings.js  ─┐
+trawler/news.py    ─► data/stories.js    ─┼─► commandcenter-map.html ◄─ World Bank, Wikidata, Wikipedia (live)
+trawler/markets.py ─► data/markets.js    ─┘          │                ◄─ TradingView widgets (live)
+                                                     └─► relay/news-relay.js (Cloudflare Worker) ─► Bing News
+```
 
-All three write into `data/`. Locally on Windows, run `trawler\setup_daily_task.bat` once to schedule it every morning, or run `trawler\run_trawler.bat` by hand. See [`trawler/README.md`](trawler/README.md).
+- **`trawler.py`** reads news feeds for claims that a country joined, left or applied to a bloc. Each claim is checked against Wikidata and against independent outlets. A change appears on the map only when two or more independent outlets report it.
+- **`news.py`** groups the day's headlines from about 30 outlets into stories. For each story it picks sources from different perspectives and assigns it to a country or to the diplomacy section.
+- **`markets.py`** stores daily Brent closes for the offline "Daily close" view.
+- **`relay/news-relay.js`** is a small Cloudflare Worker. It fetches Bing News search results for a clicked place, because browsers cannot read the feed directly.
 
-If GitHub runs the job, you can switch the PC task off with `trawler\remove_daily_task.bat`; `git pull` brings the latest data down. A local EODHD key goes in `trawler/keys.json`, which is git-ignored; never commit it.
+The scripts use only the Python standard library. No API keys are required.
 
-## Live headlines when you click a place (free relay)
+## Project structure
 
-Clicking a country or province shows its top Bing News headlines from the last 24 hours at the top of the Headlines panel; × goes back to the daily headlines. Browsers can't read Bing's news feed directly, so a tiny free relay sits in between (Google News was tried first but refuses requests from Cloudflare):
+```
+commandcenter-map.html     the app (HTML, CSS and JavaScript in one file)
+index.html                 redirects to the app
+data/                      data files loaded by the app
+  config.js                news relay address
+  market_catalog.js        TradingView symbols and place-to-chart rules
+  *.geojson                contested-control, disputed-area and DMZ layers
+  groupings.js, stories.js, markets.js   written by the daily job
+trawler/                   daily job: trawler.py, news.py, markets.py, and their settings
+relay/news-relay.js        Cloudflare Worker for place headlines
+.github/workflows/daily.yml   schedule for the daily job
+CONTROL_SOURCES.md         sources for each contested-control layer
+```
 
-1. Sign in (or sign up, free) at [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages → Create → Create Worker**.
-2. Name it `cc-news` → **Deploy** → **Edit code**.
-3. Replace everything with the contents of [`relay/news-relay.js`](relay/news-relay.js) → **Deploy**.
-4. Copy the worker's address (`https://cc-news.<your-name>.workers.dev`) into `data/config.js` as `newsRelay`, and commit it.
+## Running locally
 
-The relay only answers pages served from `notvadoth.github.io` or opened from your PC (edit `ALLOWED_ORIGINS` if you rename the repo or use another host). It caches each place for 15 minutes; Cloudflare's free plan allows 100,000 requests a day. If the relay isn't set up, the panel says so and nothing else changes.
+Open `commandcenter-map.html` in a browser. There is no build step and no server is needed.
 
-## Charts for the place you click, and chart search
+To refresh the data by hand:
 
-Clicking a place adds its own charts to the market panel (the six defaults stay in the drop-down). For example, Wayanad shows coffee, Kerala tea planters, the Sensex and the rupee; Texas shows oil, gas, cattle and cotton. The choices come from [`data/market_catalog.js`](data/market_catalog.js): add a region there with a name pattern and its chart keys.
+```
+cd trawler
+python trawler.py run
+python news.py
+python markets.py
+```
 
-TradingView's free embedded charts don't show every market. Exchange feeds like the Nikkei, FTSE, ICE coffee futures, palm oil, rubber and iron ore futures only display on tradingview.com, so the catalog uses index CFDs, US-listed country ETFs and producer stocks (e.g. Vale for Brazilian iron ore) instead. There is no embeddable tea price, so tea regions use tea-grower stocks, labelled as such.
+On Windows:
+- `trawler\run_trawler.bat` runs all three scripts and keeps a log.
+- `trawler\setup_daily_task.bat` schedules it every morning.
+- `trawler\remove_daily_task.bat` removes the schedule.
 
-The search box next to Live / Daily close takes any TradingView symbol (`AAPL`, `NSE:TCS`, `FX_IDC:USDJPY`) or a catalog name (`coffee`, `copper`). The last 8 searches are kept under "My charts".
+See [`trawler/README.md`](trawler/README.md) for options.
 
-## Data and licences
+## Deployment
 
-The map's left panel has a full **Sources & licences** list; the main points:
+**GitHub Pages:** in **Settings → Pages**, deploy from the `main` branch, root folder.
 
-- Boundaries: Natural Earth (public domain) and geoBoundaries (CC BY 4.0).
-- Live figures: World Bank, Wikidata and Wikipedia.
-- Markets: live charts embedded from TradingView (free widget, attribution kept). Daily Brent closes from the U.S. EIA via FRED (public domain). The Dow and S&P 500 are live-only: on FRED they're copyrighted by S&P Dow Jones Indices and can't be republished. If you add an EODHD key, check its plan allows public display before the daily job publishes that data.
-- Headlines link to the original outlets; only titles are stored. Live place headlines come from Bing News search via your own relay.
-- ISW/CTP maps are not included (their licence requires written consent).
+**Daily data update:** `.github/workflows/daily.yml` runs at 11:41 UTC and commits the refreshed files in `data/`. Pages then redeploys automatically.
+- To run it by hand, use **Actions → Daily data update → Run workflow**.
+- The workflow needs **Settings → Actions → General → Workflow permissions → Read and write**.
+
+**News relay:**
+1. Create a Cloudflare Worker.
+2. Paste in [`relay/news-relay.js`](relay/news-relay.js) and deploy.
+3. Put the Worker's address in `data/config.js`.
+
+The relay only answers requests from the origins listed in `ALLOWED_ORIGINS`, and caches each search for 15 minutes.
+
+## Configuration
+
+| File | What it controls |
+|---|---|
+| `commandcenter-map.html` → `GROUPINGS` | Built-in bloc members and colours |
+| `trawler/blocs.json` | Blocs the trawler tracks, with aliases and Wikidata lookup |
+| `trawler/feeds.json` | Feeds the bloc trawler reads |
+| `trawler/news_sources.json` | Outlets and the perspective ("camp") each represents |
+| `data/market_catalog.js` | Chart symbols and which places they are recommended for |
+| `data/config.js` | News relay address |
+
+Secrets never go in the repository:
+- Optional keys, such as `EODHD_KEY` for extra daily market series, belong in GitHub Actions secrets.
+- On a local machine they go in `trawler/keys.json`, which is git-ignored.
+
+## Data sources and licences
+
+The app's left panel lists every source with its licence. In summary:
+
+| Data | Source | Licence |
+|---|---|---|
+| National borders | Natural Earth | Public domain |
+| Province and district borders | geoBoundaries (Runfola et al., 2020, *PLoS ONE* 15(4): e0231866) | CC BY 4.0 |
+| Base maps | Esri; OpenTopoMap, © OpenStreetMap contributors | Esri terms; CC BY-SA, ODbL |
+| GDP, Gini, growth charts | World Bank, World Development Indicators | CC BY 4.0 |
+| Leaders, cabinets, province figures | Wikidata | CC0 |
+| Legislature seats | Wikipedia infoboxes | CC BY-SA 4.0 |
+| Contested-control layers | Per layer; see [`CONTROL_SOURCES.md`](CONTROL_SOURCES.md) | Per source |
+| Headlines | Outlets' RSS feeds; Bing News search | Titles and links only |
+| Live market charts | TradingView widgets | TradingView terms |
+| Brent daily closes | U.S. Energy Information Administration via FRED | Public domain |
+
+**Not included:**
+- Daily data for the S&P 500 and Dow Jones. On FRED these series are copyrighted by S&P Dow Jones Indices and may not be republished, so they appear only as live charts.
+- ISW/CTP conflict maps, which require written consent.
+
+## Limitations
+
+- Contested-control outlines are approximate and can lag events. The current Ukraine front line is not included because no openly licensed source was found.
+- Province-level economic data comes from Wikidata and is often missing; empty fields are hidden.
+- TradingView's embedded charts do not display some exchange feeds (Nikkei, FTSE, several futures). The catalogue uses CFDs, country ETFs or producer stocks instead, and labels them as such.
+- Place headlines rely on Bing News search coverage.
+
+## Versions
+
+Saved snapshots are kept as branches:
+- **`V2`**: headlines panel, market charts and GitHub hosting.
+- **`V3`**: place headlines, recommended charts and chart search.
+
+`main` is the current version.
