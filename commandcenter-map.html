@@ -135,6 +135,8 @@
     #status{max-width:60vw;font-size:10px;bottom:30px}
     .pbtn,#drawer .dmin,#drawer .x,#news .nh button{width:32px;height:32px}
   }
+  #drawer.info-collapsed .dsec{display:none}
+  @media (max-width:760px){ #drawer .path{cursor:pointer} #drawer #live-news{border-top:1px solid var(--line2)} }
   @media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}}
 
   /* segmented controls (In view / All, Live / Daily close, ranges) */
@@ -1016,9 +1018,10 @@ function renderHover(h){
              + (h.occupied||[]).map(r=>`<div class="ctrl-box" style="padding:3px 6px;border-color:#d6336c;background:#a61e4d22"><span class="t" style="color:#f783ac">▣ ${esc(r.props.name)}</span>${r.props.occupier?` <span class="small">held by ${esc(r.props.occupier)}</span>`:""}</div>`).join("")
              + (h.dmz||[]).map(r=>`<div class="small" style="color:#99e9f2">╳ ${esc(r.props.name)}</div>`).join("")
              + (h.disputed||[]).map(r=>`<div class="small" style="color:#ffc078">◇ Disputed: ${esc(r.props.name)}</div>`).join("");
-  hoverEl.innerHTML = `<div class="path">${path}</div>${ctrl}${statsHtml(h)}<div class="small" style="margin-top:4px">Click for charts, legislature and links</div>`;
+  hoverEl.innerHTML = `<div class="path">${path}</div>${ctrl}${statsHtml(h)}<div class="small" style="margin-top:4px">${NARROW.matches ? "Double-tap for charts, legislature and local news" : "Click for charts, legislature and links"}</div>`;
 }
 map.on("mousemove", e=>{
+  if (NARROW.matches) return;            // phones have no hover: a tap shows the preview instead
   const now=performance.now(); if (now-lastHover<60) return; lastHover=now;
   const h = hitAt(e.latlng);
   if (!h.country && !h.adm1 && !h.dmz?.length){ hoverEl.style.display="none"; lastHit=null; return; }
@@ -1029,24 +1032,43 @@ map.on("mousemove", e=>{
   hoverEl.style.left = (x+16+bw>W ? x-16-bw : x+16)+"px";
   hoverEl.style.top  = (y+14+bh>H ? Math.max(4,H-bh-4) : y+14)+"px";
 });
-map.on("mouseout", ()=> hoverEl.style.display="none");
-map.on("click", e=>{
-  const h = hitAt(e.latlng);
-  if (!h.country && !h.adm1 && !h.control?.length && !h.occupied?.length && !h.dmz?.length){
-    closeDrawer();
-    if (NARROW.matches && !(appEl.classList.contains("side-hidden") && appEl.classList.contains("news-hidden"))){ appEl.classList.add("side-hidden","news-hidden"); mapResized(); }
-    return;
-  }
+map.on("mouseout", ()=>{ if (!NARROW.matches) hoverEl.style.display="none"; });
+function openPlace(h, latlng){
   drawerHit = h; renderDrawer(h);
   liveNewsFor(h);
   chartsForPlace(h);
   const wasOpen = drawerEl.classList.contains("open") && !drawerEl.classList.contains("collapsed");
   drawerEl.classList.add("open"); drawerEl.classList.remove("collapsed");
   if (NARROW.matches){ appEl.classList.add("side-hidden"); appEl.classList.add("news-hidden"); }
-  if (!wasOpen) mapResized(e.latlng);      // the map narrows; keep the clicked spot in view
+  placeLive();
+  if (!wasOpen) mapResized(latlng);      // the map narrows; keep the clicked spot in view
   hoverEl.style.display="none";
   if (h.country){ loadSeries(h.country); loadLegislature(h.country); }
+}
+const isEmptyHit = h => !h.country && !h.adm1 && !h.control?.length && !h.occupied?.length && !h.dmz?.length;
+map.on("click", e=>{
+  const h = hitAt(e.latlng);
+  if (isEmptyHit(h)){
+    closeDrawer(); hoverEl.style.display = "none";
+    if (NARROW.matches && !(appEl.classList.contains("side-hidden") && appEl.classList.contains("news-hidden"))){ appEl.classList.add("side-hidden","news-hidden"); mapResized(); }
+    return;
+  }
+  if (NARROW.matches){ showTapPreview(h, e); return; }   // phones: one tap previews, a double tap opens the full panel
+  openPlace(h, e.latlng);
 });
+// phones: a quick card at the tap point; double-tapping the place opens its full panel with local news below
+function showTapPreview(h, e){
+  lastHit = h; renderHover(h); prefetchLive(h);
+  hoverEl.style.display = "block";
+  const p = e.containerPoint, r = map.getContainer().getBoundingClientRect(), bw = hoverEl.offsetWidth, bh = hoverEl.offsetHeight;
+  hoverEl.style.left = Math.max(6, Math.min(innerWidth - bw - 6, r.left + p.x - bw/2)) + "px";
+  hoverEl.style.top  = (r.top + p.y - bh - 14 > 6 ? r.top + p.y - bh - 14 : Math.min(innerHeight - bh - 6, r.top + p.y + 14)) + "px";
+}
+map.on("dblclick", e=>{ if (!NARROW.matches) return; const h = hitAt(e.latlng); if (!isEmptyHit(h)) openPlace(h, e.latlng); });
+map.on("movestart", ()=>{ if (NARROW.matches) hoverEl.style.display = "none"; });
+function phoneMode(){ NARROW.matches ? map.doubleClickZoom.disable() : map.doubleClickZoom.enable(); placeLive(); }
+NARROW.addEventListener?.("change", phoneMode);
+setTimeout(phoneMode);   // after the rest of the script has defined the panels
 
 
 
@@ -1260,8 +1282,8 @@ function renderDrawer(h){
   const c = h.country;
   const title = [c?.name, h.adm1?.name, h.adm2?.name].filter(Boolean).join(" › ");
   let html = `<button class="dstrip" title="Show details" onclick="collapseDrawer(false)">«<span class="nm">${esc(title)}</span></button>`;
-  html += `<header><button class="dmin" title="Collapse panel" aria-label="Collapse" onclick="collapseDrawer(true)">»</button><button class="x" aria-label="Close" onclick="closeDrawer()">×</button>`;
-  html += `<div class="path" style="padding-right:60px">${[c?.name, h.adm1?.name, h.adm2?.name].filter(Boolean).map(esc).join(" › ")}</div>`;
+  html += `<header><button class="dmin" title="Collapse panel" aria-label="Collapse" onclick="drawerMin()">${NARROW.matches ? (infoFolded ? "▾" : "▴") : "»"}</button><button class="x" aria-label="Close" onclick="closeDrawer()">×</button>`;
+  html += `<div class="path" style="padding-right:60px" onclick="if(NARROW.matches) drawerMin()">${[c?.name, h.adm1?.name, h.adm2?.name].filter(Boolean).map(esc).join(" › ")}</div>`;
   if (c){
     const blocs = Object.values(GROUPINGS).filter(g=>g.set.has(c.code));
     if (blocs.length) html += `<div class="chips">${blocs.map(g=>`<span class="chip" style="border-color:${g.color};color:#e6e9ef;background:${g.color}33">${esc(g.name)}</span>`).join("")}</div>`;
@@ -1286,6 +1308,23 @@ function renderDrawer(h){
   drawerEl.innerHTML = html;
   drawerEl.scrollTop = scroll;
   const d = document.getElementById("leg-details"); if (d) d.ontoggle = ()=>{ legOpen.v = d.open; };
+  drawerEl.classList.toggle("info-collapsed", NARROW.matches && infoFolded);
+  placeLive();
+}
+// phones: the place's figures fold away under its name, leaving its local news; on wider screens » collapses the panel to a strip
+let infoFolded = false;
+function drawerMin(){
+  if (!NARROW.matches) return collapseDrawer(true);
+  infoFolded = !infoFolded;
+  drawerEl.classList.toggle("info-collapsed", infoFolded);
+  const b = drawerEl.querySelector(".dmin"); if (b) b.textContent = infoFolded ? "▾" : "▴";
+  if (infoFolded) drawerEl.scrollTop = 0;
+}
+// phones: local headlines sit at the bottom of the place panel; elsewhere they head the Headlines panel
+function placeLive(){
+  const list = document.getElementById("news-list");
+  if (NARROW.matches && drawerEl.classList.contains("open")) { if (liveEl.parentElement !== drawerEl || drawerEl.lastElementChild !== liveEl) drawerEl.appendChild(liveEl); }
+  else if (liveEl.nextElementSibling !== list) list.parentElement.insertBefore(liveEl, list);
 }
 /* =========================================================================
    HEADLINES PANEL: data/stories.js, written daily by news.py (no AI)
