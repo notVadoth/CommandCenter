@@ -1053,9 +1053,17 @@ map.on("click", e=>{
     if (NARROW.matches && !(appEl.classList.contains("side-hidden") && appEl.classList.contains("news-hidden"))){ appEl.classList.add("side-hidden","news-hidden"); mapResized(); }
     return;
   }
-  if (NARROW.matches){ showTapPreview(h, e); return; }   // phones: one tap previews, a double tap opens the full panel
+  if (NARROW.matches){
+    // phones: one tap previews, a second tap on the same spot within 600 ms opens the full panel.
+    // Detected here rather than with the browser's dblclick, whose window is too short on many phones.
+    const t = performance.now(), p = e.containerPoint, prev = lastTap;
+    lastTap = {t, p};
+    if (prev && t - prev.t < 600 && p.distanceTo(prev.p) < 40){ lastTap = null; openPlace(h, e.latlng); return; }
+    showTapPreview(h, e); return;
+  }
   openPlace(h, e.latlng);
 });
+let lastTap = null;
 // phones: a quick card at the tap point; double-tapping the place opens its full panel with local news below
 function showTapPreview(h, e){
   lastHit = h; renderHover(h); prefetchLive(h);
@@ -1064,7 +1072,7 @@ function showTapPreview(h, e){
   hoverEl.style.left = Math.max(6, Math.min(innerWidth - bw - 6, r.left + p.x - bw/2)) + "px";
   hoverEl.style.top  = (r.top + p.y - bh - 14 > 6 ? r.top + p.y - bh - 14 : Math.min(innerHeight - bh - 6, r.top + p.y + 14)) + "px";
 }
-map.on("dblclick", e=>{ if (!NARROW.matches) return; const h = hitAt(e.latlng); if (!isEmptyHit(h)) openPlace(h, e.latlng); });
+
 map.on("movestart", ()=>{ if (NARROW.matches) hoverEl.style.display = "none"; });
 function phoneMode(){ NARROW.matches ? map.doubleClickZoom.disable() : map.doubleClickZoom.enable(); placeLive(); }
 NARROW.addEventListener?.("change", phoneMode);
