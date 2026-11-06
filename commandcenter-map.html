@@ -7,138 +7,187 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
+  /* Design: a quiet graphite frame around the map. Editorial serif for names and headlines (newspaper register),
+     system sans for controls, Apple-style details: segmented controls, round icon buttons, thin overlay
+     scrollbars and frosted floating cards. Colour is reserved for data. */
   :root{
-    --bg:#11151c; --panel:#171c25; --line:#2a3140; --text:#e6e9ef; --muted:#8b94a7; --accent:#f2b134;
+    --bg:#121417; --panel:#17191d; --raised:#202329; --well:#0f1114;
+    --line:rgba(255,255,255,.085); --line2:rgba(255,255,255,.14);
+    --text:#ecebe7; --muted:#9b9ea6; --link:#7eb3ff; --accent:#e8b04b;
+    --serif:"Iowan Old Style","Charter","Source Serif Pro",Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI Variable Text","Segoe UI",system-ui,Roboto,sans-serif;
+    --r-sm:6px; --r:9px; --r-lg:13px;
   }
   *{box-sizing:border-box}
-  html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font:13px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+  html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font:13px/1.45 var(--sans);-webkit-font-smoothing:antialiased}
+  a{color:var(--link)}
+  button{font:inherit}
+  :focus-visible{outline:2px solid var(--link);outline-offset:2px}
+  /* thin overlay scrollbars */
+  *{scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.2) transparent}
+  ::-webkit-scrollbar{width:10px;height:10px} ::-webkit-scrollbar-track{background:transparent}
+  ::-webkit-scrollbar-thumb{background:rgba(255,255,255,.16);border-radius:10px;border:3px solid transparent;background-clip:padding-box}
+  ::-webkit-scrollbar-thumb:hover{background-color:rgba(255,255,255,.3)}
+  ::-webkit-scrollbar-button{display:none;height:0;width:0}
+
   #app{display:flex;height:100%}
   #side{width:300px;flex:none;background:var(--panel);border-right:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden}
-  #side header{padding:14px 16px 10px;border-bottom:1px solid var(--line)}
-  #side h1{margin:0;font-size:15px;letter-spacing:.08em;text-transform:uppercase}
-  #side h1 span{color:var(--accent)}
-  #side .sub{color:var(--muted);font-size:11px;margin-top:2px}
-  #scroll{overflow-y:auto;flex:1;padding:4px 0 12px}
-  section{padding:10px 16px;border-bottom:1px solid var(--line)}
-  section h2{margin:0 0 8px;font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
-  label.row{display:flex;align-items:center;gap:8px;padding:4px 0;cursor:pointer;user-select:none}
-  label.row input{accent-color:var(--accent);margin:0}
-  label.row .hint{margin-left:auto;color:var(--muted);font-size:11px}
-  .sw{width:12px;height:12px;border-radius:3px;flex:none;border:1px solid rgba(255,255,255,.25)}
-  .line-sw{width:18px;height:0;border-top:2px solid;flex:none}
-  select,input[type=search]{width:100%;background:#0e1219;color:var(--text);border:1px solid var(--line);border-radius:6px;padding:7px 8px;font:inherit}
+  #side header{padding:16px 18px 12px;border-bottom:1px solid var(--line)}
+  #side h1{margin:0;font:600 21px/1.15 var(--serif);letter-spacing:-.005em}
+  #side .sub{color:var(--muted);font-size:11.5px;margin-top:3px}
+  #scroll{overflow-y:auto;flex:1;padding:2px 0 12px}
+  section{padding:12px 18px 14px;border-bottom:1px solid var(--line)}
+  section h2{margin:0 0 8px;font:700 15px/1.2 var(--serif);color:var(--text)}
+  label.row{display:flex;align-items:center;gap:9px;padding:4px 0;cursor:pointer;user-select:none}
+  label.row input{accent-color:var(--link);margin:0;width:15px;height:15px}
+  label.row .hint{margin-left:auto;color:var(--muted);font-size:11px;font-variant-numeric:tabular-nums}
+  .sw{width:12px;height:12px;border-radius:4px;flex:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}
+  .line-sw{width:18px;height:0;border-top:2px solid;flex:none;border-radius:2px}
+  select,input[type=search]{width:100%;background:var(--well);color:var(--text);border:1px solid var(--line2);border-radius:var(--r);padding:7px 10px;font:inherit;appearance:auto}
+  select:hover,input[type=search]:hover{border-color:rgba(255,255,255,.22)}
   #info .empty{color:var(--muted)}
-  #info .lvl{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.08em;margin-top:6px}
-  #info .name{font-size:14px;font-weight:600}
-  .chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
-  .chip{font-size:11px;padding:1px 7px;border-radius:10px;border:1px solid}
+  #info .lvl{color:var(--muted);font-size:11px;margin-top:8px}
+  #info .name{font:600 16px/1.25 var(--serif)}
+  .chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:6px}
+  .chip{font-size:11px;padding:1px 9px;border-radius:999px;border:1px solid}
   .small{font-size:11px;color:var(--muted)}
   #map{flex:1;height:100%;background:#a9c6d8}
-  #status{position:absolute;right:10px;bottom:22px;z-index:800;background:rgba(17,21,28,.88);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:6px 9px;font-size:11px;max-width:420px;pointer-events:none}
-  #status b{color:var(--accent)}
-  #hover{position:fixed;z-index:850;pointer-events:none;background:rgba(17,21,28,.95);color:#fff;padding:8px 10px;border-radius:6px;font-size:12px;display:none;width:300px;box-shadow:0 4px 16px rgba(0,0,0,.35);border:1px solid var(--line)}
-  .path{font-weight:600;font-size:12px;margin-bottom:4px}
-  .card{border-top:1px solid var(--line);padding-top:5px;margin-top:5px}
-  .card-h{font-weight:600;font-size:13px;margin-bottom:2px}
-  .card a, .pop a{color:#74c0fc;text-decoration:none} .card a:hover{text-decoration:underline}
-  table.stats{border-collapse:collapse;width:100%}
-  table.stats td{padding:1px 0;vertical-align:top}
-  table.stats td:first-child{color:var(--muted);width:92px;white-space:nowrap}
-  .ctrl-box{border:1px solid #e03131;background:#e0313114;border-radius:6px;padding:6px 8px;margin-top:6px}
+
+  /* floating glass: status pill and hover card */
+  #status{position:absolute;right:12px;bottom:24px;z-index:800;background:rgba(23,25,29,.72);-webkit-backdrop-filter:blur(18px) saturate(150%);backdrop-filter:blur(18px) saturate(150%);
+          color:var(--text);border:1px solid var(--line2);border-radius:var(--r-lg);padding:6px 12px;font-size:11px;max-width:440px;pointer-events:none;font-variant-numeric:tabular-nums}
+  #status b{color:var(--accent);font-weight:600}
+  #hover{position:fixed;z-index:850;pointer-events:none;background:rgba(23,25,29,.8);-webkit-backdrop-filter:blur(20px) saturate(150%);backdrop-filter:blur(20px) saturate(150%);
+         color:var(--text);padding:10px 12px;border-radius:var(--r-lg);font-size:12px;display:none;width:300px;box-shadow:0 10px 30px rgba(0,0,0,.35);border:1px solid var(--line2)}
+  .path{font:600 13px/1.3 var(--serif);margin-bottom:4px}
+  .card{border-top:1px solid var(--line);padding-top:6px;margin-top:6px}
+  .card-h{font:600 14px/1.3 var(--serif);margin-bottom:3px}
+  .card a, .pop a{color:var(--link);text-decoration:none} .card a:hover{text-decoration:underline}
+  table.stats{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+  table.stats td{padding:2px 0;vertical-align:top}
+  table.stats td:first-child{color:var(--muted);width:96px;white-space:nowrap}
+  .ctrl-box{border:1px solid rgba(224,49,49,.6);background:rgba(224,49,49,.08);border-radius:var(--r);padding:7px 9px;margin-top:6px}
   .ctrl-box .t{color:#ff8787;font-weight:600}
+
+  /* round icon buttons (collapse, close) */
+  .pbtn,#drawer .dmin,#drawer .x,#news .nh button,#live-news .lh .x2{display:inline-grid;place-items:center;width:26px;height:26px;padding:0;border-radius:50%;
+      background:rgba(255,255,255,.07);border:0;color:var(--muted);cursor:pointer;font-size:14px;line-height:1}
+  .pbtn:hover,#drawer .dmin:hover,#drawer .x:hover,#news .nh button:hover,#live-news .lh .x2:hover{background:rgba(255,255,255,.14);color:var(--text)}
+
   /* country drawer: a column between the map and the Headlines panel (the news shifts right, it is never covered) */
   #drawer{display:none;flex:none;width:380px;max-width:40vw;background:var(--panel);border-left:1px solid var(--line);overflow-y:auto;position:relative}
   #drawer.open{display:block}
   #drawer .dstrip{display:none}
-  #drawer.open.collapsed{width:30px;overflow:hidden;cursor:pointer}
+  #drawer.open.collapsed{width:32px;overflow:hidden;cursor:pointer}
   #drawer.collapsed > :not(.dstrip){display:none}
-  #drawer.collapsed .dstrip{display:flex;flex-direction:column;align-items:center;gap:8px;width:100%;height:100%;background:none;border:0;color:var(--text);cursor:pointer;padding:10px 0;font:inherit}
-  #drawer.collapsed .dstrip:hover{background:#1d2330}
-  #drawer .dstrip .nm{writing-mode:vertical-rl;font-size:12px;letter-spacing:.04em;white-space:nowrap;overflow:hidden;max-height:calc(100% - 40px)}
-  #drawer .dmin{position:absolute;right:34px;top:8px;background:none;border:1px solid var(--line);color:var(--muted);border-radius:5px;cursor:pointer;font:inherit;padding:1px 7px}
-  #drawer header{position:sticky;top:0;background:var(--panel);padding:12px 14px 8px;border-bottom:1px solid var(--line);z-index:2}
-  #drawer .x{position:absolute;right:10px;top:8px;background:none;border:0;color:var(--muted);font-size:20px;cursor:pointer}
-  #drawer .dsec{padding:10px 14px;border-bottom:1px solid var(--line)}
-  #drawer h3{margin:0 0 6px;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
-  #drawer a{color:#74c0fc;text-decoration:none} #drawer a:hover{text-decoration:underline}
-  #drawer details > summary{cursor:pointer;list-style:none;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-weight:600}
-  #drawer details > summary::before{content:"▸ ";color:var(--accent)} #drawer details[open] > summary::before{content:"▾ "}
+  #drawer.collapsed .dstrip{display:flex;flex-direction:column;align-items:center;gap:8px;width:100%;height:100%;background:none;border:0;color:var(--text);cursor:pointer;padding:12px 0;font:inherit}
+  #drawer.collapsed .dstrip:hover{background:var(--raised)}
+  #drawer .dstrip .nm{writing-mode:vertical-rl;font:600 13px/1 var(--serif);white-space:nowrap;overflow:hidden;max-height:calc(100% - 40px)}
+  #drawer .dmin{position:absolute;right:44px;top:12px}
+  #drawer header{position:sticky;top:0;background:rgba(23,25,29,.86);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);padding:14px 16px 10px;border-bottom:1px solid var(--line);z-index:2}
+  #drawer header .path{font:600 18px/1.25 var(--serif)}
+  #drawer .x{position:absolute;right:12px;top:12px;font-size:17px}
+  #drawer .dsec{padding:12px 16px 14px;border-bottom:1px solid var(--line)}
+  #drawer h3{margin:0 0 7px;font:700 14px/1.25 var(--serif);color:var(--text)}
+  #drawer a{color:var(--link);text-decoration:none} #drawer a:hover{text-decoration:underline}
+  #drawer details > summary{cursor:pointer;list-style:none;font:700 14px/1.25 var(--serif);color:var(--text)}
+  #drawer details > summary::-webkit-details-marker{display:none}
+  #drawer details > summary::before{content:"";display:inline-block;width:6px;height:6px;margin:0 8px 2px 1px;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:rotate(-45deg);transition:transform .15s}
+  #drawer details[open] > summary::before{transform:rotate(45deg)}
   .chart{position:relative} .chart svg{display:block;width:100%;height:auto;overflow:visible}
-  .chart .tip{position:absolute;pointer-events:none;background:#0e1219;border:1px solid var(--line);border-radius:4px;padding:3px 6px;font-size:11px;white-space:nowrap;display:none;transform:translate(-50%,-110%)}
+  .chart .tip{position:absolute;pointer-events:none;background:rgba(15,17,20,.92);border:1px solid var(--line2);border-radius:var(--r-sm);padding:3px 7px;font-size:11px;white-space:nowrap;display:none;transform:translate(-50%,-110%)}
   .seatwrap{position:relative;margin:8px 0 6px}
-  .seatbar{display:flex;gap:2px;height:14px;border-radius:4px}
-  .seatbar .govseg{display:flex;gap:2px;outline:2px solid var(--accent);outline-offset:1px;border-radius:3px}
-  .majtick{position:absolute;top:-4px;bottom:-4px;width:2px;background:#fff;opacity:.85;transform:translateX(-1px)}
-  .govbox{border:1px solid var(--accent);background:#f2b13414;border-radius:6px;padding:6px 8px;margin-top:6px}
+  .seatbar{display:flex;gap:2px;height:14px;border-radius:5px;overflow:visible}
+  .seatbar .govseg{display:flex;gap:2px;outline:2px solid var(--accent);outline-offset:1px;border-radius:4px}
+  .majtick{position:absolute;top:-4px;bottom:-4px;width:2px;background:#fff;opacity:.85;transform:translateX(-1px);border-radius:1px}
+  .govbox{border:1px solid rgba(232,176,75,.55);background:rgba(232,176,75,.07);border-radius:var(--r);padding:7px 9px;margin-top:6px}
   .govhead{display:flex;justify-content:space-between;font-weight:600;color:var(--accent);margin-bottom:2px}
-  .seatbar span{display:block;height:100%}
-  .plist{display:grid;grid-template-columns:12px 1fr auto;gap:2px 6px;font-size:12px;align-items:center}
-  .plist i{width:10px;height:10px;border-radius:2px;display:block;border:1px solid rgba(255,255,255,.25)}
-  .chamber{margin-top:10px} .chamber:first-child{margin-top:4px}
+  .seatbar span{display:block;height:100%;border-radius:2px}
+  .plist{display:grid;grid-template-columns:12px 1fr auto;gap:3px 7px;font-size:12px;align-items:center;font-variant-numeric:tabular-nums}
+  .plist i{width:10px;height:10px;border-radius:3px;display:block;box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}
+  .chamber{margin-top:12px} .chamber:first-child{margin-top:4px}
+
+  /* headlines panel */
   #news{width:330px;flex:none;background:var(--panel);border-left:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden}
-  #news header{padding:12px 14px 8px;border-bottom:1px solid var(--line)}
+  #news header{padding:14px 16px 10px;border-bottom:1px solid var(--line)}
   #news .nh{display:flex;align-items:center;justify-content:space-between}
-  #news h2{margin:0;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
-  #news .nh button,#news-open{background:none;border:1px solid var(--line);color:var(--muted);border-radius:5px;cursor:pointer;font:inherit;padding:1px 7px}
+  #news h2{margin:0;font:700 19px/1.15 var(--serif);color:var(--text)}
   /* collapsed panels leave a thin strip you click to reopen */
-  .vstrip{flex:none;width:30px;background:var(--panel);color:var(--text);display:none;border:0 !important;border-radius:0 !important;cursor:pointer;
-          writing-mode:vertical-rl;padding:10px 0 !important;letter-spacing:.04em;font:inherit;font-size:12px;text-align:left}
-  .vstrip:hover{background:#1d2330}
+  .vstrip{flex:none;width:32px;background:var(--panel);color:var(--text);display:none;border:0 !important;border-radius:0 !important;cursor:pointer;
+          writing-mode:vertical-rl;padding:12px 0 !important;font:600 13px/1 var(--serif);text-align:left}
+  .vstrip:hover{background:var(--raised)}
   #news-open{border-left:1px solid var(--line) !important} #side-open{border-right:1px solid var(--line) !important}
-  .pbtn{position:absolute;right:10px;top:12px;background:none;border:1px solid var(--line);color:var(--muted);border-radius:5px;cursor:pointer;font:inherit;padding:1px 7px}
+  .pbtn{position:absolute;right:14px;top:16px}
   #app.news-hidden #news{display:none} #app.news-hidden #news-open{display:block}
   #app.side-hidden #side{display:none} #app.side-hidden #side-open{display:block}
   /* phones and narrow windows: panels float over the map instead of squeezing it, one at a time */
   @media (max-width:760px){
-    #side,#news,#drawer.open:not(.collapsed){position:absolute;top:0;bottom:0;width:min(340px,88vw);max-width:none;box-shadow:0 0 24px rgba(0,0,0,.5)}
+    #side,#news,#drawer.open:not(.collapsed){position:absolute;top:0;bottom:0;width:min(340px,88vw);max-width:none;box-shadow:0 0 30px rgba(0,0,0,.5)}
     #side,#news{z-index:1200} #side{left:0} #news{right:0} #drawer.open:not(.collapsed){right:0;z-index:1210}   /* above Leaflet's controls (1000) */
     #mkt{min-height:170px}
-    #status{max-width:55vw;font-size:10px;bottom:28px}
-    .pbtn,#news .nh button,#drawer .dmin{padding:4px 10px} #drawer .x{font-size:24px}
+    #status{max-width:60vw;font-size:10px;bottom:30px}
+    .pbtn,#drawer .dmin,#drawer .x,#news .nh button{width:32px;height:32px}
   }
-  #news .seg{display:flex;gap:4px;margin-top:6px} #news .seg button{flex:1;background:#0e1219;border:1px solid var(--line);color:var(--muted);border-radius:5px;padding:3px;cursor:pointer;font:inherit;font-size:11px}
-  #news .seg button.on{color:var(--text);border-color:var(--accent)}
-  #news-list{overflow-y:auto;flex:1;padding:4px 0 16px}
-  #mkt{flex:0 0 33%;min-height:190px;max-height:300px;border-bottom:1px solid var(--line);padding:8px 14px 6px;display:flex;flex-direction:column}
+  @media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}}
+
+  /* segmented controls (In view / All, Live / Daily close, ranges) */
+  #news .seg,#mkt .rng,#mkt .segc{display:flex;gap:2px;padding:2px;background:rgba(255,255,255,.06);border-radius:var(--r)}
+  #news .seg{margin-top:8px}
+  #news .seg button,#mkt .rng button,#mkt .mode button{flex:1;background:none;border:0;color:var(--muted);border-radius:7px;padding:3px 8px;cursor:pointer;font-size:11.5px;white-space:nowrap}
+  #news .seg button:hover,#mkt .rng button:hover,#mkt .mode button:hover{color:var(--text)}
+  #news .seg button.on,#mkt .rng button.on,#mkt .mode button.on{background:#3a3d45;color:var(--text);box-shadow:0 1px 2px rgba(0,0,0,.35)}
+  #mkt .rng button{padding:2px 7px;font-size:11px}
+  #news-list{overflow-y:auto;flex:1;padding:2px 0 16px}
+
+  /* markets */
+  #mkt{flex:0 0 33%;min-height:200px;max-height:310px;border-bottom:1px solid var(--line);padding:10px 16px 8px;display:flex;flex-direction:column}
   #mkt .mh{display:flex;gap:6px;align-items:center}
-  #mkt select{flex:1;background:#0e1219;color:var(--text);border:1px solid var(--line);border-radius:5px;font:inherit;font-size:12px;padding:3px 4px}
-  #mkt .rng button{background:#0e1219;border:1px solid var(--line);color:var(--muted);border-radius:5px;cursor:pointer;font:inherit;font-size:10.5px;padding:2px 6px}
-  #mkt .rng button.on{color:var(--text);border-color:var(--accent)}
-  #mkt .mv{margin-top:5px;display:flex;align-items:baseline;gap:8px} #mkt .mv b{font-size:17px;font-weight:600}
-  #mkt .mv .ch{font-size:11.5px} #mkt .mv .ch.up{color:#69db7c} #mkt .mv .ch.dn{color:#ff8787}
-  #mkt .mode{display:flex;gap:4px;margin-top:5px} #mkt .mode button{background:none;border:none;border-bottom:2px solid transparent;color:var(--muted);cursor:pointer;font:inherit;font-size:10.5px;padding:1px 2px}
-  #mkt .mode button.on{color:var(--text);border-bottom-color:var(--accent)}
-  .credits summary{cursor:pointer;color:var(--text)} .credits ul{margin:6px 0;padding-left:16px} .credits li{margin:3px 0} .credits a{color:#74c0fc}
-  #mkt-q{flex:1;min-width:0;margin-left:8px;background:#0e1219;color:var(--text);border:1px solid var(--line);border-radius:5px;font:inherit;font-size:11px;padding:2px 6px}
-  #mkt-place{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px;font-size:10.5px;color:var(--muted)} #mkt-place:empty{display:none}
-  #mkt-place button{background:#0e1219;border:1px solid var(--line);color:var(--text);border-radius:10px;cursor:pointer;font:inherit;font-size:10.5px;padding:0 7px}
-  #mkt-place button.on{border-color:var(--accent);color:var(--accent)}
-  #mkt-live{flex:1;min-height:120px;margin-top:4px;display:none} #mkt.live #mkt-live{display:block} #mkt.live #mkt-chart,#mkt.live #mkt-val{display:none}
+  #mkt select{flex:1;background:var(--well);color:var(--text);border:1px solid var(--line2);border-radius:var(--r);font:inherit;font-size:12.5px;padding:4px 6px}
+  #mkt .mv{margin-top:6px;display:flex;align-items:baseline;gap:8px;font-variant-numeric:tabular-nums} #mkt .mv b{font-size:18px;font-weight:600}
+  #mkt .mv .ch{font-size:11.5px} #mkt .mv .ch.up{color:#5fd38a} #mkt .mv .ch.dn{color:#ff7b7b}
+  #mkt .mode{display:flex;gap:8px;margin-top:7px;align-items:center} #mkt .mode button{flex:none}
+  .credits summary{cursor:pointer;color:var(--text);font:700 14px/1.25 var(--serif)} .credits ul{margin:8px 0;padding-left:16px} .credits li{margin:4px 0;line-height:1.45} .credits a{color:var(--link)}
+  #mkt-q{flex:1;min-width:0;margin-left:4px;background:var(--well);color:var(--text);border:1px solid var(--line2);border-radius:7px;font:inherit;font-size:11.5px;padding:3px 8px}
+  #mkt-place{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;font-size:11px;color:var(--muted);align-items:center} #mkt-place:empty{display:none}
+  #mkt-place button{background:rgba(255,255,255,.06);border:0;color:var(--text);border-radius:999px;cursor:pointer;font-size:11px;padding:2px 9px}
+  #mkt-place button:hover{background:rgba(255,255,255,.12)}
+  #mkt-place button.on{background:var(--text);color:var(--panel)}
+  #mkt-live{flex:1;min-height:120px;margin-top:6px;display:none} #mkt.live #mkt-live{display:block} #mkt.live #mkt-chart,#mkt.live #mkt-val{display:none}
   #mkt-chart{flex:1;position:relative;min-height:90px} #mkt-chart svg{position:absolute;inset:0;width:100%;height:100%}
-  #mkt-tip{position:absolute;pointer-events:none;background:#0e1219;border:1px solid var(--line);border-radius:4px;padding:2px 6px;font-size:10.5px;white-space:nowrap;display:none}
-  #mkt .msrc{font-size:10px;color:var(--muted);margin-top:2px} #mkt .msrc a{color:#74c0fc}
-  .ncountry.diplo{color:#b197fc} .story .tag{display:inline-block;font-size:9.5px;border:1px solid #4c3f7a;color:#b197fc;border-radius:3px;padding:0 4px;margin-right:4px;vertical-align:1px}
-  .ncountry{padding:8px 14px 2px;font-size:11px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;cursor:pointer}
-  .story{padding:6px 14px;border-bottom:1px solid #1f2532;cursor:pointer}
-  #live-news{border-bottom:1px solid var(--line);background:#141924}
-  #live-news .lh{display:flex;align-items:center;gap:6px;padding:7px 14px 3px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#ffd43b}
-  #live-news .lh .x2{margin-left:auto;background:none;border:0;color:var(--muted);cursor:pointer;font-size:15px;line-height:1}
-  #live-news .li{display:block;padding:5px 14px;border-top:1px solid #1f2532;color:var(--text);text-decoration:none;font-size:12.5px;line-height:1.35}
-  #live-news .li:hover{background:#1d2330} #live-news .li .m{display:block;font-size:10.5px;color:var(--muted);margin-top:1px}
-  #live-news .lnote{padding:4px 14px 8px;font-size:11px;color:var(--muted)} #live-news .lnote a,#live-news .lnote button{color:#74c0fc;background:none;border:0;padding:0;font:inherit;cursor:pointer}
-  .story:hover{background:#1d2330}
-  .story .hl{font-size:12.5px;line-height:1.35}
-  .story .sm{font-size:10.5px;color:var(--muted);margin-top:2px}
-  .story .srcs{display:none;margin-top:6px} .story.open .srcs{display:block}
-  .src{display:block;margin:4px 0;padding:4px 6px;border-left:3px solid var(--line);background:#141922;border-radius:0 4px 4px 0;color:var(--text);text-decoration:none}
-  .src:hover{background:#1a2130} .src .camp{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-  .src .t{font-size:12px} .src .o{font-size:10.5px;color:#74c0fc}
-  .miss{font-size:10.5px;color:var(--muted);margin-top:4px} .miss a{color:#74c0fc}
-  .spin{display:inline-block;width:8px;height:8px;border:2px solid var(--accent);border-right-color:transparent;border-radius:50%;animation:s .8s linear infinite;margin-right:5px;vertical-align:-1px}
+  #mkt-tip{position:absolute;pointer-events:none;background:rgba(15,17,20,.92);border:1px solid var(--line2);border-radius:var(--r-sm);padding:2px 7px;font-size:11px;white-space:nowrap;display:none}
+  #mkt .msrc{font-size:10.5px;color:var(--muted);margin-top:4px} #mkt .msrc a{color:var(--link)}
+
+  /* story list: newspaper register */
+  .ncountry{padding:14px 16px 4px;font:700 14px/1.2 var(--serif);color:var(--text);cursor:pointer;border-top:1px solid var(--line2);margin-top:-1px}
+  .ncountry:first-child{border-top:0}
+  .ncountry.diplo{color:var(--text)}
+  .story .tag{display:inline-block;font:600 10px/1.5 var(--sans);color:#c4b5fd;background:rgba(177,151,252,.12);border-radius:5px;padding:0 5px;margin-right:6px;vertical-align:2px}
+  .story{padding:8px 16px 9px;border-bottom:1px solid var(--line);cursor:pointer}
+  .story:hover{background:rgba(255,255,255,.035)}
+  .story .hl{font:500 14px/1.32 var(--serif);color:var(--text)}
+  .story .sm{font-size:11px;color:var(--muted);margin-top:3px}
+  .story .srcs{display:none;margin-top:7px} .story.open .srcs{display:block}
+  .src{display:block;margin:5px 0;padding:6px 9px;border-left:3px solid var(--line2);background:rgba(255,255,255,.04);border-radius:0 var(--r-sm) var(--r-sm) 0;color:var(--text);text-decoration:none}
+  .src:hover{background:rgba(255,255,255,.07)} .src .camp{font-size:10.5px;color:var(--muted)}
+  .src .t{font:500 13px/1.3 var(--serif)} .src .o{font-size:11px;color:var(--link)}
+  .miss{font-size:11px;color:var(--muted);margin-top:5px} .miss a{color:var(--link)}
+
+  /* live place headlines */
+  #live-news{border-bottom:1px solid var(--line);background:var(--raised)}
+  #live-news .lh{display:flex;align-items:center;gap:6px;padding:12px 16px 4px;font:700 14px/1.25 var(--serif);color:var(--text)}
+  #live-news .lh .x2{margin-left:auto}
+  #live-news .li{display:block;padding:7px 16px;border-top:1px solid var(--line);color:var(--text);text-decoration:none;font:500 13.5px/1.32 var(--serif)}
+  #live-news .li:hover{background:rgba(255,255,255,.04)} #live-news .li .m{display:block;font:11px/1.4 var(--sans);color:var(--muted);margin-top:2px}
+  #live-news .lnote{padding:5px 16px 10px;font-size:11px;color:var(--muted)} #live-news .lnote a,#live-news .lnote button{color:var(--link);background:none;border:0;padding:0;font:inherit;cursor:pointer}
+
+  .spin{display:inline-block;width:9px;height:9px;border:2px solid var(--muted);border-right-color:transparent;border-radius:50%;animation:s .8s linear infinite;margin-right:6px;vertical-align:-1px}
   @keyframes s{to{transform:rotate(360deg)}}
   .leaflet-container{font:inherit}
-  .bl-actions{display:flex;gap:10px;margin-top:4px}
-  .bl-actions a{color:var(--accent);cursor:pointer;font-size:11px}
+  .leaflet-bar{border:0 !important;border-radius:var(--r) !important;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.25) !important}
+  .leaflet-bar a{width:32px !important;height:32px !important;line-height:32px !important;border-bottom-color:rgba(0,0,0,.08) !important}
+  .leaflet-control-scale-line{border-radius:6px;background:rgba(255,255,255,.75);border-color:rgba(0,0,0,.35)}
+  .bl-actions{display:flex;gap:12px;margin-top:6px}
+  .bl-actions a{color:var(--link);cursor:pointer;font-size:11.5px}
 </style>
 </head>
 <body>
@@ -146,8 +195,8 @@
   <aside id="side">
     <header style="position:relative">
       <button id="side-collapse" class="pbtn" title="Hide layers panel" aria-label="Hide layers panel">«</button>
-      <h1>Command<span>Center</span></h1>
-      <div class="sub">Physical world map · admin boundaries · blocs</div>
+      <h1>Command Centre</h1>
+      <div class="sub">Geopolitics, blocs and economies on one map</div>
     </header>
     <div id="scroll">
       <section>
@@ -235,7 +284,7 @@
         </select>
         <span class="rng"><button data-r="1D">1D</button><button data-r="1M">1M</button><button data-r="3M" class="on">3M</button><button data-r="12M">1Y</button></span>
       </div>
-      <div class="mode"><button data-m="live" class="on" title="Live chart from TradingView">Live</button><button data-m="daily" title="Daily closes saved by the daily job (works offline)">Daily close</button>
+      <div class="mode"><span class="segc"><button data-m="live" class="on" title="Live chart from TradingView">Live</button><button data-m="daily" title="Daily closes saved by the daily job (works offline)">Daily close</button></span>
         <input id="mkt-q" list="mkt-list" placeholder="Any chart: coffee, AAPL, NSE:TCS…" aria-label="Search for any chart" autocomplete="off"><datalist id="mkt-list"></datalist></div>
       <div id="mkt-place"></div>
       <div class="mv" id="mkt-val"></div>
@@ -378,6 +427,7 @@ let adm0Layer = null, selLayer = L.layerGroup().addTo(map);
 for (const g of Object.values(GROUPINGS)) g.set = new Set(g.members.split(/\s+/));
 
 const statusEl = document.getElementById("status");
+map.getContainer().appendChild(statusEl);   // keep the zoom/status pill inside the map, clear of the side panels
 const hoverEl = document.getElementById("hover");
 const chk = id => document.getElementById(id).checked;
 
@@ -1300,7 +1350,7 @@ function liveNewsFor(h){
   const L = liveQuery(h); if (!L) return clearLiveNews();
   if (!NARROW.matches && appEl.classList.contains("news-hidden")) setPanel("news", true);   // make sure the headlines are visible
   liveEl.hidden = false; liveEl.dataset.key = L.key;
-  const head = `<div class="lh">Top headlines · ${esc(L.label)} · last 24 h<button class="x2" title="Back to the daily headlines" onclick="clearLiveNews()">×</button></div>`;
+  const head = `<div class="lh">Latest from ${esc(L.label)} <span class="small" style="font-family:var(--sans);font-weight:400">past 24 hours</span><button class="x2" title="Back to the daily headlines" onclick="clearLiveNews()">×</button></div>`;
   if (!relayURL()){
     liveEl.innerHTML = head + `<div class="lnote">Live headlines need the free news relay: see <b>relay/news-relay.js</b> for the 5-minute setup, then <button onclick="setRelay()">paste its address</button>.</div>`;
     return;
