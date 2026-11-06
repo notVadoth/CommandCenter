@@ -1,6 +1,6 @@
 // written by trawler.py — loaded automatically by commandcenter-map.html
 window.TRAWLER_GROUPINGS = {
- "generated": "2026-11-06T18:26:05.933752+00:00",
+ "generated": "2026-11-06T19:27:18.725797+00:00",
  "extractor": "rules",
  "verification": {
   "wikidata": true,
@@ -13,7 +13,7 @@ window.TRAWLER_GROUPINGS = {
    "conflict": "Wikidata contradicts the claim — review"
   }
  },
- "articles_in_store": 465,
+ "articles_in_store": 481,
  "blocs": {
   "EU": {
    "name": "European Union",
@@ -241,13 +241,7 @@ window.TRAWLER_GROUPINGS = {
     "qid": "Q7184",
     "label": null
    },
-   "baseline_audit": {
-    "in_wikidata_not_baseline": [],
-    "in_baseline_not_wikidata": [
-     "DNK",
-     "NLD"
-    ]
-   },
+   "baseline_audit": null,
    "changes": [
     {
      "country": "UKR",
@@ -698,11 +692,7 @@ window.TRAWLER_GROUPINGS = {
   {
    "name": "Hong Kong Alliance",
    "status": "single-source",
-   "wikidata": {
-    "qid": "Q835349",
-    "label": "Hong Kong Alliance in Support of Patriotic Democratic Movements in China",
-    "description": "organization"
-   },
+   "wikidata": null,
    "color": "#44f0cc",
    "members": [
     {
