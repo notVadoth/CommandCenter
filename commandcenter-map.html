@@ -77,6 +77,7 @@
   .wars .war a{cursor:pointer}
   .wars .other{padding-left:26px;margin-top:2px}
   .wars .hint{color:var(--muted);font-size:11px}
+  .war-disc{color:var(--muted);margin-top:3px;line-height:1.35}
   .wars .war-sides{padding-left:26px;color:var(--muted);font-size:11.5px;margin-top:-2px}
   .wars .other .ex{padding-left:10px}
   .ctrl-box{border:1px solid rgba(224,49,49,.6);background:rgba(224,49,49,.08);border-radius:var(--r);padding:7px 9px;margin-top:6px}
@@ -557,7 +558,9 @@ const frontLayer = L.geoJSON(null,{renderer:R.front, pane:"front", interactive:f
   style:{color:"#cc5de8", weight:1.4, opacity:.9, fillColor:"#cc5de8", fillOpacity:.22}});
 const FRONT = window.CC_FRONTLINE || null;
 function fmtDay(d){ return d ? new Date(d).toLocaleDateString(undefined,{day:"numeric",month:"short"}) : ""; }
-const sidesOf = w => (w.belligerents||[]).map(b=>b.side).join(" vs ");
+const sidesOf = w => (w.belligerents||[]).map(b=>b.short||b.side).join(" vs ");
+const WAR_DISCLAIMER = "Shaded: fighting is going on here, or part of it has been taken in the current round of fighting. Not a map of who controls what; front lines move daily.";
+const trackerLinks = w => (w.trackers||[]).length ? `<div class="small" style="margin-top:4px">Front-line maps: ${w.trackers.map(t=>`<a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.label)}</a>`).join(" · ")}</div>` : "";
 if (FRONT){
   for (const w of FRONT.wars||[]) for (const f of w.features||[]){
     if (!f.geometry) continue;
@@ -571,7 +574,7 @@ if (FRONT){
 function renderWars(){
   if (!FRONT) return;
   const other = FRONT.other_fighting||[];
-  document.getElementById("wars").innerHTML = (FRONT.wars||[]).map(w=>`<div class="war"><a onclick="zoomWar('${esc(w.id)}')">${esc(w.name)}</a><span class="hint">${(w.features||[]).length} provinces</span></div><div class="war-sides">${esc(sidesOf(w))}</div>`).join("")
+  document.getElementById("wars").innerHTML = (FRONT.wars||[]).map(w=>`<div class="war"><a onclick="zoomWar('${esc(w.id)}')">${esc(w.name)}</a><span class="hint">${(w.features||[]).length} province${(w.features||[]).length===1?"":"s"}</span></div><div class="war-sides">${esc(sidesOf(w))}</div>`).join("")
     + (other.length ? `<details class="small other"><summary>Other fighting in the news (not mapped)</summary>${other.map(o=>`<div>${esc(byCode[o.iso]?.name||o.iso)} <span class="hint">${Array.isArray(o.outlets)?o.outlets.length:o.outlets} outlets</span>${(o.examples||[]).slice(0,2).map(x=>`<div class="ex"><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a> <span class="hint">${esc(x.outlet||"")}</span></div>`).join("")}</div>`).join("")}</details>` : "");
 }
 function zoomWar(id){
@@ -591,8 +594,9 @@ function frontBox(r){
     + `<div class="small" style="margin-top:4px">${why}</div>`
     + ((p.reports||[]).length?`<div class="small" style="margin-top:4px"><b>Recent reports</b>${p.places?.length?` · places named: ${p.places.map(esc).join(", ")}`:""}</div>`
       + p.reports.map(x=>`<div class="small">· <a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a> <span class="hint">${esc(x.outlet)}${x.partisan?" · party to the war":""}</span></div>`).join(""):"")
-    + (w.reference?`<div class="small" style="margin-top:4px">Front line detail: <a href="${esc(w.reference.url)}" target="_blank" rel="noopener">${esc(w.reference.label)}</a></div>`:"")
-    + `<div class="small">Shaded provinces show where fighting is going on, not who controls them.</div></div>`;
+    + (w.note?`<div class="small" style="margin-top:4px">${esc(w.note)}</div>`:"")
+    + trackerLinks(w)
+    + `<div class="small war-disc">${WAR_DISCLAIMER}</div></div>`;
 }
 
 // --- DMZs, UN buffer zones and ceasefire / control lines (Natural Earth 10m) ---
@@ -1076,7 +1080,8 @@ function renderHover(h){
   const path = [h.country?.name, h.adm1?.name, h.adm2?.name].filter(Boolean).map(esc).join(" › ");
   const ctrl = (h.control||[]).map(r=>`<div class="ctrl-box" style="padding:3px 6px"><span class="t">⚑ ${esc(r.props.name)}</span>${r.props.actor?` <span class="small">${esc(r.props.actor)}</span>`:""}</div>`).join("")
              + (h.occupied||[]).map(r=>`<div class="ctrl-box" style="padding:3px 6px;border-color:#d6336c;background:#a61e4d22"><span class="t" style="color:#f783ac">▣ ${esc(r.props.name)}</span>${r.props.occupier?` <span class="small">held by ${esc(r.props.occupier)}</span>`:""}</div>`).join("")
-             + (h.front||[]).map(r=>`<div class="ctrl-box" style="padding:3px 6px;border-color:#cc5de8;background:#cc5de81a"><span class="t" style="color:#e5b3fe">⚔ ${esc(r.war.name)}</span> <span class="small">${esc(sidesOf(r.war))}</span></div>`).join("")
+             + (h.front||[]).map(r=>`<div class="ctrl-box" style="padding:4px 7px;border-color:#cc5de8;background:#cc5de81a"><span class="t" style="color:#e5b3fe">⚔ ${esc(r.war.name)}</span> <span class="small">${esc(sidesOf(r.war))}</span>`
+                 + `<div class="small war-disc">${WAR_DISCLAIMER}</div>${trackerLinks(r.war)}</div>`).join("")
              + (h.dmz||[]).map(r=>`<div class="small" style="color:#99e9f2">╳ ${esc(r.props.name)}</div>`).join("")
              + (h.disputed||[]).map(r=>`<div class="small" style="color:#ffc078">◇ Disputed: ${esc(r.props.name)}</div>`).join("");
   hoverEl.innerHTML = `<div class="path">${path}</div>${ctrl}${statsHtml(h)}<div class="small" style="margin-top:4px">${NARROW.matches ? "" : "Click for charts, legislature and links"}</div>`;

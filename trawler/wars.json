@@ -1,5 +1,5 @@
 {
-  "_note": "Wars tracked on the map. Provinces listed under 'front' are marked as active war zones (checked against the sources in 'front_sources' on 'front_as_of'; edit the list when the front moves). Any other province is added automatically when 3+ outlets, at least one not run by a party to the war, report ground fighting there within 'window_days'. Provinces under 'held' are firmly controlled by one side and are never marked. Province names must match geoBoundaries ADM1 names.",
+  "_note": "Wars tracked on the map. A province is shaded when fighting is going on there, or when any part of it has been taken by the other side in the current round of fighting (since the last ceasefire broke down). It is not shaded when it has been held by one side since before that (e.g. Crimea, Sanaa), or when its government controls all of it, even if it has been attacked (e.g. Kyiv). 'front' lists the shaded provinces, checked against 'front_sources' on 'front_as_of'; edit it when the front moves. The daily news check can add a province (3+ outlets, at least one not run by a party to the war, reporting ground fighting there within 'window_days') but never removes one. 'held' provinces are never shaded. Province names must match geoBoundaries ADM1 names.",
   "min_outlets": 3,
   "window_days": 14,
   "wars": [
@@ -24,6 +24,7 @@
       "front": {
         "UKR": [
           "Donetsk Oblast",
+          "Luhansk Oblast",
           "Zaporizhia Oblast",
           "Kharkiv Oblast",
           "Dnipropetrovsk Oblast",
@@ -35,7 +36,7 @@
         "UKR": [
           "Autonomous Republic of Crimea",
           "Sevastopol",
-          "Luhansk Oblast"
+          "Kyiv"
         ]
       },
       "front_as_of": "Nov 2026",
@@ -81,10 +82,17 @@
         "Ukrainian forces repelled assault",
         "Ukraine counteroffensive village"
       ],
-      "reference": {
-        "label": "DeepStateMap.live front line",
-        "url": "https://deepstatemap.live/en"
-      }
+      "trackers": [
+        {
+          "label": "DeepStateMap",
+          "url": "https://deepstatemap.live/en"
+        },
+        {
+          "label": "Military Summary",
+          "url": "https://militarysummary.com/"
+        }
+      ],
+      "note": "Crimea and Sevastopol have been held by Russia since 2014 and are shown under Occupied territory instead."
     },
     {
       "id": "yemen",
@@ -93,11 +101,13 @@
       "belligerents": [
         {
           "side": "Houthis (Ansar Allah)",
-          "detail": "control Sanaa and most of the north-west; backed by Iran"
+          "detail": "control Sanaa and most of the north-west; backed by Iran",
+          "short": "Houthis"
         },
         {
           "side": "Government",
-          "detail": "Presidential Leadership Council forces, Giants Brigades, National Resistance and Southern Transitional Council units; backed by Saudi Arabia"
+          "detail": "Presidential Leadership Council forces, Giants Brigades, National Resistance and Southern Transitional Council units; backed by Saudi Arabia",
+          "short": "Government"
         }
       ],
       "countries": {
@@ -175,7 +185,568 @@
         "Houthis advance Yemen",
         "Yemen army Houthi attack repelled"
       ],
-      "reference": null
+      "trackers": [
+        {
+          "label": "Military Summary",
+          "url": "https://militarysummary.com/"
+        }
+      ],
+      "note": "Sanaa and the north-west have been held by the Houthis since 2014-15; Aden and the east by government-aligned forces."
+    },
+    {
+      "id": "sudan",
+      "name": "Sudanese civil war",
+      "since": "15 Apr 2023",
+      "belligerents": [
+        {
+          "side": "Sudanese Armed Forces (SAF)",
+          "detail": "army-led government based in Port Sudan, with allied Joint Forces",
+          "short": "SAF"
+        },
+        {
+          "side": "Rapid Support Forces (RSF)",
+          "detail": "paramilitary; allied with SPLM-N (al-Hilu) in the 'Tasis' coalition and parallel government",
+          "short": "RSF"
+        }
+      ],
+      "countries": {
+        "SDN": "ADM1"
+      },
+      "front": {
+        "SDN": [
+          "North Kordofan",
+          "West Kordofan",
+          "South Kordofan",
+          "North Darfur",
+          "South Darfur",
+          "Central Darfur",
+          "East Darfur",
+          "West Darfur",
+          "Blue Nile"
+        ]
+      },
+      "held": {
+        "SDN": [
+          "Khartoum",
+          "Gezira",
+          "Sennar",
+          "Northern",
+          "River Nile",
+          "Red Sea",
+          "Kassala",
+          "Gedaref"
+        ]
+      },
+      "front_as_of": "Nov 2026",
+      "front_sources": [
+        {
+          "label": "Al Jazeera: the battle for Kordofan (1 Oct 2026)",
+          "url": "https://www.aljazeera.com/news/2026/10/1/the-battle-for-kordofan-the-corridor-linking-sudans-east-and-west"
+        },
+        {
+          "label": "ACLED: fighting moves to Kordofan as Sudan's east-west divide solidifies",
+          "url": "https://acleddata.com/report/fighting-moves-kordofan-sudans-east-west-divide-solidifies"
+        }
+      ],
+      "sides": {
+        "SAF": [
+          "Sudanese army",
+          "Sudanese Armed Forces",
+          "SAF",
+          "army"
+        ],
+        "RSF": [
+          "Rapid Support Forces",
+          "RSF",
+          "paramilitary"
+        ]
+      },
+      "partisan": [
+        "SUNA",
+        "suna-sd.net"
+      ],
+      "queries": [
+        "Sudan RSF army fighting Kordofan",
+        "RSF captured Sudan",
+        "Sudanese army retook"
+      ],
+      "trackers": [
+        {
+          "label": "Sudan War Monitor",
+          "url": "https://sudanwarmonitor.com/"
+        }
+      ],
+      "note": "The army retook Khartoum and Gezira in 2025; Darfur is almost entirely RSF-held after El Fasher fell in Oct 2025."
+    },
+    {
+      "id": "myanmar",
+      "name": "Myanmar armed conflict",
+      "since": "Feb 2021 coup (ethnic conflicts since 1948)",
+      "belligerents": [
+        {
+          "side": "Myanmar Armed Forces (Tatmadaw)",
+          "detail": "military-led government under Min Aung Hlaing, with Pyu Saw Htee militias",
+          "short": "Military"
+        },
+        {
+          "side": "Resistance forces",
+          "detail": "National Unity Government's People's Defence Forces and ethnic armed organisations (Arakan Army, KIA, KNU, Karenni and Chin forces, TNLA and others)",
+          "short": "Resistance forces"
+        }
+      ],
+      "countries": {
+        "MMR": "ADM1"
+      },
+      "front": {
+        "MMR": [
+          "Kachin",
+          "Chin",
+          "Kayah",
+          "Kayin",
+          "Saigang",
+          "Magway",
+          "Mandalay",
+          "Shan",
+          "Rakhine",
+          "Bago",
+          "Mon",
+          "Tanitharyi"
+        ]
+      },
+      "held": {
+        "MMR": [
+          "Yangon"
+        ]
+      },
+      "front_as_of": "Nov 2026",
+      "front_sources": [
+        {
+          "label": "The Irrawaddy: resistance and regime fronts (Oct 2026)",
+          "url": "https://www.irrawaddy.com/news/war-against-the-junta/myanmars-revolutionary-forces-prepare-to-go-on-the-offensive.html"
+        },
+        {
+          "label": "ISP-Myanmar Stakeholder Tracker, Aug 2026",
+          "url": "https://ispmyanmar.com/community/wp-content/uploads/2026/08/ST2026_04_English.pdf"
+        }
+      ],
+      "sides": {
+        "Military": [
+          "junta",
+          "regime",
+          "Myanmar military",
+          "Tatmadaw",
+          "military"
+        ],
+        "Resistance": [
+          "PDF",
+          "PDFs",
+          "People's Defence Force",
+          "resistance",
+          "Arakan Army",
+          "Kachin Independence Army",
+          "KIA",
+          "KNU",
+          "KNLA",
+          "TNLA",
+          "MNDAA",
+          "Karenni"
+        ]
+      },
+      "partisan": [
+        "Global New Light of Myanmar",
+        "gnlm.com.mm",
+        "MRTV"
+      ],
+      "queries": [
+        "Myanmar resistance junta fighting",
+        "Myanmar military recaptured town",
+        "Arakan Army captured"
+      ],
+      "trackers": [
+        {
+          "label": "IISS Myanmar Conflict Map",
+          "url": "https://myanmar.iiss.org/"
+        },
+        {
+          "label": "ISP-Myanmar maps",
+          "url": "https://ispmyanmar.com/"
+        }
+      ],
+      "note": "Control is patchy: resistance groups hold much of the borderlands, the military holds the cities and the Irrawaddy delta."
+    },
+    {
+      "id": "drc-m23",
+      "name": "Eastern Congo conflict (M23)",
+      "since": "2022 (M23 resurgence)",
+      "belligerents": [
+        {
+          "side": "AFC/M23",
+          "detail": "rebel alliance holding Goma and Bukavu; UN experts report Rwandan army support, which Rwanda denies",
+          "short": "AFC/M23"
+        },
+        {
+          "side": "DR Congo government",
+          "detail": "Congolese army (FARDC), Wazalendo militias and Burundian troops",
+          "short": "DR Congo"
+        }
+      ],
+      "countries": {
+        "COD": "ADM1"
+      },
+      "front": {
+        "COD": [
+          "North Kivu",
+          "South Kivu"
+        ]
+      },
+      "held": {},
+      "front_as_of": "Nov 2026",
+      "front_sources": [
+        {
+          "label": "CTP Congo War Security Review",
+          "url": "https://www.criticalthreats.org/briefs/congo-war-security-review"
+        }
+      ],
+      "sides": {
+        "M23": [
+          "M23",
+          "AFC/M23",
+          "AFC"
+        ],
+        "Government": [
+          "Congolese army",
+          "FARDC",
+          "Wazalendo",
+          "Congolese forces"
+        ]
+      },
+      "partisan": [],
+      "queries": [
+        "M23 fighting Congo",
+        "M23 captured Kivu",
+        "Wazalendo M23 clashes"
+      ],
+      "trackers": [
+        {
+          "label": "CTP Congo War Security Review (maps)",
+          "url": "https://www.criticalthreats.org/briefs/congo-war-security-review"
+        }
+      ],
+      "note": "Ituri's separate violence (ADF, CODECO) is not part of this war and is not shaded."
+    },
+    {
+      "id": "sahel",
+      "name": "Sahel insurgency",
+      "since": "2012 (Mali); 2015 (Burkina Faso, Niger)",
+      "belligerents": [
+        {
+          "side": "Military governments of Mali, Burkina Faso and Niger",
+          "detail": "Alliance of Sahel States, with Russia's Africa Corps and local militias (VDP)",
+          "short": "Mali, Burkina Faso & Niger"
+        },
+        {
+          "side": "Jihadist and separatist groups",
+          "detail": "JNIM (al-Qaeda), Islamic State Sahel, and in northern Mali the Azawad Liberation Front (FLA); JNIM and IS Sahel also fight each other",
+          "short": "JNIM, IS Sahel & FLA"
+        }
+      ],
+      "countries": {
+        "MLI": "ADM1",
+        "BFA": "ADM1",
+        "NER": "ADM1"
+      },
+      "front": {
+        "MLI": [
+          "Kayes",
+          "Koulikouro",
+          "Sikasso",
+          "Segou",
+          "Mopti",
+          "Tombouctou",
+          "Gao",
+          "Kidal"
+        ],
+        "BFA": [
+          "Sahel",
+          "Nord",
+          "Est",
+          "Centre-Nord",
+          "Boucle du Mouhoun",
+          "Centre-Est",
+          "Centre-Ouest",
+          "Hauts-Bassins",
+          "Cascades",
+          "Plateau Central",
+          "Centre-Sud",
+          "Sud-Ouest"
+        ],
+        "NER": [
+          "Tillaberi"
+        ]
+      },
+      "held": {
+        "MLI": [
+          "Bamako"
+        ],
+        "BFA": [
+          "Centre"
+        ],
+        "NER": [
+          "Niamey"
+        ]
+      },
+      "front_as_of": "Nov 2026",
+      "front_sources": [
+        {
+          "label": "BISI: JNIM and FLA coordinate attacks across Mali (May 2026)",
+          "url": "https://bisi.org.uk/reports/jnim-and-fla-coordinate-attacks-across-mali"
+        },
+        {
+          "label": "AFP/Arab News: offensive sweeps northern and eastern Burkina Faso (Feb 2026)",
+          "url": "https://www.arabnews.com/node/2634634/amp"
+        }
+      ],
+      "sides": {
+        "Governments": [
+          "Malian army",
+          "FAMa",
+          "Burkinabe army",
+          "Burkina Faso army",
+          "Nigerien army",
+          "Africa Corps",
+          "VDP"
+        ],
+        "Insurgents": [
+          "JNIM",
+          "jihadists",
+          "Islamic State Sahel",
+          "FLA",
+          "militants"
+        ]
+      },
+      "partisan": [],
+      "queries": [
+        "JNIM attack Mali",
+        "Burkina Faso jihadists attack",
+        "Mali army FLA fighting"
+      ],
+      "trackers": [
+        {
+          "label": "CTP Africa File (maps)",
+          "url": "https://www.criticalthreats.org/briefs/africa-file"
+        }
+      ],
+      "note": "An insurgency without fixed front lines; shading marks regions with sustained ground attacks, not territorial control."
+    },
+    {
+      "id": "somalia",
+      "name": "Somalia: al-Shabaab insurgency",
+      "since": "2006",
+      "belligerents": [
+        {
+          "side": "Federal Government of Somalia",
+          "detail": "Somali National Army, Danab, regional and clan forces; supported by the AU mission (AUSSOM), Turkey and US airstrikes",
+          "short": "Somali government"
+        },
+        {
+          "side": "al-Shabaab",
+          "detail": "al-Qaeda affiliate controlling much of rural south-central Somalia",
+          "short": "al-Shabaab"
+        }
+      ],
+      "countries": {
+        "SOM": "ADM1"
+      },
+      "front": {
+        "SOM": [
+          "Hiiraan",
+          "Middle Shebelle",
+          "Lower Shebelle",
+          "Bay",
+          "Bakool",
+          "Galgaduud",
+          "Gedo",
+          "Lower Juba"
+        ]
+      },
+      "held": {
+        "SOM": [
+          "Banadir",
+          "Middle Juba"
+        ]
+      },
+      "front_as_of": "Nov 2026",
+      "front_sources": [
+        {
+          "label": "Dawan: Hirshabelle says al-Shabaab reduced to three districts (Jun 2026)",
+          "url": "https://www.dawan.africa/news/hirshabelle-president-says-al-shabaab-presence-reduced-to-three-districts"
+        },
+        {
+          "label": "Garowe Online: Somali forces and allies gear up for offensive",
+          "url": "https://www.garoweonline.com/en/news/somalia/somali-forces-and-allies-gear-up-for-offensive-against-al-shabaab-after-losing-ground"
+        }
+      ],
+      "sides": {
+        "Government": [
+          "Somali army",
+          "Somali National Army",
+          "SNA",
+          "Danab",
+          "Somali forces",
+          "government forces",
+          "Jubaland forces",
+          "AUSSOM"
+        ],
+        "al-Shabaab": [
+          "al-Shabaab",
+          "Al-Shabaab",
+          "al-Shabab",
+          "Shabaab"
+        ]
+      },
+      "partisan": [
+        "SONNA",
+        "sonna.so",
+        "Radio Andalus"
+      ],
+      "queries": [
+        "al-Shabaab fighting Somalia",
+        "Somali army al-Shabaab offensive"
+      ],
+      "trackers": [
+        {
+          "label": "CTP Africa File (maps)",
+          "url": "https://www.criticalthreats.org/briefs/africa-file"
+        }
+      ],
+      "note": "Middle Juba (Jilib) has been al-Shabaab's base for years and is not shaded; Mogadishu is government-held."
+    },
+    {
+      "id": "israel-gaza",
+      "name": "Gaza war",
+      "since": "7 Oct 2023; ceasefire since 10 Oct 2025",
+      "belligerents": [
+        {
+          "side": "Israel",
+          "detail": "Israel Defense Forces, holding the area behind the ceasefire's 'Yellow Line'",
+          "short": "Israel"
+        },
+        {
+          "side": "Hamas and allied Palestinian armed groups",
+          "detail": "control the rest of the Gaza Strip",
+          "short": "Hamas"
+        }
+      ],
+      "countries": {
+        "PSE": "ADM1"
+      },
+      "front": {
+        "PSE": [
+          "Gaza"
+        ]
+      },
+      "held": {
+        "PSE": [
+          "West Bank"
+        ]
+      },
+      "front_as_of": "Nov 2026",
+      "front_sources": [
+        {
+          "label": "Dhaka Tribune/AFP: a year on, Gaza ceasefire promises mostly unfulfilled (Oct 2026)",
+          "url": "https://www.dhakatribune.com/world/middle-east/421778/year-later-gaza-ceasefire-promises-mostly"
+        }
+      ],
+      "sides": {
+        "Israel": [
+          "Israeli",
+          "Israel",
+          "IDF"
+        ],
+        "Hamas": [
+          "Hamas",
+          "Palestinian militants",
+          "Islamic Jihad"
+        ]
+      },
+      "partisan": [
+        "IDF",
+        "idf.il",
+        "Al-Aqsa TV"
+      ],
+      "queries": [
+        "Gaza fighting Israeli troops",
+        "Gaza ceasefire clashes"
+      ],
+      "trackers": [
+        {
+          "label": "Military Summary",
+          "url": "https://militarysummary.com/"
+        }
+      ],
+      "note": "A ceasefire has held loosely since Oct 2025, with Israeli troops occupying part of the Strip and continued strikes. The West Bank, occupied since 1967, is shown under Occupied territory."
+    },
+    {
+      "id": "israel-lebanon",
+      "name": "Israel–Hezbollah war",
+      "since": "2 Mar 2026; ceasefire since 4 Jun 2026",
+      "belligerents": [
+        {
+          "side": "Israel",
+          "detail": "Israel Defense Forces, occupying border areas of southern Lebanon"
+        },
+        {
+          "side": "Hezbollah",
+          "detail": "Iran-backed Lebanese armed group; the Lebanese army is not a party to the fighting"
+        }
+      ],
+      "countries": {
+        "LBN": "ADM1"
+      },
+      "front": {
+        "LBN": [
+          "Liban-Sud",
+          "Nabatîyé"
+        ]
+      },
+      "held": {},
+      "front_as_of": "Nov 2026",
+      "front_sources": [
+        {
+          "label": "Asharq Al-Awsat: Lebanon-Israel ceasefire deal (Jun 2026)",
+          "url": "https://english.aawsat.com/arab-world/5280352-lebanon-israel-ceasefire-deal-complete-cessation-hezbollah-attacks-creation"
+        },
+        {
+          "label": "SCMP: Israel entrenches hold on south Lebanon",
+          "url": "https://www.scmp.com/news/world/middle-east/article/3350658/israel-says-military-use-full-force-lebanon-despite-truce-if-soldiers-face-threat"
+        }
+      ],
+      "sides": {
+        "Israel": [
+          "Israeli",
+          "Israel",
+          "IDF"
+        ],
+        "Hezbollah": [
+          "Hezbollah"
+        ]
+      },
+      "partisan": [
+        "Al-Manar",
+        "almanar.com.lb",
+        "IDF",
+        "idf.il"
+      ],
+      "queries": [
+        "south Lebanon Hezbollah Israeli troops clashes"
+      ],
+      "trackers": [
+        {
+          "label": "Military Summary",
+          "url": "https://militarysummary.com/"
+        }
+      ],
+      "note": "Israeli troops hold villages in the south despite the June 2026 ceasefire; strikes and Hezbollah attacks continue."
     }
   ]
 }

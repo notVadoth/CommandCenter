@@ -73,6 +73,33 @@ def contains(geom, x, y):
     polys = geom["coordinates"] if geom["type"] == "MultiPolygon" else [geom["coordinates"]]
     return any(_in_ring(x, y, p[0]) and not any(_in_ring(x, y, h) for h in p[1:]) for p in polys)
 
+def _dp(pts, tol):
+    """Douglas-Peucker line simplification (degrees)."""
+    if len(pts) < 3: return pts
+    (x1, y1), (x2, y2) = pts[0][:2], pts[-1][:2]
+    dx, dy = x2 - x1, y2 - y1; n = (dx * dx + dy * dy) ** .5 or 1e-12
+    i, dmax = 0, 0
+    for k in range(1, len(pts) - 1):
+        d = abs(dy * pts[k][0] - dx * pts[k][1] + x2 * y1 - y2 * x1) / n
+        if d > dmax: i, dmax = k, d
+    if dmax <= tol: return [pts[0], pts[-1]]
+    return _dp(pts[:i + 1], tol)[:-1] + _dp(pts[i:], tol)
+
+def light(geom, tol=0.02):
+    """A smaller copy of a polygon for the map: simplified rings, 3-decimal coordinates, tiny islands dropped."""
+    polys = geom["coordinates"] if geom["type"] == "MultiPolygon" else [geom["coordinates"]]
+    out = []
+    for poly in polys:
+        rings = []
+        for r in poly:
+            far = max(range(len(r)), key=lambda k: (r[k][0] - r[0][0]) ** 2 + (r[k][1] - r[0][1]) ** 2)   # closed ring: split in two
+            simple = _dp(r[:far + 1], tol)[:-1] + _dp(r[far:], tol)
+            rr = [[round(x, 3), round(y, 3)] for x, y in (pt[:2] for pt in simple)]
+            if len(rr) >= 4: rings.append(rr)
+        if rings: out.append(rings)
+    if not out: return geom
+    return {"type": "MultiPolygon", "coordinates": out}
+
 def district_at(iso, lvl, lon, lat):
     for f in boundaries(iso, lvl):
         if contains(f["geometry"], lon, lat):
@@ -265,12 +292,12 @@ def run(args):
                 if key not in front and not by_news: continue
                 one = {}
                 for r in rs: one.setdefault(r["outlet"].lower(), r)
-                feats.append({"type": "Feature", "geometry": f["geometry"], "properties": {
+                feats.append({"type": "Feature", "geometry": light(f["geometry"]), "properties": {
                     "war": war["id"], "province": f["properties"]["shapeName"], "iso": iso,
                     "basis": "front" if key in front else "news", "outlets": len(outlets),
                     "places": sorted({r["place"] for r in rs})[:8], "last": rs[0]["date"][:10] if rs else None,
                     "reports": [{k: r[k] for k in ("outlet", "place", "title", "url", "date", "partisan")} for r in list(one.values())[:6]]}})
-        out_wars.append({k: war.get(k) for k in ("id", "name", "since", "reference", "belligerents", "front_as_of", "front_sources")}
+        out_wars.append({k: war.get(k) for k in ("id", "name", "since", "trackers", "note", "belligerents", "front_as_of", "front_sources")}
                         | {"held": war.get("held", {}), "provinces": len(feats), "features": feats})
         print(f"  {war['name']}: {len(feats)} provinces ({sum(f['properties']['basis'] == 'news' for f in feats)} from news)")
 
