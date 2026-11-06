@@ -136,6 +136,9 @@
     .pbtn,#drawer .dmin,#drawer .x,#news .nh button{width:32px;height:32px}
   }
   #drawer.info-collapsed .dsec{display:none}
+  #hover.tap{pointer-events:auto}
+  #hover .open-details{display:block;width:100%;margin-top:9px;padding:9px 12px;border:0;border-radius:var(--r);background:#0a84ff;color:#fff;font-weight:600;font-size:13.5px;cursor:pointer}
+  #hover .open-details:active{background:#0071e3}
   @media (max-width:760px){ #drawer .path{cursor:pointer} #drawer #live-news{border-top:1px solid var(--line2)} }
   @media (prefers-reduced-motion:reduce){*{transition:none !important;animation:none !important}}
 
@@ -1018,7 +1021,7 @@ function renderHover(h){
              + (h.occupied||[]).map(r=>`<div class="ctrl-box" style="padding:3px 6px;border-color:#d6336c;background:#a61e4d22"><span class="t" style="color:#f783ac">▣ ${esc(r.props.name)}</span>${r.props.occupier?` <span class="small">held by ${esc(r.props.occupier)}</span>`:""}</div>`).join("")
              + (h.dmz||[]).map(r=>`<div class="small" style="color:#99e9f2">╳ ${esc(r.props.name)}</div>`).join("")
              + (h.disputed||[]).map(r=>`<div class="small" style="color:#ffc078">◇ Disputed: ${esc(r.props.name)}</div>`).join("");
-  hoverEl.innerHTML = `<div class="path">${path}</div>${ctrl}${statsHtml(h)}<div class="small" style="margin-top:4px">${NARROW.matches ? "Double-tap for charts, legislature and local news" : "Click for charts, legislature and links"}</div>`;
+  hoverEl.innerHTML = `<div class="path">${path}</div>${ctrl}${statsHtml(h)}<div class="small" style="margin-top:4px">${NARROW.matches ? "" : "Click for charts, legislature and links"}</div>`;
 }
 map.on("mousemove", e=>{
   if (NARROW.matches) return;            // phones have no hover: a tap shows the preview instead
@@ -1049,32 +1052,28 @@ const isEmptyHit = h => !h.country && !h.adm1 && !h.control?.length && !h.occupi
 map.on("click", e=>{
   const h = hitAt(e.latlng);
   if (isEmptyHit(h)){
-    closeDrawer(); hoverEl.style.display = "none";
+    closeDrawer(); hoverEl.style.display = "none"; hoverEl.classList.remove("tap");
     if (NARROW.matches && !(appEl.classList.contains("side-hidden") && appEl.classList.contains("news-hidden"))){ appEl.classList.add("side-hidden","news-hidden"); mapResized(); }
     return;
   }
-  if (NARROW.matches){
-    // phones: one tap previews, a second tap on the same spot within 600 ms opens the full panel.
-    // Detected here rather than with the browser's dblclick, whose window is too short on many phones.
-    const t = performance.now(), p = e.containerPoint, prev = lastTap;
-    lastTap = {t, p};
-    if (prev && t - prev.t < 600 && p.distanceTo(prev.p) < 40){ lastTap = null; openPlace(h, e.latlng); return; }
-    showTapPreview(h, e); return;
-  }
+  if (NARROW.matches){ showTapPreview(h, e); return; }   // phones: a tap shows a card with an "Open details" button
   openPlace(h, e.latlng);
 });
-let lastTap = null;
-// phones: a quick card at the tap point; double-tapping the place opens its full panel with local news below
+// phones: a quick card at the tap point; its "Open details" button opens the full panel with local news below
+function openTapped(){ if (tapHit) openPlace(tapHit, tapLatLng); hoverEl.classList.remove("tap"); }
+let tapHit = null, tapLatLng = null;
 function showTapPreview(h, e){
-  lastHit = h; renderHover(h); prefetchLive(h);
+  lastHit = h; tapHit = h; tapLatLng = e.latlng; renderHover(h); prefetchLive(h);
+  hoverEl.insertAdjacentHTML("beforeend", `<button class="open-details" onclick="openTapped()">Open details</button>`);
+  hoverEl.classList.add("tap");
   hoverEl.style.display = "block";
   const p = e.containerPoint, r = map.getContainer().getBoundingClientRect(), bw = hoverEl.offsetWidth, bh = hoverEl.offsetHeight;
   hoverEl.style.left = Math.max(6, Math.min(innerWidth - bw - 6, r.left + p.x - bw/2)) + "px";
   hoverEl.style.top  = (r.top + p.y - bh - 14 > 6 ? r.top + p.y - bh - 14 : Math.min(innerHeight - bh - 6, r.top + p.y + 14)) + "px";
 }
 
-map.on("movestart", ()=>{ if (NARROW.matches) hoverEl.style.display = "none"; });
-function phoneMode(){ NARROW.matches ? map.doubleClickZoom.disable() : map.doubleClickZoom.enable(); placeLive(); }
+map.on("movestart", ()=>{ if (NARROW.matches){ hoverEl.style.display = "none"; hoverEl.classList.remove("tap"); } });
+function phoneMode(){ placeLive(); }
 NARROW.addEventListener?.("change", phoneMode);
 setTimeout(phoneMode);   // after the rest of the script has defined the panels
 
