@@ -557,7 +557,7 @@ const frontRecs = [];
 const frontLayer = L.geoJSON(null,{renderer:R.front, pane:"front", interactive:false,
   style:{color:"#cc5de8", weight:1.4, opacity:.9, fillColor:"#cc5de8", fillOpacity:.22}});
 const FRONT = window.CC_FRONTLINE || null;
-function fmtDay(d){ return d ? new Date(d).toLocaleDateString(undefined,{day:"numeric",month:"short"}) : ""; }
+function fmtDay(d){ return d ? new Date(/^\d{4}-\d\d-\d\d$/.test(d) ? d+"T12:00" : d).toLocaleDateString(undefined,{day:"numeric",month:"short"}) : ""; }
 const sidesOf = w => (w.belligerents||[]).map(b=>b.short||b.side).join(" vs ");
 const WAR_DISCLAIMER = "Shading indicates an active war in this province; it does not reflect who controls the ground.";
 const trackerLinks = w => (w.trackers||[]).length ? `<div class="small" style="margin-top:4px">Front-line maps: ${w.trackers.map(t=>`<a href="${esc(t.url)}" target="_blank" rel="noopener">${esc(t.label)}</a>`).join(" · ")}</div>` : "";
@@ -571,10 +571,18 @@ if (FRONT){
   document.getElementById("front-meta").textContent = `${n} province${n===1?"":"s"} · ${fmtDay(FRONT.generated)}`;
   renderWars(); frontLayer.addTo(map);
 }
+function truceLine(w, box){
+  const c = w.ceasefire; if (!c) return "";
+  const src = (c.reports||[]).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.outlet)}</a>`).join(", ");
+  const txt = c.status==="verified"
+    ? `Ceasefire since ${fmtDay(c.since)}, held 4+ days (${c.outlets} outlets): provinces no longer shaded.`
+    : `Ceasefire reported ${fmtDay(c.since)} by ${c.outlets} outlets; shading stays until it has held to ${fmtDay(c.verify_by)}.`;
+  return `<div class="${box?"small":"war-sides"}" style="color:#8ce99a">${txt}${box&&src?` Sources: ${src}`:""}</div>`;
+}
 function renderWars(){
   if (!FRONT) return;
   const other = FRONT.other_fighting||[];
-  document.getElementById("wars").innerHTML = (FRONT.wars||[]).map(w=>`<div class="war"><a onclick="zoomWar('${esc(w.id)}')">${esc(w.name)}</a><span class="hint">${(w.features||[]).length} province${(w.features||[]).length===1?"":"s"}</span></div><div class="war-sides">${esc(sidesOf(w))}</div>`).join("")
+  document.getElementById("wars").innerHTML = (FRONT.wars||[]).map(w=>`<div class="war"><a onclick="zoomWar('${esc(w.id)}')">${esc(w.name)}</a><span class="hint">${w.ceasefire?.status==="verified" ? "ceasefire" : `${(w.features||[]).length} province${(w.features||[]).length===1?"":"s"}`}</span></div><div class="war-sides">${esc(sidesOf(w))}</div>${truceLine(w)}`).join("")
     + (other.length ? `<details class="small other"><summary>Other fighting in the news (not mapped)</summary>${other.map(o=>`<div>${esc(byCode[o.iso]?.name||o.iso)} <span class="hint">${Array.isArray(o.outlets)?o.outlets.length:o.outlets} outlets</span>${(o.examples||[]).slice(0,2).map(x=>`<div class="ex"><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a> <span class="hint">${esc(x.outlet||"")}</span></div>`).join("")}</div>`).join("")}</details>` : "");
 }
 function zoomWar(id){
@@ -595,6 +603,7 @@ function frontBox(r){
     + ((p.reports||[]).length?`<div class="small" style="margin-top:4px"><b>Recent reports</b>${p.places?.length?` · places named: ${p.places.map(esc).join(", ")}`:""}</div>`
       + p.reports.map(x=>`<div class="small">· <a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a> <span class="hint">${esc(x.outlet)}${x.partisan?" · party to the war":""}</span></div>`).join(""):"")
     + (w.note?`<div class="small" style="margin-top:4px">${esc(w.note)}</div>`:"")
+    + truceLine(w, true)
     + trackerLinks(w)
     + `<div class="small war-disc">${WAR_DISCLAIMER}</div></div>`;
 }

@@ -40,6 +40,38 @@ AIR = re.compile(r"\b(?:air ?strikes?|drones?|missiles?|shell(?:ed|ing)|bomb(?:e
 HYPO = re.compile(r"\b(?:could|would|might|plans? to|threaten(?:s|ed)? to|aims? to|seeks? to)\b", re.I)
 PLACE = r"(?P<place>[A-Z][\w'’\-]+(?:[ \-](?:al-|el-|ad-)?[A-Z][\w'’\-]+){0,2})"
 WHERE = re.compile(rf"\b(?:in|near|on|around|outside|toward|towards|into|of|at|from)\s+(?:the\s+)?(?:(?:village|town|city|settlement|district|port|outskirts|area|province|governorate|region|oblast)s?\s+of\s+)?{PLACE}")
+# ceasefires: front-wide only. Local, humanitarian, prisoner-exchange, holiday or sector-limited truces don't count.
+TRUCE = re.compile(r"\b(?:cease-?fire|truce|armistice|peace (?:deal|agreement|accord)|cessation of hostilities)\b", re.I)
+TRUCE_START = re.compile(r"\b(?:takes? effect|took effect|came into (?:force|effect)|comes? into (?:force|effect)|went into effect|goes into effect|"
+                         r"entered into force|enters into force|(?:was |were |been )?signed|agreed (?:to )?(?:a|an|the)|declared (?:a|an)|announced (?:a|an)|"
+                         r"began|begins|started|is now in (?:force|effect))\b", re.I)
+TRUCE_LOCAL = re.compile(r"\b(?:local(?:i[sz]ed)?|humanitarian|pause|prisoners?|POWs?|exchange|swap|Christmas|Easter|Orthodox|Eid|Ramadan|Hanukkah|New Year|holiday|"
+                         r"Olympic|energy|infrastructure|power plants?|air|aerial|maritime|naval|Black Sea|sea|partial|limited|\d+[- ]hours?|\d+[- ]day|one-day|"
+                         r"evacuat\w*|aid|vaccination|polio|corridor|town|city|village|district|sector|nuclear plant)\b", re.I)
+TRUCE_NOT = re.compile(r"\b(?:since|despite|violat\w*|breach\w*|call(?:s|ed)? for|urg\w+|propos\w*|push(?:es|ed)? for|seek\w*|talks?|negotiat\w*|"
+                       r"reject\w*|refus\w*|would|could|might|may|hopes?|if|unless|ahead of|prospects?|plan|draft|framework|previous|last year|earlier)\b", re.I)
+TRUCE_END = re.compile(r"\b(?:cease-?fire|truce)\b[^.;]{0,40}\b(?:collaps\w+|broke down|breaks? down|has ended|ended|is over|shattered|abandoned)\b|"
+                       r"\b(?:resum\w+|renewed) (?:fighting|hostilities|offensive|assaults?|attacks)\b", re.I)
+
+MONTHS = ["january","february","march","april","may","june","july","august","september","october","november","december"]
+def old_date(sent):
+    """True when the sentence dates the ceasefire to an earlier month or year (a look back, not news of a new one)."""
+    recent = {MONTHS[NOW.month - 1]} | ({MONTHS[NOW.month - 2]} if NOW.day <= 7 else set())
+    named = {m for m in MONTHS if re.search(rf"\b{m}\b", sent, re.I)} - {"may"} | ({"may"} if re.search(r"\bin May\b|\bMay \d", sent) else set())
+    years = {int(y) for y in re.findall(r"\b(20\d\d)\b", sent)}
+    return bool(named - recent) or any(y < NOW.year for y in years)
+
+def truce_in(text, war):
+    """('start'|'end', sentence) for front-wide ceasefire news about this war."""
+    names = re.compile("|".join(re.escape(w) for ws in war["sides"].values() for w in ws) + "|" + "|".join(re.escape(n) for n in war.get("names", [])))
+    out = []
+    for sent in re.split(r"(?<=[.!?])\s+|\s+[-–—|]\s+", text):
+        if len(sent) < 15 or not names.search(sent): continue
+        if TRUCE_END.search(sent): out.append(("end", sent.strip()[:300])); continue
+        if TRUCE.search(sent) and TRUCE_START.search(sent) and not TRUCE_LOCAL.search(sent) and not TRUCE_NOT.search(sent) and not old_date(sent):
+            out.append(("start", sent.strip()[:300]))
+    return out
+
 TAKEN = re.compile(rf"\b{GAIN}\s+(?:the\s+)?(?:(?:village|town|city|settlement|district|port)\s+of\s+)?{PLACE}")
 STOP = {"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday","January","February","March","April","May","June","July","August",
         "September","October","November","December","The","A","An","Control","Positions","Territory","Ground","Part","Parts","Areas","Area",
@@ -229,6 +261,31 @@ def when(r):
     try: return dt.datetime.fromisoformat(r["date"].replace("Z", "+00:00"))
     except Exception: return NOW
 
+def ceasefire_status(war, state, cfg):
+    """None, or {status: 'reported'|'verified', since, verify_by, outlets, reports}.
+    Reported: 3+ outlets (1+ not run by a party to the war) report a front-wide ceasefire taking effect, within 7 days of each other.
+    Verified: it has then held for `ceasefire_hold_days` (default 4) with no collapse reported by 3+ outlets and no renewed
+    ground fighting reported by 3+ outlets. A later collapse or renewed fighting puts the shading back."""
+    need = cfg.get("min_outlets", 3); hold = cfg.get("ceasefire_hold_days", 4)
+    rs = sorted((r for r in state.get("truce", []) if r["war"] == war["id"]), key=when)
+    starts = [r for r in rs if r["kind"] == "start"]
+    best = None
+    for i, r in enumerate(starts):                       # earliest 7-day window with enough independent outlets
+        win = [x for x in starts[i:] if when(x) - when(r) <= dt.timedelta(days=7)]
+        outs = {x["outlet"].lower() for x in win}
+        if len(outs) >= need and any(not x["partisan"] for x in win): best = (r, win, outs)
+    if not best: return None
+    first, win, outs = best
+    since = when(first)
+    ends = {r["outlet"].lower() for r in rs if r["kind"] == "end" and when(r) > since}
+    fights = {r["outlet"].lower() for r in state["reports"] if r["war"] == war["id"] and when(r) > since + dt.timedelta(days=1)}
+    if len(ends) >= need or len(fights) >= need: return None          # broke down: keep shading
+    one = {}
+    for r in win: one.setdefault(r["outlet"].lower(), r)
+    return {"status": "verified" if NOW - since >= dt.timedelta(days=hold) else "reported",
+            "since": since.date().isoformat(), "verify_by": (since + dt.timedelta(days=hold)).date().isoformat(), "outlets": len(outs),
+            "reports": [{k: r[k] for k in ("outlet", "title", "url", "date", "partisan")} for r in list(one.values())[:6]]}
+
 def run(args):
     cfg = load(HERE / "wars.json", {"wars": []})
     state = load(HERE / "frontline_state.json", {"reports": []})
@@ -249,11 +306,19 @@ def run(args):
                 except Exception as e: print(f"  ! bing '{q}': {e}", file=sys.stderr)
     print(f"  {len(arts)} articles to scan")
 
-    seen = {r["url"] + "|" + r["province"] for r in state["reports"]}
+    seen = {r["url"] + "|" + r["province"] for r in state["reports"]} | {r["url"] + "|truce" for r in state.get("truce", [])}
     new = 0
     for a in arts:
         text = (a["title"] or "") + ". " + re.sub(r"<[^>]+>", " ", a["summary"] or "")
         for war in cfg["wars"]:
+            if war.get("ceasefire_check", True):
+                for kind, sent in truce_in(text, war):
+                    k = a["url"] + "|truce"
+                    if k in seen: continue
+                    outlet, host = outlet_key(a["outlet"], a["url"])
+                    state.setdefault("truce", []).append({"war": war["id"], "kind": kind, "outlet": a["outlet"], "partisan": is_partisan(war, a["outlet"], host),
+                        "title": a["title"][:200], "sentence": sent, "url": a["url"], "date": a.get("date") or NOW.isoformat()})
+                    seen.add(k)
             for sides, place, sent in fighting_in(text, war):
                 try: hit = resolve(place, text, war, gcache, args.offline)
                 except Exception as e: print(f"  ! resolve {place}: {e}", file=sys.stderr); continue
@@ -270,6 +335,7 @@ def run(args):
                 seen.add(k); new += 1
     cutoff = NOW - dt.timedelta(days=max(window, 30))
     state["reports"] = [r for r in state["reports"] if when(r) >= cutoff]
+    state["truce"] = [r for r in state.get("truce", []) if when(r) >= NOW - dt.timedelta(days=60)]
     print(f"  {new} new fighting reports, {len(state['reports'])} kept")
 
     # 2. provinces: the listed front, plus provinces with enough independent reports; never the firmly held ones
@@ -281,8 +347,9 @@ def run(args):
         by = collections.defaultdict(list)
         for r in state["reports"]:
             if r["war"] == war["id"] and when(r) >= recent: by[(r["iso"], norm(r["province"]))].append(r)
+        cf = ceasefire_status(war, state, cfg)
         feats = []
-        for iso in war["countries"]:
+        for iso in (war["countries"] if not (cf and cf["status"] == "verified") else []):
             for f in boundaries(iso, "ADM1"):
                 key = (iso, norm(f["properties"]["shapeName"]))
                 if key in held: continue
@@ -298,7 +365,8 @@ def run(args):
                     "places": sorted({r["place"] for r in rs})[:8], "last": rs[0]["date"][:10] if rs else None,
                     "reports": [{k: r[k] for k in ("outlet", "place", "title", "url", "date", "partisan")} for r in list(one.values())[:6]]}})
         out_wars.append({k: war.get(k) for k in ("id", "name", "since", "trackers", "note", "belligerents", "front_as_of", "front_sources")}
-                        | {"held": war.get("held", {}), "provinces": len(feats), "features": feats})
+                        | {"held": war.get("held", {}), "provinces": len(feats), "features": feats, "ceasefire": cf})
+        if cf: print(f"  {war['name']}: ceasefire {cf['status']} (since {cf['since']}, {cf['outlets']} outlets)")
         print(f"  {war['name']}: {len(feats)} provinces ({sum(f['properties']['basis'] == 'news' for f in feats)} from news)")
 
     # 3. other fighting in the news (candidates, not mapped)
