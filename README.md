@@ -55,6 +55,7 @@ The scripts use only the Python standard library. No API keys are required.
 ```
 commandcenter-map.html     the app (HTML, CSS and JavaScript in one file)
 index.html                 redirects to the app
+icons/weather/             weather icons (SVG)
 data/                      data files loaded by the app
   config.js                news relay address
   market_catalog.js        TradingView symbols and place-to-chart rules
@@ -131,6 +132,7 @@ The app's left panel lists every source with its licence. In summary:
 | Contested-control layers | Per layer; see [`CONTROL_SOURCES.md`](CONTROL_SOURCES.md) | Per source |
 | Headlines | Outlets' RSS feeds; Bing News search | Titles and links only |
 | Weather | Open-Meteo.com | CC BY 4.0 (free for non-commercial use) |
+| Weather icons | "Weather elements" set by Dewanto (`icons/weather/`) | Per the set's licence |
 | Live market charts | TradingView widgets | TradingView terms |
 | Brent daily closes | U.S. Energy Information Administration via FRED | Public domain |
 

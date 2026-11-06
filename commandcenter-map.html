@@ -136,7 +136,8 @@
     .pbtn,#drawer .dmin,#drawer .x,#news .nh button{width:32px;height:32px}
   }
   #drawer.info-collapsed .dsec{display:none}
-  .wxnow{font-size:13px;margin:2px 0 8px} .wxnow b{font-size:17px;font-weight:600;font-variant-numeric:tabular-nums}
+  .wxnow{display:flex;align-items:center;flex-wrap:wrap;gap:0 6px;font-size:13px;margin:2px 0 8px} .wxnow b{font-size:17px;font-weight:600;font-variant-numeric:tabular-nums}
+  .wxnow .wxi{width:34px;height:34px;margin-right:2px} .wxh .wxi{width:26px;height:26px;margin:1px 0}
   #hover .wxnow{margin:8px 0 0}
   .wxstrip{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin-bottom:6px}
   .wxh{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0 5px;background:rgba(255,255,255,.045);border-radius:var(--r);font-variant-numeric:tabular-nums}
@@ -279,7 +280,7 @@
             <li><b>Headlines:</b> titles and links from each outlet's public RSS feed (daily list) and from <a href="https://www.bing.com/news" target="_blank" rel="noopener">Bing News</a> search (place headlines). Stories belong to their publishers; only titles are shown, each linking to the original.</li>
             <li><b>Markets:</b> live charts by <a href="https://www.tradingview.com/" target="_blank" rel="noopener">TradingView</a>. Daily Brent closes: U.S. Energy Information Administration via
               <a href="https://fred.stlouisfed.org/series/DCOILBRENTEU" target="_blank" rel="noopener">FRED</a>. Index data is not stored or republished.</li>
-            <li><b>Weather:</b> <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo.com</a> (CC BY 4.0), from national weather services' models.</li>
+            <li><b>Weather:</b> <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo.com</a> (CC BY 4.0), from national weather services' models. Icons: "Weather elements" set by Dewanto.</li>
             <li><b>Map engine:</b> <a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a> (BSD-2).</li>
           </ul>
           <div>Figures and outlines can be out of date or contested; check the linked source before relying on them.</div>
@@ -1042,6 +1043,20 @@ map.on("mouseout", ()=>{ if (!NARROW.matches) hoverEl.style.display="none"; });
 const WMO = {0:"Clear",1:"Mostly clear",2:"Partly cloudy",3:"Overcast",45:"Fog",48:"Freezing fog",51:"Light drizzle",53:"Drizzle",55:"Heavy drizzle",
   56:"Freezing drizzle",57:"Freezing drizzle",61:"Light rain",63:"Rain",65:"Heavy rain",66:"Freezing rain",67:"Freezing rain",71:"Light snow",73:"Snow",75:"Heavy snow",
   77:"Snow grains",80:"Light showers",81:"Showers",82:"Heavy showers",85:"Snow showers",86:"Heavy snow showers",95:"Thunderstorm",96:"Thunderstorm, hail",99:"Thunderstorm, hail"};
+// WMO weather code (+ day/night) -> icon in icons/weather/
+function wxIcon(code, day){
+  const n = code === 0 ? (day ? "clear-day" : "clear-night")
+          : code <= 2 ? (day ? "partly-cloudy-day" : "partly-cloudy-night")
+          : code === 3 ? "overcast"
+          : code === 45 || code === 48 ? "fog-wind"
+          : code >= 51 && code <= 57 ? "drizzle"
+          : (code >= 61 && code <= 67) || (code >= 80 && code <= 82) ? "rain"
+          : code === 75 || code === 86 ? "snowflake"
+          : (code >= 71 && code <= 77) || code === 85 ? "snow"
+          : code === 95 ? "thunder"
+          : code >= 96 ? "thunder-rain" : "cloud";
+  return `<img class="wxi" src="icons/weather/${n}.svg" alt="${esc(WMO[code] || "")}" title="${esc(WMO[code] || "")}">`;
+}
 const WX = new Map();   // "lat,lng" rounded to 0.1° -> {status, d, t}
 let drawerLL = null;
 const wxKey = ll => `${ll.lat.toFixed(1)},${L.latLng(ll).wrap().lng.toFixed(1)}`;
@@ -1051,20 +1066,20 @@ function loadWeather(ll, onReady){
   const rec = {status:"loading", t:Date.now(), wait:[onReady]}; WX.set(k, rec);
   const w = L.latLng(ll).wrap();
   fetch(`https://api.open-meteo.com/v1/forecast?latitude=${w.lat.toFixed(3)}&longitude=${w.lng.toFixed(3)}`
-      + `&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m&hourly=temperature_2m,precipitation_probability,weather_code&forecast_hours=8&timezone=auto`)
+      + `&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m,is_day&hourly=temperature_2m,precipitation_probability,weather_code,is_day&forecast_hours=8&timezone=auto`)
     .then(r => r.ok ? r.json() : Promise.reject(new Error("HTTP " + r.status)))
     .then(d => { rec.status = "ok"; rec.d = d; })
     .catch(() => { rec.status = "error"; })
     .finally(() => { rec.t = Date.now(); rec.wait.forEach(f => f?.()); rec.wait = []; });
 }
-const wxLine = d => { const c = d.current; return `<b>${Math.round(c.temperature_2m)}°C</b> ${esc(WMO[c.weather_code] || "")}<span class="small"> · feels ${Math.round(c.apparent_temperature)}° · wind ${Math.round(c.wind_speed_10m)} km/h</span>`; };
+const wxLine = d => { const c = d.current; return `${wxIcon(c.weather_code, c.is_day)}<b>${Math.round(c.temperature_2m)}°C</b> ${esc(WMO[c.weather_code] || "")}<span class="small"> · feels ${Math.round(c.apparent_temperature)}° · wind ${Math.round(c.wind_speed_10m)} km/h</span>`; };
 function weatherHtml(ll){
   const rec = ll && WX.get(wxKey(ll));
   if (!rec || rec.status === "loading") return `<div class="dsec"><h3>Weather here</h3><div class="small">loading…</div></div>`;
   if (rec.status === "error") return `<div class="dsec"><h3>Weather here</h3><div class="small">Weather unavailable right now.</div></div>`;
   const d = rec.d, now = d.current.time, H = d.hourly;
   const idx = H.time.map((t,i)=>i).filter(i => H.time[i] > now).slice(0, 6);
-  const cells = idx.map(i => `<div class="wxh"><span class="t">${H.time[i].slice(11,16)}</span><b>${Math.round(H.temperature_2m[i])}°</b>
+  const cells = idx.map(i => `<div class="wxh"><span class="t">${H.time[i].slice(11,16)}</span>${wxIcon(H.weather_code[i], H.is_day?.[i] ?? 1)}<b>${Math.round(H.temperature_2m[i])}°</b>
       <span class="p" title="Chance of precipitation"><i style="height:${Math.max(2, (H.precipitation_probability[i] ?? 0) * 0.16)}px"></i>${H.precipitation_probability[i] ?? "–"}%</span></div>`).join("");
   return `<div class="dsec wx"><h3>Weather here</h3><div class="wxnow">${wxLine(d)}</div>
     <div class="wxstrip" aria-label="Next 6 hours: temperature and chance of precipitation">${cells}</div>
