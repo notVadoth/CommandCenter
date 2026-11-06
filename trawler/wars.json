@@ -1,32 +1,180 @@
 {
-  "_note": "Wars whose front-line movements are tracked. A district is marked contested only when 3+ independent outlets (at least one not partisan to either side) report ground control changing there. Add a war by adding an entry: its countries (with the boundary level to mark), the sides and the words news uses for them, outlets that speak for a side, and a few news searches.",
+  "_note": "Wars tracked on the map. Provinces listed under 'front' are marked as active war zones (checked against the sources in 'front_sources' on 'front_as_of'; edit the list when the front moves). Any other province is added automatically when 3+ outlets, at least one not run by a party to the war, report ground fighting there within 'window_days'. Provinces under 'held' are firmly controlled by one side and are never marked. Province names must match geoBoundaries ADM1 names.",
   "min_outlets": 3,
-  "window_days": 30,
+  "window_days": 14,
   "wars": [
     {
       "id": "russia-ukraine",
       "name": "Russia–Ukraine war",
       "since": "24 Feb 2022",
-      "countries": {"UKR": "ADM2", "RUS": "ADM1"},
-      "sides": {
-        "Russia": ["Russian", "Russia", "Russia's", "Moscow", "Kremlin"],
-        "Ukraine": ["Ukrainian", "Ukraine", "Ukraine's", "Kyiv"]
+      "belligerents": [
+        {
+          "side": "Russia",
+          "detail": "Russian Armed Forces, with North Korean troops in Kursk (2024–25)"
+        },
+        {
+          "side": "Ukraine",
+          "detail": "Armed Forces of Ukraine, backed by Western military aid"
+        }
+      ],
+      "countries": {
+        "UKR": "ADM1",
+        "RUS": "ADM1"
       },
-      "partisan": ["TASS", "RT", "RIA Novosti", "Ukrinform", "tass.com", "rt.com", "ria.ru", "ukrinform.net", "mil.gov.ua"],
-      "queries": ["Russian forces captured village Ukraine", "Russia claims capture of village", "Ukrainian forces liberated village", "Ukraine recaptured village"],
-      "reference": {"label": "DeepStateMap.live front line", "url": "https://deepstatemap.live/en"}
+      "front": {
+        "UKR": [
+          "Donetsk Oblast",
+          "Zaporizhia Oblast",
+          "Kharkiv Oblast",
+          "Dnipropetrovsk Oblast",
+          "Sumy Oblast",
+          "Kherson Oblast"
+        ]
+      },
+      "held": {
+        "UKR": [
+          "Autonomous Republic of Crimea",
+          "Sevastopol",
+          "Luhansk Oblast"
+        ]
+      },
+      "front_as_of": "Nov 2026",
+      "front_sources": [
+        {
+          "label": "General Staff of Ukraine daily front report, via Censor.NET (Oct 2026)",
+          "url": "https://censor.net/en/news/4030732/191-combat-engagements-in-the-past-24-hours-"
+        }
+      ],
+      "sides": {
+        "Russia": [
+          "Russian",
+          "Russians",
+          "Russia",
+          "Russia's",
+          "Moscow",
+          "Kremlin",
+          "occupiers"
+        ],
+        "Ukraine": [
+          "Ukrainian",
+          "Ukrainians",
+          "Ukraine",
+          "Ukraine's",
+          "Kyiv"
+        ]
+      },
+      "partisan": [
+        "TASS",
+        "RT",
+        "RIA Novosti",
+        "Ukrinform",
+        "tass.com",
+        "rt.com",
+        "ria.ru",
+        "ukrinform.net",
+        "mil.gov.ua",
+        "mil.ru"
+      ],
+      "queries": [
+        "Ukraine front line fighting",
+        "Russian forces captured village Ukraine",
+        "Ukrainian forces repelled assault",
+        "Ukraine counteroffensive village"
+      ],
+      "reference": {
+        "label": "DeepStateMap.live front line",
+        "url": "https://deepstatemap.live/en"
+      }
     },
     {
       "id": "yemen",
       "name": "Yemeni civil war",
       "since": "Sep 2014; renewed fighting since Jul 2026",
-      "countries": {"YEM": "ADM2"},
-      "sides": {
-        "Houthis": ["Houthi", "Houthis", "Ansar Allah", "Ansarallah"],
-        "Government": ["government forces", "Yemeni government", "Yemeni army", "Yemeni forces", "Giants Brigades", "pro-government", "Southern Transitional Council", "STC forces", "National Resistance"]
+      "belligerents": [
+        {
+          "side": "Houthis (Ansar Allah)",
+          "detail": "control Sanaa and most of the north-west; backed by Iran"
+        },
+        {
+          "side": "Government",
+          "detail": "Presidential Leadership Council forces, Giants Brigades, National Resistance and Southern Transitional Council units; backed by Saudi Arabia"
+        }
+      ],
+      "countries": {
+        "YEM": "ADM1"
       },
-      "partisan": ["Saba", "Al Masirah", "saba.ye", "sabanew.net", "almasirah.net", "almasirah.net.ye", "26sepnews.net"],
-      "queries": ["Houthis seized Yemen", "Houthis captured district Yemen", "Yemeni government forces recaptured", "Yemen forces regained control"],
+      "front": {
+        "YEM": [
+          "Ta'izz Governorate",
+          "Lahij Governorate",
+          "Al Jawf Governorate",
+          "Ma'rib Governorate",
+          "Al Hudaydah Governorate",
+          "Ad Dali' Governorate",
+          "Al Bayda' Governorate"
+        ]
+      },
+      "held": {
+        "YEM": [
+          "Sanʿaʾ",
+          "Sanʿaʾ Governorate",
+          "Sa'dah Governorate",
+          "'Amran Governorate",
+          "Al Mahwit Governorate",
+          "Raymah Governorate",
+          "Dhamar Governorate",
+          "‘Adan Governorate",
+          "Hadhramaut",
+          "Al Mahrah Governorate",
+          "Socotra"
+        ]
+      },
+      "front_as_of": "Nov 2026",
+      "front_sources": [
+        {
+          "label": "Arab News: fighting intensifies as government forces push on multiple fronts",
+          "url": "https://www.arabnews.com/middle-east/yemen-fighting-intensifies-as-government-forces-push-on-multiple-fronts-3001185"
+        },
+        {
+          "label": "Al-Quds: escalation on the Lahj, Taiz and Al-Jawf fronts (2 Nov 2026)",
+          "url": "https://alquds.com/en/posts/268323"
+        }
+      ],
+      "sides": {
+        "Houthis": [
+          "Houthi",
+          "Houthis",
+          "Ansar Allah",
+          "Ansarallah"
+        ],
+        "Government": [
+          "government forces",
+          "government troops",
+          "Yemeni government",
+          "Yemeni army",
+          "Yemeni forces",
+          "Giants Brigades",
+          "pro-government",
+          "Southern Transitional Council",
+          "STC forces",
+          "National Resistance"
+        ]
+      },
+      "partisan": [
+        "Saba",
+        "Al Masirah",
+        "saba.ye",
+        "sabanew.net",
+        "almasirah.net",
+        "almasirah.net.ye",
+        "26sepnews.net"
+      ],
+      "queries": [
+        "Houthi clashes Yemen front",
+        "Yemen government forces Houthis fighting",
+        "Houthis advance Yemen",
+        "Yemen army Houthi attack repelled"
+      ],
       "reference": null
     }
   ]

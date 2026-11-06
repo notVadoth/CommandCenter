@@ -13,7 +13,7 @@ Command Centre is a single-page world map that brings together political geograp
 - National, province/state and county/district boundaries, loaded per country as you zoom.
 - Bloc overlays: EU, NATO, BRICS and partners, G7, G20, ASEAN, SCO, CSTO, African Union, GCC, OPEC, USMCA, Mercosur, Five Eyes, Quad and the Mecca Joint Defence Agreement.
 - Contested-control layers: areas held by non-state actors, occupied territory, DMZs and ceasefire lines, and disputed territory. Each area shows its source and date.
-- Active war fronts: for each tracked war (currently Russia–Ukraine and Yemen), districts where three or more outlets report ground forces taking or entering a place in the last 30 days are shaded as contested, with the articles listed. A side list shows other fighting in the news that is not yet tracked.
+- Active wars: provinces where a tracked war (currently Russia–Ukraine and Yemen) is being fought are shaded, and clicking one names the belligerents and the sources. Provinces firmly held by one side, such as Sanaa or Crimea, are not shaded. A side list shows other fighting in the news that is not yet tracked.
 
 **Place details**
 - Hover card with GDP, GDP per capita, Gini, leader and cabinet for countries; leader and government for provinces and states.
@@ -56,7 +56,7 @@ trawler/markets.py ─► data/markets.js    ─┘          │                
 
 - **`trawler.py`** reads news feeds for claims that a country joined, left or applied to a bloc. Each claim is checked against Wikidata and against independent outlets. A change appears on the map only when two or more independent outlets report it.
 - **`news.py`** groups the day's headlines from about 30 outlets into stories. For each story it picks sources from different perspectives and assigns it to a country or to the diplomacy section.
-- **`frontline.py`** tracks the wars listed in `trawler/wars.json`. It reads headlines from the outlet feeds and from Bing News searches for each war, looking for sentences in which one side captures, enters or retakes a named place. Air, drone and missile strikes, and attacks reported as repelled or failed, are ignored. Each place is located with Wikidata and assigned to a district from geoBoundaries; if the name is ambiguous, the report is dropped. A district is shaded only when at least three different outlets report fighting there within 30 days, and at least one of them is not run by a party to the war (for example, TASS or Ukrinform alone are never enough).
+- **`frontline.py`** marks active war zones for the wars in `trawler/wars.json`. Each war has a list of front-line provinces, dated and sourced, and a list of provinces held firmly by one side that are never marked. The script also reads headlines from the outlet feeds and Bing News searches for sentences that name a side and report ground fighting (clashes, assaults, advances, captures); air, drone, missile and shelling reports are ignored. Places are located with Wikidata and assigned to a province from geoBoundaries. A province outside the front list is added when 3+ different outlets report fighting there within 14 days, at least one of them not run by a party to the war.
 - **`markets.py`** stores daily Brent closes for the offline "Daily close" view.
 - **`relay/news-relay.js`** is a small Cloudflare Worker. It fetches Bing News search results for a clicked place, because browsers cannot read the feed directly.
 - **Weather** comes straight from Open-Meteo in the browser, for the exact spot clicked, and is cached for 15 minutes.
@@ -122,7 +122,7 @@ The relay only answers requests from the origins listed in `ALLOWED_ORIGINS`, an
 | `commandcenter-map.html` → `GROUPINGS` | Built-in bloc members and colours |
 | `trawler/blocs.json` | Blocs the trawler tracks, with aliases and Wikidata lookup |
 | `trawler/feeds.json` | Feeds the bloc trawler reads |
-| `trawler/wars.json` | Wars tracked on the map: countries, the belligerents' names, outlets run by a party to the war, search terms, and the outlet threshold |
+| `trawler/wars.json` | Wars on the map: belligerents, front-line provinces (with the date and sources checked), provinces held by one side, outlets run by a party to the war, and news searches. Update the front list when the front moves |
 | `trawler/news_sources.json` | Outlets and the perspective ("camp") each represents |
 | `data/market_catalog.js` | Chart symbols and which places they are recommended for |
 | `data/config.js` | News relay address |
@@ -144,7 +144,7 @@ The app's left panel lists every source with its licence. In summary:
 | Leaders and cabinets | Wikidata | CC0 |
 | Legislature seats | Wikipedia infoboxes | CC BY-SA 4.0 |
 | Contested-control layers | Per layer; see [`CONTROL_SOURCES.md`](CONTROL_SOURCES.md) | Per source |
-| War fronts | Headlines from outlets' RSS feeds and Bing News; places from Wikidata; districts from geoBoundaries | Titles and links only; CC0; CC BY 4.0 |
+| Active wars | Front-line lists checked against news sources (linked in the app); headlines from outlets' RSS feeds and Bing News; places from Wikidata; provinces from geoBoundaries | Titles and links only; CC0; CC BY 4.0 |
 | Headlines | Outlets' RSS feeds; Bing News search | Titles and links only |
 | Weather | Open-Meteo.com | CC BY 4.0 (free for non-commercial use) |
 | Weather icons | "Weather elements" set by Dewanto (`icons/weather/`) | Per the set's licence |
@@ -159,7 +159,7 @@ The app's left panel lists every source with its licence. In summary:
 ## Limitations
 
 - Contested-control outlines are approximate and can lag events. The current Ukraine front line is not drawn because no openly licensed source was found.
-- War-front shading is district-level and comes from news reports, so it marks where fighting for ground has been reported, not who holds it. It lags events by about a day and misses places the press doesn't name.
+- War shading is by province and shows where fighting is going on, not who controls the ground. The front-line lists are kept by hand and dated; the news check only adds provinces, so a quiet front stays listed until the list is edited.
 - Economic figures are national only; provinces and states show their leader and government.
 - TradingView's embedded charts do not display some exchange feeds (Nikkei, FTSE, several futures). The catalogue uses CFDs, country ETFs or producer stocks instead, and labels them as such.
 - Place headlines rely on Bing News search coverage.
