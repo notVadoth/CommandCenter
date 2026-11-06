@@ -573,12 +573,18 @@ if (FRONT){
   renderWars(); frontLayer.addTo(map);
 }
 function truceLine(w, box){
-  const c = w.ceasefire; if (!c) return "";
+  const wd = (w.withdrawals||[]).map(x=>{
+    const where = esc(x.province || byCode[x.iso]?.name || x.iso);
+    return x.status==="verified"
+      ? `Withdrawal from ${where} since ${fmtDay(x.since)}, held 4+ days (${x.outlets} outlets): no longer marked as held.`
+      : `Withdrawal from ${where} reported ${fmtDay(x.since)} by ${x.outlets} outlets; checking for 4 days.`; });
+  const wdHtml = wd.map(t=>`<div class="${box?"small":"war-sides"}" style="color:#8ce99a">${t}</div>`).join("");
+  const c = w.ceasefire; if (!c) return wdHtml;
   const src = (c.reports||[]).map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.outlet)}</a>`).join(", ");
   const txt = c.status==="verified"
     ? `Ceasefire since ${fmtDay(c.since)}, held 4+ days (${c.outlets} outlets): only areas still held by a side stay marked (dashed).`
     : `Ceasefire reported ${fmtDay(c.since)} by ${c.outlets} outlets; shading stays until it has held to ${fmtDay(c.verify_by)}.`;
-  return `<div class="${box?"small":"war-sides"}" style="color:#8ce99a">${txt}${box&&src?` Sources: ${src}`:""}</div>`;
+  return `<div class="${box?"small":"war-sides"}" style="color:#8ce99a">${txt}${box&&src?` Sources: ${src}`:""}</div>` + wdHtml;
 }
 function renderWars(){
   if (!FRONT) return;
@@ -594,7 +600,7 @@ document.getElementById("lyr-front").onchange = e => e.target.checked ? frontLay
 function frontBox(r){
   const p=r.props, w=r.war;
   const why = p.basis==="ceasefire"
-    ? `Under a ceasefire since ${fmtDay(w.ceasefire?.since)}. ${esc(p.label||"")}: shown until the front-line lists are updated for any withdrawal.`
+    ? `Under a ceasefire since ${fmtDay(w.ceasefire?.since)}. ${esc(p.label||"")}. The outline is removed once 3+ outlets report a complete withdrawal that holds for 4 days.`
     : p.basis==="front"
     ? `On the front line as of ${esc(w.front_as_of||"")}${(w.front_sources||[]).length?` (${w.front_sources.map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">source</a>`).join(", ")})`:""}.`
     : `Added from the news: ${p.outlets} outlets reported ground fighting here in the last ${FRONT.window_days} days.`;

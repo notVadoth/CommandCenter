@@ -61,6 +61,52 @@ def old_date(sent):
     years = {int(y) for y in re.findall(r"\b(20\d\d)\b", sent)}
     return bool(named - recent) or any(y < NOW.year for y in years)
 
+# withdrawals: only complete pull-outs from a whole province or country count, not "withdrew from three villages"
+WITHDRAW = re.compile(r"\b(?:complet\w*|finish\w*|full|fully|total|entire|final)\b[^.;]{0,30}\b(?:withdraw\w*|pull-?out|pulled out|pullback)\b|"
+                      r"\b(?:withdr(?:ew|awn)|pulled out)\b[^.;]{0,15}\b(?:all (?:its|their) (?:troops|forces)|(?:its|their) last (?:troops|forces|positions)|completely|fully)\b", re.I)
+WITHDRAW_NOT = re.compile(r"\b(?:will|would|could|must|should|agree\w* to|plans?|planned|deadline|demand\w*|calls? for|urg\w+|expected|due to|refus\w*|delay\w*|"
+                          r"reject\w*|denied|partial|some|several|positions? near|villages?|if|unless|before|after (?:a|the) (?:deal|agreement) is)\b", re.I)
+WITHDRAW_FROM = re.compile(r"\bfrom\s+(?:the\s+)?(?:(?:southern|northern|eastern|western|south|north|east|west|occupied)\s+)?(?P<place>[A-Z][\w'’\-]+(?:[ \-][A-Z][\w'’\-]+){0,2})")
+COUNTRY_NAMES = {"UKR": ["Ukraine"], "RUS": ["Russia"], "LBN": ["Lebanon"], "PSE": ["Gaza", "Gaza Strip"], "YEM": ["Yemen"], "SDN": ["Sudan"],
+                 "MMR": ["Myanmar", "Burma"], "COD": ["Congo", "DR Congo", "DRC"], "SYR": ["Syria"]}
+
+def withdrawals_in(text, war, gcache, offline):
+    """[(iso, province or '*', sentence)]: complete withdrawals from a whole province ('*' = every held province in that country)."""
+    out = []
+    for sent in re.split(r"(?<=[.!?])\s+|\s+[-–—|]\s+", text):
+        if len(sent) < 15 or not WITHDRAW.search(sent) or WITHDRAW_NOT.search(sent) or old_date(sent): continue
+        for m in WITHDRAW_FROM.finditer(sent):
+            pl = m.group("place").strip(" '’-")
+            iso = next((i for i in war["countries"] if pl in COUNTRY_NAMES.get(i, [])), None)
+            if iso and not provinces(iso).get(REGION_ALIASES.get(norm(pl), norm(pl))):
+                out.append((iso, "*", sent.strip()[:300])); continue
+            for i in war["countries"]:
+                f = provinces(i).get(REGION_ALIASES.get(norm(pl), norm(pl)))
+                if f: out.append((i, f["properties"]["shapeName"], sent.strip()[:300])); break
+    return out
+
+def withdrawal_status(war, state, cfg):
+    """{(iso, province|'*'): {status, since, outlets, reports}} for complete withdrawals reported by 3+ outlets (1+ independent);
+    'verified' once held `ceasefire_hold_days` with no renewed ground fighting there reported by 3+ outlets."""
+    need = cfg.get("min_outlets", 3); hold = cfg.get("ceasefire_hold_days", 4)
+    by = collections.defaultdict(list)
+    for r in state.get("withdrawals", []):
+        if r["war"] == war["id"]: by[(r["iso"], r["province"])].append(r)
+    out = {}
+    for key, rs in by.items():
+        rs.sort(key=when)
+        outs = {r["outlet"].lower() for r in rs}
+        if len(outs) < need or all(r["partisan"] for r in rs): continue
+        since = when(rs[0])
+        fights = {r["outlet"].lower() for r in state["reports"] if r["war"] == war["id"] and r["iso"] == key[0]
+                  and (key[1] == "*" or norm(r["province"]) == norm(key[1])) and when(r) > since + dt.timedelta(days=1)}
+        if len(fights) >= need: continue
+        one = {}
+        for r in rs: one.setdefault(r["outlet"].lower(), r)
+        out[key] = {"status": "verified" if NOW - since >= dt.timedelta(days=hold) else "reported", "since": since.date().isoformat(),
+                    "outlets": len(outs), "reports": [{k: r[k] for k in ("outlet", "title", "url", "date")} for r in list(one.values())[:4]]}
+    return out
+
 def truce_in(text, war):
     """('start'|'end', sentence) for front-wide ceasefire news about this war."""
     names = re.compile("|".join(re.escape(w) for ws in war["sides"].values() for w in ws) + "|" + "|".join(re.escape(n) for n in war.get("names", [])))
@@ -180,7 +226,7 @@ def norm(s):
     return re.sub(r"[^a-z]", "", s)
 
 # common English spellings of first-level regions ("Donetsk region", "Taiz", "Hodeidah")
-REGION_ALIASES = {"zaporizhzhia": "zaporizhia", "zaporozhye": "zaporizhia", "hodeidah": "hudaydah", "hudaydah": "hudaydah", "taiz": "taizz",
+REGION_ALIASES = {"nabatieh": "nabatiye", "nabatiyeh": "nabatiye", "nabatieh governorate": "nabatiye", "zaporizhzhia": "zaporizhia", "zaporozhye": "zaporizhia", "hodeidah": "hudaydah", "hudaydah": "hudaydah", "taiz": "taizz",
                   "marib": "marib", "maarib": "marib", "maareb": "marib", "sanaa": "sana", "aden": "adan", "lahj": "lahij", "hadramout": "hadhramaut",
                   "hadramawt": "hadhramaut", "dhale": "dali", "dhalea": "dali", "daleh": "dali", "bayda": "bayda", "baydha": "bayda", "jouf": "jawf",
                   "saada": "sadah", "amran": "amran", "kharkov": "kharkiv", "odesa": "odessa", "lugansk": "luhansk", "dnipro": "dnipropetrovsk"}
@@ -306,7 +352,8 @@ def run(args):
                 except Exception as e: print(f"  ! bing '{q}': {e}", file=sys.stderr)
     print(f"  {len(arts)} articles to scan")
 
-    seen = {r["url"] + "|" + r["province"] for r in state["reports"]} | {r["url"] + "|truce" for r in state.get("truce", [])}
+    seen = {r["url"] + "|" + r["province"] for r in state["reports"]} | {r["url"] + "|truce" for r in state.get("truce", [])} \
+           | {r["url"] + "|wd|" + r["province"] for r in state.get("withdrawals", [])}
     new = 0
     for a in arts:
         text = (a["title"] or "") + ". " + re.sub(r"<[^>]+>", " ", a["summary"] or "")
@@ -318,6 +365,15 @@ def run(args):
                     outlet, host = outlet_key(a["outlet"], a["url"])
                     state.setdefault("truce", []).append({"war": war["id"], "kind": kind, "outlet": a["outlet"], "partisan": is_partisan(war, a["outlet"], host),
                         "title": a["title"][:200], "sentence": sent, "url": a["url"], "date": a.get("date") or NOW.isoformat()})
+                    seen.add(k)
+            if war.get("after_ceasefire"):
+                for iso, prov, sent in withdrawals_in(text, war, gcache, args.offline):
+                    k = a["url"] + "|wd|" + prov
+                    if k in seen: continue
+                    outlet, host = outlet_key(a["outlet"], a["url"])
+                    state.setdefault("withdrawals", []).append({"war": war["id"], "iso": iso, "province": prov, "outlet": a["outlet"],
+                        "partisan": is_partisan(war, a["outlet"], host), "title": a["title"][:200], "sentence": sent, "url": a["url"],
+                        "date": a.get("date") or NOW.isoformat()})
                     seen.add(k)
             for sides, place, sent in fighting_in(text, war):
                 try: hit = resolve(place, text, war, gcache, args.offline)
@@ -336,6 +392,7 @@ def run(args):
     cutoff = NOW - dt.timedelta(days=max(window, 30))
     state["reports"] = [r for r in state["reports"] if when(r) >= cutoff]
     state["truce"] = [r for r in state.get("truce", []) if when(r) >= NOW - dt.timedelta(days=60)]
+    state["withdrawals"] = [r for r in state.get("withdrawals", []) if when(r) >= NOW - dt.timedelta(days=365)]
     print(f"  {new} new fighting reports, {len(state['reports'])} kept")
 
     # 2. provinces: the listed front, plus provinces with enough independent reports; never the firmly held ones
@@ -348,13 +405,16 @@ def run(args):
         for r in state["reports"]:
             if r["war"] == war["id"] and when(r) >= recent: by[(r["iso"], norm(r["province"]))].append(r)
         cf = ceasefire_status(war, state, cfg)
+        wd = withdrawal_status(war, state, cfg)
+        gone = {(iso, norm(p)) for (iso, p), v in wd.items() if v["status"] == "verified" and p != "*"}
+        gone_all = {iso for (iso, p), v in wd.items() if v["status"] == "verified" and p == "*"}
         feats = []
         if cf and cf["status"] == "verified":           # under a verified ceasefire: keep only provinces still (partly) held by the other side
             after = war.get("after_ceasefire", {})
             for iso, ps in after.get("provinces", {}).items():
                 keep = {norm(x) for x in ps}
                 for f in boundaries(iso, "ADM1"):
-                    if norm(f["properties"]["shapeName"]) in keep:
+                    if norm(f["properties"]["shapeName"]) in keep and iso not in gone_all and (iso, norm(f["properties"]["shapeName"])) not in gone:
                         feats.append({"type": "Feature", "geometry": light(f["geometry"]), "properties": {
                             "war": war["id"], "province": f["properties"]["shapeName"], "iso": iso, "basis": "ceasefire",
                             "label": after.get("label", ""), "outlets": 0, "places": [], "last": None, "reports": []}})
@@ -374,7 +434,8 @@ def run(args):
                     "places": sorted({r["place"] for r in rs})[:8], "last": rs[0]["date"][:10] if rs else None,
                     "reports": [{k: r[k] for k in ("outlet", "place", "title", "url", "date", "partisan")} for r in list(one.values())[:6]]}})
         out_wars.append({k: war.get(k) for k in ("id", "name", "since", "trackers", "note", "belligerents", "front_as_of", "front_sources")}
-                        | {"held": war.get("held", {}), "provinces": len(feats), "features": feats, "ceasefire": cf})
+                        | {"held": war.get("held", {}), "provinces": len(feats), "features": feats, "ceasefire": cf,
+                           "withdrawals": [dict(v, iso=iso, province=(p if p != "*" else None)) for (iso, p), v in wd.items()]})
         if cf: print(f"  {war['name']}: ceasefire {cf['status']} (since {cf['since']}, {cf['outlets']} outlets)")
         print(f"  {war['name']}: {len(feats)} provinces ({sum(f['properties']['basis'] == 'news' for f in feats)} from news)")
 
