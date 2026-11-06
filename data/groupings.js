@@ -1,6 +1,6 @@
 // written by trawler.py — loaded automatically by commandcenter-map.html
 window.TRAWLER_GROUPINGS = {
- "generated": "2026-11-05T18:57:44.515203+00:00",
+ "generated": "2026-11-06T18:26:05.933752+00:00",
  "extractor": "rules",
  "verification": {
   "wikidata": true,
@@ -13,7 +13,7 @@ window.TRAWLER_GROUPINGS = {
    "conflict": "Wikidata contradicts the claim — review"
   }
  },
- "articles_in_store": 337,
+ "articles_in_store": 465,
  "blocs": {
   "EU": {
    "name": "European Union",
@@ -249,6 +249,25 @@ window.TRAWLER_GROUPINGS = {
     ]
    },
    "changes": [
+    {
+     "country": "UKR",
+     "action": "joined",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "independent_outlets": 1,
+     "evidence": [
+      {
+       "source": "CBC World",
+       "domain": "cbc.ca",
+       "title": "Death toll from Russian attack in Ukraine's Zaporizhzhia region climbs to 53",
+       "url": "https://www.cbc.ca/news/world/ukraine-zaporizhzhia-attack-russia-melania-trump-9.7411754?cmp=rss",
+       "date": "2026-11-06T12:25:34+00:00",
+       "sentence": "Moscow hopes Trump can pressure Kyiv into agreeing a deal that meets many of its conditions, such as full Russian control of Ukraine's Donbas region and a bar on Ukraine joining NATO.",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
     {
      "country": "CYP",
      "action": "joined",
@@ -507,7 +526,27 @@ window.TRAWLER_GROUPINGS = {
     "label": null
    },
    "baseline_audit": null,
-   "changes": []
+   "changes": [
+    {
+     "country": "UGA",
+     "action": "left",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "independent_outlets": 1,
+     "evidence": [
+      {
+       "source": "BBC World",
+       "domain": "bbc.co.uk",
+       "title": "Somalia's top court rejects president's term extension amid political crisis",
+       "url": "https://www.bbc.co.uk/news/articles/c977ppnezep6o?at_medium=RSS&at_campaign=rss",
+       "date": "2026-11-06T08:18:10+00:00",
+       "sentence": "Uganda, the largest contributor of troops to the African Union mission fighting the militants, announced this week that it planned to withdraw its forces by the end of the year, adding to concerns about Somalia's security.",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    }
+   ]
   },
   "GCC": {
    "name": "Gulf Cooperation Council",
@@ -638,9 +677,216 @@ window.TRAWLER_GROUPINGS = {
    },
    "baseline_audit": null,
    "changes": []
+  },
+  "MECCA": {
+   "name": "Mecca Joint Defence Agreement",
+   "color": "#0b7285",
+   "members": [
+    "PAK",
+    "SAU",
+    "TUR"
+   ],
+   "partners": [],
+   "applicants": [],
+   "note": null,
+   "wikidata": null,
+   "baseline_audit": null,
+   "changes": []
   }
  },
  "new_groupings": [
+  {
+   "name": "Hong Kong Alliance",
+   "status": "single-source",
+   "wikidata": {
+    "qid": "Q835349",
+    "label": "Hong Kong Alliance in Support of Patriotic Democratic Movements in China",
+    "description": "organization"
+   },
+   "color": "#44f0cc",
+   "members": [
+    {
+     "country": "AUS",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "action": "joined",
+     "independent_outlets": 1,
+     "hedged_only": false,
+     "evidence": [
+      {
+       "source": "CBC World",
+       "domain": "cbc.ca",
+       "title": "Canada, others call on China to end 'unjust prosecutions' after sentencing of Joshua Wong",
+       "url": "https://www.cbc.ca/news/world/canada-joint-statement-wong-hong-kong-9.7412017?cmp=rss",
+       "date": "2026-11-06T16:27:33+00:00",
+       "sentence": "Australia, France, Germany, Italy, Japan, the Netherlands, New Zealand, the United Kingdom and the United States also signed onto the statement, condemning how Hong Kong's National Security Law \"is being used to target individuals for political expression and participation.\" \nThe countries also invoked the conviction earlier this year of members of the Hong Kong Alliance in Support of Patriotic De",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
+     "country": "DEU",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "action": "joined",
+     "independent_outlets": 1,
+     "hedged_only": false,
+     "evidence": [
+      {
+       "source": "CBC World",
+       "domain": "cbc.ca",
+       "title": "Canada, others call on China to end 'unjust prosecutions' after sentencing of Joshua Wong",
+       "url": "https://www.cbc.ca/news/world/canada-joint-statement-wong-hong-kong-9.7412017?cmp=rss",
+       "date": "2026-11-06T16:27:33+00:00",
+       "sentence": "Australia, France, Germany, Italy, Japan, the Netherlands, New Zealand, the United Kingdom and the United States also signed onto the statement, condemning how Hong Kong's National Security Law \"is being used to target individuals for political expression and participation.\" \nThe countries also invoked the conviction earlier this year of members of the Hong Kong Alliance in Support of Patriotic De",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
+     "country": "FRA",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "action": "joined",
+     "independent_outlets": 1,
+     "hedged_only": false,
+     "evidence": [
+      {
+       "source": "CBC World",
+       "domain": "cbc.ca",
+       "title": "Canada, others call on China to end 'unjust prosecutions' after sentencing of Joshua Wong",
+       "url": "https://www.cbc.ca/news/world/canada-joint-statement-wong-hong-kong-9.7412017?cmp=rss",
+       "date": "2026-11-06T16:27:33+00:00",
+       "sentence": "Australia, France, Germany, Italy, Japan, the Netherlands, New Zealand, the United Kingdom and the United States also signed onto the statement, condemning how Hong Kong's National Security Law \"is being used to target individuals for political expression and participation.\" \nThe countries also invoked the conviction earlier this year of members of the Hong Kong Alliance in Support of Patriotic De",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
+     "country": "GBR",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "action": "joined",
+     "independent_outlets": 1,
+     "hedged_only": false,
+     "evidence": [
+      {
+       "source": "CBC World",
+       "domain": "cbc.ca",
+       "title": "Canada, others call on China to end 'unjust prosecutions' after sentencing of Joshua Wong",
+       "url": "https://www.cbc.ca/news/world/canada-joint-statement-wong-hong-kong-9.7412017?cmp=rss",
+       "date": "2026-11-06T16:27:33+00:00",
+       "sentence": "Australia, France, Germany, Italy, Japan, the Netherlands, New Zealand, the United Kingdom and the United States also signed onto the statement, condemning how Hong Kong's National Security Law \"is being used to target individuals for political expression and participation.\" \nThe countries also invoked the conviction earlier this year of members of the Hong Kong Alliance in Support of Patriotic De",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
+     "country": "ITA",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "action": "joined",
+     "independent_outlets": 1,
+     "hedged_only": false,
+     "evidence": [
+      {
+       "source": "CBC World",
+       "domain": "cbc.ca",
+       "title": "Canada, others call on China to end 'unjust prosecutions' after sentencing of Joshua Wong",
+       "url": "https://www.cbc.ca/news/world/canada-joint-statement-wong-hong-kong-9.7412017?cmp=rss",
+       "date": "2026-11-06T16:27:33+00:00",
+       "sentence": "Australia, France, Germany, Italy, Japan, the Netherlands, New Zealand, the United Kingdom and the United States also signed onto the statement, condemning how Hong Kong's National Security Law \"is being used to target individuals for political expression and participation.\" \nThe countries also invoked the conviction earlier this year of members of the Hong Kong Alliance in Support of Patriotic De",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
+     "country": "JPN",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "action": "joined",
+     "independent_outlets": 1,
+     "hedged_only": false,
+     "evidence": [
+      {
+       "source": "CBC World",
+       "domain": "cbc.ca",
+       "title": "Canada, others call on China to end 'unjust prosecutions' after sentencing of Joshua Wong",
+       "url": "https://www.cbc.ca/news/world/canada-joint-statement-wong-hong-kong-9.7412017?cmp=rss",
+       "date": "2026-11-06T16:27:33+00:00",
+       "sentence": "Australia, France, Germany, Italy, Japan, the Netherlands, New Zealand, the United Kingdom and the United States also signed onto the statement, condemning how Hong Kong's National Security Law \"is being used to target individuals for political expression and participation.\" \nThe countries also invoked the conviction earlier this year of members of the Hong Kong Alliance in Support of Patriotic De",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
+     "country": "NLD",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "action": "joined",
+     "independent_outlets": 1,
+     "hedged_only": false,
+     "evidence": [
+      {
+       "source": "CBC World",
+       "domain": "cbc.ca",
+       "title": "Canada, others call on China to end 'unjust prosecutions' after sentencing of Joshua Wong",
+       "url": "https://www.cbc.ca/news/world/canada-joint-statement-wong-hong-kong-9.7412017?cmp=rss",
+       "date": "2026-11-06T16:27:33+00:00",
+       "sentence": "Australia, France, Germany, Italy, Japan, the Netherlands, New Zealand, the United Kingdom and the United States also signed onto the statement, condemning how Hong Kong's National Security Law \"is being used to target individuals for political expression and participation.\" \nThe countries also invoked the conviction earlier this year of members of the Hong Kong Alliance in Support of Patriotic De",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
+     "country": "NZL",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "action": "joined",
+     "independent_outlets": 1,
+     "hedged_only": false,
+     "evidence": [
+      {
+       "source": "CBC World",
+       "domain": "cbc.ca",
+       "title": "Canada, others call on China to end 'unjust prosecutions' after sentencing of Joshua Wong",
+       "url": "https://www.cbc.ca/news/world/canada-joint-statement-wong-hong-kong-9.7412017?cmp=rss",
+       "date": "2026-11-06T16:27:33+00:00",
+       "sentence": "Australia, France, Germany, Italy, Japan, the Netherlands, New Zealand, the United Kingdom and the United States also signed onto the statement, condemning how Hong Kong's National Security Law \"is being used to target individuals for political expression and participation.\" \nThe countries also invoked the conviction earlier this year of members of the Hong Kong Alliance in Support of Patriotic De",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
+     "country": "USA",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "action": "joined",
+     "independent_outlets": 1,
+     "hedged_only": false,
+     "evidence": [
+      {
+       "source": "CBC World",
+       "domain": "cbc.ca",
+       "title": "Canada, others call on China to end 'unjust prosecutions' after sentencing of Joshua Wong",
+       "url": "https://www.cbc.ca/news/world/canada-joint-statement-wong-hong-kong-9.7412017?cmp=rss",
+       "date": "2026-11-06T16:27:33+00:00",
+       "sentence": "Australia, France, Germany, Italy, Japan, the Netherlands, New Zealand, the United Kingdom and the United States also signed onto the statement, condemning how Hong Kong's National Security Law \"is being used to target individuals for political expression and participation.\" \nThe countries also invoked the conviction earlier this year of members of the Hong Kong Alliance in Support of Patriotic De",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    }
+   ]
+  },
   {
    "name": "the Mecca Agreement",
    "status": "single-source",
@@ -742,6 +988,46 @@ window.TRAWLER_GROUPINGS = {
    ]
   },
   {
+   "group": "NATO",
+   "country": "UKR",
+   "action": "joined",
+   "status": "single-source",
+   "wikidata": "unknown",
+   "independent_outlets": 1,
+   "evidence": [
+    {
+     "source": "CBC World",
+     "domain": "cbc.ca",
+     "title": "Death toll from Russian attack in Ukraine's Zaporizhzhia region climbs to 53",
+     "url": "https://www.cbc.ca/news/world/ukraine-zaporizhzhia-attack-russia-melania-trump-9.7411754?cmp=rss",
+     "date": "2026-11-06T12:25:34+00:00",
+     "sentence": "Moscow hopes Trump can pressure Kyiv into agreeing a deal that meets many of its conditions, such as full Russian control of Ukraine's Donbas region and a bar on Ukraine joining NATO.",
+     "hedged": false,
+     "syndicated_copy": false
+    }
+   ]
+  },
+  {
+   "group": "African Union",
+   "country": "UGA",
+   "action": "left",
+   "status": "single-source",
+   "wikidata": "unknown",
+   "independent_outlets": 1,
+   "evidence": [
+    {
+     "source": "BBC World",
+     "domain": "bbc.co.uk",
+     "title": "Somalia's top court rejects president's term extension amid political crisis",
+     "url": "https://www.bbc.co.uk/news/articles/c977ppnezep6o?at_medium=RSS&at_campaign=rss",
+     "date": "2026-11-06T08:18:10+00:00",
+     "sentence": "Uganda, the largest contributor of troops to the African Union mission fighting the militants, announced this week that it planned to withdraw its forces by the end of the year, adding to concerns about Somalia's security.",
+     "hedged": false,
+     "syndicated_copy": false
+    }
+   ]
+  },
+  {
    "group": "the Mecca Agreement",
    "country": "OMN,QAT",
    "action": "new grouping",
@@ -764,6 +1050,44 @@ window.TRAWLER_GROUPINGS = {
      "url": "https://www.aljazeera.com/opinions/2026/11/5/can-irans-new-supreme-leader-make-peace-from-behind-the-scenes?traffic_source=rss",
      "date": "2026-11-05T14:45:46+00:00",
      "sentence": "Where the earlier backchannel ran through Oman, today mediation involves Qatar and the countries of the Mecca Agreement, signed on August 7.",
+     "hedged": false,
+     "syndicated_copy": false
+    }
+   ]
+  },
+  {
+   "group": "Hong Kong Alliance",
+   "country": "AUS,FRA,DEU,ITA,JPN,NLD,NZL,GBR,USA",
+   "action": "new grouping",
+   "status": "single-source",
+   "evidence": [
+    {
+     "source": "CBC World",
+     "domain": "cbc.ca",
+     "title": "Canada, others call on China to end 'unjust prosecutions' after sentencing of Joshua Wong",
+     "url": "https://www.cbc.ca/news/world/canada-joint-statement-wong-hong-kong-9.7412017?cmp=rss",
+     "date": "2026-11-06T16:27:33+00:00",
+     "sentence": "Australia, France, Germany, Italy, Japan, the Netherlands, New Zealand, the United Kingdom and the United States also signed onto the statement, condemning how Hong Kong's National Security Law \"is being used to target individuals for political expression and participation.\" \nThe countries also invoked the conviction earlier this year of members of the Hong Kong Alliance in Support of Patriotic De",
+     "hedged": false,
+     "syndicated_copy": false
+    },
+    {
+     "source": "CBC World",
+     "domain": "cbc.ca",
+     "title": "Canada, others call on China to end 'unjust prosecutions' after sentencing of Joshua Wong",
+     "url": "https://www.cbc.ca/news/world/canada-joint-statement-wong-hong-kong-9.7412017?cmp=rss",
+     "date": "2026-11-06T16:27:33+00:00",
+     "sentence": "Australia, France, Germany, Italy, Japan, the Netherlands, New Zealand, the United Kingdom and the United States also signed onto the statement, condemning how Hong Kong's National Security Law \"is being used to target individuals for political expression and participation.\" \nThe countries also invoked the conviction earlier this year of members of the Hong Kong Alliance in Support of Patriotic De",
+     "hedged": false,
+     "syndicated_copy": false
+    },
+    {
+     "source": "CBC World",
+     "domain": "cbc.ca",
+     "title": "Canada, others call on China to end 'unjust prosecutions' after sentencing of Joshua Wong",
+     "url": "https://www.cbc.ca/news/world/canada-joint-statement-wong-hong-kong-9.7412017?cmp=rss",
+     "date": "2026-11-06T16:27:33+00:00",
+     "sentence": "Australia, France, Germany, Italy, Japan, the Netherlands, New Zealand, the United Kingdom and the United States also signed onto the statement, condemning how Hong Kong's National Security Law \"is being used to target individuals for political expression and participation.\" \nThe countries also invoked the conviction earlier this year of members of the Hong Kong Alliance in Support of Patriotic De",
      "hedged": false,
      "syndicated_copy": false
     }
