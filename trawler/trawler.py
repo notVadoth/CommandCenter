@@ -253,7 +253,7 @@ def extract_rules(a: dict, blocs: dict) -> list[dict]:
         hedged = bool(HEDGE.search(sent))
         targets = [("bloc", b, m) for b in blocs.values() for m in b["_re"].finditer(sent)]
         for m in NEW_GROUP.finditer(sent):
-            name = re.sub(r"^(?:the|and|of|for|on)\s+", "", m.group(1), flags=re.I).strip()
+            name = re.sub(r"^(?:(?:the|and|of|for|on)\s+)+", "", m.group(1), flags=re.I).strip()   # "of the X" -> "X"
             if any(b["_re"].fullmatch(name) for b in blocs.values()): continue
             if name.split()[0] in COUNTRIES and len(name.split()) == 2: continue
             targets.append(("new", name, m))

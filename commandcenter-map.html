@@ -272,7 +272,11 @@ let GROUPINGS = {
   MERCOSUR:{name:"Mercosur (full)", color:"#099268", members:"ARG BRA PRY URY BOL", note:"Venezuela is suspended."},
   FVEY:    {name:"Five Eyes", color:"#495057", members:"AUS CAN NZL GBR USA"},
   QUAD:    {name:"Quad", color:"#e64980", members:"AUS IND JPN USA"},
+  MECCA:   {name:"Mecca Joint Defence Agreement", color:"#0b7285", members:"PAK SAU TUR",
+            note:"Signed in Mecca on 7 Aug 2026: an attack on one is an attack on all. Extends the 2025 Saudi–Pakistan mutual defence pact."},
 };
+const BASE_GROUPINGS = GROUPINGS;   // built-in baseline, kept for blocs the latest trawler run does not cover yet
+
 
 const ADM1_MIN_ZOOM = 4, ADM2_MIN_ZOOM = 6;
 const MAX_ADM1_COUNTRIES = 10, MAX_ADM2_COUNTRIES = 5;   // per view, to keep things responsive
@@ -551,11 +555,15 @@ function loadTrawlerOutput(data){
   }
   for (const [i,g] of (data.new_groupings||[]).entries()){
     const key = "NEW"+i;
+    // a newly spotted grouping only goes on the map once 2+ independent outlets back its members;
+    // single-sentence finds (e.g. countries merely named next to a pact) stay in the review list
     const ok = g.members.filter(m=>m.status==="confirmed"||m.status==="corroborated").map(m=>m.country);
-    const pend = g.members.filter(m=>!ok.includes(m.country)).map(m=>m.country);
-    G[key] = {name:"★ "+g.name, color:g.color, members:ok.join(" "), pending:new Set(pend), status:g.status};
     for (const m of g.members) note(m.country, {group:g.name, action:m.action, status:m.status, evidence:m.evidence});
+    if (!ok.length) continue;
+    G[key] = {name:"★ "+g.name, color:g.color, members:ok.join(" "), pending:new Set(), status:g.status};
   }
+  // blocs added to the page after the last trawler run keep their built-in members until the next run includes them
+  for (const [k,g] of Object.entries(BASE_GROUPINGS)) if (!G[k]) G[k] = {...g};
   for (const g of Object.values(G)) g.set = new Set(g.members.split(/\s+/).filter(Boolean));
   GROUPINGS = G;
   buildBlocUI(countriesFC);

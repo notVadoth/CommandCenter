@@ -174,5 +174,20 @@
    "Quadrilateral Security Dialogue"
   ],
   "wikidata_search": "Quadrilateral Security Dialogue"
+ },
+ "MECCA": {
+  "name": "Mecca Joint Defence Agreement",
+  "color": "#0b7285",
+  "members": "PAK SAU TUR",
+  "aliases": [
+   "Mecca Joint Defence Agreement",
+   "Mecca Joint Defense Agreement",
+   "Mecca Agreement",
+   "Mecca Pact",
+   "Mecca Defence Agreement",
+   "Mecca Defense Agreement",
+   "Makkah Agreement"
+  ],
+  "wikidata_search": "Mecca Joint Defense Agreement"
  }
 }
