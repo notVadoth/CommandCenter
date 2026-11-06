@@ -14,14 +14,19 @@ Command Centre is a single-page world map that brings together political geograp
 - Bloc overlays: EU, NATO, BRICS and partners, G7, G20, ASEAN, SCO, CSTO, African Union, GCC, OPEC, USMCA, Mercosur, Five Eyes, Quad and the Mecca Joint Defence Agreement.
 - Contested-control layers: areas held by non-state actors, occupied territory, DMZs and ceasefire lines, and disputed territory. Each area shows its source and date.
 
-**Country and province details**
+**Place details**
 - Hover card with GDP, GDP per capita, Gini, leader and cabinet for countries; leader and government for provinces and states.
-- Click panel with the current weather and a 6-hour forecast (temperature and chance of precipitation) for the spot clicked, GDP-growth and population-growth charts, and the legislature's composition with the governing coalition highlighted.
+- Click panel for the place clicked:
+  - Current weather and a 6-hour forecast of temperature and chance of precipitation, in local time.
+  - GDP-growth and population-growth charts.
+  - The legislature's composition, with the governing coalition highlighted.
+  - Contested-control details where relevant.
 
 **Headlines panel**
 - Market chart: Dow Jones, S&P 500, Hang Seng, BSE Sensex, gold and Brent by default.
   - Clicking a place adds recommended charts for it, e.g. coffee and tea growers for Wayanad, oil and cattle for Texas.
-  - A search box opens any TradingView symbol.
+  - A search box opens any TradingView symbol; recent searches are kept under "My charts".
+  - A "Daily close" view shows stored Brent closes and works offline.
 - Top headlines from the last 24 hours for the place you click.
 - Daily headlines:
   - A "Global diplomacy" section for summits and multilateral bodies.
@@ -29,8 +34,11 @@ Command Centre is a single-page world map that brings together political geograp
   - Each story is linked to up to three outlets from different sides of the issue.
 
 **Layout**
-- The layers, country and headlines panels each collapse to a side strip.
-- On phones the panels open over the map, one at a time.
+- Editorial serif type for names and headlines, system type for controls, and a graphite frame that leaves colour to the data.
+- The layers, place and headlines panels each collapse to a side strip; panel layout is remembered between visits.
+- On phones:
+  - Tapping a place shows a summary card with the current weather and an **Open details** button.
+  - The details panel opens over the map, with the place's latest headlines below its figures. The figures fold away to leave the headlines.
 
 ## How it works
 
@@ -40,15 +48,17 @@ GitHub Actions (daily)                        Browser
 trawler/trawler.py ─► data/groupings.js  ─┐
 trawler/news.py    ─► data/stories.js    ─┼─► commandcenter-map.html ◄─ World Bank, Wikidata, Wikipedia (live)
 trawler/markets.py ─► data/markets.js    ─┘          │                ◄─ TradingView widgets (live)
-                                                     └─► relay/news-relay.js (Cloudflare Worker) ─► Bing News
+                                                     ├─► relay/news-relay.js (Cloudflare Worker) ─► Bing News
+                                                     └─► Open-Meteo (weather, live)
 ```
 
 - **`trawler.py`** reads news feeds for claims that a country joined, left or applied to a bloc. Each claim is checked against Wikidata and against independent outlets. A change appears on the map only when two or more independent outlets report it.
 - **`news.py`** groups the day's headlines from about 30 outlets into stories. For each story it picks sources from different perspectives and assigns it to a country or to the diplomacy section.
 - **`markets.py`** stores daily Brent closes for the offline "Daily close" view.
 - **`relay/news-relay.js`** is a small Cloudflare Worker. It fetches Bing News search results for a clicked place, because browsers cannot read the feed directly.
+- **Weather** comes straight from Open-Meteo in the browser, for the exact spot clicked, and is cached for 15 minutes.
 
-The scripts use only the Python standard library. No API keys are required.
+The scripts use only the Python standard library. No API keys are required anywhere.
 
 ## Project structure
 
@@ -146,6 +156,7 @@ The app's left panel lists every source with its licence. In summary:
 - Economic figures are national only; provinces and states show their leader and government.
 - TradingView's embedded charts do not display some exchange feeds (Nikkei, FTSE, several futures). The catalogue uses CFDs, country ETFs or producer stocks instead, and labels them as such.
 - Place headlines rely on Bing News search coverage.
+- Weather is model forecast data for the clicked point, not a station reading.
 
 ## Versions
 
@@ -153,4 +164,8 @@ Saved snapshots are kept as branches:
 - **`V2`**: headlines panel, market charts and GitHub hosting.
 - **`V3`**: place headlines, recommended charts and chart search.
 
-`main` is the current version.
+`main` is the current version. Since V3 it adds:
+- Weather and the editorial restyle.
+- The phone details flow.
+- Bing-only headlines.
+- The full sources list.
