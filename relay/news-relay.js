@@ -1,7 +1,7 @@
-// CommandCenter news relay (v1.2): a free Cloudflare Worker that searches Google News and Bing News at
-// the same time for a place, merges the results and returns the top headlines from the last 24 hours
-// as JSON the map page can read.
-// Browsers can't read Google News directly (no CORS), so this small relay sits in between.
+// CommandCenter news relay (v1.3): a free Cloudflare Worker that searches Bing News for a place (several
+// phrasings at once), merges the results and returns the top headlines from the last 24 hours as JSON
+// the map page can read. Browsers can't read Bing's news feed directly (no CORS), so this relay sits in between.
+// (Google News was dropped: it refuses requests from Cloudflare's servers.)
 //
 // Setup (about 5 minutes, free, no card):
 //   1. Sign in at https://dash.cloudflare.com  ->  Workers & Pages  ->  Create  ->  Create Worker
@@ -10,7 +10,7 @@
 //   4. Copy the address it shows (https://cc-news.<you>.workers.dev) into data/config.js
 //
 // Request:  GET https://cc-news.<you>.workers.dev/?q=%22Michigan%22||Michigan%20news&ceid=US:en   (up to 3 phrasings, ||-separated)
-// Response: {"query":[…],"provider":"Google News + Bing News","fetched":"…","items":[{"title","source","url","published"}]}
+// Response: {"query":[…],"provider":"Bing News","fetched":"…","items":[{"title","source","url","published"}]}
 //
 // The free plan allows 100,000 requests a day; results are cached for 15 minutes per place.
 
@@ -45,27 +45,15 @@ export default {
 
     const [gl, hl] = ceid.split(":");
     const cache = caches.default;
-    const cacheKey = new Request(`https://relay.cache/v2?q=${encodeURIComponent(queries.join("||"))}&ceid=${ceid}`);
+    const cacheKey = new Request(`https://relay.cache/v3?q=${encodeURIComponent(queries.join("||"))}&ceid=${ceid}`);
     let res = await cache.match(cacheKey);
     if (!res) {
-      // Google refuses Cloudflare's servers some of the time (HTTP 503); after a refusal it is skipped for 30 minutes
-      const googleDown = !!(await cache.match(GOOGLE_DOWN));
-      const jobs = [];
-      if (!googleDown) jobs.push(["Google News", 0, googleNews(queries[0], gl, hl)]);
-      queries.forEach((q, i) => jobs.push(["Bing News", i, bingNews(q, gl, hl)]));
-      const settled = await Promise.allSettled(jobs.map(j => withTimeout(j[2], 6000)));
-      const lists = [], providers = new Set(), errors = [];
-      settled.forEach((r, i) => {
-        const [name] = jobs[i];
-        if (r.status === "fulfilled") { lists.push(r.value); if (r.value.length) providers.add(name); }
-        else {
-          errors.push(`${name}: ${r.reason?.message || r.reason}`);
-          if (name === "Google News") ctx.waitUntil(cache.put(GOOGLE_DOWN, new Response("1", { headers: { "Cache-Control": "max-age=1800" } })));
-        }
-      });
-      if (!lists.length) return json({ error: errors.join("; ") }, 502, cors);
+      const settled = await Promise.allSettled(queries.map(q => withTimeout(bingNews(q, gl, hl), 6000)));
+      const lists = [], errors = [];
+      for (const r of settled) r.status === "fulfilled" ? lists.push(r.value) : errors.push(r.reason?.message || String(r.reason));
+      if (!lists.length) return json({ error: "Bing News: " + errors.join("; ") }, 502, cors);
       const items = mergeRanked(lists).slice(0, MAX_ITEMS);
-      res = json({ query: queries, ceid, provider: [...providers].join(" + ") || "none", fetched: new Date().toISOString(), items },
+      res = json({ query: queries, ceid, provider: "Bing News", fetched: new Date().toISOString(), items },
                  200, { "Cache-Control": `public, max-age=${CACHE_SECONDS}` });
       ctx.waitUntil(cache.put(cacheKey, res.clone()));
     }
@@ -74,8 +62,6 @@ export default {
     return out;
   },
 };
-
-const GOOGLE_DOWN = new Request("https://relay.cache/google-down");
 
 function withTimeout(p, ms) {
   return Promise.race([p, new Promise((_, rej) => setTimeout(() => rej(new Error(`timed out after ${ms / 1000}s`)), ms))]);
@@ -94,18 +80,6 @@ function mergeRanked(lists) {
 
 const UA = "Mozilla/5.0 (compatible; CommandCenter-news-relay/1.1)";
 const DAY = 24 * 3600 * 1000;
-
-async function googleNews(q, gl, hl) {
-  const feed = `https://news.google.com/rss/search?q=${encodeURIComponent(q + " when:1d")}&hl=${hl}-${gl}&gl=${gl}&ceid=${gl}:${hl}`;
-  const r = await fetch(feed, { headers: { "Accept": "application/rss+xml, application/xml", "User-Agent": UA } });
-  if (!r.ok) throw new Error(`returned ${r.status}`);
-  return parseItems(await r.text(), it => {
-    const source = text(it, "source");
-    let title = text(it, "title");
-    if (source && title.endsWith(" - " + source)) title = title.slice(0, -(source.length + 3));
-    return { title, source, url: text(it, "link"), published: text(it, "pubDate") };
-  });
-}
 
 async function bingNews(q, gl, hl) {
   // qft interval "7" = past 24 hours

@@ -44,7 +44,7 @@ If GitHub runs the job, you can switch the PC task off with `trawler\remove_dail
 
 ## Live headlines when you click a place (free relay)
 
-Clicking a country or province shows its top Google News headlines from the last 24 hours at the top of the Headlines panel; × goes back to the daily headlines. Browsers can't read Google News directly, so a tiny free relay sits in between:
+Clicking a country or province shows its top Bing News headlines from the last 24 hours at the top of the Headlines panel; × goes back to the daily headlines. Browsers can't read Bing's news feed directly, so a tiny free relay sits in between (Google News was tried first but refuses requests from Cloudflare):
 
 1. Sign in (or sign up, free) at [dash.cloudflare.com](https://dash.cloudflare.com) → **Workers & Pages → Create → Create Worker**.
 2. Name it `cc-news` → **Deploy** → **Edit code**.
@@ -63,8 +63,10 @@ The search box next to Live / Daily close takes any TradingView symbol (`AAPL`, 
 
 ## Data and licences
 
+The map's left panel has a full **Sources & licences** list; the main points:
+
 - Boundaries: Natural Earth (public domain) and geoBoundaries (CC BY 4.0).
 - Live figures: World Bank, Wikidata and Wikipedia.
-- Markets: live charts embedded from TradingView (free widget, attribution kept); daily closes from FRED.
-- Headlines link to the original outlets; only titles are stored. Live place headlines come from Google News search via your own relay.
+- Markets: live charts embedded from TradingView (free widget, attribution kept). Daily Brent closes from the U.S. EIA via FRED (public domain). The Dow and S&P 500 are live-only: on FRED they're copyrighted by S&P Dow Jones Indices and can't be republished. If you add an EODHD key, check its plan allows public display before the daily job publishes that data.
+- Headlines link to the original outlets; only titles are stored. Live place headlines come from Bing News search via your own relay.
 - ISW/CTP maps are not included (their licence requires written consent).

@@ -108,6 +108,7 @@
   #mkt .mv .ch{font-size:11.5px} #mkt .mv .ch.up{color:#69db7c} #mkt .mv .ch.dn{color:#ff8787}
   #mkt .mode{display:flex;gap:4px;margin-top:5px} #mkt .mode button{background:none;border:none;border-bottom:2px solid transparent;color:var(--muted);cursor:pointer;font:inherit;font-size:10.5px;padding:1px 2px}
   #mkt .mode button.on{color:var(--text);border-bottom-color:var(--accent)}
+  .credits summary{cursor:pointer;color:var(--text)} .credits ul{margin:6px 0;padding-left:16px} .credits li{margin:3px 0} .credits a{color:#74c0fc}
   #mkt-q{flex:1;min-width:0;margin-left:8px;background:#0e1219;color:var(--text);border:1px solid var(--line);border-radius:5px;font:inherit;font-size:11px;padding:2px 6px}
   #mkt-place{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px;font-size:10.5px;color:var(--muted)} #mkt-place:empty{display:none}
   #mkt-place button{background:#0e1219;border:1px solid var(--line);color:var(--text);border-radius:10px;cursor:pointer;font:inherit;font-size:10.5px;padding:0 7px}
@@ -194,10 +195,26 @@
         <div class="empty">Click anywhere on the map.</div>
       </section>
 
-      <section class="small">
-        Boundaries: <a href="https://www.naturalearthdata.com/" target="_blank" style="color:var(--muted)">Natural Earth</a> (national),
-        <a href="https://www.geoboundaries.org/" target="_blank" style="color:var(--muted)">geoBoundaries</a> (sub-national, CC BY 4.0).
-        Blocs as of Nov 2026; edit <code>GROUPINGS</code> in the file to change them.
+      <section class="small credits">
+        <details>
+          <summary>Sources &amp; licences</summary>
+          <ul>
+            <li><b>Borders:</b> <a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> (public domain) for countries, de facto view;
+              <a href="https://www.geoboundaries.org/" target="_blank" rel="noopener">geoBoundaries</a> gbOpen (CC BY 4.0, per-country source licences apply) for provinces and districts.
+              Runfola D. et al. (2020), "geoBoundaries: A global database of political administrative boundaries", <i>PLoS ONE</i> 15(4): e0231866.</li>
+            <li><b>Base maps:</b> Esri (see the credit in the map corner); OpenTopoMap (CC BY-SA) with © OpenStreetMap contributors (ODbL), SRTM.</li>
+            <li><b>Economic figures and charts:</b> <a href="https://data.worldbank.org/" target="_blank" rel="noopener">World Bank, World Development Indicators</a> (CC BY 4.0); each figure links to its indicator.</li>
+            <li><b>Leaders, cabinets, province figures:</b> <a href="https://www.wikidata.org/" target="_blank" rel="noopener">Wikidata</a> (CC0). <b>Legislature seats:</b> the chamber's <a href="https://en.wikipedia.org/" target="_blank" rel="noopener">Wikipedia</a> infobox (CC BY-SA 4.0), linked from each chamber.</li>
+            <li><b>Contested control, occupation, DMZs, disputes:</b> sources and dates are given on each area when you click it; full list and licence notes in
+              <a href="https://github.com/notVadoth/CommandCenter/blob/main/CONTROL_SOURCES.md" target="_blank" rel="noopener">CONTROL_SOURCES.md</a>. Outlines are approximate.</li>
+            <li><b>Blocs:</b> built-in list as of Nov 2026, checked daily against Wikidata and news reports; a dashed outline needs 2+ independent outlets. Each claim links to its articles.</li>
+            <li><b>Headlines:</b> titles and links from each outlet's public RSS feed (daily list) and from <a href="https://www.bing.com/news" target="_blank" rel="noopener">Bing News</a> search (place headlines). Stories belong to their publishers; only titles are shown, each linking to the original.</li>
+            <li><b>Markets:</b> live charts by <a href="https://www.tradingview.com/" target="_blank" rel="noopener">TradingView</a>. Daily Brent closes: U.S. Energy Information Administration via
+              <a href="https://fred.stlouisfed.org/series/DCOILBRENTEU" target="_blank" rel="noopener">FRED</a>. Index data is not stored or republished.</li>
+            <li><b>Map engine:</b> <a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a> (BSD-2).</li>
+          </ul>
+          <div>Figures and outlines can be out of date or contested; check the linked source before relying on them.</div>
+        </details>
       </section>
     </div>
   </aside>
@@ -1289,7 +1306,7 @@ function liveNewsFor(h){
     return;
   }
   const hit = liveCache.get(L.key);
-  if (!(hit?.d)) liveEl.innerHTML = head + `<div class="lnote">Searching Google News and Bing News…</div>`;
+  if (!(hit?.d)) liveEl.innerHTML = head + `<div class="lnote">Searching Bing News…</div>`;
   fetchLive(L)
     .then(d => { if (liveEl.dataset.key === L.key) showLive(head, d, L.label); })
     .catch(e => { if (liveEl.dataset.key === L.key) liveEl.innerHTML = head + `<div class="lnote">Couldn't load headlines (${esc(e.message)}). <button onclick="liveNewsFor(drawerHit)">Try again</button> · <button onclick="setRelay()">Check relay address</button></div>`; });
@@ -1299,8 +1316,8 @@ function showLive(head, d, label){
   const items = d.items || [];
   liveEl.innerHTML = head + (items.length
     ? items.map(it => `<a class="li" href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.title)}<span class="m">${esc(it.source||"")} · ${esc(ago(it.published))}</span></a>`).join("")
-      + `<div class="lnote">${esc(d.provider||"News")} search for ${esc(label)}, past 24 hours.</div>`
-    : `<div class="lnote">No stories about ${esc(label)} found in the last 24 hours${/Google/.test(d.provider||"") ? "" : " (Bing only; Google wasn't answering)"}.</div>`);
+      + `<div class="lnote">Headlines and links from <a href="https://www.bing.com/news" target="_blank" rel="noopener">Bing News</a> search for ${esc(label)}, past 24 hours. Each story belongs to the outlet named under it.</div>`
+    : `<div class="lnote">No stories about ${esc(label)} found on Bing News in the last 24 hours.</div>`);
 }
 function setRelay(){
   const u = prompt("Address of your news relay (e.g. https://cc-news.yourname.workers.dev). Leave empty to use data/config.js.", relayURL());
@@ -1436,6 +1453,8 @@ function renderMarket(){
     src.innerHTML = tvFailed ? "The live chart couldn't load (offline?). Daily closes are kept only for the six default series." : "Daily closes are kept only for the six default series. Switch to Live for this chart."; return; }
   if (!M){ val.innerHTML=""; src.innerHTML = "No market data yet. It appears after the daily run (or double-click trawler\\run_trawler.bat)."; return; }
   const all = (S && S.points) || [];
+  if ((mkt.key==="DJIA"||mkt.key==="SPX") && !all.length){ val.innerHTML = `<span class="small">${esc(mktLabel(mkt.key))}</span>`;
+    src.innerHTML = "Daily closes for this index aren't stored: S&amp;P Dow Jones Indices doesn't allow republishing its data. Use the Live chart."; return; }
   if (!all.length){ val.innerHTML = `<span class="small">${esc(S?.label||mkt.key)}: no data</span>`;
     src.innerHTML = esc(S?.note||"") + (S?.page ? ` <a href="${esc(S.page)}" target="_blank" rel="noopener">Official page ↗</a>` : ""); return; }
   const lastD = new Date(all[all.length-1][0]); const cut = new Date(lastD - mkt.days*864e5).toISOString().slice(0,10);

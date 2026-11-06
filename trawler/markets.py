@@ -2,7 +2,8 @@
 """
 CommandCenter market charts: free daily closes for the Headlines panel.
 
-  Dow Jones, S&P 500, Brent crude  ->  FRED (St. Louis Fed), no key needed
+  Brent crude                      ->  U.S. EIA via FRED (public domain, citation requested), no key needed
+  (Dow Jones and S&P 500 are live-only: S&P Dow Jones Indices doesn't allow republishing their data)
   Hang Seng, BSE Sensex, Gold      ->  EODHD free plan (20 calls/day), only if you add a key
 
 To turn on the three optional series, get a free key at https://eodhd.com/register and save
@@ -25,8 +26,8 @@ TODAY = dt.date.today()
 
 SERIES = [
     # key, label, kind, unit, provider, provider id, official page
-    ("DJIA",  "Dow Jones",   "index",     "pts",     "fred",  "DJIA",         "https://fred.stlouisfed.org/series/DJIA"),
-    ("SPX",   "S&P 500",     "index",     "pts",     "fred",  "SP500",        "https://fred.stlouisfed.org/series/SP500"),
+    # Dow Jones and S&P 500 are not stored: on FRED they are "copyrighted, pre-approval required" by S&P Dow Jones
+    # Indices, so republishing them on a public site isn't allowed. The page shows them as live TradingView charts.
     ("HSI",   "Hang Seng",   "index",     "pts",     "eodhd", "HSI.INDX",     "https://www.hsi.com.hk/eng"),
     ("SENSEX","BSE Sensex",  "index",     "pts",     "eodhd", "BSESN.INDX",   "https://www.bseindia.com/sensex/code/16/"),
     ("GOLD",  "Gold",        "commodity", "USD/oz",  "eodhd", "XAUUSD.FOREX", "https://www.lbma.org.uk/prices-and-data/precious-metal-prices"),
@@ -57,7 +58,7 @@ def run(args):
         s = {"label": label, "kind": kind, "unit": unit, "page": page, "points": [], "source": "", "note": ""}
         try:
             if prov == "fred":
-                s["source"] = "FRED, Federal Reserve Bank of St. Louis"; s["source_url"] = f"https://fred.stlouisfed.org/series/{pid}"
+                s["source"] = "U.S. Energy Information Administration via FRED"; s["source_url"] = f"https://fred.stlouisfed.org/series/{pid}"
                 s["points"] = fred(pid, since)
             elif keys.get("eodhd"):
                 s["source"] = "EODHD (free plan)"; s["source_url"] = "https://eodhd.com/"
