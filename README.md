@@ -16,7 +16,7 @@ Command Centre is a single-page world map that brings together political geograp
 
 **Country and province details**
 - Hover card with GDP, GDP per capita, Gini, leader and cabinet for countries; leader and government for provinces and states.
-- Click panel with GDP-growth and population-growth charts, and the legislature's composition with the governing coalition highlighted.
+- Click panel with the current weather and a 6-hour forecast (temperature and chance of precipitation) for the spot clicked, GDP-growth and population-growth charts, and the legislature's composition with the governing coalition highlighted.
 
 **Headlines panel**
 - Market chart: Dow Jones, S&P 500, Hang Seng, BSE Sensex, gold and Brent by default.
@@ -130,6 +130,7 @@ The app's left panel lists every source with its licence. In summary:
 | Legislature seats | Wikipedia infoboxes | CC BY-SA 4.0 |
 | Contested-control layers | Per layer; see [`CONTROL_SOURCES.md`](CONTROL_SOURCES.md) | Per source |
 | Headlines | Outlets' RSS feeds; Bing News search | Titles and links only |
+| Weather | Open-Meteo.com | CC BY 4.0 (free for non-commercial use) |
 | Live market charts | TradingView widgets | TradingView terms |
 | Brent daily closes | U.S. Energy Information Administration via FRED | Public domain |
 

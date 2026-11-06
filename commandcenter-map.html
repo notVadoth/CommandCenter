@@ -136,6 +136,13 @@
     .pbtn,#drawer .dmin,#drawer .x,#news .nh button{width:32px;height:32px}
   }
   #drawer.info-collapsed .dsec{display:none}
+  .wxnow{font-size:13px;margin:2px 0 8px} .wxnow b{font-size:17px;font-weight:600;font-variant-numeric:tabular-nums}
+  #hover .wxnow{margin:8px 0 0}
+  .wxstrip{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin-bottom:6px}
+  .wxh{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0 5px;background:rgba(255,255,255,.045);border-radius:var(--r);font-variant-numeric:tabular-nums}
+  .wxh .t{font-size:10.5px;color:var(--muted)} .wxh b{font-size:14px;font-weight:600}
+  .wxh .p{position:relative;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;width:100%;height:30px;font-size:10.5px;color:#9ec5ff}
+  .wxh .p i{position:absolute;bottom:14px;left:50%;width:6px;transform:translateX(-50%);background:#4c9ffe;border-radius:3px;opacity:.85}
   #hover.tap{pointer-events:auto}
   #hover .open-details{display:block;width:100%;margin-top:9px;padding:9px 12px;border:0;border-radius:var(--r);background:#0a84ff;color:#fff;font-weight:600;font-size:13.5px;cursor:pointer}
   #hover .open-details:active{background:#0071e3}
@@ -272,6 +279,7 @@
             <li><b>Headlines:</b> titles and links from each outlet's public RSS feed (daily list) and from <a href="https://www.bing.com/news" target="_blank" rel="noopener">Bing News</a> search (place headlines). Stories belong to their publishers; only titles are shown, each linking to the original.</li>
             <li><b>Markets:</b> live charts by <a href="https://www.tradingview.com/" target="_blank" rel="noopener">TradingView</a>. Daily Brent closes: U.S. Energy Information Administration via
               <a href="https://fred.stlouisfed.org/series/DCOILBRENTEU" target="_blank" rel="noopener">FRED</a>. Index data is not stored or republished.</li>
+            <li><b>Weather:</b> <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo.com</a> (CC BY 4.0), from national weather services' models.</li>
             <li><b>Map engine:</b> <a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a> (BSD-2).</li>
           </ul>
           <div>Figures and outlines can be out of date or contested; check the linked source before relying on them.</div>
@@ -1028,8 +1036,45 @@ map.on("mousemove", e=>{
   hoverEl.style.top  = (y+14+bh>H ? Math.max(4,H-bh-4) : y+14)+"px";
 });
 map.on("mouseout", ()=>{ if (!NARROW.matches) hoverEl.style.display="none"; });
+/* =========================================================================
+   WEATHER for the clicked spot: Open-Meteo (free, no key, CC BY 4.0), current conditions + next 6 hours
+   ========================================================================= */
+const WMO = {0:"Clear",1:"Mostly clear",2:"Partly cloudy",3:"Overcast",45:"Fog",48:"Freezing fog",51:"Light drizzle",53:"Drizzle",55:"Heavy drizzle",
+  56:"Freezing drizzle",57:"Freezing drizzle",61:"Light rain",63:"Rain",65:"Heavy rain",66:"Freezing rain",67:"Freezing rain",71:"Light snow",73:"Snow",75:"Heavy snow",
+  77:"Snow grains",80:"Light showers",81:"Showers",82:"Heavy showers",85:"Snow showers",86:"Heavy snow showers",95:"Thunderstorm",96:"Thunderstorm, hail",99:"Thunderstorm, hail"};
+const WX = new Map();   // "lat,lng" rounded to 0.1° -> {status, d, t}
+let drawerLL = null;
+const wxKey = ll => `${ll.lat.toFixed(1)},${L.latLng(ll).wrap().lng.toFixed(1)}`;
+function loadWeather(ll, onReady){
+  const k = wxKey(ll), hit = WX.get(k);
+  if (hit && (hit.status === "loading" || Date.now() - hit.t < 15*60e3)) { if (hit.status !== "loading") onReady?.(); else hit.wait.push(onReady); return; }
+  const rec = {status:"loading", t:Date.now(), wait:[onReady]}; WX.set(k, rec);
+  const w = L.latLng(ll).wrap();
+  fetch(`https://api.open-meteo.com/v1/forecast?latitude=${w.lat.toFixed(3)}&longitude=${w.lng.toFixed(3)}`
+      + `&current=temperature_2m,apparent_temperature,weather_code,wind_speed_10m&hourly=temperature_2m,precipitation_probability,weather_code&forecast_hours=8&timezone=auto`)
+    .then(r => r.ok ? r.json() : Promise.reject(new Error("HTTP " + r.status)))
+    .then(d => { rec.status = "ok"; rec.d = d; })
+    .catch(() => { rec.status = "error"; })
+    .finally(() => { rec.t = Date.now(); rec.wait.forEach(f => f?.()); rec.wait = []; });
+}
+const wxLine = d => { const c = d.current; return `<b>${Math.round(c.temperature_2m)}°C</b> ${esc(WMO[c.weather_code] || "")}<span class="small"> · feels ${Math.round(c.apparent_temperature)}° · wind ${Math.round(c.wind_speed_10m)} km/h</span>`; };
+function weatherHtml(ll){
+  const rec = ll && WX.get(wxKey(ll));
+  if (!rec || rec.status === "loading") return `<div class="dsec"><h3>Weather here</h3><div class="small">loading…</div></div>`;
+  if (rec.status === "error") return `<div class="dsec"><h3>Weather here</h3><div class="small">Weather unavailable right now.</div></div>`;
+  const d = rec.d, now = d.current.time, H = d.hourly;
+  const idx = H.time.map((t,i)=>i).filter(i => H.time[i] > now).slice(0, 6);
+  const cells = idx.map(i => `<div class="wxh"><span class="t">${H.time[i].slice(11,16)}</span><b>${Math.round(H.temperature_2m[i])}°</b>
+      <span class="p" title="Chance of precipitation"><i style="height:${Math.max(2, (H.precipitation_probability[i] ?? 0) * 0.16)}px"></i>${H.precipitation_probability[i] ?? "–"}%</span></div>`).join("");
+  return `<div class="dsec wx"><h3>Weather here</h3><div class="wxnow">${wxLine(d)}</div>
+    <div class="wxstrip" aria-label="Next 6 hours: temperature and chance of precipitation">${cells}</div>
+    <div class="small">Next 6 hours, local time (${esc(d.timezone_abbreviation || d.timezone)}). Bars show the chance of precipitation. Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo.com</a> (CC BY 4.0).</div></div>`;
+}
+
 function openPlace(h, latlng){
-  drawerHit = h; renderDrawer(h);
+  drawerHit = h; drawerLL = latlng;
+  loadWeather(latlng, () => { if (drawerHit === h) renderDrawer(h); });
+  renderDrawer(h);
   liveNewsFor(h);
   chartsForPlace(h);
   const wasOpen = drawerEl.classList.contains("open") && !drawerEl.classList.contains("collapsed");
@@ -1056,7 +1101,10 @@ function openTapped(){ if (tapHit) openPlace(tapHit, tapLatLng); hoverEl.classLi
 let tapHit = null, tapLatLng = null;
 function showTapPreview(h, e){
   lastHit = h; tapHit = h; tapLatLng = e.latlng; renderHover(h); prefetchLive(h);
-  hoverEl.insertAdjacentHTML("beforeend", `<button class="open-details" onclick="openTapped()">Open details</button>`);
+  const wxSlot = `<div class="wxnow tapwx small">Weather loading…</div>`;
+  hoverEl.insertAdjacentHTML("beforeend", wxSlot + `<button class="open-details" onclick="openTapped()">Open details</button>`);
+  loadWeather(e.latlng, () => { const slot = hoverEl.querySelector(".tapwx"), r = WX.get(wxKey(e.latlng)); if (!slot || tapHit !== h) return;
+    slot.classList.remove("small"); slot.innerHTML = r?.status === "ok" ? wxLine(r.d) : `<span class="small">Weather unavailable</span>`; });
   hoverEl.classList.add("tap");
   hoverEl.style.display = "block";
   const p = e.containerPoint, r = map.getContainer().getBoundingClientRect(), bw = hoverEl.offsetWidth, bh = hoverEl.offsetHeight;
@@ -1077,7 +1125,7 @@ setTimeout(phoneMode);   // after the rest of the script has defined the panels
    ========================================================================= */
 const drawerEl = document.getElementById("drawer");
 function mapResized(keep){ map.invalidateSize({pan:false}); if (keep) map.panInside(keep, {padding:[60,60], animate:false}); }
-function closeDrawer(){ if (!drawerEl.classList.contains("open")) return; drawerEl.classList.remove("open","collapsed"); drawerHit=null; mapResized(); clearLiveNews(); }
+function closeDrawer(){ if (!drawerEl.classList.contains("open")) return; drawerEl.classList.remove("open","collapsed"); drawerHit=null; drawerLL=null; mapResized(); clearLiveNews(); }
 function collapseDrawer(on){ drawerEl.classList.toggle("collapsed", on); mapResized(); }
 document.addEventListener("keydown", e=>{ if (e.key==="Escape") closeDrawer(); });
 const SERIES = {};       // ISO3 -> {status, gdp:[{yr,v}], pop:[{yr,v}]}
@@ -1288,6 +1336,7 @@ function renderDrawer(h){
     if (blocs.length) html += `<div class="chips">${blocs.map(g=>`<span class="chip" style="border-color:${g.color};color:#e6e9ef;background:${g.color}33">${esc(g.name)}</span>`).join("")}</div>`;
   }
   html += `</header>`;
+  if (drawerLL) html += weatherHtml(drawerLL);
   if (h.control?.length || h.disputed?.length || h.occupied?.length || h.dmz?.length) html += `<div class="dsec"><h3>Contested control</h3>${(h.occupied||[]).map(occupiedBox).join("")}${(h.control||[]).map(controlBox).join("")}${(h.dmz||[]).map(dmzBox).join("")}${(h.disputed||[]).map(disputedBox).join("")}</div>`;
   if (h.adm1 && c){ loadProvStats(c); html += `<div class="dsec"><h3>Province / state</h3>${provinceCard(c, h.adm1)}</div>`; }
   if (c){
