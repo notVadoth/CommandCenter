@@ -15,7 +15,7 @@ Command Centre is a single-page world map that brings together political geograp
 - Contested-control layers: areas held by non-state actors, occupied territory, DMZs and ceasefire lines, and disputed territory. Each area shows its source and date.
 
 **Country and province details**
-- Hover card with GDP, GDP per capita, Gini, leader and cabinet.
+- Hover card with GDP, GDP per capita, Gini, leader and cabinet for countries; leader and government for provinces and states.
 - Click panel with GDP-growth and population-growth charts, and the legislature's composition with the governing coalition highlighted.
 
 **Headlines panel**
@@ -126,7 +126,7 @@ The app's left panel lists every source with its licence. In summary:
 | Province and district borders | geoBoundaries (Runfola et al., 2020, *PLoS ONE* 15(4): e0231866) | CC BY 4.0 |
 | Base maps | Esri; OpenTopoMap, © OpenStreetMap contributors | Esri terms; CC BY-SA, ODbL |
 | GDP, Gini, growth charts | World Bank, World Development Indicators | CC BY 4.0 |
-| Leaders, cabinets, province figures | Wikidata | CC0 |
+| Leaders and cabinets | Wikidata | CC0 |
 | Legislature seats | Wikipedia infoboxes | CC BY-SA 4.0 |
 | Contested-control layers | Per layer; see [`CONTROL_SOURCES.md`](CONTROL_SOURCES.md) | Per source |
 | Headlines | Outlets' RSS feeds; Bing News search | Titles and links only |
@@ -140,7 +140,7 @@ The app's left panel lists every source with its licence. In summary:
 ## Limitations
 
 - Contested-control outlines are approximate and can lag events. The current Ukraine front line is not included because no openly licensed source was found.
-- Province-level economic data comes from Wikidata and is often missing; empty fields are hidden.
+- Economic figures are national only; provinces and states show their leader and government.
 - TradingView's embedded charts do not display some exchange feeds (Nikkei, FTSE, several futures). The catalogue uses CFDs, country ETFs or producer stocks instead, and labels them as such.
 - Place headlines rely on Bing News search coverage.
 

@@ -265,7 +265,7 @@
               Runfola D. et al. (2020), "geoBoundaries: A global database of political administrative boundaries", <i>PLoS ONE</i> 15(4): e0231866.</li>
             <li><b>Base maps:</b> Esri (see the credit in the map corner); OpenTopoMap (CC BY-SA) with © OpenStreetMap contributors (ODbL), SRTM.</li>
             <li><b>Economic figures and charts:</b> <a href="https://data.worldbank.org/" target="_blank" rel="noopener">World Bank, World Development Indicators</a> (CC BY 4.0); each figure links to its indicator.</li>
-            <li><b>Leaders, cabinets, province figures:</b> <a href="https://www.wikidata.org/" target="_blank" rel="noopener">Wikidata</a> (CC0). <b>Legislature seats:</b> the chamber's <a href="https://en.wikipedia.org/" target="_blank" rel="noopener">Wikipedia</a> infobox (CC BY-SA 4.0), linked from each chamber.</li>
+            <li><b>Leaders and cabinets:</b> <a href="https://www.wikidata.org/" target="_blank" rel="noopener">Wikidata</a> (CC0). <b>Legislature seats:</b> the chamber's <a href="https://en.wikipedia.org/" target="_blank" rel="noopener">Wikipedia</a> infobox (CC BY-SA 4.0), linked from each chamber.</li>
             <li><b>Contested control, occupation, DMZs, disputes:</b> sources and dates are given on each area when you click it; full list and licence notes in
               <a href="https://github.com/notVadoth/CommandCenter/blob/main/CONTROL_SOURCES.md" target="_blank" rel="noopener">CONTROL_SOURCES.md</a>. Outlines are approximate.</li>
             <li><b>Blocs:</b> built-in list as of Nov 2026, checked daily against Wikidata and news reports; a dashed outline needs 2+ independent outlets. Each claim links to its articles.</li>
@@ -924,13 +924,11 @@ function loadProvStats(country){
   const blocks = [];
   if (codes.size) blocks.push(`VALUES ?key { ${[...codes].map(sq).join(" ")} } ?item wdt:P300 ?key .`);
   if (names.size && crec?.qid) blocks.push(`VALUES ?key { ${[...names].map(n=>sq(n)+"@en").join(" ")} } ?item rdfs:label ?key ; wdt:P17 wd:${crec.qid} ; wdt:P300 ?anyIso .`);
+  // provinces show only their leader and government; economic figures are national only
   const parts = {
     base: `SELECT DISTINCT ?key ?item ?itemLabel ?itemArticle WHERE { %V ${ART("item")} ${LAB("item")} }`,
     hog:  `SELECT ?key ?person ?personLabel ?personArticle ?date WHERE { %V ?item p:P6 ?s . ?s ps:P6 ?person . FILTER NOT EXISTS { ?s pq:P582 ?e } OPTIONAL { ?s pq:P580 ?date } ${ART("person")} ${LAB("person")} }`,
     exec: `SELECT ?key ?person ?personLabel ?personArticle WHERE { %V ?item wdt:P208 ?person . ${ART("person")} ${LAB("person")} }`,
-    gdp:  `SELECT ?key ?val ?unitLabel ?date WHERE { %V ?item p:P2131 ?s . ?s psv:P2131 ?vn . ?vn wikibase:quantityAmount ?val ; wikibase:quantityUnit ?unit . OPTIONAL { ?s pq:P585 ?date } ${LAB("unit")} }`,
-    pop:  `SELECT ?key ?val ?date WHERE { %V ?item p:P1082 ?s . ?s ps:P1082 ?val . OPTIONAL { ?s pq:P585 ?date } }`,
-    gini: `SELECT ?key ?val ?date WHERE { %V ?item p:P1125 ?s . ?s ps:P1125 ?val . OPTIONAL { ?s pq:P585 ?date } }`,
   };
   const store = STATS.prov[country.code] = {byKey:{}};
   const K = key => store.byKey[key] ||= blankRec();
@@ -986,17 +984,11 @@ function countryCard(c){
 function provinceCard(country, adm1){
   const st = STATS.provStatus[country.code];
   const rec = provRec(country, adm1);
-  const src = rec?.qid ? `https://www.wikidata.org/wiki/${rec.qid}` : null;
-  const g = rec && newest(rec.gdp), pop = rec && newest(rec.pop), gi = rec && newest(rec.gini);
-  const p = g && pop && pop.v>0 ? {v:g.v/pop.v, unit:g.unit, date:g.date, computed:true} : null;
   const hog = rec && newest(rec.hog), exec = rec?.exec?.[0];
   const pend = st==="loading" || !st ? '<span class="small">loading…</span>' : st==="error" ? '<span class="small">Wikidata unavailable</span>' : null;
   let h = `<div class="card-h">${link(rec?.article, esc(adm1.name))} <span class="small">${esc(adm1.iso||"")}</span></div><table class="stats">`;
   // provinces: rows with no data are left out rather than shown as "n/a" (still shown while loading or if Wikidata is down)
   const optRow = (label, v) => v == null ? "" : statRow(label, v);
-  h += optRow("GDP", g ? link(src, money(g.v,g.unit))+yr(g.date) : pend);
-  h += optRow("GDP / capita", p ? link(src, money(p.v,p.unit))+yr(p.date)+' <span class="small" title="GDP ÷ population, both from Wikidata">calc.</span>' : pend);
-  h += optRow("Gini", gi ? link(src, gi.v.toFixed(1))+yr(gi.date) : pend);
   h += optRow("Leader", hog ? `${link(hog.url||wikiSearch(hog.name), esc(hog.name))} <span class="small">Head of government</span>` : pend);
   h += statRow("Cabinet", exec ? link(exec.url||wikiSearch(exec.name), esc(exec.name))
                                   : link(wikiSearch("Executive Council of "+adm1.name), "Search Wikipedia"));
