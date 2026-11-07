@@ -1,0 +1,433 @@
+{
+ "reports": [
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Kremenchuk",
+   "iso": "UKR",
+   "province": "Poltava Oblast",
+   "province_id": "14850775B18105645488844",
+   "outlet": "Ukrainska Pravda",
+   "host": "pravda.com.ua",
+   "partisan": false,
+   "title": "Russian forces attack businesses in Kremenchuk",
+   "sentence": "Russian forces attack businesses in Kremenchuk.",
+   "url": "https://www.pravda.com.ua/eng/news/2026/11/07/8061721/",
+   "date": "2026-11-07T12:50:00+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Vinnytsia Oblast",
+   "iso": "UKR",
+   "province": "Vinnytsia Oblast",
+   "province_id": "14850775B93300237551625",
+   "outlet": "Ukrainska Pravda",
+   "host": "pravda.com.ua",
+   "partisan": false,
+   "title": "Russia attacks energy infrastructure in Vinnytsia Oblast, one person in critical condition",
+   "sentence": "Russia attacks energy infrastructure in Vinnytsia Oblast, one person in critical condition.",
+   "url": "https://www.pravda.com.ua/eng/news/2026/11/07/8061702/",
+   "date": "2026-11-07T09:59:00+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "Solomianskyi",
+   "iso": "UKR",
+   "province": "Kyiv",
+   "province_id": "14850775B22712718081002",
+   "outlet": "Ukrainska Pravda",
+   "host": "pravda.com.ua",
+   "partisan": false,
+   "title": "Six people injured in Russian attack on Kyiv, including teenager – photos",
+   "sentence": "Five people, including a teenager, have been injured in an overnight Russian attack on the Solomianskyi district of Kyiv.",
+   "url": "https://www.pravda.com.ua/eng/news/2026/11/07/8061667/",
+   "date": "2026-11-07T08:45:00+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Kiev",
+   "iso": "UKR",
+   "province": "Kyiv",
+   "province_id": "14850775B22712718081002",
+   "outlet": "TASS",
+   "host": "tass.com",
+   "partisan": true,
+   "title": "Russian forces hit rocket fuel components manufacturing facility in Kiev Region",
+   "sentence": "The Russian army launched a massive strike using precision-guided ground-based weapons and attack drones against military-industrial complex, energy and transport infrastructure facilities in the city of Kiev and Kiev Region",
+   "url": "https://tass.com/defense/2214207",
+   "date": "2026-11-07T08:40:08+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "White House",
+   "iso": "RUS",
+   "province": "Moscow",
+   "province_id": "28173009B19676032168465",
+   "outlet": "Meduza",
+   "host": "meduza.io",
+   "partisan": false,
+   "title": "Melania Trump receives Ukraine’s Order of Princess Olha at White House meeting on Oleshky evacuation",
+   "sentence": "first lady Melania Trump met with Russian and Ukrainian representatives at the White House following a humanitarian mission in the occupied town of Oleshky.",
+   "url": "https://meduza.io/en/feature/2026/11/07/melania-trump-receives-ukraine-s-order-of-princess-olha-at-white-house-meeting-on-oleshky-evacuation",
+   "date": "2026-11-06T21:07:45+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "Oleshky",
+   "iso": "UKR",
+   "province": "Kherson Oblast",
+   "province_id": "14850775B65901307765467",
+   "outlet": "Meduza",
+   "host": "meduza.io",
+   "partisan": false,
+   "title": "Melania Trump receives Ukraine’s Order of Princess Olha at White House meeting on Oleshky evacuation",
+   "sentence": "first lady Melania Trump met with Russian and Ukrainian representatives at the White House following a humanitarian mission in the occupied town of Oleshky.",
+   "url": "https://meduza.io/en/feature/2026/11/07/melania-trump-receives-ukraine-s-order-of-princess-olha-at-white-house-meeting-on-oleshky-evacuation",
+   "date": "2026-11-06T21:07:45+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Zaporizhzhia",
+   "iso": "UKR",
+   "province": "Zaporizhia Oblast",
+   "province_id": "14850775B92888097715572",
+   "outlet": "Meduza",
+   "host": "meduza.io",
+   "partisan": false,
+   "title": "Russia has declared hundreds of hotels in occupied Ukraine ‘ownerless.’ Dozens have been taken over — but one Ukrainian hotelier is fighting back.",
+   "sentence": "Russian authorities have declared more than 7,000 private and commercial properties in the occupied Zaporizhzhia region “ownerless,” including 521 hotels and resort complexes, Reuters found.",
+   "url": "https://meduza.io/en/feature/2026/11/06/russia-has-declared-hundreds-of-hotels-in-occupied-ukraine-ownerless-dozens-have-been-taken-over-but-one-ukrainian-hotelier-is-fighting-back",
+   "date": "2026-11-06T16:50:03+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis",
+    "Government"
+   ],
+   "place": "Taiz",
+   "iso": "YEM",
+   "province": "Ta'izz Governorate",
+   "province_id": "18629408B66245584752084",
+   "outlet": "Middle East Eye",
+   "host": "middleeasteye.net",
+   "partisan": false,
+   "title": "Yemeni government forces claim attack on Houthi positions in al-Misrakh, while Saudi attacks on Bani Hashih kill at least 15",
+   "sentence": "Yemeni government forces have claimed three air attacks on Houthi positions in the al-Misrakh district of the Taiz governorate.",
+   "url": "https://www.middleeasteye.net/live-blog/live-blog-update/yemeni-government-forces-claim-attack-houthi-positions-al-misrakh-while",
+   "date": "2026-11-07T11:33:04+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "Gaza",
+   "iso": "PSE",
+   "province": "Gaza",
+   "province_id": "83478781B7121896376882",
+   "outlet": "Middle East Eye",
+   "host": "middleeasteye.net",
+   "partisan": false,
+   "title": "US-Israeli former soldier on visit to Netherlands accused of Gaza war crimes",
+   "sentence": "The Hind Rajab Foundation (HRF) has filed a criminal complaint in the Netherlands against a former US-Israeli soldier accused of involvement in attacks on schools sheltering displaced Palestinians, mass detentions and the destruction of residential buildings in Gaza.",
+   "url": "https://www.middleeasteye.net/live-blog/live-blog-update/us-israeli-former-soldier-visit-netherlands-accused-gaza-war-crimes",
+   "date": "2026-11-07T07:43:42+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "West Bank",
+   "iso": "PSE",
+   "province": "West Bank",
+   "province_id": "83478781B28849486138516",
+   "outlet": "Middle East Eye",
+   "host": "middleeasteye.net",
+   "partisan": false,
+   "title": "Israeli forces raid West Bank areas of Salfit and Nablus, detain Palestinian man",
+   "sentence": "Israeli forces have carried out raids in several parts of the occupied West Bank and detained at least one person on Saturday, Wafa reported.",
+   "url": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-forces-raid-west-bank-areas-salfit-and-nablus-detain-palestinian",
+   "date": "2026-11-07T07:06:09+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "West Bank",
+   "iso": "PSE",
+   "province": "West Bank",
+   "province_id": "83478781B28849486138516",
+   "outlet": "Anadolu Agency",
+   "host": "aa.com.tr",
+   "partisan": false,
+   "title": "Israeli army arrests 6 Palestinians in renewed raids across occupied West Bank",
+   "sentence": "Israeli army arrests 6 Palestinians in renewed raids across occupied West Bank.",
+   "url": "https://www.aa.com.tr/en/middle-east/israeli-army-arrests-6-palestinians-in-renewed-raids-across-occupied-west-bank/4114964",
+   "date": "2026-11-07T08:13:12+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "West Bank",
+   "iso": "PSE",
+   "province": "West Bank",
+   "province_id": "83478781B28849486138516",
+   "outlet": "Africanews",
+   "host": "africanews.com",
+   "partisan": false,
+   "title": "West Bank: Palestinians harvest olives under Israeli military restrictions",
+   "sentence": "Palestinian farmers in the occupied West Bank have been allowed limited access to their olive groves under Israeli military restrictions.",
+   "url": "http://www.africanews.com/2026/11/05/west-bank-palestinians-harvest-olives-under-israeli-military-restrictions/",
+   "date": "2026-11-05T22:43:03+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "Zaporizhzhia",
+   "iso": "UKR",
+   "province": "Zaporizhia Oblast",
+   "province_id": "14850775B92888097715572",
+   "outlet": "Voennoe Delo",
+   "host": "voennoedelo.com",
+   "partisan": false,
+   "title": "Russia-Ukraine Frontline Update for November 7: Fighting in Zaporizhzhia, Lyman and Kharkiv",
+   "sentence": "Russia-Ukraine Frontline Update for November 7: Fighting in Zaporizhzhia, Lyman and Kharkiv.",
+   "url": "https://voennoedelo.com/en/posts/id21900-russia-ukraine-war-update-frontline-battles-on-november-7",
+   "date": "2026-11-07T01:55:00+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Kostiantynivka",
+   "iso": "UKR",
+   "province": "Donetsk Oblast",
+   "province_id": "14850775B15615817748403",
+   "outlet": "The New Voice of Ukraine on MSN",
+   "host": "msn.com",
+   "partisan": false,
+   "title": "DeepState reports Russian gains in Donetsk Oblast",
+   "sentence": "4, DeepState reported that Russian forces had advanced in Kostiantynivka, Donetsk Oblast.",
+   "url": "https://www.msn.com/en-us/news/news/deepstate-reports-russian-gains-in-donetsk-oblast/ar-AA2gWGBY",
+   "date": "2026-11-07T02:23:00+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "Mala Tokmachka",
+   "iso": "UKR",
+   "province": "Zaporizhia Oblast",
+   "province_id": "14850775B92888097715572",
+   "outlet": "UA.NEWS",
+   "host": "ua.news",
+   "partisan": false,
+   "title": "Ukrainian troops are holding Malaya Tokmachka in the Zaporizhzhia region",
+   "sentence": "The village of Mala Tokmachka in Zaporizhzhia Oblast remains under the control of the Ukrainian Defense Forces, despite regular claims by the Russian command that it has been captured.",
+   "url": "https://ua.news/en/war-vs-rf/ukrayinski-viiskovi-utrimuiut-malu-tokmachku-na-zaporizhzhi",
+   "date": "2026-11-06T10:45:00+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "Donetsk",
+   "iso": "UKR",
+   "province": "Donetsk Oblast",
+   "province_id": "14850775B15615817748403",
+   "outlet": "The Wall Street Journal on MSN",
+   "host": "msn.com",
+   "partisan": false,
+   "title": "Ten months of war to gain 46 square miles: How Russia is failing on the battlefield",
+   "sentence": "Ukrainian forces have foiled Moscow’s offensive in the Donetsk region.",
+   "url": "https://www.msn.com/en-us/news/other/ten-months-of-war-to-gain-46-square-miles-how-russia-is-failing-on-the-battlefield/ar-AA2gVrLq",
+   "date": "2026-11-06T20:00:00+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis"
+   ],
+   "place": "Marib",
+   "iso": "YEM",
+   "province": "Ma'rib Governorate",
+   "province_id": "18629408B1777518619063",
+   "outlet": "yemenmonitor",
+   "host": "yemenmonitor.com",
+   "partisan": false,
+   "title": "Yemeni Army: Ongoing Clashes in Marib and Battles Extending to Al-Jawf",
+   "sentence": "The Yemeni Armed Forces announced today that clashes with the Houthi group are continuing on the northern front in Marib governorate for the second consecutive day, with fighting extending to fronts ...",
+   "url": "https://www.yemenmonitor.com/en/Details/ArtMID/908/ArticleID/187058",
+   "date": "2026-11-06T16:00:00+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis",
+    "Government"
+   ],
+   "place": "Taiz",
+   "iso": "YEM",
+   "province": "Ta'izz Governorate",
+   "province_id": "18629408B66245584752084",
+   "outlet": "Anadolu Agency",
+   "host": "aa.com.tr",
+   "partisan": false,
+   "title": "Yemeni army claims it recaptured areas in Taiz as Houthi missiles kill, wound dozens",
+   "sentence": "Yemeni army claims it recaptured areas in Taiz as Houthi missiles kill, wound dozens.",
+   "url": "https://www.aa.com.tr/en/middle-east/yemeni-army-claims-it-recaptured-areas-in-taiz-as-houthi-missiles-kill-wound-dozens/4114563",
+   "date": "2026-11-06T11:04:00+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Government"
+   ],
+   "place": "Taiz",
+   "iso": "YEM",
+   "province": "Ta'izz Governorate",
+   "province_id": "18629408B66245584752084",
+   "outlet": "operativmm",
+   "host": "operativmm.az",
+   "partisan": false,
+   "title": "Yemeni army says it recaptured areas in Taiz as missile attack kills civilians",
+   "sentence": "Yemeni army says it recaptured areas in Taiz as missile attack kills civilians.",
+   "url": "https://operativmm.az/en/post/yemeni-army-says-it-recaptured-areas-in-taiz-as-missile-attack-kills-civilians/85947",
+   "date": "2026-11-06T12:10:00+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis",
+    "Government"
+   ],
+   "place": "Taiz",
+   "iso": "YEM",
+   "province": "Ta'izz Governorate",
+   "province_id": "18629408B66245584752084",
+   "outlet": "Outlook India",
+   "host": "outlookindia.com",
+   "partisan": false,
+   "title": "Who Hit Al-Hadara Market? Yemen's Govt, Houthis Trade Blame Over Deadly Taiz Attack",
+   "sentence": "Yemen's government and Houthi rebels trade blame over a deadly attack on al-Hadara market in Taiz as fighting intensifies and government forces launch an offensive ...",
+   "url": "https://www.outlookindia.com/international/yemen-taiz-market-strikes-houthis-government-forces-blame-saudi-arabia",
+   "date": "2026-11-07T05:45:00+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis"
+   ],
+   "place": "Taiz",
+   "iso": "YEM",
+   "province": "Ta'izz Governorate",
+   "province_id": "18629408B66245584752084",
+   "outlet": "Al Jazeera",
+   "host": "aljazeera.com",
+   "partisan": false,
+   "title": "Yemeni gov’t forces, Houthis trade blame for deadly strikes on Taiz market",
+   "sentence": "The attack on al-Hadara market in Taiz governorate's al-Waziiya district killed at least 30 people, Houthi rebels say.",
+   "url": "https://www.aljazeera.com/news/2026/11/6/yemeni-govt-forces-houthis-trade-blame-for-deadly-strikes-on-taiz-market",
+   "date": "2026-11-06T10:09:00+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "myanmar",
+   "sides": [
+    "Resistance"
+   ],
+   "place": "Sittwe",
+   "iso": "MMR",
+   "province": "Rakhine",
+   "province_id": "20573499B29373908448635",
+   "outlet": "The Business Standard",
+   "host": "tbsnews.net",
+   "partisan": false,
+   "title": "Arakan Army faces second front on Bangladesh border as it advances towards Sittwe",
+   "sentence": "Arakan Army faces second front on Bangladesh border as it advances towards Sittwe.",
+   "url": "https://www.tbsnews.net/world/south-asia/arakan-army-faces-second-front-bangladesh-border-it-advances-towards-sittwe-1595131",
+   "date": "2026-11-06T23:30:00+00:00",
+   "seen": "2026-11-07T16:59:52.605028+00:00"
+  }
+ ],
+ "truce": [],
+ "withdrawals": [],
+ "candidates": [
+  {
+   "iso": "ISR",
+   "outlets": [
+    "Anadolu Agency",
+    "Middle East Eye"
+   ],
+   "examples": [
+    {
+     "outlet": "Middle East Eye",
+     "title": "Israeli forces raid West Bank areas of Salfit and Nablus, detain Palestinian man",
+     "url": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-forces-raid-west-bank-areas-salfit-and-nablus-detain-palestinian"
+    },
+    {
+     "outlet": "Anadolu Agency",
+     "title": "Israeli army arrests 6 Palestinians in renewed raids across occupied West Bank",
+     "url": "https://www.aa.com.tr/en/middle-east/israeli-army-arrests-6-palestinians-in-renewed-raids-across-occupied-west-bank/4114964"
+    }
+   ],
+   "last": "2026-11-07"
+  }
+ ]
+}

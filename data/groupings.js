@@ -1,6 +1,6 @@
 // written by trawler.py — loaded automatically by commandcenter-map.html
 window.TRAWLER_GROUPINGS = {
- "generated": "2026-11-06T19:27:18.725797+00:00",
+ "generated": "2026-11-07T16:59:02.874202+00:00",
  "extractor": "rules",
  "verification": {
   "wikidata": true,
@@ -13,7 +13,7 @@ window.TRAWLER_GROUPINGS = {
    "conflict": "Wikidata contradicts the claim — review"
   }
  },
- "articles_in_store": 481,
+ "articles_in_store": 584,
  "blocs": {
   "EU": {
    "name": "European Union",
@@ -61,6 +61,45 @@ window.TRAWLER_GROUPINGS = {
     ]
    },
    "changes": [
+    {
+     "country": "GBR",
+     "action": "left",
+     "status": "confirmed",
+     "wikidata": "agrees",
+     "independent_outlets": 1,
+     "evidence": [
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Home Office sued after stripping almost 1,500 EU citizens of right to live in UK",
+       "url": "https://www.theguardian.com/politics/2026/nov/07/home-office-sued-the3million-eu-citizens-right-to-live-in-uk-pre-settled",
+       "date": "2026-11-07T09:15:35+00:00",
+       "sentence": "Campaign group the3million lodges court papers after EU citizens told pre-settled status was an ‘error’\nThe Home Office is being sued for alleged breach of the Brexit withdrawal agreement after stripping almost 1,500 EU citizens of their full rights to live in the UK.",
+       "hedged": false,
+       "syndicated_copy": false
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Home Office sued after stripping almost 1,500 EU citizens of right to live in UK",
+       "url": "https://www.theguardian.com/politics/2026/nov/07/home-office-sued-the3million-eu-citizens-right-to-live-in-uk-pre-settled",
+       "date": "2026-11-07T09:15:35+00:00",
+       "sentence": "Campaign group the3million lodges court papers after EU citizens told pre-settled status was an ‘error’\nThe Home Office is being sued for alleged breach of the Brexit withdrawal agreement after stripping almost 1,500 EU citizens of their full rights to live in the UK.",
+       "hedged": false,
+       "syndicated_copy": true
+      },
+      {
+       "source": "BBC World",
+       "domain": "bbc.co.uk",
+       "title": "UK cannot 'cherry pick' EU single market deal, Barnier tells BBC",
+       "url": "https://www.bbc.co.uk/news/articles/c9kgjj206nzpo?at_medium=RSS&at_campaign=rss",
+       "date": "2026-11-07T15:19:35+00:00",
+       "sentence": "The prime minister has said rejoining the bloc's internal market was among options he could pursue as part of a reshaping of ties since the UK's exit from the EU nearly six years ago.",
+       "hedged": true,
+       "syndicated_copy": false
+      }
+     ]
+    },
     {
      "country": "SRB",
      "action": "applied",
@@ -241,14 +280,49 @@ window.TRAWLER_GROUPINGS = {
     "qid": "Q7184",
     "label": null
    },
-   "baseline_audit": null,
+   "baseline_audit": {
+    "in_wikidata_not_baseline": [],
+    "in_baseline_not_wikidata": [
+     "DNK",
+     "NLD"
+    ]
+   },
    "changes": [
+    {
+     "country": "FRA",
+     "action": "left",
+     "status": "conflict",
+     "wikidata": "disagrees",
+     "independent_outlets": 1,
+     "evidence": [
+      {
+       "source": "France 24",
+       "domain": "france24.com",
+       "title": "🔴 Watch live: 'We must change everything,' French far-left presidential candidate Mélenchon says",
+       "url": "https://www.france24.com/en/france/20261107-french-presidential-hopeful-m%C3%A9lenchon-launches-campaign-by-vowing-lower-retirement-age",
+       "date": "2026-11-07T14:44:24+00:00",
+       "sentence": "On ​foreign policy, Mélenchon's programme reiterates his long-standing criticism of NATO and calls for France's gradual withdrawal from the military alliance, starting with an exit from its integrated military command.",
+       "hedged": false,
+       "syndicated_copy": false
+      },
+      {
+       "source": "France 24",
+       "domain": "france24.com",
+       "title": "🔴 Watch live: 'We must change everything,' French far-left presidential candidate Mélenchon says",
+       "url": "https://www.france24.com/en/france/20261107-french-presidential-hopeful-m%C3%A9lenchon-launches-campaign-by-vowing-lower-retirement-age",
+       "date": "2026-11-07T14:44:24+00:00",
+       "sentence": "France previously withdrew from NATO's integrated military command in 1966 under president Charles de Gaulle, a decision later reversed under right-wing president Nicolas Sarkozy in 2009.",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
     {
      "country": "UKR",
      "action": "joined",
-     "status": "single-source",
+     "status": "corroborated",
      "wikidata": "unknown",
-     "independent_outlets": 1,
+     "independent_outlets": 2,
      "evidence": [
       {
        "source": "CBC World",
@@ -257,6 +331,16 @@ window.TRAWLER_GROUPINGS = {
        "url": "https://www.cbc.ca/news/world/ukraine-zaporizhzhia-attack-russia-melania-trump-9.7411754?cmp=rss",
        "date": "2026-11-06T12:25:34+00:00",
        "sentence": "Moscow hopes Trump can pressure Kyiv into agreeing a deal that meets many of its conditions, such as full Russian control of Ukraine's Donbas region and a bar on Ukraine joining NATO.",
+       "hedged": false,
+       "syndicated_copy": false
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Blackouts and water shortages in Kyiv after Russia strikes Ukraine’s energy grid",
+       "url": "https://www.theguardian.com/world/2026/nov/07/blackout-water-shortage-kyiv-russia-strike-ukraine-energy-grid",
+       "date": "2026-11-07T13:03:03+00:00",
+       "sentence": "Shortly before invading Ukraine, the Russian president, Vladimir Putin, demanded that Nato go back to its pre-1997 posture – before the Baltic states and nations in eastern Europe and the Balkans joined.",
        "hedged": false,
        "syndicated_copy": false
       }
@@ -692,7 +776,11 @@ window.TRAWLER_GROUPINGS = {
   {
    "name": "Hong Kong Alliance",
    "status": "single-source",
-   "wikidata": null,
+   "wikidata": {
+    "qid": "Q835349",
+    "label": "Hong Kong Alliance in Support of Patriotic Democratic Movements in China",
+    "description": "organization"
+   },
    "color": "#44f0cc",
    "members": [
     {
@@ -981,9 +1069,9 @@ window.TRAWLER_GROUPINGS = {
    "group": "NATO",
    "country": "UKR",
    "action": "joined",
-   "status": "single-source",
+   "status": "corroborated",
    "wikidata": "unknown",
-   "independent_outlets": 1,
+   "independent_outlets": 2,
    "evidence": [
     {
      "source": "CBC World",
@@ -992,6 +1080,46 @@ window.TRAWLER_GROUPINGS = {
      "url": "https://www.cbc.ca/news/world/ukraine-zaporizhzhia-attack-russia-melania-trump-9.7411754?cmp=rss",
      "date": "2026-11-06T12:25:34+00:00",
      "sentence": "Moscow hopes Trump can pressure Kyiv into agreeing a deal that meets many of its conditions, such as full Russian control of Ukraine's Donbas region and a bar on Ukraine joining NATO.",
+     "hedged": false,
+     "syndicated_copy": false
+    },
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "Blackouts and water shortages in Kyiv after Russia strikes Ukraine’s energy grid",
+     "url": "https://www.theguardian.com/world/2026/nov/07/blackout-water-shortage-kyiv-russia-strike-ukraine-energy-grid",
+     "date": "2026-11-07T13:03:03+00:00",
+     "sentence": "Shortly before invading Ukraine, the Russian president, Vladimir Putin, demanded that Nato go back to its pre-1997 posture – before the Baltic states and nations in eastern Europe and the Balkans joined.",
+     "hedged": false,
+     "syndicated_copy": false
+    }
+   ]
+  },
+  {
+   "group": "NATO",
+   "country": "FRA",
+   "action": "left",
+   "status": "conflict",
+   "wikidata": "disagrees",
+   "independent_outlets": 1,
+   "evidence": [
+    {
+     "source": "France 24",
+     "domain": "france24.com",
+     "title": "🔴 Watch live: 'We must change everything,' French far-left presidential candidate Mélenchon says",
+     "url": "https://www.france24.com/en/france/20261107-french-presidential-hopeful-m%C3%A9lenchon-launches-campaign-by-vowing-lower-retirement-age",
+     "date": "2026-11-07T14:44:24+00:00",
+     "sentence": "On ​foreign policy, Mélenchon's programme reiterates his long-standing criticism of NATO and calls for France's gradual withdrawal from the military alliance, starting with an exit from its integrated military command.",
+     "hedged": false,
+     "syndicated_copy": false
+    },
+    {
+     "source": "France 24",
+     "domain": "france24.com",
+     "title": "🔴 Watch live: 'We must change everything,' French far-left presidential candidate Mélenchon says",
+     "url": "https://www.france24.com/en/france/20261107-french-presidential-hopeful-m%C3%A9lenchon-launches-campaign-by-vowing-lower-retirement-age",
+     "date": "2026-11-07T14:44:24+00:00",
+     "sentence": "France previously withdrew from NATO's integrated military command in 1966 under president Charles de Gaulle, a decision later reversed under right-wing president Nicolas Sarkozy in 2009.",
      "hedged": false,
      "syndicated_copy": false
     }
