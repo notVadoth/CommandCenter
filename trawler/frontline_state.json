@@ -404,9 +404,367 @@
    "url": "https://www.tbsnews.net/world/south-asia/arakan-army-faces-second-front-bangladesh-border-it-advances-towards-sittwe-1595131",
    "date": "2026-11-06T23:30:00+00:00",
    "seen": "2026-11-07T16:59:52.605028+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis",
+    "Government"
+   ],
+   "place": "Yemeni",
+   "iso": "YEM",
+   "province": "Hadhramaut",
+   "province_id": "18629408B49078263925584",
+   "outlet": "France 24",
+   "host": "france24.com",
+   "partisan": false,
+   "title": "Yemen's humanitarian crisis worsens",
+   "sentence": "One month into the Yemeni government's offensive against the Iran-aligned Houthis, fighting continues to escalate along the Red Sea coast.",
+   "url": "https://www.france24.com/en/yemen-s-humanitarian-crisis-worsens",
+   "date": "2026-11-08T14:22:14+00:00",
+   "seen": "2026-11-08T17:15:04.768585+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Khmelnytskyi Oblast",
+   "iso": "UKR",
+   "province": "Khmelnytskyi Oblast",
+   "province_id": "14850775B78366470925827",
+   "outlet": "Ukrainska Pravda",
+   "host": "pravda.com.ua",
+   "partisan": false,
+   "title": "People injured and houses damaged in Russian attack on Khmelnytskyi Oblast",
+   "sentence": "People injured and houses damaged in Russian attack on Khmelnytskyi Oblast.",
+   "url": "https://www.pravda.com.ua/eng/news/2026/11/08/8061817/",
+   "date": "2026-11-08T13:02:00+00:00",
+   "seen": "2026-11-08T17:15:04.768585+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Dnipro",
+   "iso": "UKR",
+   "province": "Dnipropetrovsk Oblast",
+   "province_id": "14850775B41808765507575",
+   "outlet": "Ukrainska Pravda",
+   "host": "pravda.com.ua",
+   "partisan": false,
+   "title": "One killed and three injured in Russian attack on Dnipro suburb – photos",
+   "sentence": "One killed and three injured in Russian attack on Dnipro suburb",
+   "url": "https://www.pravda.com.ua/eng/news/2026/11/08/8061782/",
+   "date": "2026-11-08T10:48:00+00:00",
+   "seen": "2026-11-08T17:15:04.768585+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis"
+   ],
+   "place": "Yemeni",
+   "iso": "YEM",
+   "province": "Hadhramaut",
+   "province_id": "18629408B49078263925584",
+   "outlet": "TASS",
+   "host": "tass.com",
+   "partisan": false,
+   "title": "Saudi-led coalition hits Houthi missile launchers used to attack Riyadh",
+   "sentence": "The Houthis from the Yemeni rebel movement Ansar Allah used launchers \"to try to attack Riyadh on Sunday\", the coalition’s spokesman Turki al-Maliki said",
+   "url": "https://tass.com/world/2214505",
+   "date": "2026-11-08T17:05:56+00:00",
+   "seen": "2026-11-08T17:15:04.768585+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "West Bank",
+   "iso": "PSE",
+   "province": "West Bank",
+   "province_id": "83478781B28849486138516",
+   "outlet": "Middle East Eye",
+   "host": "middleeasteye.net",
+   "partisan": false,
+   "title": "Israeli forces detain teacher following school raid in Masafer Yatta, install gate east of Tammun",
+   "sentence": "Israeli forces have detained a teacher following a raid on a school in Hebron's Masafer Yatta in the southern occupied West Bank, Wafa reports citing a \"media activist\".",
+   "url": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-forces-detain-teacher-following-school-raid-masafer-yatta",
+   "date": "2026-11-08T15:56:43+00:00",
+   "seen": "2026-11-08T17:15:04.768585+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "Salfit",
+   "iso": "PSE",
+   "province": "West Bank",
+   "province_id": "83478781B28849486138516",
+   "outlet": "Middle East Eye",
+   "host": "middleeasteye.net",
+   "partisan": false,
+   "title": "What is happening in the occupied West Bank?",
+   "sentence": "Three Palestinians have been wounded after being severely beaten with clubs by Israeli settlers near Salfit city in the central occupied West Bank, Wafa reports, citing local sources.",
+   "url": "https://www.middleeasteye.net/live-blog/live-blog-update/what-happening-occupied-west-bank",
+   "date": "2026-11-08T13:14:28+00:00",
+   "seen": "2026-11-08T17:15:04.768585+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "Qalqilya",
+   "iso": "PSE",
+   "province": "West Bank",
+   "province_id": "83478781B28849486138516",
+   "outlet": "Middle East Eye",
+   "host": "middleeasteye.net",
+   "partisan": false,
+   "title": "Palestinian injured, six others detained during raids in West Bank",
+   "sentence": "A Palestinian youth was wounded in the leg by Israeli gunfire during a raid in the Kafr Saba neighbourhood of Qalqilya in the occupied West Bank, Quds News Network reported.",
+   "url": "https://www.middleeasteye.net/live-blog/live-blog-update/palestinian-injured-six-others-detained-during-raids-west-bank",
+   "date": "2026-11-08T07:45:00+00:00",
+   "seen": "2026-11-08T17:15:04.768585+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "Dobropolye",
+   "iso": "RUS",
+   "province": "Belgorod Oblast",
+   "province_id": "28173009B21416061393121",
+   "outlet": "Voennoe Delo",
+   "host": "voennoedelo.com",
+   "partisan": false,
+   "title": "Ukraine Frontline Report for November 8: Russian Operations Across Seven Directions",
+   "sentence": "November 8 Ukraine frontline update covers reported Russian advances near Dobropolye and Orekhov, with fighting in Sumy, Kharkov, Gulyaypole and Zaporozhye.",
+   "url": "https://voennoedelo.com/en/posts/id21929-ukraine-frontline-update-russian-advances-on-november-8",
+   "date": "2026-11-08T02:09:00+00:00",
+   "seen": "2026-11-08T17:15:04.768585+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "Sumy",
+   "iso": "UKR",
+   "province": "Sumy Oblast",
+   "province_id": "14850775B14512392274127",
+   "outlet": "Voennoe Delo",
+   "host": "voennoedelo.com",
+   "partisan": false,
+   "title": "Ukraine Frontline Report for November 8: Russian Operations Across Seven Directions",
+   "sentence": "November 8 Ukraine frontline update covers reported Russian advances near Dobropolye and Orekhov, with fighting in Sumy, Kharkov, Gulyaypole and Zaporozhye.",
+   "url": "https://voennoedelo.com/en/posts/id21929-ukraine-frontline-update-russian-advances-on-november-8",
+   "date": "2026-11-08T02:09:00+00:00",
+   "seen": "2026-11-08T17:15:04.768585+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis"
+   ],
+   "place": "Taiz",
+   "iso": "YEM",
+   "province": "Ta'izz Governorate",
+   "province_id": "18629408B66245584752084",
+   "outlet": "Asharq Al-Awsat",
+   "host": "english.aawsat.com",
+   "partisan": false,
+   "title": "Fighting in Yemen’s Al-Jawf and Marib Intensifies",
+   "sentence": "Fighting in Yemen intensified over the past few hours amid widespread clashes between government armed forces and the Houthi movement across the governorates of Taiz, Marib, Al-Jawf, and Lahj.",
+   "url": "https://english.aawsat.com/arab-world/5338802-fighting-yemen%E2%80%99s-al-jawf-and-marib-intensifies",
+   "date": "2026-11-07T21:52:00+00:00",
+   "seen": "2026-11-08T17:15:04.768585+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis"
+   ],
+   "place": "Sanaa",
+   "iso": "YEM",
+   "province": "Sanʿaʾ Governorate",
+   "province_id": "18629408B64822604790923",
+   "outlet": "Yahoo",
+   "host": "yahoo.com",
+   "partisan": false,
+   "title": "Saudi Aramco building in Riyadh damaged in ‘attempted’ attack",
+   "sentence": "The interceptions come as the Houthis report 33 people killed in a coalition air attack on a village near Sanaa.",
+   "url": "https://www.yahoo.com/news/world/articles/saudi-arabia-intercepts-houthi-missiles-074007505.html",
+   "date": "2026-11-07T23:40:00+00:00",
+   "seen": "2026-11-08T17:15:04.768585+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis"
+   ],
+   "place": "Sanaa",
+   "iso": "YEM",
+   "province": "Sanʿaʾ Governorate",
+   "province_id": "18629408B64822604790923",
+   "outlet": "UA.NEWS",
+   "host": "ua.news",
+   "partisan": false,
+   "title": "Yemen reports 27 dead after strikes in Sanaa province — Al Jazeera",
+   "sentence": "Houthis said strikes north of Sanaa killed at least 27 people and injured about 30, while fighting continued in Marib and Al-Jawf.",
+   "url": "https://ua.news/en/dovkolo-svitu/u-emeni-zaiavili-pro-27-zagiblikh-unaslidok-udariv-u-provintsiyi-sana-al-jazeera",
+   "date": "2026-11-07T13:35:00+00:00",
+   "seen": "2026-11-08T17:15:04.768585+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis"
+   ],
+   "place": "Marib",
+   "iso": "YEM",
+   "province": "Ma'rib Governorate",
+   "province_id": "18629408B1777518619063",
+   "outlet": "UA.NEWS",
+   "host": "ua.news",
+   "partisan": false,
+   "title": "Yemen reports 27 dead after strikes in Sanaa province — Al Jazeera",
+   "sentence": "Houthis said strikes north of Sanaa killed at least 27 people and injured about 30, while fighting continued in Marib and Al-Jawf.",
+   "url": "https://ua.news/en/dovkolo-svitu/u-emeni-zaiavili-pro-27-zagiblikh-unaslidok-udariv-u-provintsiyi-sana-al-jazeera",
+   "date": "2026-11-07T13:35:00+00:00",
+   "seen": "2026-11-08T17:15:04.768585+00:00"
+  },
+  {
+   "war": "sudan",
+   "sides": [
+    "RSF"
+   ],
+   "place": "Blue Nile",
+   "iso": "SDN",
+   "province": "Blue Nile",
+   "province_id": "86620642B86272532082738",
+   "outlet": "Asharq Al-Awsat on MSN",
+   "host": "msn.com",
+   "partisan": false,
+   "title": "Sudan’s RSF claims new gains in Blue Nile fighting",
+   "sentence": "Sudan’s RSF claims new gains in Blue Nile fighting.",
+   "url": "https://www.msn.com/en-ae/news/news/sudan-s-rsf-claims-new-gains-in-blue-nile-fighting/ar-AA2gZYvn",
+   "date": "2026-11-08T05:03:37+00:00",
+   "seen": "2026-11-08T17:15:04.768585+00:00"
+  },
+  {
+   "war": "sudan",
+   "sides": [
+    "SAF",
+    "RSF"
+   ],
+   "place": "West Kordofan",
+   "iso": "SDN",
+   "province": "West Kordofan",
+   "province_id": "86620642B26042209819562",
+   "outlet": "Middle East Monitor",
+   "host": "middleeastmonitor.com",
+   "partisan": false,
+   "title": "Sudanese army takes control of key area in West Kordofan",
+   "sentence": "The Sudanese army and allied forces took control of Ayyal Bakhit in West Kordofan state on Saturday after clashes with the paramilitary Rapid Support Forces (RSF), military sources told Anadolu ...",
+   "url": "https://www.middleeastmonitor.com/20261108-sudanese-army-takes-control-of-key-area-in-west-kordofan/",
+   "date": "2026-11-08T01:47:00+00:00",
+   "seen": "2026-11-08T17:15:04.768585+00:00"
+  },
+  {
+   "war": "sudan",
+   "sides": [
+    "RSF"
+   ],
+   "place": "Blue Nile State",
+   "iso": "SDN",
+   "province": "Blue Nile",
+   "province_id": "86620642B86272532082738",
+   "outlet": "UA.NEWS",
+   "host": "ua.news",
+   "partisan": false,
+   "title": "Rapid Support Forces claim capture of Makja in Sudan — Asharq Al-Awsat",
+   "sentence": "Sudan’s Rapid Support Forces claimed they captured Makja in Blue Nile State.",
+   "url": "https://ua.news/en/dovkolo-svitu/sili-shvidkoyi-pidtrimki-zaiavili-pro-zakhoplennia-makdzhi-v-sudani-asharq-al-awsat",
+   "date": "2026-11-08T04:22:00+00:00",
+   "seen": "2026-11-08T17:15:04.768585+00:00"
+  },
+  {
+   "war": "sudan",
+   "sides": [
+    "SAF",
+    "RSF"
+   ],
+   "place": "Iyal Bakhit",
+   "iso": "SDN",
+   "province": "West Kordofan",
+   "province_id": "86620642B26042209819562",
+   "outlet": "Sudan Tribune",
+   "host": "sudantribune.com",
+   "partisan": false,
+   "title": "Sudanese army captures strategic town in West Kordofan, downs drone",
+   "sentence": "The Sudanese army has captured the strategic town of Iyal Bakhit in West Kordofan and shot down a long-range RSF drone, advancing toward El Khuwei.",
+   "url": "https://sudantribune.com/article/320981",
+   "date": "2026-11-07T10:34:00+00:00",
+   "seen": "2026-11-08T17:15:04.768585+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "West Bank",
+   "iso": "PSE",
+   "province": "West Bank",
+   "province_id": "83478781B28849486138516",
+   "outlet": "Asharq Al-Awsat on MSN",
+   "host": "msn.com",
+   "partisan": false,
+   "title": "Israel Deports 14 Activists on Palestinian Solidarity Mission",
+   "sentence": "Asharq Al Awsat Israel said on Sunday it had deported 14 Western activists who had gone to the occupied West Bank on solidarity missions with Palestinians facing violence from Israeli settlers.",
+   "url": "https://www.msn.com/en-ae/news/other/israel-deports-14-activists-on-palestinian-solidarity-mission/ar-AA2h0qex",
+   "date": "2026-11-08T04:05:47+00:00",
+   "seen": "2026-11-08T17:15:04.768585+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "West Bank",
+   "iso": "PSE",
+   "province": "West Bank",
+   "province_id": "83478781B28849486138516",
+   "outlet": "The Express Tribune",
+   "host": "tribune.com.pk",
+   "partisan": false,
+   "title": "Israeli forces shoot Palestinian child, detain 2 in West Bank raids",
+   "sentence": "Israeli forces shot and wounded a Palestinian child and detained two men during raids in the occupied West Bank late Saturday, Palestinian media reported.",
+   "url": "https://tribune.com.pk/story/2639283/israeli-forces-shoot-palestinian-child-detain-2-in-west-bank-raids",
+   "date": "2026-11-08T00:40:00+00:00",
+   "seen": "2026-11-08T17:15:04.768585+00:00"
   }
  ],
- "truce": [],
+ "truce": [
+  {
+   "war": "russia-ukraine",
+   "kind": "end",
+   "outlet": "Africanews",
+   "partisan": false,
+   "title": "Ukraine: Russian strikes hit Kyiv region, damaging infrastructure",
+   "sentence": "Firefighters battled a major blaze as Ukraine faced renewed attacks on its energy network.",
+   "url": "http://www.africanews.com/2026/11/07/ukraine-russian-strikes-hit-kyiv-region-damaging-infrastructure/",
+   "date": "2026-11-07T21:45:36+00:00"
+  }
+ ],
  "withdrawals": [],
  "candidates": [
   {

@@ -1,6 +1,6 @@
 // written by trawler.py — loaded automatically by commandcenter-map.html
 window.TRAWLER_GROUPINGS = {
- "generated": "2026-11-07T16:59:02.874202+00:00",
+ "generated": "2026-11-08T17:14:19.765169+00:00",
  "extractor": "rules",
  "verification": {
   "wikidata": true,
@@ -13,7 +13,7 @@ window.TRAWLER_GROUPINGS = {
    "conflict": "Wikidata contradicts the claim — review"
   }
  },
- "articles_in_store": 584,
+ "articles_in_store": 690,
  "blocs": {
   "EU": {
    "name": "European Union",
@@ -149,6 +149,25 @@ window.TRAWLER_GROUPINGS = {
      ]
     },
     {
+     "country": "CAN",
+     "action": "joined",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "independent_outlets": 1,
+     "evidence": [
+      {
+       "source": "CBC World",
+       "domain": "cbc.ca",
+       "title": "What needs to happen for Canada to join Europe's flagship student exchange program?",
+       "url": "https://www.cbc.ca/news/politics/erasmus-students-youth-european-union-9.7408763?cmp=rss",
+       "date": "2026-11-08T09:00:00+00:00",
+       "sentence": "Joining was one of the most concrete examples Carney gave when he announced in September that Canada was pursuing an \"alliance for the future\" with the EU.",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
      "country": "MNE",
      "action": "joined",
      "status": "speculative",
@@ -280,19 +299,42 @@ window.TRAWLER_GROUPINGS = {
     "qid": "Q7184",
     "label": null
    },
-   "baseline_audit": {
-    "in_wikidata_not_baseline": [],
-    "in_baseline_not_wikidata": [
-     "DNK",
-     "NLD"
-    ]
-   },
+   "baseline_audit": null,
    "changes": [
+    {
+     "country": "UKR",
+     "action": "joined",
+     "status": "corroborated",
+     "wikidata": "unknown",
+     "independent_outlets": 2,
+     "evidence": [
+      {
+       "source": "CBC World",
+       "domain": "cbc.ca",
+       "title": "Death toll from Russian attack in Ukraine's Zaporizhzhia region climbs to 53",
+       "url": "https://www.cbc.ca/news/world/ukraine-zaporizhzhia-attack-russia-melania-trump-9.7411754?cmp=rss",
+       "date": "2026-11-06T12:25:34+00:00",
+       "sentence": "Moscow hopes Trump can pressure Kyiv into agreeing a deal that meets many of its conditions, such as full Russian control of Ukraine's Donbas region and a bar on Ukraine joining NATO.",
+       "hedged": false,
+       "syndicated_copy": false
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Blackouts and water shortages in Kyiv after Russia strikes Ukraine’s energy grid",
+       "url": "https://www.theguardian.com/world/2026/nov/07/blackout-water-shortage-kyiv-russia-strike-ukraine-energy-grid",
+       "date": "2026-11-07T13:03:03+00:00",
+       "sentence": "Shortly before invading Ukraine, the Russian president, Vladimir Putin, demanded that Nato go back to its pre-1997 posture – before the Baltic states and nations in eastern Europe and the Balkans joined.",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
     {
      "country": "FRA",
      "action": "left",
-     "status": "conflict",
-     "wikidata": "disagrees",
+     "status": "single-source",
+     "wikidata": "unknown",
      "independent_outlets": 1,
      "evidence": [
       {
@@ -319,28 +361,37 @@ window.TRAWLER_GROUPINGS = {
     },
     {
      "country": "UKR",
-     "action": "joined",
-     "status": "corroborated",
+     "action": "applied",
+     "status": "single-source",
      "wikidata": "unknown",
-     "independent_outlets": 2,
+     "independent_outlets": 1,
      "evidence": [
       {
-       "source": "CBC World",
-       "domain": "cbc.ca",
-       "title": "Death toll from Russian attack in Ukraine's Zaporizhzhia region climbs to 53",
-       "url": "https://www.cbc.ca/news/world/ukraine-zaporizhzhia-attack-russia-melania-trump-9.7411754?cmp=rss",
-       "date": "2026-11-06T12:25:34+00:00",
-       "sentence": "Moscow hopes Trump can pressure Kyiv into agreeing a deal that meets many of its conditions, such as full Russian control of Ukraine's Donbas region and a bar on Ukraine joining NATO.",
+       "source": "France 24",
+       "domain": "france24.com",
+       "title": "Europe will take part in US-mediated Ukraine talks in Abu Dhabi, French FM says",
+       "url": "https://www.france24.com/en/europe/20261108-europe-will-take-part-us-mediated-ukraine-peace-talks-abu-dhabi-french-fm-says",
+       "date": "2026-11-08T14:16:31+00:00",
+       "sentence": "A NATO spokeswoman said they \"sought to advance a just and sustainable end to the war in Ukraine\".",
        "hedged": false,
        "syndicated_copy": false
-      },
+      }
+     ]
+    },
+    {
+     "country": "UKR",
+     "action": "left",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "independent_outlets": 1,
+     "evidence": [
       {
-       "source": "The Guardian World",
-       "domain": "theguardian.com",
-       "title": "Blackouts and water shortages in Kyiv after Russia strikes Ukraine’s energy grid",
-       "url": "https://www.theguardian.com/world/2026/nov/07/blackout-water-shortage-kyiv-russia-strike-ukraine-energy-grid",
-       "date": "2026-11-07T13:03:03+00:00",
-       "sentence": "Shortly before invading Ukraine, the Russian president, Vladimir Putin, demanded that Nato go back to its pre-1997 posture – before the Baltic states and nations in eastern Europe and the Balkans joined.",
+       "source": "France 24",
+       "domain": "france24.com",
+       "title": "Europe will take part in US-mediated Ukraine talks in Abu Dhabi, French FM says",
+       "url": "https://www.france24.com/en/europe/20261108-europe-will-take-part-us-mediated-ukraine-peace-talks-abu-dhabi-french-fm-says",
+       "date": "2026-11-08T14:16:31+00:00",
+       "sentence": "Before launching the war in Ukraine in 2022, the Kremlin delivered an ultimatum to NATO which included a demand that the alliance's troops be withdrawn from eastern Europe.",
        "hedged": false,
        "syndicated_copy": false
       }
@@ -1066,6 +1117,26 @@ window.TRAWLER_GROUPINGS = {
    ]
   },
   {
+   "group": "European Union",
+   "country": "CAN",
+   "action": "joined",
+   "status": "single-source",
+   "wikidata": "unknown",
+   "independent_outlets": 1,
+   "evidence": [
+    {
+     "source": "CBC World",
+     "domain": "cbc.ca",
+     "title": "What needs to happen for Canada to join Europe's flagship student exchange program?",
+     "url": "https://www.cbc.ca/news/politics/erasmus-students-youth-european-union-9.7408763?cmp=rss",
+     "date": "2026-11-08T09:00:00+00:00",
+     "sentence": "Joining was one of the most concrete examples Carney gave when he announced in September that Canada was pursuing an \"alliance for the future\" with the EU.",
+     "hedged": false,
+     "syndicated_copy": false
+    }
+   ]
+  },
+  {
    "group": "NATO",
    "country": "UKR",
    "action": "joined",
@@ -1099,8 +1170,8 @@ window.TRAWLER_GROUPINGS = {
    "group": "NATO",
    "country": "FRA",
    "action": "left",
-   "status": "conflict",
-   "wikidata": "disagrees",
+   "status": "single-source",
+   "wikidata": "unknown",
    "independent_outlets": 1,
    "evidence": [
     {
@@ -1120,6 +1191,46 @@ window.TRAWLER_GROUPINGS = {
      "url": "https://www.france24.com/en/france/20261107-french-presidential-hopeful-m%C3%A9lenchon-launches-campaign-by-vowing-lower-retirement-age",
      "date": "2026-11-07T14:44:24+00:00",
      "sentence": "France previously withdrew from NATO's integrated military command in 1966 under president Charles de Gaulle, a decision later reversed under right-wing president Nicolas Sarkozy in 2009.",
+     "hedged": false,
+     "syndicated_copy": false
+    }
+   ]
+  },
+  {
+   "group": "NATO",
+   "country": "UKR",
+   "action": "applied",
+   "status": "single-source",
+   "wikidata": "unknown",
+   "independent_outlets": 1,
+   "evidence": [
+    {
+     "source": "France 24",
+     "domain": "france24.com",
+     "title": "Europe will take part in US-mediated Ukraine talks in Abu Dhabi, French FM says",
+     "url": "https://www.france24.com/en/europe/20261108-europe-will-take-part-us-mediated-ukraine-peace-talks-abu-dhabi-french-fm-says",
+     "date": "2026-11-08T14:16:31+00:00",
+     "sentence": "A NATO spokeswoman said they \"sought to advance a just and sustainable end to the war in Ukraine\".",
+     "hedged": false,
+     "syndicated_copy": false
+    }
+   ]
+  },
+  {
+   "group": "NATO",
+   "country": "UKR",
+   "action": "left",
+   "status": "single-source",
+   "wikidata": "unknown",
+   "independent_outlets": 1,
+   "evidence": [
+    {
+     "source": "France 24",
+     "domain": "france24.com",
+     "title": "Europe will take part in US-mediated Ukraine talks in Abu Dhabi, French FM says",
+     "url": "https://www.france24.com/en/europe/20261108-europe-will-take-part-us-mediated-ukraine-peace-talks-abu-dhabi-french-fm-says",
+     "date": "2026-11-08T14:16:31+00:00",
+     "sentence": "Before launching the war in Ukraine in 2022, the Kremlin delivered an ultimatum to NATO which included a demand that the alliance's troops be withdrawn from eastern Europe.",
      "hedged": false,
      "syndicated_copy": false
     }

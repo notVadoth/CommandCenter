@@ -460,5 +460,164 @@
    "lat": 34.30083333333334,
    "lon": 36.115833333333335
   }
- ]
+ ],
+ "Yemen|YEM": [
+  {
+   "qid": "Q805",
+   "iso": "YEM",
+   "lat": 15.5,
+   "lon": 48
+  },
+  {
+   "qid": "Q199841",
+   "iso": "YEM",
+   "lat": 12.8,
+   "lon": 45.03
+  }
+ ],
+ "Yemeni|YEM": [
+  {
+   "qid": "Q805",
+   "iso": "YEM",
+   "lat": 15.5,
+   "lon": 48
+  }
+ ],
+ "Aramco|YEM": [],
+ "Riyadh|YEM": [],
+ "RT|RUS,UKR": [],
+ "Abqaiq|YEM": [],
+ "CIS Council|RUS,UKR": [],
+ "Heads|RUS,UKR": [],
+ "State|RUS,UKR": [],
+ "Turkmenistan|RUS,UKR": [],
+ "LPR|RUS,UKR": [
+  {
+   "qid": "Q16746854",
+   "iso": "RUS",
+   "lat": 49,
+   "lon": 39
+  }
+ ],
+ "Gaza's Khan Younis|PSE": [],
+ "Gaza's Khan Younis|LBN": [],
+ "Hebron's Masafer Yatta|PSE": [],
+ "Hebron's Masafer Yatta|LBN": [],
+ "Saudi Arabia's King|YEM": [],
+ "King Khalid International|YEM": [],
+ "Salfit|PSE": [
+  {
+   "qid": "Q1972013",
+   "iso": "PSE",
+   "lat": 32.081944444444,
+   "lon": 35.182222222222
+  },
+  {
+   "qid": "Q926530",
+   "iso": "PSE",
+   "lat": 32.118194,
+   "lon": 35.090278
+  },
+  {
+   "qid": "Q30081250",
+   "iso": "PSE",
+   "lat": 32.0735505,
+   "lon": 35.1737527
+  },
+  {
+   "qid": "Q56376703",
+   "iso": "PSE",
+   "lat": 32.082027777777775,
+   "lon": 35.1825
+  },
+  {
+   "qid": "Q49529776",
+   "iso": "PSE",
+   "lat": 32.08763,
+   "lon": 35.18383
+  },
+  {
+   "qid": "Q123738100",
+   "iso": "PSE",
+   "lat": 32.0848416,
+   "lon": 35.1819416
+  },
+  {
+   "qid": "Q120469189",
+   "iso": "PSE",
+   "lat": 32.0820425,
+   "lon": 35.1773102
+  },
+  {
+   "qid": "Q129256662",
+   "iso": "PSE",
+   "lat": 32.0818652,
+   "lon": 35.176594
+  }
+ ],
+ "Salfit|LBN": [],
+ "Tehran|MMR": [],
+ "Kafr Saba|PSE": [],
+ "Qalqilya|PSE": [
+  {
+   "qid": "Q623159",
+   "iso": "PSE",
+   "lat": 32.190377777778,
+   "lon": 34.968508333333
+  },
+  {
+   "qid": "Q1074443",
+   "iso": "PSE",
+   "lat": 32.185833,
+   "lon": 35.065833
+  },
+  {
+   "qid": "Q2891853",
+   "iso": "PSE",
+   "lat": 32.1953845,
+   "lon": 34.9707511
+  }
+ ],
+ "Kafr Saba|LBN": [],
+ "Qalqilya|LBN": [],
+ "Dobropolye|RUS,UKR": [
+  {
+   "qid": "Q21335994",
+   "iso": "RUS",
+   "lat": 50.435,
+   "lon": 35.7946
+  }
+ ],
+ "Ukraine’s Zaporizhzhia|RUS,UKR": [],
+ "Bab al-Mandab|YEM": [
+  {
+   "qid": "Q83318",
+   "iso": "YEM",
+   "lat": 12.583333333333,
+   "lon": 43.333333333333
+  }
+ ],
+ "Maqja|SDN": [],
+ "Ayyal Bakhit|SDN": [],
+ "Ayyal Bakhit|MMR": [],
+ "West Kordofan|MMR": [],
+ "Blue Nile State|SDN": [
+  {
+   "qid": "Q309489",
+   "iso": "SDN",
+   "lat": 11.35056,
+   "lon": 34.13444
+  }
+ ],
+ "Makja|SDN": [],
+ "Iyal Bakhit|SDN": [
+  {
+   "qid": "Q8076321",
+   "iso": "SDN",
+   "lat": 13.416666666667,
+   "lon": 28.683333333333
+  }
+ ],
+ "El Khuwei|SDN": [],
+ "Congo|BFA,MLI,NER": []
 }
