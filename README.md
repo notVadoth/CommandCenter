@@ -2,7 +2,7 @@
 
 A web app to interactively analyse geopolitics with Current affairs, Blocs and macroeconomic figures available at the user's discretion.
 
-**Live site:** https://notvadoth.github.io/CommandCenter/
+**Live site:** https://notvadoth.github.io/Command_Centre/
 
 Command Centre is a single-page world map that brings together political geography, economic indicators, contested territory, multilateral blocs, market data and daily news. It runs entirely in the browser; a scheduled job refreshes its data files once a day.
 
