@@ -1,6 +1,6 @@
 // written by trawler.py — loaded automatically by commandcenter-map.html
 window.TRAWLER_GROUPINGS = {
- "generated": "2026-11-09T20:07:59.864511+00:00",
+ "generated": "2026-11-09T21:37:26.139365+00:00",
  "extractor": "rules",
  "verification": {
   "wikidata": true,
@@ -13,7 +13,7 @@ window.TRAWLER_GROUPINGS = {
    "conflict": "Wikidata contradicts the claim — review"
   }
  },
- "articles_in_store": 817,
+ "articles_in_store": 841,
  "blocs": {
   "EU": {
    "name": "European Union",
@@ -318,8 +318,43 @@ window.TRAWLER_GROUPINGS = {
     "qid": "Q7184",
     "label": null
    },
-   "baseline_audit": null,
+   "baseline_audit": {
+    "in_wikidata_not_baseline": [],
+    "in_baseline_not_wikidata": [
+     "DNK",
+     "NLD"
+    ]
+   },
    "changes": [
+    {
+     "country": "FRA",
+     "action": "left",
+     "status": "conflict",
+     "wikidata": "disagrees",
+     "independent_outlets": 1,
+     "evidence": [
+      {
+       "source": "France 24",
+       "domain": "france24.com",
+       "title": "🔴 Watch live: 'We must change everything,' French far-left presidential candidate Mélenchon says",
+       "url": "https://www.france24.com/en/france/20261107-french-presidential-hopeful-m%C3%A9lenchon-launches-campaign-by-vowing-lower-retirement-age",
+       "date": "2026-11-07T14:44:24+00:00",
+       "sentence": "On ​foreign policy, Mélenchon's programme reiterates his long-standing criticism of NATO and calls for France's gradual withdrawal from the military alliance, starting with an exit from its integrated military command.",
+       "hedged": false,
+       "syndicated_copy": false
+      },
+      {
+       "source": "France 24",
+       "domain": "france24.com",
+       "title": "🔴 Watch live: 'We must change everything,' French far-left presidential candidate Mélenchon says",
+       "url": "https://www.france24.com/en/france/20261107-french-presidential-hopeful-m%C3%A9lenchon-launches-campaign-by-vowing-lower-retirement-age",
+       "date": "2026-11-07T14:44:24+00:00",
+       "sentence": "France previously withdrew from NATO's integrated military command in 1966 under president Charles de Gaulle, a decision later reversed under right-wing president Nicolas Sarkozy in 2009.",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
     {
      "country": "UKR",
      "action": "joined",
@@ -344,35 +379,6 @@ window.TRAWLER_GROUPINGS = {
        "url": "https://www.theguardian.com/world/2026/nov/07/blackout-water-shortage-kyiv-russia-strike-ukraine-energy-grid",
        "date": "2026-11-07T13:03:03+00:00",
        "sentence": "Shortly before invading Ukraine, the Russian president, Vladimir Putin, demanded that Nato go back to its pre-1997 posture – before the Baltic states and nations in eastern Europe and the Balkans joined.",
-       "hedged": false,
-       "syndicated_copy": false
-      }
-     ]
-    },
-    {
-     "country": "FRA",
-     "action": "left",
-     "status": "single-source",
-     "wikidata": "unknown",
-     "independent_outlets": 1,
-     "evidence": [
-      {
-       "source": "France 24",
-       "domain": "france24.com",
-       "title": "🔴 Watch live: 'We must change everything,' French far-left presidential candidate Mélenchon says",
-       "url": "https://www.france24.com/en/france/20261107-french-presidential-hopeful-m%C3%A9lenchon-launches-campaign-by-vowing-lower-retirement-age",
-       "date": "2026-11-07T14:44:24+00:00",
-       "sentence": "On ​foreign policy, Mélenchon's programme reiterates his long-standing criticism of NATO and calls for France's gradual withdrawal from the military alliance, starting with an exit from its integrated military command.",
-       "hedged": false,
-       "syndicated_copy": false
-      },
-      {
-       "source": "France 24",
-       "domain": "france24.com",
-       "title": "🔴 Watch live: 'We must change everything,' French far-left presidential candidate Mélenchon says",
-       "url": "https://www.france24.com/en/france/20261107-french-presidential-hopeful-m%C3%A9lenchon-launches-campaign-by-vowing-lower-retirement-age",
-       "date": "2026-11-07T14:44:24+00:00",
-       "sentence": "France previously withdrew from NATO's integrated military command in 1966 under president Charles de Gaulle, a decision later reversed under right-wing president Nicolas Sarkozy in 2009.",
        "hedged": false,
        "syndicated_copy": false
       }
@@ -1209,8 +1215,8 @@ window.TRAWLER_GROUPINGS = {
    "group": "NATO",
    "country": "FRA",
    "action": "left",
-   "status": "single-source",
-   "wikidata": "unknown",
+   "status": "conflict",
+   "wikidata": "disagrees",
    "independent_outlets": 1,
    "evidence": [
     {

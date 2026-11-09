@@ -1023,6 +1023,42 @@
    "url": "https://indepthnews.net/eepa-reports-on-endf-reinforcements-sent-to-rama-and-sheraro/",
    "date": "2026-11-08T16:00:00+00:00",
    "seen": "2026-11-09T20:08:51.082501+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis"
+   ],
+   "place": "Taiz",
+   "iso": "YEM",
+   "province": "Ta'izz Governorate",
+   "province_id": "18629408B66245584752084",
+   "outlet": "yemenmonitor",
+   "host": "yemenmonitor.com",
+   "partisan": false,
+   "title": "Yemeni Army and Popular Resistance Repel Major Houthi Offensive on Al-Aqroudh Front in Taiz",
+   "sentence": "Yemeni Army and Popular Resistance Repel Major Houthi Offensive on Al-Aqroudh Front in Taiz.",
+   "url": "https://www.yemenmonitor.com/en/Details/ArtMID/908/ArticleID/187340",
+   "date": "2026-11-09T02:01:00+00:00",
+   "seen": "2026-11-09T21:37:51.848437+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis"
+   ],
+   "place": "Taiz",
+   "iso": "YEM",
+   "province": "Ta'izz Governorate",
+   "province_id": "18629408B66245584752084",
+   "outlet": "yemenmonitor",
+   "host": "yemenmonitor.com",
+   "partisan": false,
+   "title": "Yemeni Army Repels Two Houthi Attacks South of Taiz",
+   "sentence": "Yemeni Army Repels Two Houthi Attacks South of Taiz.",
+   "url": "https://www.yemenmonitor.com/en/Details/ArtMID/908/ArticleID/187348",
+   "date": "2026-11-09T02:01:00+00:00",
+   "seen": "2026-11-09T21:37:51.848437+00:00"
   }
  ],
  "truce": [

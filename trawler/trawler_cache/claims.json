@@ -6535,6 +6535,198 @@
    "date": "2026-11-08T18:18:03+00:00",
    "seen": "2026-11-09T20:07:59.864511+00:00",
    "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/ck1l3le7q29vo?at_medium=RSS&at_campaign=rss": {
+   "title": "Judge denies motion to dismiss Lindsay Clancy's murder case",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-09T21:31:49+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/videos/cvp8g82pled5o?at_medium=RSS&at_campaign=rss": {
+   "title": "Millions fill Buenos Aires streets to welcome Pope Leo XIV",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-09T19:09:27+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/uk-news/2026/nov/09/tommy-walsh-co-presenter-of-bbcs-ground-force-dies-aged-69": {
+   "title": "Tommy Walsh, co-presenter of BBC’s Ground Force, dies aged 69",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-09T19:59:36+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/us-news/2026/nov/09/citizen-shot-ice-officer-lawsuit-california": {
+   "title": "US citizen shot by ICE officer near children’s bus stop sues government for $25m",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-09T21:27:41+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/us-news/2026/nov/09/charlie-kirk-murder-trial": {
+   "title": "Suspect in Charlie Kirk killing to stand trial for murder in July 2028",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-09T20:55:57+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/us-news/2026/nov/09/lindsay-clancy-judge-retrial": {
+   "title": "Judge clears way for Lindsay Clancy to be retried on murder charges",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-09T20:42:22+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/technology/2026/nov/09/nvidia-affair-huang-trump-national-security": {
+   "title": "The AI poster boy, the ‘Chinese spy’ and Trump: how an affair may have harmed US security",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-09T20:01:05+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/9/cop31-opens-amid-energy-crisis-as-activists-demand-climate-action?traffic_source=rss": {
+   "title": "COP31 opens amid energy crisis as activists demand climate action",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-09T21:18:25+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/inside-story/2026/11/9/will-najib-razak-be-transferred-to-house-arrest?traffic_source=rss": {
+   "title": "Will Najib Razak be transferred to house arrest?",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-09T21:13:02+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/9/republican-lawmaker-moves-to-impeach-us-defense-secretary-hegseth?traffic_source=rss": {
+   "title": "Republican lawmaker moves to impeach US Defense Secretary Hegseth",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-09T21:04:11+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/9/cyprus-rivals-agree-new-crossings-across-islands-dividing-line?traffic_source=rss": {
+   "title": "Cyprus rivals agree new crossings across island’s dividing line",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-09T20:50:20+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/9/deadly-explosion-at-iron-and-steel-plant-in-turkiye?traffic_source=rss": {
+   "title": "Deadly explosion at Iron and steel plant in Turkiye",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-09T20:19:18+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/9/russell-brand-sentenced-to-10-5-years-over-sexual-assault-charges?traffic_source=rss": {
+   "title": "Russell Brand sentenced to 10.5 years over sexual assault charges",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-09T20:08:18+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/9/explosion-at-turkish-steel-plant-kills-at-least-16-people?traffic_source=rss": {
+   "title": "Explosion at Turkish steel plant kills at least 16 people",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-09T19:58:40+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/9/south-africa-detains-foreigners-suspected-of-heading-to-join-russian-forces?traffic_source=rss": {
+   "title": "South Africa detains foreigners suspected of heading to join Russian forces",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-09T19:56:45+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/9/how-is-gaza-coping-with-another-severe-winter?traffic_source=rss": {
+   "title": "How is Gaza coping with another severe winter?",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-09T19:47:46+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/nvidia-s-huang-scandal-rattles-ai-industry-built-around-him": {
+   "title": "Nvidia's Huang scandal rattles AI industry built around him",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-09T20:09:22+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/paris-prosecutor-opens-probe-into-irgc-cyber-unit-shahid-kaveh-over-fridge-cyberattacks": {
+   "title": "Paris prosecutor opens probe into IRGC cyber unit Shahid Kaveh over fridge cyberattacks",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-09T20:06:09+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/sexual-predator-russell-brand-jailed-for-10-years-for-rape-assault": {
+   "title": "'Sexual predator' Russell Brand jailed for 10 years for rape, assault",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-09T20:03:55+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/tv-shows/spotlight/20261109-will-eisenkot-succeed-in-minefield-of-israeli-politics-where-so-many-other-generals-have-failed": {
+   "title": "Will Eisenkot succeed in 'minefield of Israeli politics' where 'so many other generals' have failed?",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-09T20:03:31+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/world/hegaseth-impeachment-motion-thomas-massie-9.7415356?cmp=rss": {
+   "title": "U.S. House Republican moves to force vote on impeaching Pete Hegseth",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-09T20:24:23+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/world/tyler-robinson-trial-date-utah-9.7415504?cmp=rss": {
+   "title": "Tyler Robinson, man accused of shooting Charlie Kirk, to face trial in 2028",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-09T21:16:47+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/world/massachusetts-judge-clancy-trial-9.7415418?cmp=rss": {
+   "title": "Judge clears way for Lindsay Clancy to face potential 2nd trial",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-09T20:49:41+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/entertainment/arnold-schwarzenegger-son-baena-bodybuilding-9.7415339?cmp=rss": {
+   "title": "Like father, like son: Arnold Schwarzenegger’s son muscles into top 5 at bodybuilding competition",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-09T20:19:36+00:00",
+   "seen": "2026-11-09T21:37:26.139365+00:00",
+   "n_claims": 0
   }
  },
  "claims": [
