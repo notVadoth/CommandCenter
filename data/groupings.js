@@ -1,6 +1,6 @@
 // written by trawler.py — loaded automatically by commandcenter-map.html
 window.TRAWLER_GROUPINGS = {
- "generated": "2026-11-08T17:14:19.765169+00:00",
+ "generated": "2026-11-09T20:07:59.864511+00:00",
  "extractor": "rules",
  "verification": {
   "wikidata": true,
@@ -13,7 +13,7 @@ window.TRAWLER_GROUPINGS = {
    "conflict": "Wikidata contradicts the claim — review"
   }
  },
- "articles_in_store": 690,
+ "articles_in_store": 817,
  "blocs": {
   "EU": {
    "name": "European Union",
@@ -162,6 +162,25 @@ window.TRAWLER_GROUPINGS = {
        "url": "https://www.cbc.ca/news/politics/erasmus-students-youth-european-union-9.7408763?cmp=rss",
        "date": "2026-11-08T09:00:00+00:00",
        "sentence": "Joining was one of the most concrete examples Carney gave when he announced in September that Canada was pursuing an \"alliance for the future\" with the EU.",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
+     "country": "RUS",
+     "action": "applied",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "independent_outlets": 1,
+     "evidence": [
+      {
+       "source": "France 24",
+       "domain": "france24.com",
+       "title": "Russian network used social media to blame French riots on immigration, EU report says",
+       "url": "https://www.france24.com/en/france/20261109-russian-network-used-social-media-to-blame-french-riots-on-immigration-eu-report-says",
+       "date": "2026-11-09T15:38:42+00:00",
+       "sentence": "The EU analysis, which covers the period from October 7 to 21, found that Russia sought to \"depict the French leadership as weak and increasingly ‌authoritarian\".",
        "hedged": false,
        "syndicated_copy": false
       }
@@ -1131,6 +1150,26 @@ window.TRAWLER_GROUPINGS = {
      "url": "https://www.cbc.ca/news/politics/erasmus-students-youth-european-union-9.7408763?cmp=rss",
      "date": "2026-11-08T09:00:00+00:00",
      "sentence": "Joining was one of the most concrete examples Carney gave when he announced in September that Canada was pursuing an \"alliance for the future\" with the EU.",
+     "hedged": false,
+     "syndicated_copy": false
+    }
+   ]
+  },
+  {
+   "group": "European Union",
+   "country": "RUS",
+   "action": "applied",
+   "status": "single-source",
+   "wikidata": "unknown",
+   "independent_outlets": 1,
+   "evidence": [
+    {
+     "source": "France 24",
+     "domain": "france24.com",
+     "title": "Russian network used social media to blame French riots on immigration, EU report says",
+     "url": "https://www.france24.com/en/france/20261109-russian-network-used-social-media-to-blame-french-riots-on-immigration-eu-report-says",
+     "date": "2026-11-09T15:38:42+00:00",
+     "sentence": "The EU analysis, which covers the period from October 7 to 21, found that Russia sought to \"depict the French leadership as weak and increasingly ‌authoritarian\".",
      "hedged": false,
      "syndicated_copy": false
     }

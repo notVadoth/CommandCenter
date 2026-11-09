@@ -619,5 +619,153 @@
   }
  ],
  "El Khuwei|SDN": [],
- "Congo|BFA,MLI,NER": []
+ "Congo|BFA,MLI,NER": [],
+ "Trypilska Thermal Power|RUS,UKR": [
+  {
+   "qid": "Q12007778",
+   "iso": "UKR",
+   "lat": 50.134671,
+   "lon": 30.746402
+  }
+ ],
+ "Khortytsia Island|RUS,UKR": [],
+ "ZNPP|RUS,UKR": [
+  {
+   "qid": "Q909477",
+   "iso": "UKR",
+   "lat": 47.50833333333333,
+   "lon": 34.59166666666667
+  }
+ ],
+ "Lod|PSE": [],
+ "Lod|LBN": [],
+ "Bethlehem|PSE": [
+  {
+   "qid": "Q5776",
+   "iso": "PSE",
+   "lat": 31.704444444444,
+   "lon": 35.206111111111
+  }
+ ],
+ "Bethlehem|LBN": [],
+ "Pokrovsk|RUS,UKR": [
+  {
+   "qid": "Q1000446",
+   "iso": "UKR",
+   "lat": 48.283333333333,
+   "lon": 37.183333333333
+  },
+  {
+   "qid": "Q181548",
+   "iso": "RUS",
+   "lat": 61.483333333333,
+   "lon": 129.15
+  },
+  {
+   "qid": "Q103821232",
+   "iso": "UKR",
+   "lat": 48.204594,
+   "lon": 37.384434
+  },
+  {
+   "qid": "Q18408176",
+   "iso": "RUS",
+   "lat": 54.07,
+   "lon": 43.62
+  },
+  {
+   "qid": "Q2888942",
+   "iso": "UKR",
+   "lat": 48.284444444444,
+   "lon": 37.184527777778
+  },
+  {
+   "qid": "Q16022681",
+   "iso": "RUS",
+   "lat": 54.1175,
+   "lon": 35.625
+  },
+  {
+   "qid": "Q7208717",
+   "iso": "RUS",
+   "lat": 57.24506,
+   "lon": 66.793749
+  },
+  {
+   "qid": "Q543321",
+   "iso": "UKR",
+   "lat": 48.2597,
+   "lon": 37.3767
+  },
+  {
+   "qid": "Q2636982",
+   "iso": "UKR",
+   "lat": 47.9799,
+   "lon": 36.2303
+  },
+  {
+   "qid": "Q2217102",
+   "iso": "RUS",
+   "lat": 52.61222222,
+   "lon": 36.86805556
+  },
+  {
+   "qid": "Q2367649",
+   "iso": "RUS",
+   "lat": 55.82111111,
+   "lon": 37.47416667
+  }
+ ],
+ "Houthi|SDN": [],
+ "Kahlan Front|YEM": [],
+ "Al-Mahawala|YEM": [],
+ "Al-Mahawala|BFA,MLI,NER": [],
+ "Lahj|BFA,MLI,NER": [],
+ "Al-Mahawala|SOM": [],
+ "Lahj|SOM": [],
+ "Al-Mudaribah|YEM": [],
+ "Al-Mahawila|YEM": [],
+ "Houthis|SDN": [],
+ "Al-Mudaribah|SDN": [],
+ "Riyadh's King Abdullah|YEM": [],
+ "Al-Khuwei|SDN": [],
+ "RSF|MMR": [],
+ "Al-Khuwei|MMR": [],
+ "West Kordofan State|SDN": [
+  {
+   "qid": "Q536396",
+   "iso": "SDN",
+   "lat": 12,
+   "lon": 28.15
+  }
+ ],
+ "West Kordofan State|MMR": [],
+ "Damazin|SDN": [
+  {
+   "qid": "Q1708778",
+   "iso": "SDN",
+   "lat": 11.785833333333,
+   "lon": 34.336388888889
+  },
+  {
+   "qid": "Q311307",
+   "iso": "SDN",
+   "lat": 11.766666666667,
+   "lon": 34.35
+  }
+ ],
+ "Sudan’s Blue Nile|SDN": [],
+ "Damazin|MMR": [],
+ "Sudan’s Blue Nile|MMR": [],
+ "ENDF|SDN": [],
+ "Sudan|SDN": [
+  {
+   "qid": "Q1049",
+   "iso": "SDN",
+   "lat": 15,
+   "lon": 32
+  }
+ ],
+ "Ethiopia|SDN": [],
+ "Jowhar|SOM": []
 }

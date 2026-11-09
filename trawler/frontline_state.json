@@ -751,6 +751,278 @@
    "url": "https://tribune.com.pk/story/2639283/israeli-forces-shoot-palestinian-child-detain-2-in-west-bank-raids",
    "date": "2026-11-08T00:40:00+00:00",
    "seen": "2026-11-08T17:15:04.768585+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Dnipro",
+   "iso": "UKR",
+   "province": "Dnipropetrovsk Oblast",
+   "province_id": "14850775B41808765507575",
+   "outlet": "Ukrainska Pravda",
+   "host": "pravda.com.ua",
+   "partisan": false,
+   "title": "Russian attack leaves large parts of Dnipro and Kamianske without power",
+   "sentence": "Russian attack leaves large parts of Dnipro and Kamianske without power.",
+   "url": "https://www.pravda.com.ua/eng/news/2026/11/09/8062040/",
+   "date": "2026-11-09T19:34:00+00:00",
+   "seen": "2026-11-09T20:08:51.082501+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "Trypilska Thermal Power",
+   "iso": "UKR",
+   "province": "Kyiv Oblast",
+   "province_id": "14850775B37539954297462",
+   "outlet": "Ukrainska Pravda",
+   "host": "pravda.com.ua",
+   "partisan": false,
+   "title": "Russia strikes Trypilska power plant crucial for three oblasts: consequences \"extremely serious\" – photos",
+   "sentence": "A recent Russian attack on the Trypilska Thermal Power Plant in Kyiv Oblast has caused \"extremely serious\" damage, Centrenergo reports.",
+   "url": "https://www.pravda.com.ua/eng/news/2026/11/09/8062006/",
+   "date": "2026-11-09T16:00:00+00:00",
+   "seen": "2026-11-09T20:08:51.082501+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Zaporizhzhia",
+   "iso": "UKR",
+   "province": "Zaporizhia Oblast",
+   "province_id": "14850775B92888097715572",
+   "outlet": "Ukrainska Pravda",
+   "host": "pravda.com.ua",
+   "partisan": false,
+   "title": "Russian attack damages Actor's House theatre building in Zaporizhzhia",
+   "sentence": "Russian attack damages Actor's House theatre building in Zaporizhzhia.",
+   "url": "https://www.pravda.com.ua/eng/news/2026/11/09/8061962/",
+   "date": "2026-11-09T13:21:00+00:00",
+   "seen": "2026-11-09T20:08:51.082501+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Ukraine"
+   ],
+   "place": "ZNPP",
+   "iso": "UKR",
+   "province": "Zaporizhia Oblast",
+   "province_id": "14850775B92888097715572",
+   "outlet": "TASS",
+   "host": "tass.com",
+   "partisan": true,
+   "title": "IAEA experts informed of ZNPP electrical technician’s death in Ukrainian attack — plant",
+   "sentence": "IAEA experts informed of ZNPP electrical technician’s death in Ukrainian attack",
+   "url": "https://tass.com/world/2214825",
+   "date": "2026-11-09T12:05:32+00:00",
+   "seen": "2026-11-09T20:08:51.082501+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "Gaza",
+   "iso": "PSE",
+   "province": "Gaza",
+   "province_id": "83478781B7121896376882",
+   "outlet": "Middle East Eye",
+   "host": "middleeasteye.net",
+   "partisan": false,
+   "title": "Nearly 80 percent of Britons see Israel as a threat to world peace",
+   "sentence": "The figure rose from 48 percent in 2005 to 78 percent this spring, two-and-a-half years into the genocide in Gaza and just after Israel and the US had attacked Iran.",
+   "url": "https://www.middleeasteye.net/news/nearly-80-percent-britons-see-israel-threat-world-peace-gaza-iran",
+   "date": "2026-11-09T13:21:20+00:00",
+   "seen": "2026-11-09T20:08:51.082501+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "Bethlehem",
+   "iso": "PSE",
+   "province": "West Bank",
+   "province_id": "83478781B28849486138516",
+   "outlet": "Anadolu Agency",
+   "host": "aa.com.tr",
+   "partisan": false,
+   "title": "Israel issues tender for over 700 settlement units near Bethlehem in occupied West Bank",
+   "sentence": "Israel issues tender for over 700 settlement units near Bethlehem in occupied West Bank.",
+   "url": "https://www.aa.com.tr/en/middle-east/israel-issues-tender-for-over-700-settlement-units-near-bethlehem-in-occupied-west-bank/4117276",
+   "date": "2026-11-09T11:58:18+00:00",
+   "seen": "2026-11-09T20:08:51.082501+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis"
+   ],
+   "place": "Lahj",
+   "iso": "YEM",
+   "province": "Lahij Governorate",
+   "province_id": "18629408B46389326189415",
+   "outlet": "Yemen Online",
+   "host": "yemenonline.info",
+   "partisan": false,
+   "title": "Yemeni Forces Capture Houthi Positions in Lahj, Repel Assaults on Kahlan Front...",
+   "sentence": "Yemeni Forces Capture Houthi Positions in Lahj, Repel Assaults on Kahlan Front....",
+   "url": "https://yemenonline.info/special-reports/14397",
+   "date": "2026-11-09T10:01:00+00:00",
+   "seen": "2026-11-09T20:08:51.082501+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis"
+   ],
+   "place": "Lahj",
+   "iso": "YEM",
+   "province": "Lahij Governorate",
+   "province_id": "18629408B46389326189415",
+   "outlet": "Asharq Al-Awsat",
+   "host": "english.aawsat.com",
+   "partisan": false,
+   "title": "Yemeni Army Launches Surprise Attack on Houthis in Al-Mudaribah, Killing and Wounding Dozens",
+   "sentence": "Fighting escalated across several fronts in Yemen on Monday as the government-aligned Nation Shield Forces announced a large-scale offensive against Houthi positions in Lahj province, while government ...",
+   "url": "https://english.aawsat.com/arab-world/5339346-yemeni-army-launches-surprise-attack-houthis-al-mudaribah-killing-and-wounding",
+   "date": "2026-11-09T07:59:00+00:00",
+   "seen": "2026-11-09T20:08:51.082501+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis"
+   ],
+   "place": "Yemen",
+   "iso": "YEM",
+   "province": "‘Adan Governorate",
+   "province_id": "18629408B11945654439238",
+   "outlet": "Asharq Al-Awsat on MSN",
+   "host": "msn.com",
+   "partisan": false,
+   "title": "Yemeni army launches surprise attack on Houthis in Al-Mudaribah, killing and wounding dozens",
+   "sentence": "Aden: Fighting escalated across several fronts in Yemen on Monday as the government-aligned Nation Shield Forces announced a large-scale offensive against Houthi positions in Lahj province, while ...",
+   "url": "https://www.msn.com/en-ae/news/other/yemeni-army-launches-surprise-attack-on-houthis-in-al-mudaribah-killing-and-wounding-dozens/ar-AA2h4ZRA",
+   "date": "2026-11-09T08:03:38+00:00",
+   "seen": "2026-11-09T20:08:51.082501+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis"
+   ],
+   "place": "Lahj",
+   "iso": "YEM",
+   "province": "Lahij Governorate",
+   "province_id": "18629408B46389326189415",
+   "outlet": "Asharq Al-Awsat on MSN",
+   "host": "msn.com",
+   "partisan": false,
+   "title": "Yemeni army launches surprise attack on Houthis in Al-Mudaribah, killing and wounding dozens",
+   "sentence": "Aden: Fighting escalated across several fronts in Yemen on Monday as the government-aligned Nation Shield Forces announced a large-scale offensive against Houthi positions in Lahj province, while ...",
+   "url": "https://www.msn.com/en-ae/news/other/yemeni-army-launches-surprise-attack-on-houthis-in-al-mudaribah-killing-and-wounding-dozens/ar-AA2h4ZRA",
+   "date": "2026-11-09T08:03:38+00:00",
+   "seen": "2026-11-09T20:08:51.082501+00:00"
+  },
+  {
+   "war": "sudan",
+   "sides": [
+    "SAF",
+    "RSF"
+   ],
+   "place": "West Kordofan State",
+   "iso": "SDN",
+   "province": "West Kordofan",
+   "province_id": "86620642B26042209819562",
+   "outlet": "Sudan Tribune on MSN",
+   "host": "msn.com",
+   "partisan": false,
+   "title": "Sudan army, allies advance against RSF in West Kordofan, down third drone",
+   "sentence": "Clashes intensified on Sunday between the Sudanese army, backed by allied forces, and the paramilitary Rapid Support Forces (RSF) in West Kordofan State.The military also ...",
+   "url": "https://www.msn.com/en-xl/news/other/sudan-army-allies-advance-against-rsf-in-west-kordofan-down-third-drone/ar-AA2h2ijR",
+   "date": "2026-11-08T17:07:52+00:00",
+   "seen": "2026-11-09T20:08:51.082501+00:00"
+  },
+  {
+   "war": "sudan",
+   "sides": [
+    "SAF"
+   ],
+   "place": "West Kordofan",
+   "iso": "SDN",
+   "province": "West Kordofan",
+   "province_id": "86620642B26042209819562",
+   "outlet": "Radio Tamazuj",
+   "host": "radiotamazuj.org",
+   "partisan": false,
+   "title": "Sudanese army reports gains in West Kordofan offensive",
+   "sentence": "Sudanese army reports gains in West Kordofan offensive.",
+   "url": "https://www.radiotamazuj.org/en/news/article/sudanese-army-reports-gains-in-west-kordofan-offensive",
+   "date": "2026-11-08T12:41:00+00:00",
+   "seen": "2026-11-09T20:08:51.082501+00:00"
+  },
+  {
+   "war": "sudan",
+   "sides": [
+    "RSF"
+   ],
+   "place": "Damazin",
+   "iso": "SDN",
+   "province": "Blue Nile",
+   "province_id": "86620642B86272532082738",
+   "outlet": "Radio Tamazuj",
+   "host": "radiotamazuj.org",
+   "partisan": false,
+   "title": "Damazin residents fear worsening insecurity amid escalating military operations",
+   "sentence": "Residents of Damazin, the capital of Sudan’s Blue Nile Region, are increasingly anxious amid rapidly unfolding military and security developments, reports of advances by the Rapid Support Forces (RSF) ...",
+   "url": "https://www.radiotamazuj.org/en/news/article/damazin-residents-fear-worsening-insecurity-amid-escalating-military-operations",
+   "date": "2026-11-08T16:00:00+00:00",
+   "seen": "2026-11-09T20:08:51.082501+00:00"
+  },
+  {
+   "war": "sudan",
+   "sides": [
+    "SAF"
+   ],
+   "place": "West Kordofan",
+   "iso": "SDN",
+   "province": "West Kordofan",
+   "province_id": "86620642B26042209819562",
+   "outlet": "IDN-InDepthNews",
+   "host": "indepthnews.net",
+   "partisan": false,
+   "title": "EEPA reports on ENDF reinforcements sent to Rama and Sheraro",
+   "sentence": "The following are the situation reports on ENDF reinforcements sent to Rama and Sheraro, SAF advance into West Kordofan, Tigrayans allegedly trafficked to fight in Sudan war, the situation in Ethiopia ...",
+   "url": "https://indepthnews.net/eepa-reports-on-endf-reinforcements-sent-to-rama-and-sheraro/",
+   "date": "2026-11-08T16:00:00+00:00",
+   "seen": "2026-11-09T20:08:51.082501+00:00"
+  },
+  {
+   "war": "sudan",
+   "sides": [
+    "SAF"
+   ],
+   "place": "Sudan",
+   "iso": "SDN",
+   "province": "North Kordofan",
+   "province_id": "86620642B75144405979625",
+   "outlet": "IDN-InDepthNews",
+   "host": "indepthnews.net",
+   "partisan": false,
+   "title": "EEPA reports on ENDF reinforcements sent to Rama and Sheraro",
+   "sentence": "The following are the situation reports on ENDF reinforcements sent to Rama and Sheraro, SAF advance into West Kordofan, Tigrayans allegedly trafficked to fight in Sudan war, the situation in Ethiopia ...",
+   "url": "https://indepthnews.net/eepa-reports-on-endf-reinforcements-sent-to-rama-and-sheraro/",
+   "date": "2026-11-08T16:00:00+00:00",
+   "seen": "2026-11-09T20:08:51.082501+00:00"
   }
  ],
  "truce": [
@@ -763,6 +1035,16 @@
    "sentence": "Firefighters battled a major blaze as Ukraine faced renewed attacks on its energy network.",
    "url": "http://www.africanews.com/2026/11/07/ukraine-russian-strikes-hit-kyiv-region-damaging-infrastructure/",
    "date": "2026-11-07T21:45:36+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "kind": "end",
+   "outlet": "Outlook India",
+   "partisan": false,
+   "title": "Why Is Yemen’s War Escalating Again? The Houthi Offensive, Taiz And The Threat To Aden",
+   "sentence": "The renewed fighting has intensified an already severe humanitarian emergency.",
+   "url": "https://www.outlookindia.com/international/yemen-war-2026-houthi-rebels-offensive-saudi-led-coalition-taiz-lahij-aden-conflict",
+   "date": "2026-11-09T05:08:00+00:00"
   }
  ],
  "withdrawals": [],
