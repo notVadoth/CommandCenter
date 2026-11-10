@@ -1059,6 +1059,336 @@
    "url": "https://www.yemenmonitor.com/en/Details/ArtMID/908/ArticleID/187348",
    "date": "2026-11-09T02:01:00+00:00",
    "seen": "2026-11-09T21:37:51.848437+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Oleshky",
+   "iso": "UKR",
+   "province": "Kherson Oblast",
+   "province_id": "14850775B65901307765467",
+   "outlet": "Ukrainska Pravda",
+   "host": "pravda.com.ua",
+   "partisan": false,
+   "title": "Ukrainian Human Rights Commissioner's Office working to arrange additional evacuation from Oleshky",
+   "sentence": "Human Rights Commissioner Dmytro Lubinets says his office is collecting details of residents wishing to leave Russian-occupied Oleshky, with priority given to vulnerable people and families with children.",
+   "url": "https://www.pravda.com.ua/eng/news/2026/11/10/8062204/",
+   "date": "2026-11-10T17:11:00+00:00",
+   "seen": "2026-11-10T18:50:20.163754+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Dnipro",
+   "iso": "UKR",
+   "province": "Dnipropetrovsk Oblast",
+   "province_id": "14850775B41808765507575",
+   "outlet": "Ukrainska Pravda",
+   "host": "pravda.com.ua",
+   "partisan": false,
+   "title": "Three killed and four injured in Russian strike on critical infrastructure facility in Dnipro",
+   "sentence": "Russian forces have attacked a critical infrastructure facility in Dnipro, killing three people and injuring at least four others.",
+   "url": "https://www.pravda.com.ua/eng/news/2026/11/10/8062182/",
+   "date": "2026-11-10T16:36:00+00:00",
+   "seen": "2026-11-10T18:50:20.163754+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "Donetsk",
+   "iso": "UKR",
+   "province": "Donetsk Oblast",
+   "province_id": "14850775B15615817748403",
+   "outlet": "Ukrainska Pravda",
+   "host": "pravda.com.ua",
+   "partisan": false,
+   "title": "Ukrainian drone forces post video of strike on Russian drone base in Donetsk – video",
+   "sentence": "The Nemesis brigade of Ukraine's Unmanned Systems Forces has released a video showing a successful strike on a Russian drone base in occupied Donetsk.",
+   "url": "https://www.pravda.com.ua/eng/news/2026/11/10/8062195/",
+   "date": "2026-11-10T16:25:00+00:00",
+   "seen": "2026-11-10T18:50:20.163754+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Komyshuvakha",
+   "iso": "UKR",
+   "province": "Zaporizhia Oblast",
+   "province_id": "14850775B92888097715572",
+   "outlet": "Ukrainska Pravda",
+   "host": "pravda.com.ua",
+   "partisan": false,
+   "title": "Nurse who cared for elderly people and helped animals among those killed in Komyshuvakha attack",
+   "sentence": "Iryna Fokina, a local nurse who helped people and cared for animals, was killed in Russia's attack on Komyshuvakha in Zaporizhzhia Oblast on 2 November.",
+   "url": "https://www.pravda.com.ua/eng/news/2026/11/10/8062178/",
+   "date": "2026-11-10T14:51:00+00:00",
+   "seen": "2026-11-10T18:50:20.163754+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Ukraine"
+   ],
+   "place": "Donbass",
+   "iso": "UKR",
+   "province": "Donetsk Oblast",
+   "province_id": "14850775B15615817748403",
+   "outlet": "TASS",
+   "host": "tass.com",
+   "partisan": true,
+   "title": "More than 250 churches damaged in Donbass, Novorossiya in Ukrainian attacks",
+   "sentence": "More than 250 churches damaged in Donbass, Novorossiya in Ukrainian attacks.",
+   "url": "https://tass.com/society/2215625",
+   "date": "2026-11-10T14:36:35+00:00",
+   "seen": "2026-11-10T18:50:20.163754+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "Crimea",
+   "iso": "UKR",
+   "province": "Autonomous Republic of Crimea",
+   "province_id": "14850775B24260608407062",
+   "outlet": "Meduza",
+   "host": "meduza.io",
+   "partisan": false,
+   "title": "A Ukrainian teacher set out to visit her parents in Russian-occupied Crimea. She never made it there — and died in Russian custody.",
+   "sentence": "A Ukrainian teacher set out to visit her parents in Russian-occupied Crimea.",
+   "url": "https://meduza.io/en/feature/2026/11/10/a-ukrainian-teacher-set-out-to-visit-her-parents-in-russian-occupied-crimea-she-never-made-it-there-and-died-in-russian-custody",
+   "date": "2026-11-10T14:11:28+00:00",
+   "seen": "2026-11-10T18:50:20.163754+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Kharkiv",
+   "iso": "UKR",
+   "province": "Kharkiv Oblast",
+   "province_id": "14850775B15913324833724",
+   "outlet": "Meduza",
+   "host": "meduza.io",
+   "partisan": false,
+   "title": "A Ukrainian teacher set out to visit her parents in Russian-occupied Crimea. She never made it there — and died in Russian custody.",
+   "sentence": "Oleksandra Kazarovytska (Kolesnikova), co-founder of the “Professional” language school in Kharkiv, who was arrested in Russia, did not die in occupied Crimea, the independent Russian news outlet Novaya Gazeta Europe found.",
+   "url": "https://meduza.io/en/feature/2026/11/10/a-ukrainian-teacher-set-out-to-visit-her-parents-in-russian-occupied-crimea-she-never-made-it-there-and-died-in-russian-custody",
+   "date": "2026-11-10T14:11:28+00:00",
+   "seen": "2026-11-10T18:50:20.163754+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "Gaza",
+   "iso": "PSE",
+   "province": "Gaza",
+   "province_id": "83478781B7121896376882",
+   "outlet": "Al Jazeera",
+   "host": "aljazeera.com",
+   "partisan": false,
+   "title": "Father, child among six Palestinians killed in Israeli attacks on Gaza",
+   "sentence": "Father, child among six Palestinians killed in Israeli attacks on Gaza.",
+   "url": "https://www.aljazeera.com/news/2026/11/10/israeli-attacks-kill-at-least-six-in-gaza-including-father-and-son?traffic_source=rss",
+   "date": "2026-11-10T15:49:36+00:00",
+   "seen": "2026-11-10T18:50:20.163754+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "Palestinian",
+   "iso": "PSE",
+   "province": "West Bank",
+   "province_id": "83478781B28849486138516",
+   "outlet": "Middle East Eye",
+   "host": "middleeasteye.net",
+   "partisan": false,
+   "title": "Israeli settlers torch machinery in attack on Palestinian industrial zone",
+   "sentence": "Israeli settlers torch machinery in attack on Palestinian industrial zone.",
+   "url": "https://www.middleeasteye.net/news/israeli-settlers-torch-machinery-attack-palestinian-industrial-zone",
+   "date": "2026-11-10T14:25:13+00:00",
+   "seen": "2026-11-10T18:50:20.163754+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "West Bank",
+   "iso": "PSE",
+   "province": "West Bank",
+   "province_id": "83478781B28849486138516",
+   "outlet": "Middle East Eye",
+   "host": "middleeasteye.net",
+   "partisan": false,
+   "title": "UK awards deals worth millions to firms linked to illegal Israeli settlements",
+   "sentence": "The British government has awarded £10.7m ($14.4m) in public contracts to firms linked to illegal Israeli settlements in the occupied West Bank, it has emerged.",
+   "url": "https://www.middleeasteye.net/live-blog/live-blog-update/uk-awards-deals-worth-millions-firms-linked-illegal-israeli-settlements",
+   "date": "2026-11-10T12:47:25+00:00",
+   "seen": "2026-11-10T18:50:20.163754+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "West Bank",
+   "iso": "PSE",
+   "province": "West Bank",
+   "province_id": "83478781B28849486138516",
+   "outlet": "Middle East Eye",
+   "host": "middleeasteye.net",
+   "partisan": false,
+   "title": "UK awards deals worth millions to firms linked to illegal Israeli settlements",
+   "sentence": "The British government has awarded £10.7m ($14.4m) in public contracts to firms linked to illegal Israeli settlements in the occupied West Bank, it has emerged.",
+   "url": "https://www.middleeasteye.net/news/uk-awards-deals-worth-ps10m-firms-linked-illegal-israeli-settlements",
+   "date": "2026-11-10T12:37:33+00:00",
+   "seen": "2026-11-10T18:50:20.163754+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "West Bank",
+   "iso": "PSE",
+   "province": "West Bank",
+   "province_id": "83478781B28849486138516",
+   "outlet": "Middle East Eye",
+   "host": "middleeasteye.net",
+   "partisan": false,
+   "title": "Israeli settlers injure Palestinian photojournalist in occupied West Bank",
+   "sentence": "Israeli settlers injure Palestinian photojournalist in occupied West Bank.",
+   "url": "https://www.middleeasteye.net/live-blog/live-blog-update/israeli-settlers-injure-palestinian-photojournalist-occupied-west-bank",
+   "date": "2026-11-10T12:20:51+00:00",
+   "seen": "2026-11-10T18:50:20.163754+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "West Bank",
+   "iso": "PSE",
+   "province": "West Bank",
+   "province_id": "83478781B28849486138516",
+   "outlet": "Dawn",
+   "host": "dawn.com",
+   "partisan": false,
+   "title": "Israeli forces shoot dead 14-year-old in West Bank: Palestinian officials",
+   "sentence": "Israeli forces shot dead a 14-year-old in the occupied West Bank, Palestinian officials said, with Israel claiming it was responding to stone-throwing.",
+   "url": "https://www.dawn.com/news/2043498/israeli-forces-shoot-dead-14-year-old-in-west-bank-palestinian-officials",
+   "date": "2026-11-10T08:19:20+00:00",
+   "seen": "2026-11-10T18:50:20.163754+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Kupyansk",
+   "iso": "UKR",
+   "province": "Kharkiv Oblast",
+   "province_id": "14850775B15913324833724",
+   "outlet": "Voennoe Delo",
+   "host": "voennoedelo.com",
+   "partisan": false,
+   "title": "Ukraine Frontline Update for November 10: Russian Advances Near Orekhov, Gulyaypole and Krasny Liman",
+   "sentence": "Russian forces report advances near Khoten, Orekhov and Gulyaypole as fighting continues in Kupyansk and Krasny Liman.",
+   "url": "https://voennoedelo.com/en/posts/id22005-ukraine-frontline-update-nov-10-russian-forces-advance",
+   "date": "2026-11-10T01:58:00+00:00",
+   "seen": "2026-11-10T18:50:20.163754+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "Zakarpattia",
+   "iso": "UKR",
+   "province": "Zakarpattia Oblast",
+   "province_id": "14850775B82824220650579",
+   "outlet": "Censor.NET",
+   "host": "censor.net",
+   "partisan": false,
+   "title": "One of female executives of occupying \"Donbasgaz\" has been detained in Uzhhorod, - SSU. PHOTO",
+   "sentence": "The SSU has detained a Russian collaborator in Zakarpattia who managed the occupied Donbasgaz facility in the Volnovakha district and handed over Ukrainian gas transmission system assets to the enemy: ...",
+   "url": "https://censor.net/en/news/4032960/former-head-of-the-occupation-controlled-donbasgaz-detained-in-uzhhorod",
+   "date": "2026-11-10T05:14:00+00:00",
+   "seen": "2026-11-10T18:50:20.163754+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "Volnovakha",
+   "iso": "UKR",
+   "province": "Donetsk Oblast",
+   "province_id": "14850775B15615817748403",
+   "outlet": "Censor.NET",
+   "host": "censor.net",
+   "partisan": false,
+   "title": "One of female executives of occupying \"Donbasgaz\" has been detained in Uzhhorod, - SSU. PHOTO",
+   "sentence": "The SSU has detained a Russian collaborator in Zakarpattia who managed the occupied Donbasgaz facility in the Volnovakha district and handed over Ukrainian gas transmission system assets to the enemy: ...",
+   "url": "https://censor.net/en/news/4032960/former-head-of-the-occupation-controlled-donbasgaz-detained-in-uzhhorod",
+   "date": "2026-11-10T05:14:00+00:00",
+   "seen": "2026-11-10T18:50:20.163754+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "Uzhhorod",
+   "iso": "UKR",
+   "province": "Zakarpattia Oblast",
+   "province_id": "14850775B82824220650579",
+   "outlet": "UA.NEWS",
+   "host": "ua.news",
+   "partisan": false,
+   "title": "Former Head of the Occupation-Era Donbasgaz Detained in Uzhhorod",
+   "sentence": "The Security Service of Ukraine detained a former official of the occupied company “Donbasgaz” in Uzhhorod who had collaborated with Russian invaders in the temporarily occupied territory of Donetsk ...",
+   "url": "https://ua.news/en/ukraine/v-uzhgorodi-zatrimali-kolishniu-kerivnitsiu-okupatsiinogo-donbasgazu",
+   "date": "2026-11-10T06:31:00+00:00",
+   "seen": "2026-11-10T18:50:20.163754+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "Donetsk",
+   "iso": "UKR",
+   "province": "Donetsk Oblast",
+   "province_id": "14850775B15615817748403",
+   "outlet": "UA.NEWS",
+   "host": "ua.news",
+   "partisan": false,
+   "title": "Former Head of the Occupation-Era Donbasgaz Detained in Uzhhorod",
+   "sentence": "The Security Service of Ukraine detained a former official of the occupied company “Donbasgaz” in Uzhhorod who had collaborated with Russian invaders in the temporarily occupied territory of Donetsk ...",
+   "url": "https://ua.news/en/ukraine/v-uzhgorodi-zatrimali-kolishniu-kerivnitsiu-okupatsiinogo-donbasgazu",
+   "date": "2026-11-10T06:31:00+00:00",
+   "seen": "2026-11-10T18:50:20.163754+00:00"
   }
  ],
  "truce": [
@@ -1081,6 +1411,16 @@
    "sentence": "The renewed fighting has intensified an already severe humanitarian emergency.",
    "url": "https://www.outlookindia.com/international/yemen-war-2026-houthi-rebels-offensive-saudi-led-coalition-taiz-lahij-aden-conflict",
    "date": "2026-11-09T05:08:00+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "kind": "end",
+   "outlet": "Telegraph India",
+   "partisan": false,
+   "title": "Houthis say they attack Saudi East-West pipeline in Riyadh, deny Medina strike",
+   "sentence": "The renewed fighting between the Houthis and the coalition backing Yemen's internationally recognised government intensified after the Houthis advanced in September toward the Bab ‌el-Mandeb ⁠Strait ...",
+   "url": "https://www.telegraphindia.com/world/houthis-say-they-attack-saudi-east-west-pipeline-in-riyadh-deny-medina-strike/cid/2188805",
+   "date": "2026-11-10T02:11:00+00:00"
   }
  ],
  "withdrawals": [],
@@ -1089,9 +1429,15 @@
    "iso": "ISR",
    "outlets": [
     "Anadolu Agency",
+    "Dawn",
     "Middle East Eye"
    ],
    "examples": [
+    {
+     "outlet": "Dawn",
+     "title": "Israeli forces shoot dead 14-year-old in West Bank: Palestinian officials",
+     "url": "https://www.dawn.com/news/2043498/israeli-forces-shoot-dead-14-year-old-in-west-bank-palestinian-officials"
+    },
     {
      "outlet": "Middle East Eye",
      "title": "Israeli forces raid West Bank areas of Salfit and Nablus, detain Palestinian man",
@@ -1103,7 +1449,7 @@
      "url": "https://www.aa.com.tr/en/middle-east/israeli-army-arrests-6-palestinians-in-renewed-raids-across-occupied-west-bank/4114964"
     }
    ],
-   "last": "2026-11-07"
+   "last": "2026-11-10"
   }
  ]
 }

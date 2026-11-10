@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T21:37:26.139365+00:00",
+ "generated": "2026-11-10T18:49:18.152633+00:00",
  "extractor": "rules",
  "verification": {
   "wikidata": true,
@@ -12,7 +12,7 @@
    "conflict": "Wikidata contradicts the claim — review"
   }
  },
- "articles_in_store": 841,
+ "articles_in_store": 976,
  "blocs": {
   "EU": {
    "name": "European Union",
@@ -96,6 +96,16 @@
        "sentence": "The prime minister has said rejoining the bloc's internal market was among options he could pursue as part of a reshaping of ties since the UK's exit from the EU nearly six years ago.",
        "hedged": true,
        "syndicated_copy": false
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Britain willing to discuss paying into EU to join electricity market, says minister",
+       "url": "https://www.theguardian.com/politics/2026/nov/10/britain-eu-electricity-market-cohesion-fund-hamish-falconer",
+       "date": "2026-11-10T17:52:07+00:00",
+       "sentence": "Clearly it’s something that on the EU side there’s real interest, so we are engaging in that discussion but I can’t comment in detail on the negotiations.”\nFalconer was firmly positive about the UK’s return next year to the Erasmus+ student exchange scheme, which the UK left under Boris Johnson’s Brexit deal in 2020, and will be open not just to universities but also to schools and colleges.",
+       "hedged": false,
+       "syndicated_copy": false
       }
      ]
     },
@@ -144,6 +154,26 @@
        "sentence": "Failure to agree lower fees for EU citizens studying in UK should delay prized food and drink deal, members say\nUK politics live – latest updates\nThe EU is seeking a firmer pledge from the British government to guarantee European students discounted rates on university tuition fees before a much-anticipated summit this month.",
        "hedged": false,
        "syndicated_copy": true
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Britain willing to discuss paying into EU to join electricity market, says minister",
+       "url": "https://www.theguardian.com/politics/2026/nov/10/britain-eu-electricity-market-cohesion-fund-hamish-falconer",
+       "date": "2026-11-10T17:52:07+00:00",
+       "sentence": "The UK had been seeking to join the first round of the EU’s Security Action for Europe (Safe) fund, a low-interest loan scheme that is part of the EU’s push to grow defence spending by €800bn.",
+       "hedged": false,
+       "syndicated_copy": false
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Britain willing to discuss paying into EU to join electricity market, says minister",
+       "url": "https://www.theguardian.com/politics/2026/nov/10/britain-eu-electricity-market-cohesion-fund-hamish-falconer",
+       "date": "2026-11-10T17:52:07+00:00",
+       "sentence": "The UK had been seeking to join the first round of the EU’s Security Action for Europe (Safe) fund, a low-interest loan scheme that is part of the EU’s push to grow defence spending by €800bn.",
+       "hedged": false,
+       "syndicated_copy": true
       }
      ]
     },
@@ -180,6 +210,83 @@
        "url": "https://www.france24.com/en/france/20261109-russian-network-used-social-media-to-blame-french-riots-on-immigration-eu-report-says",
        "date": "2026-11-09T15:38:42+00:00",
        "sentence": "The EU analysis, which covers the period from October 7 to 21, found that Russia sought to \"depict the French leadership as weak and increasingly ‌authoritarian\".",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
+     "country": "TUR",
+     "action": "joined",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "independent_outlets": 1,
+     "evidence": [
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Russia-Ukraine talks ‘very productive,’ says US’s Rubio – as it happened",
+       "url": "https://www.theguardian.com/world/live/2026/nov/10/ukraine-russia-war-us-talks-abu-dhabi-europe-latest-news-updates",
+       "date": "2026-11-10T17:05:05+00:00",
+       "sentence": "The EU’s climate chief, Wopke Hoekstra, has admitted that expectations were “low” from the Cop31 summit in Turkey this year, but said there was hope for “meaningful” progress on clean electricity.",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
+     "country": "UKR",
+     "action": "applied",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "independent_outlets": 1,
+     "evidence": [
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Merz accused of ‘blackmail’ by Slovak PM after demand for Ukraine aid in EU budget",
+       "url": "https://www.theguardian.com/world/2026/nov/10/friedrich-merz-accused-blackmail-ukraine-aid-eu-budget",
+       "date": "2026-11-10T16:44:27+00:00",
+       "sentence": "He also states that all member states need to contribute to a “sound” financial perspective for Ukraine from 2028 in the context of the EU’s next seven-year budget, known as the multiannual financial framework.\n\n\nafter newsletter promotion\nA German government official said: “Financial support for Ukraine of all EU member states is essential in order to successfully complete the MFF.”\nBerlin is als",
+       "hedged": false,
+       "syndicated_copy": false
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Merz accused of ‘blackmail’ by Slovak PM after demand for Ukraine aid in EU budget",
+       "url": "https://www.theguardian.com/world/2026/nov/10/friedrich-merz-accused-blackmail-ukraine-aid-eu-budget",
+       "date": "2026-11-10T16:44:27+00:00",
+       "sentence": "He also states that all member states need to contribute to a “sound” financial perspective for Ukraine from 2028 in the context of the EU’s next seven-year budget, known as the multiannual financial framework.\n\n\nafter newsletter promotion\nA German government official said: “Financial support for Ukraine of all EU member states is essential in order to successfully complete the MFF.”\nBerlin is als",
+       "hedged": false,
+       "syndicated_copy": true
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Merz accused of ‘blackmail’ by Slovak PM after demand for Ukraine aid in EU budget",
+       "url": "https://www.theguardian.com/world/2026/nov/10/friedrich-merz-accused-blackmail-ukraine-aid-eu-budget",
+       "date": "2026-11-10T16:44:27+00:00",
+       "sentence": "He also states that all member states need to contribute to a “sound” financial perspective for Ukraine from 2028 in the context of the EU’s next seven-year budget, known as the multiannual financial framework.\n\n\nafter newsletter promotion\nA German government official said: “Financial support for Ukraine of all EU member states is essential in order to successfully complete the MFF.”\nBerlin is als",
+       "hedged": false,
+       "syndicated_copy": true
+      }
+     ]
+    },
+    {
+     "country": "AUS",
+     "action": "joined",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "independent_outlets": 1,
+     "evidence": [
+      {
+       "source": "DW World",
+       "domain": "dw.com",
+       "title": "Japan watches for signs of change in Trump's foreign policy priorities",
+       "url": "https://www.dw.com/en/japan-watches-for-signs-of-change-in-trump-s-foreign-policy-priorities/a-79909398?maca=en-rss-en-world-4025-rdf",
+       "date": "2026-11-10T13:31:00+00:00",
+       "sentence": "Over the past decade, Tokyo has proactively diversified its security partnerships, stepping up defense cooperation with European Union member states and NATO, forging a quasi-alliance with Australia, and joining a range of minilateral frameworks across the Indo-Pacific, including with the Philippines.",
        "hedged": false,
        "syndicated_copy": false
       }
@@ -311,7 +418,9 @@
     "USA"
    ],
    "partners": [],
-   "applicants": [],
+   "applicants": [
+    "UKR"
+   ],
    "note": null,
    "wikidata": {
     "qid": "Q7184",
@@ -386,9 +495,9 @@
     {
      "country": "UKR",
      "action": "applied",
-     "status": "single-source",
+     "status": "corroborated",
      "wikidata": "unknown",
-     "independent_outlets": 1,
+     "independent_outlets": 2,
      "evidence": [
       {
        "source": "France 24",
@@ -399,6 +508,26 @@
        "sentence": "A NATO spokeswoman said they \"sought to advance a just and sustainable end to the war in Ukraine\".",
        "hedged": false,
        "syndicated_copy": false
+      },
+      {
+       "source": "CBC World",
+       "domain": "cbc.ca",
+       "title": "Russia, Ukraine engage in 4-hour session on first day of U.S.-mediated talks in Abu Dhabi",
+       "url": "https://www.cbc.ca/news/world/talks-between-russia-and-ukraine-begin-in-abu-dhabi-9.7416014?cmp=rss",
+       "date": "2026-11-10T09:57:22+00:00",
+       "sentence": "He also demands that Ukraine abandon its bid to join NATO, accept strict limits on its military and drop restrictions on the Russian language and the Moscow-affiliated Orthodox Church in Ukraine.",
+       "hedged": false,
+       "syndicated_copy": false
+      },
+      {
+       "source": "NPR World",
+       "domain": "npr.org",
+       "title": "Russia and Ukraine hold nearly 4 hours of U.S.-mediated talks in Abu Dhabi",
+       "url": "https://www.npr.org/2026/11/10/g-s1-152773/russia-ukraine-war-talks",
+       "date": "2026-11-10T10:58:18+00:00",
+       "sentence": "He also demands that Ukraine abandon its bid to join NATO, accept strict limits on its military and drop restrictions on the Russian language and the Moscow-affiliated Orthodox Church in Ukraine.",
+       "hedged": false,
+       "syndicated_copy": true
       }
      ]
     },
@@ -422,6 +551,25 @@
      ]
     },
     {
+     "country": "AUS",
+     "action": "joined",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "independent_outlets": 1,
+     "evidence": [
+      {
+       "source": "DW World",
+       "domain": "dw.com",
+       "title": "Japan watches for signs of change in Trump's foreign policy priorities",
+       "url": "https://www.dw.com/en/japan-watches-for-signs-of-change-in-trump-s-foreign-policy-priorities/a-79909398?maca=en-rss-en-world-4025-rdf",
+       "date": "2026-11-10T13:31:00+00:00",
+       "sentence": "Over the past decade, Tokyo has proactively diversified its security partnerships, stepping up defense cooperation with European Union member states and NATO, forging a quasi-alliance with Australia, and joining a range of minilateral frameworks across the Indo-Pacific, including with the Philippines.",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
      "country": "CYP",
      "action": "joined",
      "status": "speculative",
@@ -435,6 +583,54 @@
        "url": "https://www.dw.com/en/cyprus-from-ties-with-russia-to-a-strategic-alignment-with-the-us/a-79841251?maca=en-rss-en-world-4025-rdf",
        "date": "2026-11-03T14:28:00+00:00",
        "sentence": "At the time, Christodoulides said Cyprus was preparing for potential membership at the military, operational and administrative level and would apply to join NATO \"even tomorrow if it were possible.\"\nChristodoulides said, however, that joining the alliance was not possible because \"the political conditions are not there, taking into account the well-known position of Turkey.\"\nThe country's changin",
+       "hedged": true,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
+     "country": "RUS",
+     "action": "applied",
+     "status": "speculative",
+     "wikidata": "unknown",
+     "independent_outlets": 0,
+     "evidence": [
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "US officials seek ‘final end’ to Russia-Ukraine war, as Abu Dhabi talks set to continue",
+       "url": "https://www.theguardian.com/world/2026/nov/10/us-officials-russia-ukraine-war-abu-dhabi-talks",
+       "date": "2026-11-10T16:59:04+00:00",
+       "sentence": "Since his first decade in power, Putin has complained about Nato’s eastward expansion and sought to renegotiate the balance of power between Nato and Russia – but never before have those demands been embraced by a sitting US administration, which has made it clear that it is desperate to get to a deal.",
+       "hedged": true,
+       "syndicated_copy": false
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "US officials seek ‘final end’ to Russia-Ukraine war, as Abu Dhabi talks set to continue",
+       "url": "https://www.theguardian.com/world/2026/nov/10/us-officials-russia-ukraine-war-abu-dhabi-talks",
+       "date": "2026-11-10T16:59:04+00:00",
+       "sentence": "Since his first decade in power, Putin has complained about Nato’s eastward expansion and sought to renegotiate the balance of power between Nato and Russia – but never before have those demands been embraced by a sitting US administration, which has made it clear that it is desperate to get to a deal.",
+       "hedged": true,
+       "syndicated_copy": true
+      }
+     ]
+    },
+    {
+     "country": "RUS",
+     "action": "suspended",
+     "status": "speculative",
+     "wikidata": "unknown",
+     "independent_outlets": 0,
+     "evidence": [
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "US officials seek ‘final end’ to Russia-Ukraine war, as Abu Dhabi talks set to continue",
+       "url": "https://www.theguardian.com/world/2026/nov/10/us-officials-russia-ukraine-war-abu-dhabi-talks",
+       "date": "2026-11-10T16:59:04+00:00",
+       "sentence": "He said negotiators could also revive the Nato-Russian council that was suspended after Russia’s full-scale invasion in 2022, and potentially lift sanctions against Russia to get to a deal.",
        "hedged": true,
        "syndicated_copy": false
       }
@@ -476,7 +672,10 @@
     "label": "BRICS",
     "description": "Association of Brazil, Russia, India, China, South Africa, Egypt, Indonesia, Iran, United Arab Emirates, and Ethiopia"
    },
-   "baseline_audit": null,
+   "baseline_audit": {
+    "in_wikidata_not_baseline": [],
+    "in_baseline_not_wikidata": []
+   },
    "changes": []
   },
   "G7": {
@@ -1137,6 +1336,26 @@
      "sentence": "Failure to agree lower fees for EU citizens studying in UK should delay prized food and drink deal, members say\nUK politics live – latest updates\nThe EU is seeking a firmer pledge from the British government to guarantee European students discounted rates on university tuition fees before a much-anticipated summit this month.",
      "hedged": false,
      "syndicated_copy": true
+    },
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "Britain willing to discuss paying into EU to join electricity market, says minister",
+     "url": "https://www.theguardian.com/politics/2026/nov/10/britain-eu-electricity-market-cohesion-fund-hamish-falconer",
+     "date": "2026-11-10T17:52:07+00:00",
+     "sentence": "The UK had been seeking to join the first round of the EU’s Security Action for Europe (Safe) fund, a low-interest loan scheme that is part of the EU’s push to grow defence spending by €800bn.",
+     "hedged": false,
+     "syndicated_copy": false
+    },
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "Britain willing to discuss paying into EU to join electricity market, says minister",
+     "url": "https://www.theguardian.com/politics/2026/nov/10/britain-eu-electricity-market-cohesion-fund-hamish-falconer",
+     "date": "2026-11-10T17:52:07+00:00",
+     "sentence": "The UK had been seeking to join the first round of the EU’s Security Action for Europe (Safe) fund, a low-interest loan scheme that is part of the EU’s push to grow defence spending by €800bn.",
+     "hedged": false,
+     "syndicated_copy": true
     }
    ]
   },
@@ -1175,6 +1394,86 @@
      "url": "https://www.france24.com/en/france/20261109-russian-network-used-social-media-to-blame-french-riots-on-immigration-eu-report-says",
      "date": "2026-11-09T15:38:42+00:00",
      "sentence": "The EU analysis, which covers the period from October 7 to 21, found that Russia sought to \"depict the French leadership as weak and increasingly ‌authoritarian\".",
+     "hedged": false,
+     "syndicated_copy": false
+    }
+   ]
+  },
+  {
+   "group": "European Union",
+   "country": "TUR",
+   "action": "joined",
+   "status": "single-source",
+   "wikidata": "unknown",
+   "independent_outlets": 1,
+   "evidence": [
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "Russia-Ukraine talks ‘very productive,’ says US’s Rubio – as it happened",
+     "url": "https://www.theguardian.com/world/live/2026/nov/10/ukraine-russia-war-us-talks-abu-dhabi-europe-latest-news-updates",
+     "date": "2026-11-10T17:05:05+00:00",
+     "sentence": "The EU’s climate chief, Wopke Hoekstra, has admitted that expectations were “low” from the Cop31 summit in Turkey this year, but said there was hope for “meaningful” progress on clean electricity.",
+     "hedged": false,
+     "syndicated_copy": false
+    }
+   ]
+  },
+  {
+   "group": "European Union",
+   "country": "UKR",
+   "action": "applied",
+   "status": "single-source",
+   "wikidata": "unknown",
+   "independent_outlets": 1,
+   "evidence": [
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "Merz accused of ‘blackmail’ by Slovak PM after demand for Ukraine aid in EU budget",
+     "url": "https://www.theguardian.com/world/2026/nov/10/friedrich-merz-accused-blackmail-ukraine-aid-eu-budget",
+     "date": "2026-11-10T16:44:27+00:00",
+     "sentence": "He also states that all member states need to contribute to a “sound” financial perspective for Ukraine from 2028 in the context of the EU’s next seven-year budget, known as the multiannual financial framework.\n\n\nafter newsletter promotion\nA German government official said: “Financial support for Ukraine of all EU member states is essential in order to successfully complete the MFF.”\nBerlin is als",
+     "hedged": false,
+     "syndicated_copy": false
+    },
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "Merz accused of ‘blackmail’ by Slovak PM after demand for Ukraine aid in EU budget",
+     "url": "https://www.theguardian.com/world/2026/nov/10/friedrich-merz-accused-blackmail-ukraine-aid-eu-budget",
+     "date": "2026-11-10T16:44:27+00:00",
+     "sentence": "He also states that all member states need to contribute to a “sound” financial perspective for Ukraine from 2028 in the context of the EU’s next seven-year budget, known as the multiannual financial framework.\n\n\nafter newsletter promotion\nA German government official said: “Financial support for Ukraine of all EU member states is essential in order to successfully complete the MFF.”\nBerlin is als",
+     "hedged": false,
+     "syndicated_copy": true
+    },
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "Merz accused of ‘blackmail’ by Slovak PM after demand for Ukraine aid in EU budget",
+     "url": "https://www.theguardian.com/world/2026/nov/10/friedrich-merz-accused-blackmail-ukraine-aid-eu-budget",
+     "date": "2026-11-10T16:44:27+00:00",
+     "sentence": "He also states that all member states need to contribute to a “sound” financial perspective for Ukraine from 2028 in the context of the EU’s next seven-year budget, known as the multiannual financial framework.\n\n\nafter newsletter promotion\nA German government official said: “Financial support for Ukraine of all EU member states is essential in order to successfully complete the MFF.”\nBerlin is als",
+     "hedged": false,
+     "syndicated_copy": true
+    }
+   ]
+  },
+  {
+   "group": "European Union",
+   "country": "AUS",
+   "action": "joined",
+   "status": "single-source",
+   "wikidata": "unknown",
+   "independent_outlets": 1,
+   "evidence": [
+    {
+     "source": "DW World",
+     "domain": "dw.com",
+     "title": "Japan watches for signs of change in Trump's foreign policy priorities",
+     "url": "https://www.dw.com/en/japan-watches-for-signs-of-change-in-trump-s-foreign-policy-priorities/a-79909398?maca=en-rss-en-world-4025-rdf",
+     "date": "2026-11-10T13:31:00+00:00",
+     "sentence": "Over the past decade, Tokyo has proactively diversified its security partnerships, stepping up defense cooperation with European Union member states and NATO, forging a quasi-alliance with Australia, and joining a range of minilateral frameworks across the Indo-Pacific, including with the Philippines.",
      "hedged": false,
      "syndicated_copy": false
     }
@@ -1244,9 +1543,9 @@
    "group": "NATO",
    "country": "UKR",
    "action": "applied",
-   "status": "single-source",
+   "status": "corroborated",
    "wikidata": "unknown",
-   "independent_outlets": 1,
+   "independent_outlets": 2,
    "evidence": [
     {
      "source": "France 24",
@@ -1257,6 +1556,26 @@
      "sentence": "A NATO spokeswoman said they \"sought to advance a just and sustainable end to the war in Ukraine\".",
      "hedged": false,
      "syndicated_copy": false
+    },
+    {
+     "source": "CBC World",
+     "domain": "cbc.ca",
+     "title": "Russia, Ukraine engage in 4-hour session on first day of U.S.-mediated talks in Abu Dhabi",
+     "url": "https://www.cbc.ca/news/world/talks-between-russia-and-ukraine-begin-in-abu-dhabi-9.7416014?cmp=rss",
+     "date": "2026-11-10T09:57:22+00:00",
+     "sentence": "He also demands that Ukraine abandon its bid to join NATO, accept strict limits on its military and drop restrictions on the Russian language and the Moscow-affiliated Orthodox Church in Ukraine.",
+     "hedged": false,
+     "syndicated_copy": false
+    },
+    {
+     "source": "NPR World",
+     "domain": "npr.org",
+     "title": "Russia and Ukraine hold nearly 4 hours of U.S.-mediated talks in Abu Dhabi",
+     "url": "https://www.npr.org/2026/11/10/g-s1-152773/russia-ukraine-war-talks",
+     "date": "2026-11-10T10:58:18+00:00",
+     "sentence": "He also demands that Ukraine abandon its bid to join NATO, accept strict limits on its military and drop restrictions on the Russian language and the Moscow-affiliated Orthodox Church in Ukraine.",
+     "hedged": false,
+     "syndicated_copy": true
     }
    ]
   },
@@ -1275,6 +1594,26 @@
      "url": "https://www.france24.com/en/europe/20261108-europe-will-take-part-us-mediated-ukraine-peace-talks-abu-dhabi-french-fm-says",
      "date": "2026-11-08T14:16:31+00:00",
      "sentence": "Before launching the war in Ukraine in 2022, the Kremlin delivered an ultimatum to NATO which included a demand that the alliance's troops be withdrawn from eastern Europe.",
+     "hedged": false,
+     "syndicated_copy": false
+    }
+   ]
+  },
+  {
+   "group": "NATO",
+   "country": "AUS",
+   "action": "joined",
+   "status": "single-source",
+   "wikidata": "unknown",
+   "independent_outlets": 1,
+   "evidence": [
+    {
+     "source": "DW World",
+     "domain": "dw.com",
+     "title": "Japan watches for signs of change in Trump's foreign policy priorities",
+     "url": "https://www.dw.com/en/japan-watches-for-signs-of-change-in-trump-s-foreign-policy-priorities/a-79909398?maca=en-rss-en-world-4025-rdf",
+     "date": "2026-11-10T13:31:00+00:00",
+     "sentence": "Over the past decade, Tokyo has proactively diversified its security partnerships, stepping up defense cooperation with European Union member states and NATO, forging a quasi-alliance with Australia, and joining a range of minilateral frameworks across the Indo-Pacific, including with the Philippines.",
      "hedged": false,
      "syndicated_copy": false
     }
