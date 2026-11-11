@@ -7807,6 +7807,1006 @@
    "date": "2026-11-09T22:13:56+00:00",
    "seen": "2026-11-10T18:49:18.152633+00:00",
    "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cwvg25nypmrvo?at_medium=RSS&at_campaign=rss": {
+   "title": "Spain sees widespread disruption in first general strike for 14 years",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-11T17:44:32+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/ck792we7zrz4o?at_medium=RSS&at_campaign=rss": {
+   "title": "Russia-Ukraine talks turn to post-war security but end without breakthrough",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-11T18:04:58+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cqr7gr0010r2o?at_medium=RSS&at_campaign=rss": {
+   "title": "US Treasury Secretary Scott Bessent relocated after alleged Iranian threats",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-11T16:45:11+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cwz0k79pr8z2o?at_medium=RSS&at_campaign=rss": {
+   "title": "Schools in Italy, Scotland and Northern Ireland hit by threats in suspected bomb hoax",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-11T18:38:45+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cmvgxgz87qqro?at_medium=RSS&at_campaign=rss": {
+   "title": "Indonesia's vice president resigns amid signs ruling alliance is fraying",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-11T16:38:07+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/c933gn6710lyo?at_medium=RSS&at_campaign=rss": {
+   "title": "Kidnapper, 74, escapes from house arrest in Argentina by abseiling from balcony",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-11T14:56:11+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/c8e391xzg6z2o?at_medium=RSS&at_campaign=rss": {
+   "title": "Missing 11-month-old baby found buried alive in a crate in South Carolina",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-11T18:10:57+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cwg5r8zrm11mo?at_medium=RSS&at_campaign=rss": {
+   "title": "Four grizzly bears killed in Canada after fatal attack on mother and daughter",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-11T13:24:29+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cwe9kzv0g0v7o?at_medium=RSS&at_campaign=rss": {
+   "title": "Kenya discharges last Ebola patient in major milestone towards virus-free status",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-11T12:53:11+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/c3rryrryk59zo?at_medium=RSS&at_campaign=rss": {
+   "title": "Three Iran-backed suspects plotted attacks including RAF Fairford incident, US says",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-11T16:59:34+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cmkg5jr59835o?at_medium=RSS&at_campaign=rss": {
+   "title": "Egyptian journalist's retrial adjourned as UN warns of 'assaults on press freedom'",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-11T13:25:47+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cqm26mmpp2p1o?at_medium=RSS&at_campaign=rss": {
+   "title": "Vinícius Jr sends message to Sudan boy who received prosthetic legs after BBC report sparks appeal",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-11T00:19:42+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/c6e3d895zne7o?at_medium=RSS&at_campaign=rss": {
+   "title": "Transport workers in Chile block highways in protest over surging fuel prices",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-11T11:34:50+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cxly4y5jzl0qo?at_medium=RSS&at_campaign=rss": {
+   "title": "US House blocks bid to impeach Defence Secretary Pete Hegseth",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-11T11:47:22+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cmvg2xdwnwezo?at_medium=RSS&at_campaign=rss": {
+   "title": "Haitian PM praises El Salvador after joint strike on alleged home of gang leader",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-11T12:14:12+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/videos/cm894wg251pzo?at_medium=RSS&at_campaign=rss": {
+   "title": "Watch: Vinícius Jr's surprise message to boy who received prosthetic legs after Sudan drone strike",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-11T09:28:36+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/videos/cr0qkqqkn3j7o?at_medium=RSS&at_campaign=rss": {
+   "title": "Watch: E-bike battery explodes into massive fireball inside Oregon home",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-10T20:31:17+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/c8wy9y37z30vo?at_medium=RSS&at_campaign=rss": {
+   "title": "'It can kill us': Kenyans fear impact of El Niño with floods predicted",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-11T00:18:07+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/cm1j3jdp7w54o?at_medium=RSS&at_campaign=rss": {
+   "title": "Why does Australia want Brits to swap Sydney for the outback?",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-10T21:17:00+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.bbc.co.uk/news/articles/c687z7g4xr97o?at_medium=RSS&at_campaign=rss": {
+   "title": "'They will kill you too': Sonia Gandhi's turbulent journey in Indian politics",
+   "source": "BBC World",
+   "domain": "bbc.co.uk",
+   "date": "2026-11-11T00:26:02+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/uk-news/2026/nov/11/argentine-lawyer-mocks-uk-sovereignty-claim-in-falklands-oil-case": {
+   "title": "Argentinian lawyer mocks UK’s sovereignty claim in Falklands oil case",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T16:05:45+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/world/2026/nov/11/ecuador-journalist-killing": {
+   "title": "Killing of journalist underscores deteriorating conditions in Ecuador",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T14:00:52+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/world/2026/nov/11/ukraine-indonesian-pow-prisoner-of-war-russia": {
+   "title": "Ukraine captures first Indonesian prisoner of war amid surge in Russian recruitment",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T05:33:27+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/tv-and-radio/2026/nov/11/david-walliams-australian-film-cameo-cut-sexual-harassment-allegations-ntwnfb": {
+   "title": "David Walliams cameo cut from Australian film after sexual harassment allegations",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T15:13:23+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/australia-news/2026/nov/12/first-covid-lockdowns-then-alcohol-to-your-door-rise-in-young-victorians-with-liver-diseases-prompts-fears": {
+   "title": "First Covid lockdowns, then alcohol to your door: rise in young Victorians with liver diseases prompts fears",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T14:00:51+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/media/2026/nov/11/we-were-quite-surprised-finlands-embassy-goes-viral-with-staff-training-day-post-on-instagram": {
+   "title": "‘We were quite surprised’: Finland’s embassy goes viral with staff training day post on Instagram",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T14:00:50+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/environment/2026/nov/11/anthony-albanese-avoids-mention-of-fossil-fuels-in-cop-summit-speech": {
+   "title": "Anthony Albanese fails to mention fossil fuels in Cop summit speech",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T13:57:22+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/australia-news/2026/nov/11/one-nation-candidate-apologises-offensive-comments-ntwnfb": {
+   "title": "One Nation Victoria candidate apologises for slew of offensive comments about lesbians, Indians and Julia Gillard",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T10:12:42+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/world/2026/nov/11/spain-general-strike-housing-costs": {
+   "title": "Millions join Spain’s first general strike in 14 years in protest at housing costs",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T18:33:12+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/world/2026/nov/11/ukraine-talks-in-abu-dhabi-bring-progress-on-prisoners-but-not-on-peace": {
+   "title": "Ukraine talks in Abu Dhabi bring progress on prisoners but not on peace",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T17:03:43+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 2
+  },
+  "https://www.theguardian.com/world/live/2026/nov/11/europe-ukraine-russia-us-talks-abu-dhabi-zelenskyy-latest-news-updates": {
+   "title": "US envoys to meet Putin and Zelenskyy separately - as it happened",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T16:08:20+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 1
+  },
+  "https://www.theguardian.com/world/2026/nov/11/is-the-us-blue-wave-a-turning-point-for-europe-too": {
+   "title": "Is the US blue wave a turning point for Europe, too?",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T15:40:52+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/football/2026/nov/11/barcelona-fc-camp-nou-stadium-memorial-fans-ashes": {
+   "title": "‘Hear the goals during the afterlife’: Barça fans get to inter ashes at club’s new memorial",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T14:30:15+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/global-development/2026/nov/11/woman-in-saudi-arabia-sentenced-to-100-lashes-for-giving-birth-outside-marriage": {
+   "title": "Woman in Saudi Arabia sentenced to 100 lashes for giving birth outside marriage",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T09:15:44+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/us-news/2026/nov/11/us-treasury-chief-scott-bessent-moves-military-base-iran-threats": {
+   "title": "US Treasury chief Scott Bessent is reportedly latest Trump official to move to military base",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T09:11:31+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/global-development/2026/nov/11/thousands-without-shelter-lethal-cold-storm-gaza-israel-tents-displaced-people-flood": {
+   "title": "Thousands without shelter face lethal conditions in storm-hit Gaza as they wait for 150,000 tents",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T05:00:32+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/world/2026/nov/11/fresh-concerns-over-gaza-doctor-held-by-israel": {
+   "title": "Fresh concerns raised over Gaza doctor held by Israel for 23 months without charge",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T05:00:29+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/world/2026/nov/10/israeli-opposition-hurries-to-seize-control-as-new-knesset-is-sworn-in": {
+   "title": "Israeli opposition hurries to seize control as new Knesset is sworn in",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-10T19:59:33+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/uk-news/2026/nov/11/andy-burnham-safety-concerns-astley-manchester-megashed-inquiry": {
+   "title": "Burnham raised safety concerns about Manchester ‘monster’ warehouse, inquiry hears",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T18:31:34+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/business/2026/nov/11/itv-cut-costs-falling-advertising-sales": {
+   "title": "ITV to cut show budgets as UK TV and film production spend drops by more than £2bn",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T18:21:25+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/society/2026/nov/11/consultant-doctors-in-england-call-off-nhs-strike": {
+   "title": "Consultant doctors in England call off two-day pay strike",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T18:11:42+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/education/2026/nov/11/bomb-threats-hoax-schools-scotland-northern-ireland": {
+   "title": "Hoax bomb threats made to schools in Scotland, Northern Ireland and Italy",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T17:47:14+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/politics/live/2026/nov/11/andy-burnham-kemi-badenoch-pmqs-cop31-windfarms-europe-brexit-latest-news-updates": {
+   "title": "Chancellor confident budget will lead to growth despite OBR not finding evidence to prove it – as it happened",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T17:40:23+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/us-news/live/2026/nov/11/donald-trump-pete-hegseth-impeachment-democrats-republicans-arlington-latest-news-updates": {
+   "title": "Trump praises Hegseth after failed impeachment effort and shrugs off Iran war criticism - live",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T18:44:28+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/us-news/2026/nov/11/coast-guard-suspends-search-california-woman": {
+   "title": "US Coast Guard suspends search for woman swept out to sea in California",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T18:34:31+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/us-news/2026/nov/11/democrats-hegseth-impeachment-vote": {
+   "title": "Democrats lambast absent peers allowing Republicans to squash Hegseth impeachment attempt",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T18:21:13+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/us-news/2026/nov/11/man-arrested-alleged-rapes-central-park": {
+   "title": "Man arrested in Miami for three alleged rapes in New York’s Central Park",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T18:02:38+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.theguardian.com/us-news/2026/nov/11/heating-bill-winter-price-increases": {
+   "title": "Average US heating bills to rise 7% this winter nationwide – report",
+   "source": "The Guardian World",
+   "domain": "theguardian.com",
+   "date": "2026-11-11T18:00:11+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/11/ireland-fears-undersea-cables-face-growing-threat-from-malign-actors?traffic_source=rss": {
+   "title": "Ireland fears undersea cables face growing threat from ‘malign actors’",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T18:19:09+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/11/russias-ambassador-to-the-us-alexander-darchiev-dies-at-66?traffic_source=rss": {
+   "title": "Russia’s ambassador to US, Alexander Darchiev, dies at 66",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T18:13:10+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/11/spain-faces-nationwide-protests-over-soaring-housing-costs?traffic_source=rss": {
+   "title": "Spain faces nationwide protests over soaring housing costs",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T17:49:03+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/11/portugal-cancels-300-plus-flights-shuts-schools-ahead-of-storm-charles?traffic_source=rss": {
+   "title": "Portugal cancels more than 300 flights, shuts schools due to Storm Charles",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T17:46:40+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/11/can-democrats-shed-some-new-light-on-the-epstein-files-when-they-take-over?traffic_source=rss": {
+   "title": "Can Democrats shed some new light on the Epstein files when they take over?",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T17:44:18+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/11/tens-of-thousands-join-polands-nationalist-independence-day-march?traffic_source=rss": {
+   "title": "Tens of thousands join Poland’s nationalist Independence Day march",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T17:38:03+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/11/thune-re-elected-as-us-senate-republican-leader-after-midterm-losses?traffic_source=rss": {
+   "title": "John Thune re-elected as US Senate Republican leader after midterm losses",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T17:08:12+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/11/russia-ukraine-talks-in-uae-secure-major-prisoner-exchange-deal?traffic_source=rss": {
+   "title": "Russia-Ukraine talks in UAE secure major prisoner exchange deal",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T16:58:32+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/11/palestinian-american-activist-refused-uk-entry-for-gaza-fundraiser?traffic_source=rss": {
+   "title": "Palestinian American activist refused UK entry for Gaza fundraiser",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T16:52:59+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/sports/2026/11/11/israeli-army-kills-palestinian-footballer-mahmoud-kamal-abdel-malek-in-gaza?traffic_source=rss": {
+   "title": "Israeli army kills Palestinian footballer Mahmoud Kamal Abdel-Malek in Gaza",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T16:48:48+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/11/its-just-too-expensive-housing-and-wages-at-the-heart-of-spains-strike?traffic_source=rss": {
+   "title": "‘It’s just too expensive’: Housing and wages at the heart of Spain’s strike",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T16:20:13+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/11/israel-is-disrupting-entire-ecosystems-including-lebanons-wheat-crop?traffic_source=rss": {
+   "title": "Israel is ‘disrupting entire ecosystems’, including Lebanon’s wheat crop",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T15:48:39+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/11/russia-bans-two-french-lawmakers-two-journalists-in-tit-for-tat-move?traffic_source=rss": {
+   "title": "Russia bans two French lawmakers, two journalists in tit-for-tat move",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T15:47:37+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/economy/2026/11/11/can-tehran-survive-a-zero-oil-budget-if-us-blockade-on-iran-persists?traffic_source=rss": {
+   "title": "Can Tehran survive a ‘zero oil’ budget, if US blockade on Iran persists?",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T15:40:17+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/11/kenya-discharges-last-ebola-patient?traffic_source=rss": {
+   "title": "Kenya discharges last Ebola patient, awaits disease-free status",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T15:34:00+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news-analysis/2026/11/11/bessents-relocation-from-us-to-eu-is-iran-bringing-war-to-western-soil?traffic_source=rss": {
+   "title": "Bessent’s relocation: From US to EU, is Iran bringing war to Western soil?",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T15:33:38+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/features/2026/11/11/they-see-me-as-non-western-top-court-to-rule-on-denmarks-housing-law?traffic_source=rss": {
+   "title": "Inside the fight against Denmark’s ‘straight up racist’ housing law",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T15:15:10+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/sports/2026/11/11/motogp-carlos-ezpeleta-deputy-ceo-qatar-grand-prix-yamaha-iran-war?traffic_source=rss": {
+   "title": "Qatar Grand Prix was ‘right decision’ despite regional tensions: MotoGP",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T14:58:15+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/sports/2026/11/11/italy-vs-france-uefa-nations-league-preview-team-news?traffic_source=rss": {
+   "title": "Italy vs France: UEFA Nations League – preview, team news, predictions",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T14:43:46+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/11/is-trump-team-split-on-iran?traffic_source=rss": {
+   "title": "Rubio backs blockade, Vance wants deal: Is Trump’s team split on Iran war?",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T14:10:47+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/video/newsfeed/2026/11/11/south-africans-divided-over-olympic-swimmers-switch-to-netherlands-2?traffic_source=rss": {
+   "title": "South Africans divided over Olympic swimmer’s switch to Netherlands",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T14:09:42+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/features/2026/11/11/as-gaza-flood-waters-subside-palestinians-assess-human-and-material-damage?traffic_source=rss": {
+   "title": "‘Our neighbours are gone’: Gaza survivors recount horrors of deadly floods",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T14:04:17+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/sports/2026/11/11/why-is-pochettino-the-favourite-to-replace-carrick-at-manchester-united?traffic_source=rss": {
+   "title": "Why is Pochettino the favourite to replace Carrick at Manchester United?",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T13:56:53+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/11/at-least-300-italian-schools-evacuated-after-email-bomb-alerts?traffic_source=rss": {
+   "title": "Schools across Italy evacuated after receiving email bomb alerts",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T13:18:36+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.aljazeera.com/news/2026/11/11/russia-ukraine-talks-in-abu-dhabi-end-with-prisoner-exchange-agreement?traffic_source=rss": {
+   "title": "Russia-Ukraine talks in Abu Dhabi end with prisoner exchange agreement",
+   "source": "Al Jazeera",
+   "domain": "aljazeera.com",
+   "date": "2026-11-11T13:16:30+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.dw.com/en/brazil-electoral-court-fines-meta-sees-no-deliberate-election-bias/a-79920780?maca=en-rss-en-world-4025-rdf": {
+   "title": "Brazil electoral court fines Meta, sees no deliberate election bias",
+   "source": "DW World",
+   "domain": "dw.com",
+   "date": "2026-11-11T15:17:00+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.dw.com/en/is-aiib-s-complaint-mechanism-failing-affected-communities/a-79919917?maca=en-rss-en-world-4025-rdf": {
+   "title": "Is AIIB's complaint mechanism failing affected communities?",
+   "source": "DW World",
+   "domain": "dw.com",
+   "date": "2026-11-11T15:12:00+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.dw.com/en/wael-mohya-could-make-german-football-history-at-17/a-79919787?maca=en-rss-en-world-4025-rdf": {
+   "title": "Wael Mohya could make German football history at 17",
+   "source": "DW World",
+   "domain": "dw.com",
+   "date": "2026-11-11T15:00:00+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.dw.com/en/tundu-lissu-after-escaping-the-death-penalty-what-does-his-guilty-verdict-mean-for-tanzania-s-democracy/a-79908512?maca=en-rss-en-world-4025-rdf": {
+   "title": "Tundu Lissu: After escaping the death penalty, what does his guilty verdict mean for Tanzania's democracy?",
+   "source": "DW World",
+   "domain": "dw.com",
+   "date": "2026-11-11T13:33:00+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.dw.com/en/iran-classes-argentina-navy-air-force-as-terrorist-organizations/a-79916290?maca=en-rss-en-world-4025-rdf": {
+   "title": "Iran classes Argentina navy, air force as 'terrorist organizations'",
+   "source": "DW World",
+   "domain": "dw.com",
+   "date": "2026-11-11T11:24:00+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.dw.com/en/how-ai-worsens-online-violence-against-middle-east-women/a-79912634?maca=en-rss-en-world-4025-rdf": {
+   "title": "How AI worsens online violence against Middle East women",
+   "source": "DW World",
+   "domain": "dw.com",
+   "date": "2026-11-11T06:38:00+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.dw.com/en/british-counterterrorism-police-arrest-us-soldier-accused-of-spying-on-behalf-of-russia/a-79913240?maca=en-rss-en-world-4025-rdf": {
+   "title": "British counterterrorism police arrest US soldier accused of spying on behalf of Russia",
+   "source": "DW World",
+   "domain": "dw.com",
+   "date": "2026-11-10T19:35:00+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.dw.com/en/uk-privy-council-overrules-trinidad-and-tobago-gay-sex-law/a-79912163?maca=en-rss-en-world-4025-rdf": {
+   "title": "UK Privy Council overrules Trinidad and Tobago gay sex law",
+   "source": "DW World",
+   "domain": "dw.com",
+   "date": "2026-11-10T19:21:00+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/france/20261111-the-most-hacked-country-in-europe-why-is-france-the-target-of-so-many-cyberattacks": {
+   "title": "The most hacked country in Europe? Why is France the target of so many cyberattacks",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T17:09:03+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/tens-of-thousands-attend-polish-nationalist-march-days-afer-shootings": {
+   "title": "Tens of thousands attend Polish nationalist march days afer shootings",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T17:08:32+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/france/20261111-tehran-will-strike-us-bases-in-europe-if-used-to-attack-iran-security-chief-says": {
+   "title": "Tehran will strike US bases in Europe if used to attack Iran, security chief says",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T16:45:46+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/bukele-says-salvadoran-troops-destroyed-gang-hq-in-haiti": {
+   "title": "Haiti: 'We need to know the truth, but so far, it’s totally dark'",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T16:38:52+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/violent-incidents-in-schools-as-french-students-vow-to-maintain-protest-pressure": {
+   "title": "Violent incidents in schools as French students vow to maintain protest pressure",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T16:35:05+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/brazil-electoral-court-fines-meta-1-3-mn-sees-no-deliberate-election-bias": {
+   "title": "Brazil electoral court fines Meta $1.3 MN, sees no deliberate election bias",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T16:08:22+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/cop31-talks-in-turkey-leeaders-from-us-china-and-india-skip-summit": {
+   "title": "COP31 talks in Turkey: Leaders from US, China and India skip summit",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T16:06:28+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/president-macron-speaks-for-armistice-day-commemoration-ceremony": {
+   "title": "President Macron speaks for Armistice Day commemoration ceremony",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T16:03:01+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/europe/20261111-russia-bans-two-french-lawmakers-and-two-journalists-from-entry": {
+   "title": "Russia bans two French lawmakers and two journalists from entry",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T15:58:14+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/video/20261111-armistice-day-in-france-commemorating-the-end-of-world-war-i": {
+   "title": "Armistice Day in France: Macron honors the End of World War I",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T15:57:54+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/spain-general-strike-over-housing-costs-before-national-election": {
+   "title": "Spain: General strike over housing costs before national election",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T15:54:40+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/tv-shows/talking-europe/20261111-exclusive-eu-s-kallas-says-us-can-t-negotiate-on-our-behalf-on-lifting-russia-sanctions": {
+   "title": "Exclusive: EU's Kallas says US 'can't negotiate on our behalf' on lifting Russia sanctions",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T15:15:40+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/tv-shows/arts24/20261111-charlotte-gainsbourg-brings-pioneering-french-lawyer-gis%C3%A8le-halimi-to-the-screen": {
+   "title": "Charlotte Gainsbourg brings pioneering French lawyer Gisèle Halimi to the screen",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T15:13:34+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/tv-shows/entre-nous/20261111-tt-behind-georges-larnicol-s-creative-spin-on-kouign-amann": {
+   "title": "Behind Georges Larnicol's creative spin on Breton specialty kouign-amann",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T14:05:35+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/tv-shows/perspective/20261111-unicef-head-catherine-russell-we-re-all-committed-to-the-importance-of-children": {
+   "title": "UNICEF head Catherine Russell: 'We're all committed to the importance of children'",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T12:49:54+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/tv-shows/focus/20261111-aneto-one-of-southern-europe-s-largest-glaciers-is-melting-away": {
+   "title": "Aneto, one of southern Europe's largest glaciers, is melting away",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T12:32:41+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/europe-how-prepared-is-the-continent-to-face-a-futur-conflict": {
+   "title": "Patrick Bury: 'It’s going to cost a lot of money to repair the systems.'",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T12:32:17+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/us-house-votes-to-derail-impeachment-of-defense-secretary-hegseth": {
+   "title": "US House votes to derail impeachment of Defense Secretary Hegseth",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T12:17:22+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/violent-clashes-near-the-sudanese-border-at-least-65-dead-in-western-ethiopia": {
+   "title": "Violent clashes near the Sudanese border: At least 65 dead in western Ethiopia",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T12:07:35+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/tv-shows/press-review/20261111-uk-comedian-david-walliams-accused-of-grooming-and-sexual-harassment": {
+   "title": "UK comedian David Walliams accused of grooming and sexual harassment",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T11:56:59+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/welcome-home-peru-awaits-pope-leo-s-emotional-homecoming": {
+   "title": "'Welcome Home': Peru awaits Pope Leo's emotional 'homecoming'",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T11:53:43+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/france-marks-armistice-day-macron-attends-commemorative-ceremony": {
+   "title": "France marks Armistice Day : Macron attends commemorative ceremony",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T11:36:53+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/eisenkot-quickly-targets-netanyahu-s-legacy-in-new-israeli-parliament": {
+   "title": "Eisenkot quickly targets Netanyahu's legacy in new Israeli parliament",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T11:29:28+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.france24.com/en/eu-ready-for-united-response-after-france-blames-iran-for-fridge-hacks": {
+   "title": "EU ready for 'united response' after France blames Iran for fridge hacks",
+   "source": "France 24",
+   "domain": "france24.com",
+   "date": "2026-11-11T11:16:36+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.npr.org/2026/11/11/g-s1-150228/senegal-youth-olympic-games-breakdancing": {
+   "title": "Greetings from Senegal, where breakdancers are competing in the Youth Olympics",
+   "source": "NPR World",
+   "domain": "npr.org",
+   "date": "2026-11-11T17:23:10+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.npr.org/2026/11/11/g-s1-152954/russia-ukraine-war-talks": {
+   "title": "Russia and Ukraine agree to a prisoner exchange as talks end with no big breakthrough",
+   "source": "NPR World",
+   "domain": "npr.org",
+   "date": "2026-11-11T13:30:00+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.npr.org/2026/11/11/g-s1-152949/up-first-newsletter-pete-hegseth-jim-jordan-iran-backed-trio-us-bases": {
+   "title": "House effectively ends Hegseth impeachment. And, 3 men accused of plotting U.K. attacks",
+   "source": "NPR World",
+   "domain": "npr.org",
+   "date": "2026-11-11T12:21:59+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.npr.org/2026/11/10/nx-s1-6036786/uk-iran-airbase-russia-spy": {
+   "title": "An Iran-backed trio is accused of plotting attacks on a U.K. base hosting U.S. jets",
+   "source": "NPR World",
+   "domain": "npr.org",
+   "date": "2026-11-11T10:02:54+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.npr.org/2026/11/11/nx-s1-6037314/spain-general-strike": {
+   "title": "Spain's workers hold a general strike over housing costs before national election",
+   "source": "NPR World",
+   "domain": "npr.org",
+   "date": "2026-11-11T09:54:54+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.npr.org/2026/11/11/nx-s1-6037304/ebola-congo-outbreak": {
+   "title": "Ebola tops 11,000 cases in Congo's deadliest outbreak",
+   "source": "NPR World",
+   "domain": "npr.org",
+   "date": "2026-11-11T09:16:01+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.npr.org/2026/11/10/nx-s1-6034998/un-human-rights-us-geneva": {
+   "title": "U.S. boycotts U.N. human rights review for second year running",
+   "source": "NPR World",
+   "domain": "npr.org",
+   "date": "2026-11-10T18:53:34+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/world/us-house-republicans-leader-jordan-9.7417743?cmp=rss": {
+   "title": "Jim Jordan, once called a 'legislative terrorist' by a top Republican, will now lead the party in U.S. House",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-11T17:01:02+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/player/play/9.7418079?cmp=rss": {
+   "title": "Spaniards shut down country over high housing prices",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-11T17:17:19+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/world/three-dead-vehicle-pedestrians-los-angeles-9.7417662?cmp=rss": {
+   "title": "3 dead, driver arrested after vehicle plows into pedestrians in Los Angeles",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-11T09:52:19+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/world/us-trump-arch-kennedys-objection-9.7417679?cmp=rss": {
+   "title": "Joining lawsuit, Kennedy family members say Trump's arch would be 'denigration' of JFK, RFK plots at Arlington",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-11T11:32:33+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/entertainment/stacy-keach-obituary-actor-mike-hammer-9.7417622?cmp=rss": {
+   "title": "Stacy Keach, stage actor and Mike Hammer star, dead at 85",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-11T03:28:56+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/health/congo-ebola-outbreak-cases-9.7417666?cmp=rss": {
+   "title": "Congo's Ebola outbreak tops 11,000 cases as disease keeps spreading",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-11T09:54:39+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/world/alice-huang-nvidia-9.7416909?cmp=rss": {
+   "title": "Who is Alice Huang? Alleged Chinese spy, businesswoman involved with Nvidia CEO",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-10T20:16:37+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/world/us-charges-3-with-planning-terror-attacks-uk-airbase-9.7417230?cmp=rss": {
+   "title": "3 charged in U.S. with planning terror attacks, including alleged planned assault on British airbase",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-10T23:03:11+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/world/us-soldier-arrest-suspicion-espionage-russia-9.7416928?cmp=rss": {
+   "title": "U.S. soldier arrested in England on suspicion of espionage related to Russia, counterterror police say",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-10T20:21:11+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/player/play/9.7417187?cmp=rss": {
+   "title": "The facts about AIPAC, America's pro-Israel lobby",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-10T22:15:51+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/world/vazquez-wedding-charges-9.7417199?cmp=rss": {
+   "title": "Slain cartel boss 'The General' provided Ryan Wedding with fake police ID to evade capture, U.S. alleges",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-10T23:19:15+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/world/meghan-markle-father-thomas-markle-child-sexual-abuse-charges-9.7416922?cmp=rss": {
+   "title": "Meghan Markle's father cut off ankle monitor days after arrest, U.S. officials say",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-10T20:45:39+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
+  },
+  "https://www.cbc.ca/news/politics/carney-china-ambassador-picked-9.7416678?cmp=rss": {
+   "title": "Carney selects new ambassador to China, plans to announce 'in very short order'",
+   "source": "CBC World",
+   "domain": "cbc.ca",
+   "date": "2026-11-10T18:59:45+00:00",
+   "seen": "2026-11-11T18:51:48.765187+00:00",
+   "n_claims": 0
   }
  },
  "claims": [
@@ -8537,6 +9537,45 @@
    "source": "CBC World",
    "title": "Russia, Ukraine engage in 4-hour session on first day of U.S.-mediated talks in Abu Dhabi",
    "date": "2026-11-10T09:57:22+00:00"
+  },
+  {
+   "kind": "bloc",
+   "group": "NATO",
+   "country": "RUS",
+   "action": "applied",
+   "hedged": true,
+   "sentence": "Russia appears to be seeking to revive demands it presented to Nato in 2021, including a halt to further enlargement that would rule out Ukraine’s membership, restrictions on Nato forces and weapons in European countries that joined after 1997, and limits on missile deployments.",
+   "url": "https://www.theguardian.com/world/2026/nov/11/ukraine-talks-in-abu-dhabi-bring-progress-on-prisoners-but-not-on-peace",
+   "domain": "theguardian.com",
+   "source": "The Guardian World",
+   "title": "Ukraine talks in Abu Dhabi bring progress on prisoners but not on peace",
+   "date": "2026-11-11T17:03:43+00:00"
+  },
+  {
+   "kind": "bloc",
+   "group": "NATO",
+   "country": "RUS",
+   "action": "applied",
+   "hedged": true,
+   "sentence": "Russia appears to be seeking to revive demands it presented to Nato in 2021, including a halt to further enlargement that would rule out Ukraine’s membership, restrictions on Nato forces and weapons in European countries that joined after 1997, and limits on missile deployments.",
+   "url": "https://www.theguardian.com/world/2026/nov/11/ukraine-talks-in-abu-dhabi-bring-progress-on-prisoners-but-not-on-peace",
+   "domain": "theguardian.com",
+   "source": "The Guardian World",
+   "title": "Ukraine talks in Abu Dhabi bring progress on prisoners but not on peace",
+   "date": "2026-11-11T17:03:43+00:00"
+  },
+  {
+   "kind": "bloc",
+   "group": "G7",
+   "country": "UKR",
+   "action": "applied",
+   "hedged": false,
+   "sentence": "The G7 top diplomats stressed the need to secure long-term financial aid for Ukraine, as Kyiv’s allies sought ways to cover its budget beyond 2026, AFP reported.",
+   "url": "https://www.theguardian.com/world/live/2026/nov/11/europe-ukraine-russia-us-talks-abu-dhabi-zelenskyy-latest-news-updates",
+   "domain": "theguardian.com",
+   "source": "The Guardian World",
+   "title": "US envoys to meet Putin and Zelenskyy separately - as it happened",
+   "date": "2026-11-11T16:08:20+00:00"
   }
  ]
 }

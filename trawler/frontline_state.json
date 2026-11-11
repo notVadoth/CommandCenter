@@ -1389,6 +1389,62 @@
    "url": "https://ua.news/en/ukraine/v-uzhgorodi-zatrimali-kolishniu-kerivnitsiu-okupatsiinogo-donbasgazu",
    "date": "2026-11-10T06:31:00+00:00",
    "seen": "2026-11-10T18:50:20.163754+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Voskresenka",
+   "iso": "UKR",
+   "province": "Zaporizhia Oblast",
+   "province_id": "14850775B92888097715572",
+   "outlet": "TASS",
+   "host": "tass.com",
+   "partisan": true,
+   "title": "Russian troops liberate two communities in Ukraine operation over past day — top brass",
+   "sentence": "Units of Russia's Battlegroup Center liberated the settlement of Shilovka in the DPR and servicemen of the Battlegroup East liberated the settlement of Voskresenka in the Zaporozhye Region through decisive operations",
+   "url": "https://tass.com/politics/2216261",
+   "date": "2026-11-11T12:36:51+00:00",
+   "seen": "2026-11-11T18:52:41.672370+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "Sumy",
+   "iso": "UKR",
+   "province": "Sumy Oblast",
+   "province_id": "14850775B14512392274127",
+   "outlet": "Voennoe Delo",
+   "host": "voennoedelo.com",
+   "partisan": false,
+   "title": "Russian Forces Advance to Within 15 km of Sumy as Ukrainian Analysts Question Troop Redeployment",
+   "sentence": "Russian Forces Advance to Within 15 km of Sumy as Ukrainian Analysts Question Troop Redeployment.",
+   "url": "https://voennoedelo.com/en/posts/id22058-russian-troops-near-sumy-as-ukraine-faces-defense-gaps",
+   "date": "2026-11-11T03:59:00+00:00",
+   "seen": "2026-11-11T18:52:41.672370+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis",
+    "Government"
+   ],
+   "place": "Al-Jawf",
+   "iso": "YEM",
+   "province": "Al Jawf Governorate",
+   "province_id": "18629408B7407331306690",
+   "outlet": "UA.NEWS",
+   "host": "ua.news",
+   "partisan": false,
+   "title": "Yemeni government forces claim capture of positions in Al-Jawf — Asharq Al-Awsat",
+   "sentence": "Yemeni government forces said they captured new positions in Al-Jawf during Operation Dawn of Yemen and reported intensified strikes on Houthi forces across several fronts.",
+   "url": "https://ua.news/en/dovkolo-svitu/uriadovi-sili-emenu-zaiavili-pro-zakhoplennia-pozitsii-v-al-dzhauf-asharq-al-awsat",
+   "date": "2026-11-10T19:06:00+00:00",
+   "seen": "2026-11-11T18:52:41.672370+00:00"
   }
  ],
  "truce": [

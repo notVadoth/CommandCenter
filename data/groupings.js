@@ -1,6 +1,6 @@
 // written by trawler.py — loaded automatically by commandcenter-map.html
 window.TRAWLER_GROUPINGS = {
- "generated": "2026-11-10T18:49:18.152633+00:00",
+ "generated": "2026-11-11T18:51:48.765187+00:00",
  "extractor": "rules",
  "verification": {
   "wikidata": true,
@@ -13,7 +13,7 @@ window.TRAWLER_GROUPINGS = {
    "conflict": "Wikidata contradicts the claim — review"
   }
  },
- "articles_in_store": 976,
+ "articles_in_store": 1101,
  "blocs": {
   "EU": {
    "name": "European Union",
@@ -427,43 +427,8 @@ window.TRAWLER_GROUPINGS = {
     "qid": "Q7184",
     "label": null
    },
-   "baseline_audit": {
-    "in_wikidata_not_baseline": [],
-    "in_baseline_not_wikidata": [
-     "DNK",
-     "NLD"
-    ]
-   },
+   "baseline_audit": null,
    "changes": [
-    {
-     "country": "FRA",
-     "action": "left",
-     "status": "conflict",
-     "wikidata": "disagrees",
-     "independent_outlets": 1,
-     "evidence": [
-      {
-       "source": "France 24",
-       "domain": "france24.com",
-       "title": "🔴 Watch live: 'We must change everything,' French far-left presidential candidate Mélenchon says",
-       "url": "https://www.france24.com/en/france/20261107-french-presidential-hopeful-m%C3%A9lenchon-launches-campaign-by-vowing-lower-retirement-age",
-       "date": "2026-11-07T14:44:24+00:00",
-       "sentence": "On ​foreign policy, Mélenchon's programme reiterates his long-standing criticism of NATO and calls for France's gradual withdrawal from the military alliance, starting with an exit from its integrated military command.",
-       "hedged": false,
-       "syndicated_copy": false
-      },
-      {
-       "source": "France 24",
-       "domain": "france24.com",
-       "title": "🔴 Watch live: 'We must change everything,' French far-left presidential candidate Mélenchon says",
-       "url": "https://www.france24.com/en/france/20261107-french-presidential-hopeful-m%C3%A9lenchon-launches-campaign-by-vowing-lower-retirement-age",
-       "date": "2026-11-07T14:44:24+00:00",
-       "sentence": "France previously withdrew from NATO's integrated military command in 1966 under president Charles de Gaulle, a decision later reversed under right-wing president Nicolas Sarkozy in 2009.",
-       "hedged": false,
-       "syndicated_copy": false
-      }
-     ]
-    },
     {
      "country": "UKR",
      "action": "joined",
@@ -529,6 +494,35 @@ window.TRAWLER_GROUPINGS = {
        "sentence": "He also demands that Ukraine abandon its bid to join NATO, accept strict limits on its military and drop restrictions on the Russian language and the Moscow-affiliated Orthodox Church in Ukraine.",
        "hedged": false,
        "syndicated_copy": true
+      }
+     ]
+    },
+    {
+     "country": "FRA",
+     "action": "left",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "independent_outlets": 1,
+     "evidence": [
+      {
+       "source": "France 24",
+       "domain": "france24.com",
+       "title": "🔴 Watch live: 'We must change everything,' French far-left presidential candidate Mélenchon says",
+       "url": "https://www.france24.com/en/france/20261107-french-presidential-hopeful-m%C3%A9lenchon-launches-campaign-by-vowing-lower-retirement-age",
+       "date": "2026-11-07T14:44:24+00:00",
+       "sentence": "On ​foreign policy, Mélenchon's programme reiterates his long-standing criticism of NATO and calls for France's gradual withdrawal from the military alliance, starting with an exit from its integrated military command.",
+       "hedged": false,
+       "syndicated_copy": false
+      },
+      {
+       "source": "France 24",
+       "domain": "france24.com",
+       "title": "🔴 Watch live: 'We must change everything,' French far-left presidential candidate Mélenchon says",
+       "url": "https://www.france24.com/en/france/20261107-french-presidential-hopeful-m%C3%A9lenchon-launches-campaign-by-vowing-lower-retirement-age",
+       "date": "2026-11-07T14:44:24+00:00",
+       "sentence": "France previously withdrew from NATO's integrated military command in 1966 under president Charles de Gaulle, a decision later reversed under right-wing president Nicolas Sarkozy in 2009.",
+       "hedged": false,
+       "syndicated_copy": false
       }
      ]
     },
@@ -615,6 +609,26 @@ window.TRAWLER_GROUPINGS = {
        "sentence": "Since his first decade in power, Putin has complained about Nato’s eastward expansion and sought to renegotiate the balance of power between Nato and Russia – but never before have those demands been embraced by a sitting US administration, which has made it clear that it is desperate to get to a deal.",
        "hedged": true,
        "syndicated_copy": true
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Ukraine talks in Abu Dhabi bring progress on prisoners but not on peace",
+       "url": "https://www.theguardian.com/world/2026/nov/11/ukraine-talks-in-abu-dhabi-bring-progress-on-prisoners-but-not-on-peace",
+       "date": "2026-11-11T17:03:43+00:00",
+       "sentence": "Russia appears to be seeking to revive demands it presented to Nato in 2021, including a halt to further enlargement that would rule out Ukraine’s membership, restrictions on Nato forces and weapons in European countries that joined after 1997, and limits on missile deployments.",
+       "hedged": true,
+       "syndicated_copy": false
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Ukraine talks in Abu Dhabi bring progress on prisoners but not on peace",
+       "url": "https://www.theguardian.com/world/2026/nov/11/ukraine-talks-in-abu-dhabi-bring-progress-on-prisoners-but-not-on-peace",
+       "date": "2026-11-11T17:03:43+00:00",
+       "sentence": "Russia appears to be seeking to revive demands it presented to Nato in 2021, including a halt to further enlargement that would rule out Ukraine’s membership, restrictions on Nato forces and weapons in European countries that joined after 1997, and limits on missile deployments.",
+       "hedged": true,
+       "syndicated_copy": true
       }
      ]
     },
@@ -673,10 +687,7 @@ window.TRAWLER_GROUPINGS = {
     "label": "BRICS",
     "description": "Association of Brazil, Russia, India, China, South Africa, Egypt, Indonesia, Iran, United Arab Emirates, and Ethiopia"
    },
-   "baseline_audit": {
-    "in_wikidata_not_baseline": [],
-    "in_baseline_not_wikidata": []
-   },
+   "baseline_audit": null,
    "changes": []
   },
   "G7": {
@@ -700,7 +711,27 @@ window.TRAWLER_GROUPINGS = {
     "description": "international intergovernmental economic organization"
    },
    "baseline_audit": null,
-   "changes": []
+   "changes": [
+    {
+     "country": "UKR",
+     "action": "applied",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "independent_outlets": 1,
+     "evidence": [
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "US envoys to meet Putin and Zelenskyy separately - as it happened",
+       "url": "https://www.theguardian.com/world/live/2026/nov/11/europe-ukraine-russia-us-talks-abu-dhabi-zelenskyy-latest-news-updates",
+       "date": "2026-11-11T16:08:20+00:00",
+       "sentence": "The G7 top diplomats stressed the need to secure long-term financial aid for Ukraine, as Kyiv’s allies sought ways to cover its budget beyond 2026, AFP reported.",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    }
+   ]
   },
   "G20": {
    "name": "G20 (countries)",
@@ -1514,8 +1545,8 @@ window.TRAWLER_GROUPINGS = {
    "group": "NATO",
    "country": "FRA",
    "action": "left",
-   "status": "conflict",
-   "wikidata": "disagrees",
+   "status": "single-source",
+   "wikidata": "unknown",
    "independent_outlets": 1,
    "evidence": [
     {
@@ -1615,6 +1646,26 @@ window.TRAWLER_GROUPINGS = {
      "url": "https://www.dw.com/en/japan-watches-for-signs-of-change-in-trump-s-foreign-policy-priorities/a-79909398?maca=en-rss-en-world-4025-rdf",
      "date": "2026-11-10T13:31:00+00:00",
      "sentence": "Over the past decade, Tokyo has proactively diversified its security partnerships, stepping up defense cooperation with European Union member states and NATO, forging a quasi-alliance with Australia, and joining a range of minilateral frameworks across the Indo-Pacific, including with the Philippines.",
+     "hedged": false,
+     "syndicated_copy": false
+    }
+   ]
+  },
+  {
+   "group": "G7",
+   "country": "UKR",
+   "action": "applied",
+   "status": "single-source",
+   "wikidata": "unknown",
+   "independent_outlets": 1,
+   "evidence": [
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "US envoys to meet Putin and Zelenskyy separately - as it happened",
+     "url": "https://www.theguardian.com/world/live/2026/nov/11/europe-ukraine-russia-us-talks-abu-dhabi-zelenskyy-latest-news-updates",
+     "date": "2026-11-11T16:08:20+00:00",
+     "sentence": "The G7 top diplomats stressed the need to secure long-term financial aid for Ukraine, as Kyiv’s allies sought ways to cover its budget beyond 2026, AFP reported.",
      "hedged": false,
      "syndicated_copy": false
     }
