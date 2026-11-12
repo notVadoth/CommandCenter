@@ -1,6 +1,6 @@
 // written by trawler.py — loaded automatically by commandcenter-map.html
 window.TRAWLER_GROUPINGS = {
- "generated": "2026-11-11T18:51:48.765187+00:00",
+ "generated": "2026-11-12T19:06:28.903734+00:00",
  "extractor": "rules",
  "verification": {
   "wikidata": true,
@@ -13,7 +13,7 @@ window.TRAWLER_GROUPINGS = {
    "conflict": "Wikidata contradicts the claim — review"
   }
  },
- "articles_in_store": 1101,
+ "articles_in_store": 1230,
  "blocs": {
   "EU": {
    "name": "European Union",
@@ -546,6 +546,65 @@ window.TRAWLER_GROUPINGS = {
      ]
     },
     {
+     "country": "RUS",
+     "action": "applied",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "independent_outlets": 1,
+     "evidence": [
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "US officials seek ‘final end’ to Russia-Ukraine war, as Abu Dhabi talks set to continue",
+       "url": "https://www.theguardian.com/world/2026/nov/10/us-officials-russia-ukraine-war-abu-dhabi-talks",
+       "date": "2026-11-10T16:59:04+00:00",
+       "sentence": "Since his first decade in power, Putin has complained about Nato’s eastward expansion and sought to renegotiate the balance of power between Nato and Russia – but never before have those demands been embraced by a sitting US administration, which has made it clear that it is desperate to get to a deal.",
+       "hedged": true,
+       "syndicated_copy": false
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "US officials seek ‘final end’ to Russia-Ukraine war, as Abu Dhabi talks set to continue",
+       "url": "https://www.theguardian.com/world/2026/nov/10/us-officials-russia-ukraine-war-abu-dhabi-talks",
+       "date": "2026-11-10T16:59:04+00:00",
+       "sentence": "Since his first decade in power, Putin has complained about Nato’s eastward expansion and sought to renegotiate the balance of power between Nato and Russia – but never before have those demands been embraced by a sitting US administration, which has made it clear that it is desperate to get to a deal.",
+       "hedged": true,
+       "syndicated_copy": true
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Ukraine talks in Abu Dhabi bring progress on prisoners but not on peace",
+       "url": "https://www.theguardian.com/world/2026/nov/11/ukraine-talks-in-abu-dhabi-bring-progress-on-prisoners-but-not-on-peace",
+       "date": "2026-11-11T17:03:43+00:00",
+       "sentence": "Russia appears to be seeking to revive demands it presented to Nato in 2021, including a halt to further enlargement that would rule out Ukraine’s membership, restrictions on Nato forces and weapons in European countries that joined after 1997, and limits on missile deployments.",
+       "hedged": true,
+       "syndicated_copy": false
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Ukraine talks in Abu Dhabi bring progress on prisoners but not on peace",
+       "url": "https://www.theguardian.com/world/2026/nov/11/ukraine-talks-in-abu-dhabi-bring-progress-on-prisoners-but-not-on-peace",
+       "date": "2026-11-11T17:03:43+00:00",
+       "sentence": "Russia appears to be seeking to revive demands it presented to Nato in 2021, including a halt to further enlargement that would rule out Ukraine’s membership, restrictions on Nato forces and weapons in European countries that joined after 1997, and limits on missile deployments.",
+       "hedged": true,
+       "syndicated_copy": true
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "New talks with Russia, Ukraine and European countries agreed, US says - as it happened",
+       "url": "https://www.theguardian.com/world/live/2026/nov/12/us-envoys-in-moscow-meeting-putin-abu-dhabi-trilateral-ukraine-ceasefire-talks-latest-news-updates",
+       "date": "2026-11-12T17:17:55+00:00",
+       "sentence": "As our Russia expert, Pjotr Sauer, said after yesterday’s discussions: “Russia appears to be seeking to revive demands it presented to Nato in 2021,” with maximalist conditions on future enlargement and deployments.",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
      "country": "AUS",
      "action": "joined",
      "status": "single-source",
@@ -585,55 +644,6 @@ window.TRAWLER_GROUPINGS = {
     },
     {
      "country": "RUS",
-     "action": "applied",
-     "status": "speculative",
-     "wikidata": "unknown",
-     "independent_outlets": 0,
-     "evidence": [
-      {
-       "source": "The Guardian World",
-       "domain": "theguardian.com",
-       "title": "US officials seek ‘final end’ to Russia-Ukraine war, as Abu Dhabi talks set to continue",
-       "url": "https://www.theguardian.com/world/2026/nov/10/us-officials-russia-ukraine-war-abu-dhabi-talks",
-       "date": "2026-11-10T16:59:04+00:00",
-       "sentence": "Since his first decade in power, Putin has complained about Nato’s eastward expansion and sought to renegotiate the balance of power between Nato and Russia – but never before have those demands been embraced by a sitting US administration, which has made it clear that it is desperate to get to a deal.",
-       "hedged": true,
-       "syndicated_copy": false
-      },
-      {
-       "source": "The Guardian World",
-       "domain": "theguardian.com",
-       "title": "US officials seek ‘final end’ to Russia-Ukraine war, as Abu Dhabi talks set to continue",
-       "url": "https://www.theguardian.com/world/2026/nov/10/us-officials-russia-ukraine-war-abu-dhabi-talks",
-       "date": "2026-11-10T16:59:04+00:00",
-       "sentence": "Since his first decade in power, Putin has complained about Nato’s eastward expansion and sought to renegotiate the balance of power between Nato and Russia – but never before have those demands been embraced by a sitting US administration, which has made it clear that it is desperate to get to a deal.",
-       "hedged": true,
-       "syndicated_copy": true
-      },
-      {
-       "source": "The Guardian World",
-       "domain": "theguardian.com",
-       "title": "Ukraine talks in Abu Dhabi bring progress on prisoners but not on peace",
-       "url": "https://www.theguardian.com/world/2026/nov/11/ukraine-talks-in-abu-dhabi-bring-progress-on-prisoners-but-not-on-peace",
-       "date": "2026-11-11T17:03:43+00:00",
-       "sentence": "Russia appears to be seeking to revive demands it presented to Nato in 2021, including a halt to further enlargement that would rule out Ukraine’s membership, restrictions on Nato forces and weapons in European countries that joined after 1997, and limits on missile deployments.",
-       "hedged": true,
-       "syndicated_copy": false
-      },
-      {
-       "source": "The Guardian World",
-       "domain": "theguardian.com",
-       "title": "Ukraine talks in Abu Dhabi bring progress on prisoners but not on peace",
-       "url": "https://www.theguardian.com/world/2026/nov/11/ukraine-talks-in-abu-dhabi-bring-progress-on-prisoners-but-not-on-peace",
-       "date": "2026-11-11T17:03:43+00:00",
-       "sentence": "Russia appears to be seeking to revive demands it presented to Nato in 2021, including a halt to further enlargement that would rule out Ukraine’s membership, restrictions on Nato forces and weapons in European countries that joined after 1997, and limits on missile deployments.",
-       "hedged": true,
-       "syndicated_copy": true
-      }
-     ]
-    },
-    {
-     "country": "RUS",
      "action": "suspended",
      "status": "speculative",
      "wikidata": "unknown",
@@ -646,6 +656,63 @@ window.TRAWLER_GROUPINGS = {
        "url": "https://www.theguardian.com/world/2026/nov/10/us-officials-russia-ukraine-war-abu-dhabi-talks",
        "date": "2026-11-10T16:59:04+00:00",
        "sentence": "He said negotiators could also revive the Nato-Russian council that was suspended after Russia’s full-scale invasion in 2022, and potentially lift sanctions against Russia to get to a deal.",
+       "hedged": true,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
+     "country": "RUS",
+     "action": "reinstated",
+     "status": "speculative",
+     "wikidata": "unknown",
+     "independent_outlets": 0,
+     "evidence": [
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "New talks with Russia, Ukraine and European countries agreed, US says - as it happened",
+       "url": "https://www.theguardian.com/world/live/2026/nov/12/us-envoys-in-moscow-meeting-putin-abu-dhabi-trilateral-ukraine-ceasefire-talks-latest-news-updates",
+       "date": "2026-11-12T17:17:55+00:00",
+       "sentence": "Ushakov said that Russia had made ⁠clear to the US envoys that ​Nato ​could not expand ​further and expressed hope ​that Europe ‌would support ​talks ​on a new European security architecture.\nin Rome\nA controversial bill approved in October in the lower house of Italy’s parliament includes measures that allow healthcare workers who were struck off their professional registers during the pandemic f",
+       "hedged": true,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
+     "country": "USA",
+     "action": "reinstated",
+     "status": "speculative",
+     "wikidata": "unknown",
+     "independent_outlets": 0,
+     "evidence": [
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "New talks with Russia, Ukraine and European countries agreed, US says - as it happened",
+       "url": "https://www.theguardian.com/world/live/2026/nov/12/us-envoys-in-moscow-meeting-putin-abu-dhabi-trilateral-ukraine-ceasefire-talks-latest-news-updates",
+       "date": "2026-11-12T17:17:55+00:00",
+       "sentence": "Ushakov said that Russia had made ⁠clear to the US envoys that ​Nato ​could not expand ​further and expressed hope ​that Europe ‌would support ​talks ​on a new European security architecture.\nin Rome\nA controversial bill approved in October in the lower house of Italy’s parliament includes measures that allow healthcare workers who were struck off their professional registers during the pandemic f",
+       "hedged": true,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
+     "country": "ITA",
+     "action": "reinstated",
+     "status": "speculative",
+     "wikidata": "unknown",
+     "independent_outlets": 0,
+     "evidence": [
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "New talks with Russia, Ukraine and European countries agreed, US says - as it happened",
+       "url": "https://www.theguardian.com/world/live/2026/nov/12/us-envoys-in-moscow-meeting-putin-abu-dhabi-trilateral-ukraine-ceasefire-talks-latest-news-updates",
+       "date": "2026-11-12T17:17:55+00:00",
+       "sentence": "Ushakov said that Russia had made ⁠clear to the US envoys that ​Nato ​could not expand ​further and expressed hope ​that Europe ‌would support ​talks ​on a new European security architecture.\nin Rome\nA controversial bill approved in October in the lower house of Italy’s parliament includes measures that allow healthcare workers who were struck off their professional registers during the pandemic f",
        "hedged": true,
        "syndicated_copy": false
       }
@@ -1626,6 +1693,66 @@ window.TRAWLER_GROUPINGS = {
      "url": "https://www.france24.com/en/europe/20261108-europe-will-take-part-us-mediated-ukraine-peace-talks-abu-dhabi-french-fm-says",
      "date": "2026-11-08T14:16:31+00:00",
      "sentence": "Before launching the war in Ukraine in 2022, the Kremlin delivered an ultimatum to NATO which included a demand that the alliance's troops be withdrawn from eastern Europe.",
+     "hedged": false,
+     "syndicated_copy": false
+    }
+   ]
+  },
+  {
+   "group": "NATO",
+   "country": "RUS",
+   "action": "applied",
+   "status": "single-source",
+   "wikidata": "unknown",
+   "independent_outlets": 1,
+   "evidence": [
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "US officials seek ‘final end’ to Russia-Ukraine war, as Abu Dhabi talks set to continue",
+     "url": "https://www.theguardian.com/world/2026/nov/10/us-officials-russia-ukraine-war-abu-dhabi-talks",
+     "date": "2026-11-10T16:59:04+00:00",
+     "sentence": "Since his first decade in power, Putin has complained about Nato’s eastward expansion and sought to renegotiate the balance of power between Nato and Russia – but never before have those demands been embraced by a sitting US administration, which has made it clear that it is desperate to get to a deal.",
+     "hedged": true,
+     "syndicated_copy": false
+    },
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "US officials seek ‘final end’ to Russia-Ukraine war, as Abu Dhabi talks set to continue",
+     "url": "https://www.theguardian.com/world/2026/nov/10/us-officials-russia-ukraine-war-abu-dhabi-talks",
+     "date": "2026-11-10T16:59:04+00:00",
+     "sentence": "Since his first decade in power, Putin has complained about Nato’s eastward expansion and sought to renegotiate the balance of power between Nato and Russia – but never before have those demands been embraced by a sitting US administration, which has made it clear that it is desperate to get to a deal.",
+     "hedged": true,
+     "syndicated_copy": true
+    },
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "Ukraine talks in Abu Dhabi bring progress on prisoners but not on peace",
+     "url": "https://www.theguardian.com/world/2026/nov/11/ukraine-talks-in-abu-dhabi-bring-progress-on-prisoners-but-not-on-peace",
+     "date": "2026-11-11T17:03:43+00:00",
+     "sentence": "Russia appears to be seeking to revive demands it presented to Nato in 2021, including a halt to further enlargement that would rule out Ukraine’s membership, restrictions on Nato forces and weapons in European countries that joined after 1997, and limits on missile deployments.",
+     "hedged": true,
+     "syndicated_copy": false
+    },
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "Ukraine talks in Abu Dhabi bring progress on prisoners but not on peace",
+     "url": "https://www.theguardian.com/world/2026/nov/11/ukraine-talks-in-abu-dhabi-bring-progress-on-prisoners-but-not-on-peace",
+     "date": "2026-11-11T17:03:43+00:00",
+     "sentence": "Russia appears to be seeking to revive demands it presented to Nato in 2021, including a halt to further enlargement that would rule out Ukraine’s membership, restrictions on Nato forces and weapons in European countries that joined after 1997, and limits on missile deployments.",
+     "hedged": true,
+     "syndicated_copy": true
+    },
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "New talks with Russia, Ukraine and European countries agreed, US says - as it happened",
+     "url": "https://www.theguardian.com/world/live/2026/nov/12/us-envoys-in-moscow-meeting-putin-abu-dhabi-trilateral-ukraine-ceasefire-talks-latest-news-updates",
+     "date": "2026-11-12T17:17:55+00:00",
+     "sentence": "As our Russia expert, Pjotr Sauer, said after yesterday’s discussions: “Russia appears to be seeking to revive demands it presented to Nato in 2021,” with maximalist conditions on future enlargement and deployments.",
      "hedged": false,
      "syndicated_copy": false
     }

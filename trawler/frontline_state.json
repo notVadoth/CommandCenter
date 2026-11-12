@@ -1445,6 +1445,207 @@
    "url": "https://ua.news/en/dovkolo-svitu/uriadovi-sili-emenu-zaiavili-pro-zakhoplennia-pozitsii-v-al-dzhauf-asharq-al-awsat",
    "date": "2026-11-10T19:06:00+00:00",
    "seen": "2026-11-11T18:52:41.672370+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "Khan Younis",
+   "iso": "PSE",
+   "province": "Gaza",
+   "province_id": "83478781B7121896376882",
+   "outlet": "The Guardian",
+   "host": "theguardian.com",
+   "partisan": false,
+   "title": "Israeli airstrike on Nasser hospital in Gaza kills surgeon and five others",
+   "sentence": "The Israeli military carried out the attack on the hospital, in Khan Younis, early on Thursday saying in a statement it had s",
+   "url": "https://www.theguardian.com/world/2026/nov/12/israeli-airstrike-nasser-hospital-gaza-kills-surgeon",
+   "date": "2026-11-12T12:19:01+00:00",
+   "seen": "2026-11-12T19:07:19.382924+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Oleshky",
+   "iso": "UKR",
+   "province": "Kherson Oblast",
+   "province_id": "14850775B65901307765467",
+   "outlet": "Kyiv Independent",
+   "host": "kyivindependent.com",
+   "partisan": false,
+   "title": "Electric shock, beating, choking — Russian commander tortured civilians in occupied Oleshky, prosecutors say",
+   "sentence": "Russian commander tortured civilians in occupied Oleshky, prosecutors say.",
+   "url": "https://kyivindependent.com/electric-shock-beating-choking-russian-commander-tortured-civilians-in-occupied-oleshky-prosecutors-say/",
+   "date": "2026-11-12T15:45:38+00:00",
+   "seen": "2026-11-12T19:07:19.382924+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Chernihiv Oblast",
+   "iso": "UKR",
+   "province": "Chernihiv Oblast",
+   "province_id": "14850775B55286662261645",
+   "outlet": "Ukrainska Pravda",
+   "host": "pravda.com.ua",
+   "partisan": false,
+   "title": "Russia attacks Naftogaz oil and gas asset in Chernihiv Oblast",
+   "sentence": "Russia attacks Naftogaz oil and gas asset in Chernihiv Oblast.",
+   "url": "https://www.pravda.com.ua/eng/news/2026/11/12/8062580/",
+   "date": "2026-11-12T16:38:00+00:00",
+   "seen": "2026-11-12T19:07:19.382924+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Hola Prystan",
+   "iso": "UKR",
+   "province": "Kherson Oblast",
+   "province_id": "14850775B65901307765467",
+   "outlet": "Ukrainska Pravda",
+   "host": "pravda.com.ua",
+   "partisan": false,
+   "title": "Homes in ruins and deserted streets: what Russian-occupied Hola Prystan looks like today – video",
+   "sentence": "Homes in ruins and deserted streets: what Russian-occupied Hola Prystan looks like today",
+   "url": "https://www.pravda.com.ua/eng/news/2026/11/12/8062541/",
+   "date": "2026-11-12T13:48:00+00:00",
+   "seen": "2026-11-12T19:07:19.382924+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "Gaza",
+   "iso": "PSE",
+   "province": "Gaza",
+   "province_id": "83478781B7121896376882",
+   "outlet": "Al Jazeera",
+   "host": "aljazeera.com",
+   "partisan": false,
+   "title": "Al Jazeera reports from Gaza hospital attacked by Israel",
+   "sentence": "Al Jazeera reports from Gaza hospital attacked by Israel.",
+   "url": "https://www.aljazeera.com/video/newsfeed/2026/11/12/al-jazeera-reports-from-gaza-hospital-attacked-by-israel?traffic_source=rss",
+   "date": "2026-11-12T18:03:02+00:00",
+   "seen": "2026-11-12T19:07:19.382924+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "Donetsk",
+   "iso": "UKR",
+   "province": "Donetsk Oblast",
+   "province_id": "14850775B15615817748403",
+   "outlet": "The Hindu",
+   "host": "thehindu.com",
+   "partisan": false,
+   "title": "No compromise with Ukraine, Putin indicates to U.S. envoys during talks",
+   "sentence": "The Russian President proposes a short-term ceasefire in a key frontline city in Donetsk; he also rules out agreeing to foreign troops being stationed in Ukraine",
+   "url": "https://www.thehindu.com/news/international/us-envoys-meet-putin-at-kremlin-following-ukraine-talks-in-abu-dhabi/article71694418.ece",
+   "date": "2026-11-12T17:44:19+00:00",
+   "seen": "2026-11-12T19:07:19.382924+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "Lyman",
+   "iso": "UKR",
+   "province": "Donetsk Oblast",
+   "province_id": "14850775B15615817748403",
+   "outlet": "sofx.com",
+   "host": "sofx.com",
+   "partisan": false,
+   "title": "Ukraine Deploys 28 Ground Robots, No Troops in Assault on Russian Positions",
+   "sentence": "Ukraine reportedly deployed 28 armed unmanned ground vehicles in an assault on Russian positions near Lyman in eastern Ukraine.",
+   "url": "https://www.sofx.com/ukraine-deploys-28-ground-robots-no-troops-in-assault-on-russian-positions/",
+   "date": "2026-11-11T20:00:00+00:00",
+   "seen": "2026-11-12T19:07:19.382924+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis",
+    "Government"
+   ],
+   "place": "Marib",
+   "iso": "YEM",
+   "province": "Ma'rib Governorate",
+   "province_id": "18629408B1777518619063",
+   "outlet": "yemenmonitor",
+   "host": "yemenmonitor.com",
+   "partisan": false,
+   "title": "Marib and Al-Jawf Amid Fierce Battles… Will Northern Yemen’s Contact Lines Shift?",
+   "sentence": "Fighting fronts in the Marib and Al-Jawf governorates are witnessing an accelerating military escalation, with clashes intensifying between government forces and the Houthi group—a field development ...",
+   "url": "https://www.yemenmonitor.com/en/Details/ArtMID/908/ArticleID/187544",
+   "date": "2026-11-11T16:00:00+00:00",
+   "seen": "2026-11-12T19:07:19.382924+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis"
+   ],
+   "place": "Aden",
+   "iso": "YEM",
+   "province": "‘Adan Governorate",
+   "province_id": "18629408B11945654439238",
+   "outlet": "Yahoo",
+   "host": "yahoo.com",
+   "partisan": false,
+   "title": "Yemen security sources report strikes on Aden",
+   "sentence": "Yemeni security sources reported Houthi strikes on Wednesday in Aden, the seat of the country's internationally recognised government, saying they had targeted camps belonging to forces fighting the ...",
+   "url": "https://www.yahoo.com/news/world/articles/yemenis-sanaa-mourn-dozens-killed-151841375.html",
+   "date": "2026-11-11T12:24:00+00:00",
+   "seen": "2026-11-12T19:07:19.382924+00:00"
+  },
+  {
+   "war": "drc-m23",
+   "sides": [
+    "M23"
+   ],
+   "place": "South Kivu",
+   "iso": "COD",
+   "province": "South Kivu",
+   "province_id": "28894549B54646848790483",
+   "outlet": "africa.dailynewsegypt",
+   "host": "africa.dailynewsegypt.com",
+   "partisan": false,
+   "title": "FRN sanctions: UN adds Kabila-led movement to Congo list",
+   "sentence": "The UN has extended FRN sanctions to Joseph Kabila's movement, listed as another name for the AFC, as fighting displaces over 323,000 in South Kivu.",
+   "url": "https://africa.dailynewsegypt.com/frn-sanctions-un-list/",
+   "date": "2026-11-12T10:27:00+00:00",
+   "seen": "2026-11-12T19:07:19.382924+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "Gaza Strip",
+   "iso": "PSE",
+   "province": "Gaza",
+   "province_id": "83478781B7121896376882",
+   "outlet": "en.ilsole24ore",
+   "host": "en.ilsole24ore.com",
+   "partisan": false,
+   "title": "Israel strikes a hospital in Gaza, killing six people: ‘It was a Hamas operations centre’",
+   "sentence": "This is one of the IDF’s most intense attacks since the fragile ceasefire came into force in the Gaza Strip.",
+   "url": "https://en.ilsole24ore.com/art/israel-strikes-a-hospital-in-gaza-killing-six-people-it-was-a-hamas-operations-centre-AJxUqmDC",
+   "date": "2026-11-11T16:00:00+00:00",
+   "seen": "2026-11-12T19:07:19.382924+00:00"
   }
  ],
  "truce": [
@@ -1477,6 +1678,26 @@
    "sentence": "The renewed fighting between the Houthis and the coalition backing Yemen's internationally recognised government intensified after the Houthis advanced in September toward the Bab ‌el-Mandeb ⁠Strait ...",
    "url": "https://www.telegraphindia.com/world/houthis-say-they-attack-saudi-east-west-pipeline-in-riyadh-deny-medina-strike/cid/2188805",
    "date": "2026-11-10T02:11:00+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "kind": "end",
+   "outlet": "CBC News",
+   "partisan": false,
+   "title": "Israeli strike on a Gaza hospital kills 6 people, including surgeon, health authorities say",
+   "sentence": "An Israeli airstrike on southern Gaza's main hospital overnight killed at least six Palestinians, including a surgeon and a teenage boy, medics said, the latest Israeli attack to undermine a year-old ceasefire in the war-shattered territory.",
+   "url": "https://www.cbc.ca/news/world/israeli-strike-on-gaza-hospital-kills-six-people-9.7418729?cmp=rss",
+   "date": "2026-11-12T09:53:34+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "kind": "end",
+   "outlet": "CGTN",
+   "partisan": false,
+   "title": "Iran opens women’s training camp amid fears of renewed attacks",
+   "sentence": "Iran opens women’s training camp amid fears of renewed attacks.",
+   "url": "https://newsus.cgtn.com/news/2026-11-12/Iran-opens-women-s-training-camp-amid-fears-of-renewed-attacks-1RZJtvj2Rpu/p.html?UTM_Source=cgtn&UTM_Medium=rss&UTM_Campaign=World",
+   "date": "2026-11-11T17:10:17+00:00"
   }
  ],
  "withdrawals": [],

@@ -1279,5 +1279,134 @@
  "Bab al-Mandeb Strait|LBN": [],
  "Al-Jawf|SOM": [],
  "Yemen|SOM": [],
- "State Marco Rubio|RUS,UKR": []
+ "State Marco Rubio|RUS,UKR": [],
+ "Khan Younis|MMR": [],
+ "Khan Younis|PSE": [
+  {
+   "qid": "Q309348",
+   "iso": "PSE",
+   "lat": 31.343889,
+   "lon": 34.3025
+  },
+  {
+   "qid": "Q123120431",
+   "iso": "PSE",
+   "lat": 31.369833333333332,
+   "lon": 34.34133333333333
+  },
+  {
+   "qid": "Q6400104",
+   "iso": "PSE",
+   "lat": 31.35083333,
+   "lon": 34.28833333
+  }
+ ],
+ "Khan Younis|LBN": [],
+ "Ukrainian-led|RUS,UKR": [],
+ "Moscow|MMR": [],
+ "Ukrainian-led|MMR": [],
+ "Hola Prystan|RUS,UKR": [
+  {
+   "qid": "Q760224",
+   "iso": "UKR",
+   "lat": 46.516666666667,
+   "lon": 32.516666666667
+  },
+  {
+   "qid": "Q2120087",
+   "iso": "UKR",
+   "lat": 46.272539,
+   "lon": 32.098548
+  },
+  {
+   "qid": "Q68716596",
+   "iso": "UKR",
+   "lat": 46.516666666667,
+   "lon": 32.516666666667
+  }
+ ],
+ "Operation Vivaldi|RUS,UKR": [],
+ "Siverskyi Donets River|RUS,UKR": [],
+ "Sloviansk|RUS,UKR": [
+  {
+   "qid": "Q33581",
+   "iso": "UKR",
+   "lat": 48.85325,
+   "lon": 37.60588888888889
+  },
+  {
+   "qid": "Q2628096",
+   "iso": "UKR",
+   "lat": 48.9157,
+   "lon": 37.7217
+  },
+  {
+   "qid": "Q110492523",
+   "iso": "UKR",
+   "lat": 48.85,
+   "lon": 37.6
+  },
+  {
+   "qid": "Q12153734",
+   "iso": "UKR",
+   "lat": 48.85636667,
+   "lon": 37.57121944
+  },
+  {
+   "qid": "Q4423099",
+   "iso": "UKR",
+   "lat": 45.686388888889,
+   "lon": 34.6925
+  },
+  {
+   "qid": "Q4423100",
+   "iso": "UKR",
+   "lat": 45.726666666667,
+   "lon": 33.320555555556
+  },
+  {
+   "qid": "Q12153723",
+   "iso": "UKR",
+   "lat": 48.831355,
+   "lon": 37.559829
+  }
+ ],
+ "Rosstat|RUS,UKR": [],
+ "Hamas’s Khan Younis|MMR": [],
+ "Nasser|MMR": [],
+ "Hamas’s Khan Younis|PSE": [],
+ "Nasser|PSE": [],
+ "Hamas’s Khan Younis|LBN": [],
+ "Nasser|LBN": [],
+ "Assault|RUS,UKR": [],
+ "Lyman|RUS,UKR": [
+  {
+   "qid": "Q2234641",
+   "iso": "UKR",
+   "lat": 48.9861,
+   "lon": 37.8111
+  }
+ ],
+ "Marib|MMR": [],
+ "Marib|SOM": [],
+ "Yemen’s Aden|YEM": [],
+ "Mandera|BFA,MLI,NER": [],
+ "Somali|BFA,MLI,NER": [],
+ "Mandera|SOM": [],
+ "Somali|SOM": [],
+ "Gaza Strip|PSE": [
+  {
+   "qid": "Q39760",
+   "iso": "PSE",
+   "lat": 31.45,
+   "lon": 34.4
+  },
+  {
+   "qid": "Q5588642",
+   "iso": "PSE",
+   "lat": 31.52,
+   "lon": 34.45
+  }
+ ],
+ "Gaza Strip|LBN": []
 }
