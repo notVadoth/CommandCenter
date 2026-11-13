@@ -1408,5 +1408,195 @@
    "lon": 34.45
   }
  ],
- "Gaza Strip|LBN": []
+ "Gaza Strip|LBN": [],
+ "Tigray|SDN": [],
+ "UK|PSE": [],
+ "Germany|PSE": [],
+ "Rakhine State|MMR": [
+  {
+   "qid": "Q233838",
+   "iso": "MMR",
+   "lat": 19.5,
+   "lon": 94
+  },
+  {
+   "qid": "Q7286667",
+   "iso": "MMR",
+   "lat": 20.141899669299335,
+   "lon": 92.89928011680423
+  }
+ ],
+ "Russian-occupied Oleshky|RUS,UKR": [],
+ "Zaporizhzhia Oblast Military|RUS,UKR": [],
+ "Zaporizhzhia's Kosmichnyi|RUS,UKR": [],
+ "Institute|RUS,UKR": [
+  {
+   "qid": "Q1367256",
+   "iso": "RUS",
+   "lat": 55.929444444444,
+   "lon": 37.521388888889
+  }
+ ],
+ "Traumatology|RUS,UKR": [
+  {
+   "qid": "Q141326976",
+   "iso": "RUS",
+   "lat": 53.630305,
+   "lon": 87.349487
+  }
+ ],
+ "Tillim|BFA,MLI,NER": [],
+ "Tera|BFA,MLI,NER": [],
+ "Bab el-Mandeb Strait|YEM": [
+  {
+   "qid": "Q83318",
+   "iso": "YEM",
+   "lat": 12.583333333333,
+   "lon": 43.333333333333
+  }
+ ],
+ "Aden Province|YEM": [
+  {
+   "qid": "Q17509767",
+   "iso": "YEM",
+   "lat": 12.8,
+   "lon": 45.0333
+  }
+ ],
+ "Bab el-Mandeb Strait|BFA,MLI,NER": [],
+ "Aden Province|BFA,MLI,NER": [],
+ "Saudi Arabia|YEM": [],
+ "US-Israeli|PSE": [],
+ "US-Israeli|LBN": [],
+ "Myanmar|MMR": [
+  {
+   "qid": "Q836",
+   "iso": "MMR",
+   "lat": 22,
+   "lon": 96
+  },
+  {
+   "qid": "Q9228",
+   "iso": "MMR",
+   "lat": 18,
+   "lon": 95
+  }
+ ],
+ "Plavni|RUS,UKR": [
+  {
+   "qid": "Q4364274",
+   "iso": "UKR",
+   "lat": 47.56476687382,
+   "lon": 35.332590546812
+  },
+  {
+   "qid": "Q2976063",
+   "iso": "UKR",
+   "lat": 45.398611111111,
+   "lon": 28.58
+  },
+  {
+   "qid": "Q20091313",
+   "iso": "UKR",
+   "lat": 47.56611111,
+   "lon": 35.3275
+  },
+  {
+   "qid": "Q238495",
+   "iso": "RUS",
+   "lat": 54.36666667,
+   "lon": 22.28333333
+  },
+  {
+   "qid": "Q4364276",
+   "iso": "UKR",
+   "lat": 49.431081622829,
+   "lon": 33.812118865621
+  },
+  {
+   "qid": "Q4364277",
+   "iso": "UKR",
+   "lat": 45.380555555556,
+   "lon": 35.886111111111
+  }
+ ],
+ "Kharkov Region After|RUS,UKR": [],
+ "Fighting|RUS,UKR": [],
+ "Kotovka|RUS,UKR": [
+  {
+   "qid": "Q4236208",
+   "iso": "UKR",
+   "lat": 49.130084364465,
+   "lon": 34.942809472901
+  },
+  {
+   "qid": "Q4236269",
+   "iso": "UKR",
+   "lat": 47.339722222222,
+   "lon": 30.78
+  },
+  {
+   "qid": "Q19804949",
+   "iso": "RUS",
+   "lat": 49.96083,
+   "lon": 40.90472
+  },
+  {
+   "qid": "Q4236217",
+   "iso": "RUS",
+   "lat": 57.4158,
+   "lon": 32.491
+  },
+  {
+   "qid": "Q18781703",
+   "iso": "RUS",
+   "lat": 55.27972,
+   "lon": 43.00194
+  },
+  {
+   "qid": "Q37748656",
+   "iso": "RUS",
+   "lat": 54.425277777778,
+   "lon": 39.534166666667
+  },
+  {
+   "qid": "Q36340728",
+   "iso": "RUS",
+   "lat": 62.7283,
+   "lon": 43.9975
+  },
+  {
+   "qid": "Q4236211",
+   "iso": "UKR",
+   "lat": 49.082058944779,
+   "lon": 25.914939277456
+  },
+  {
+   "qid": "Q4236215",
+   "iso": "UKR",
+   "lat": 50.587777777778,
+   "lon": 29.176111111111
+  }
+ ],
+ "Krasnoarske|RUS,UKR": [],
+ "Wadi Halhalan|YEM": [
+  {
+   "qid": "Q31339219",
+   "iso": "YEM",
+   "lat": 15.81667,
+   "lon": 45
+  },
+  {
+   "qid": "Q31317813",
+   "iso": "YEM",
+   "lat": 15.907222222222,
+   "lon": 45.175555555556
+  }
+ ],
+ "Hormuz|YEM": [],
+ "Saudi|MMR": [],
+ "Yemen|MMR": [],
+ "Lower Shabelle|MMR": [],
+ "Lower Shabelle|BFA,MLI,NER": [],
+ "Lower Shabelle|SOM": []
 }

@@ -1,6 +1,6 @@
 // written by trawler.py — loaded automatically by commandcenter-map.html
 window.TRAWLER_GROUPINGS = {
- "generated": "2026-11-12T19:06:28.903734+00:00",
+ "generated": "2026-11-13T18:45:22.334336+00:00",
  "extractor": "rules",
  "verification": {
   "wikidata": true,
@@ -13,7 +13,7 @@ window.TRAWLER_GROUPINGS = {
    "conflict": "Wikidata contradicts the claim — review"
   }
  },
- "articles_in_store": 1230,
+ "articles_in_store": 1345,
  "blocs": {
   "EU": {
    "name": "European Union",
@@ -294,6 +294,83 @@ window.TRAWLER_GROUPINGS = {
      ]
     },
     {
+     "country": "KOS",
+     "action": "applied",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "independent_outlets": 1,
+     "evidence": [
+      {
+       "source": "France 24",
+       "domain": "france24.com",
+       "title": "'We have done all our homework' to get EU candidate status: Kosovo's PM Albin Kurti",
+       "url": "https://www.france24.com/en/tv-shows/talking-europe/20261113-we-have-done-all-our-homework-to-get-eu-candidate-status-kosovo-s-pm-albin-kurti",
+       "date": "2026-11-13T17:46:16+00:00",
+       "sentence": "'We have done all our homework' to get EU candidate status: Kosovo's PM Albin Kurti.",
+       "hedged": false,
+       "syndicated_copy": false
+      },
+      {
+       "source": "France 24",
+       "domain": "france24.com",
+       "title": "'We have done all our homework' to get EU candidate status: Kosovo's PM Albin Kurti",
+       "url": "https://www.france24.com/en/tv-shows/talking-europe/20261113-we-have-done-all-our-homework-to-get-eu-candidate-status-kosovo-s-pm-albin-kurti",
+       "date": "2026-11-13T17:46:16+00:00",
+       "sentence": "But four years after applying to join the EU, Kosovo has still not received candidate status.",
+       "hedged": false,
+       "syndicated_copy": false
+      },
+      {
+       "source": "France 24",
+       "domain": "france24.com",
+       "title": "'We have done all our homework' to get EU candidate status: Kosovo's PM Albin Kurti",
+       "url": "https://www.france24.com/en/tv-shows/talking-europe/20261113-we-have-done-all-our-homework-to-get-eu-candidate-status-kosovo-s-pm-albin-kurti",
+       "date": "2026-11-13T17:46:16+00:00",
+       "sentence": "Hopefully in the next weeks or months, we are going to get candidate status as we are the only ones without it in continental Europe.\"\nThe prime minister cites \"internal dynamics\" in the EU Council as the reason why Kosovo has not been sent that questionnaire to kickstart the process.",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
+     "country": "KOS",
+     "action": "joined",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "independent_outlets": 1,
+     "evidence": [
+      {
+       "source": "France 24",
+       "domain": "france24.com",
+       "title": "'We have done all our homework' to get EU candidate status: Kosovo's PM Albin Kurti",
+       "url": "https://www.france24.com/en/tv-shows/talking-europe/20261113-we-have-done-all-our-homework-to-get-eu-candidate-status-kosovo-s-pm-albin-kurti",
+       "date": "2026-11-13T17:46:16+00:00",
+       "sentence": "And the five non-recognisers are not an obstacle to sending the questionnaire to Kosova for the accession process.\"\nWe put it to Kurti that the EU Commission still has serious reservations about some of Kosovo's reforms, particularly on judicial independence.",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
+     "country": "CAN",
+     "action": "applied",
+     "status": "single-source",
+     "wikidata": "unknown",
+     "independent_outlets": 1,
+     "evidence": [
+      {
+       "source": "CBC World",
+       "domain": "cbc.ca",
+       "title": "Carney wraps meetings on security, trade with European leaders in Ireland",
+       "url": "https://www.cbc.ca/news/politics/carney-europe-ireland-meetings-9.7419715?cmp=rss",
+       "date": "2026-11-12T21:22:04+00:00",
+       "sentence": "Carney says, unequivocally, Canada seeking to become the EU's 1st associate member\nCarney told reporters that the summit can help advance his goal of boosting affordability and economic opportunities for Canadians through new partnerships with Europe.",
+       "hedged": false,
+       "syndicated_copy": false
+      }
+     ]
+    },
+    {
      "country": "MNE",
      "action": "joined",
      "status": "speculative",
@@ -434,7 +511,7 @@ window.TRAWLER_GROUPINGS = {
      "action": "joined",
      "status": "corroborated",
      "wikidata": "unknown",
-     "independent_outlets": 2,
+     "independent_outlets": 3,
      "evidence": [
       {
        "source": "CBC World",
@@ -455,6 +532,56 @@ window.TRAWLER_GROUPINGS = {
        "sentence": "Shortly before invading Ukraine, the Russian president, Vladimir Putin, demanded that Nato go back to its pre-1997 posture – before the Baltic states and nations in eastern Europe and the Balkans joined.",
        "hedged": false,
        "syndicated_copy": false
+      },
+      {
+       "source": "Al Jazeera",
+       "domain": "aljazeera.com",
+       "title": "Ukraine claims record 3,000 Russian casualties in one day as war drags on",
+       "url": "https://www.aljazeera.com/news/2026/11/13/russias-demands-come-from-different-reality-as-war-efforts-stagnates?traffic_source=rss",
+       "date": "2026-11-13T14:15:52+00:00",
+       "sentence": "Russia has demanded territory Ukraine is not willing to surrender, and said NATO needs to pull out of all the former Soviet bloc countries which joined it since 1997.",
+       "hedged": false,
+       "syndicated_copy": false
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Europe should not walk into Russia’s ‘traps’ on Ukraine talks, EU’s foreign policy chief Kallas says – as it happened",
+       "url": "https://www.theguardian.com/world/live/2026/nov/13/eu-leaders-negotiations-ukraine-russia-dublin-ai-summit-kushner-witkoff-latest-news-updates",
+       "date": "2026-11-13T16:39:34+00:00",
+       "sentence": "We already knew about some of them – for example, Russia’s demand to keep the occupied Ukrainian territories and the entire Donbas region, demilitarise Ukrainian ports and keep Ukraine out of Nato – but there are also some new ones, including a reported request that Nato should not have any bases in the Baltics and that Finland, which only joined in 2023, should be made to leave the alliance.",
+       "hedged": false,
+       "syndicated_copy": false
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Europe should not walk into Russia’s ‘traps’ on Ukraine talks, EU’s foreign policy chief Kallas says – as it happened",
+       "url": "https://www.theguardian.com/world/live/2026/nov/13/eu-leaders-negotiations-ukraine-russia-dublin-ai-summit-kushner-witkoff-latest-news-updates",
+       "date": "2026-11-13T16:39:34+00:00",
+       "sentence": "We already knew about some of them – for example, Russia’s demand to keep the occupied Ukrainian territories and the entire Donbas region, demilitarise Ukrainian ports and keep Ukraine out of Nato – but there are also some new ones, including a reported request that Nato should not have any bases in the Baltics and that Finland, which only joined in 2023, should be made to leave the alliance.",
+       "hedged": false,
+       "syndicated_copy": true
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Europe should not walk into Russia’s ‘traps’ on Ukraine talks, EU’s foreign policy chief Kallas says – as it happened",
+       "url": "https://www.theguardian.com/world/live/2026/nov/13/eu-leaders-negotiations-ukraine-russia-dublin-ai-summit-kushner-witkoff-latest-news-updates",
+       "date": "2026-11-13T16:39:34+00:00",
+       "sentence": "We already knew about some of them – for example, Russia’s demand to keep the occupied Ukrainian territories and the entire Donbas region, demilitarise Ukrainian ports and keep Ukraine out of Nato – but there are also some new ones, including a reported request that Nato should not have any bases in the Baltics and that Finland, which only joined in 2023, should be made to leave the alliance.",
+       "hedged": false,
+       "syndicated_copy": true
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Europe should not walk into Russia’s ‘traps’ on Ukraine talks, EU’s foreign policy chief Kallas says – as it happened",
+       "url": "https://www.theguardian.com/world/live/2026/nov/13/eu-leaders-negotiations-ukraine-russia-dublin-ai-summit-kushner-witkoff-latest-news-updates",
+       "date": "2026-11-13T16:39:34+00:00",
+       "sentence": "We already knew about some of them – for example, Russia’s demand to keep the occupied Ukrainian territories and the entire Donbas region, demilitarise Ukrainian ports and keep Ukraine out of Nato – but there are also some new ones, including a reported request that Nato should not have any bases in the Baltics and that Finland, which only joined in 2023, should be made to leave the alliance.",
+       "hedged": false,
+       "syndicated_copy": true
       }
      ]
     },
@@ -492,6 +619,65 @@ window.TRAWLER_GROUPINGS = {
        "url": "https://www.npr.org/2026/11/10/g-s1-152773/russia-ukraine-war-talks",
        "date": "2026-11-10T10:58:18+00:00",
        "sentence": "He also demands that Ukraine abandon its bid to join NATO, accept strict limits on its military and drop restrictions on the Russian language and the Moscow-affiliated Orthodox Church in Ukraine.",
+       "hedged": false,
+       "syndicated_copy": true
+      }
+     ]
+    },
+    {
+     "country": "RUS",
+     "action": "joined",
+     "status": "corroborated",
+     "wikidata": "unknown",
+     "independent_outlets": 2,
+     "evidence": [
+      {
+       "source": "Al Jazeera",
+       "domain": "aljazeera.com",
+       "title": "Ukraine claims record 3,000 Russian casualties in one day as war drags on",
+       "url": "https://www.aljazeera.com/news/2026/11/13/russias-demands-come-from-different-reality-as-war-efforts-stagnates?traffic_source=rss",
+       "date": "2026-11-13T14:15:52+00:00",
+       "sentence": "Russia has demanded territory Ukraine is not willing to surrender, and said NATO needs to pull out of all the former Soviet bloc countries which joined it since 1997.",
+       "hedged": false,
+       "syndicated_copy": false
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Europe should not walk into Russia’s ‘traps’ on Ukraine talks, EU’s foreign policy chief Kallas says – as it happened",
+       "url": "https://www.theguardian.com/world/live/2026/nov/13/eu-leaders-negotiations-ukraine-russia-dublin-ai-summit-kushner-witkoff-latest-news-updates",
+       "date": "2026-11-13T16:39:34+00:00",
+       "sentence": "We already knew about some of them – for example, Russia’s demand to keep the occupied Ukrainian territories and the entire Donbas region, demilitarise Ukrainian ports and keep Ukraine out of Nato – but there are also some new ones, including a reported request that Nato should not have any bases in the Baltics and that Finland, which only joined in 2023, should be made to leave the alliance.",
+       "hedged": false,
+       "syndicated_copy": false
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Europe should not walk into Russia’s ‘traps’ on Ukraine talks, EU’s foreign policy chief Kallas says – as it happened",
+       "url": "https://www.theguardian.com/world/live/2026/nov/13/eu-leaders-negotiations-ukraine-russia-dublin-ai-summit-kushner-witkoff-latest-news-updates",
+       "date": "2026-11-13T16:39:34+00:00",
+       "sentence": "We already knew about some of them – for example, Russia’s demand to keep the occupied Ukrainian territories and the entire Donbas region, demilitarise Ukrainian ports and keep Ukraine out of Nato – but there are also some new ones, including a reported request that Nato should not have any bases in the Baltics and that Finland, which only joined in 2023, should be made to leave the alliance.",
+       "hedged": false,
+       "syndicated_copy": true
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Europe should not walk into Russia’s ‘traps’ on Ukraine talks, EU’s foreign policy chief Kallas says – as it happened",
+       "url": "https://www.theguardian.com/world/live/2026/nov/13/eu-leaders-negotiations-ukraine-russia-dublin-ai-summit-kushner-witkoff-latest-news-updates",
+       "date": "2026-11-13T16:39:34+00:00",
+       "sentence": "We already knew about some of them – for example, Russia’s demand to keep the occupied Ukrainian territories and the entire Donbas region, demilitarise Ukrainian ports and keep Ukraine out of Nato – but there are also some new ones, including a reported request that Nato should not have any bases in the Baltics and that Finland, which only joined in 2023, should be made to leave the alliance.",
+       "hedged": false,
+       "syndicated_copy": true
+      },
+      {
+       "source": "The Guardian World",
+       "domain": "theguardian.com",
+       "title": "Europe should not walk into Russia’s ‘traps’ on Ukraine talks, EU’s foreign policy chief Kallas says – as it happened",
+       "url": "https://www.theguardian.com/world/live/2026/nov/13/eu-leaders-negotiations-ukraine-russia-dublin-ai-summit-kushner-witkoff-latest-news-updates",
+       "date": "2026-11-13T16:39:34+00:00",
+       "sentence": "We already knew about some of them – for example, Russia’s demand to keep the occupied Ukrainian territories and the entire Donbas region, demilitarise Ukrainian ports and keep Ukraine out of Nato – but there are also some new ones, including a reported request that Nato should not have any bases in the Baltics and that Finland, which only joined in 2023, should be made to leave the alliance.",
        "hedged": false,
        "syndicated_copy": true
       }
@@ -1579,12 +1765,92 @@ window.TRAWLER_GROUPINGS = {
    ]
   },
   {
+   "group": "European Union",
+   "country": "KOS",
+   "action": "applied",
+   "status": "single-source",
+   "wikidata": "unknown",
+   "independent_outlets": 1,
+   "evidence": [
+    {
+     "source": "France 24",
+     "domain": "france24.com",
+     "title": "'We have done all our homework' to get EU candidate status: Kosovo's PM Albin Kurti",
+     "url": "https://www.france24.com/en/tv-shows/talking-europe/20261113-we-have-done-all-our-homework-to-get-eu-candidate-status-kosovo-s-pm-albin-kurti",
+     "date": "2026-11-13T17:46:16+00:00",
+     "sentence": "'We have done all our homework' to get EU candidate status: Kosovo's PM Albin Kurti.",
+     "hedged": false,
+     "syndicated_copy": false
+    },
+    {
+     "source": "France 24",
+     "domain": "france24.com",
+     "title": "'We have done all our homework' to get EU candidate status: Kosovo's PM Albin Kurti",
+     "url": "https://www.france24.com/en/tv-shows/talking-europe/20261113-we-have-done-all-our-homework-to-get-eu-candidate-status-kosovo-s-pm-albin-kurti",
+     "date": "2026-11-13T17:46:16+00:00",
+     "sentence": "But four years after applying to join the EU, Kosovo has still not received candidate status.",
+     "hedged": false,
+     "syndicated_copy": false
+    },
+    {
+     "source": "France 24",
+     "domain": "france24.com",
+     "title": "'We have done all our homework' to get EU candidate status: Kosovo's PM Albin Kurti",
+     "url": "https://www.france24.com/en/tv-shows/talking-europe/20261113-we-have-done-all-our-homework-to-get-eu-candidate-status-kosovo-s-pm-albin-kurti",
+     "date": "2026-11-13T17:46:16+00:00",
+     "sentence": "Hopefully in the next weeks or months, we are going to get candidate status as we are the only ones without it in continental Europe.\"\nThe prime minister cites \"internal dynamics\" in the EU Council as the reason why Kosovo has not been sent that questionnaire to kickstart the process.",
+     "hedged": false,
+     "syndicated_copy": false
+    }
+   ]
+  },
+  {
+   "group": "European Union",
+   "country": "KOS",
+   "action": "joined",
+   "status": "single-source",
+   "wikidata": "unknown",
+   "independent_outlets": 1,
+   "evidence": [
+    {
+     "source": "France 24",
+     "domain": "france24.com",
+     "title": "'We have done all our homework' to get EU candidate status: Kosovo's PM Albin Kurti",
+     "url": "https://www.france24.com/en/tv-shows/talking-europe/20261113-we-have-done-all-our-homework-to-get-eu-candidate-status-kosovo-s-pm-albin-kurti",
+     "date": "2026-11-13T17:46:16+00:00",
+     "sentence": "And the five non-recognisers are not an obstacle to sending the questionnaire to Kosova for the accession process.\"\nWe put it to Kurti that the EU Commission still has serious reservations about some of Kosovo's reforms, particularly on judicial independence.",
+     "hedged": false,
+     "syndicated_copy": false
+    }
+   ]
+  },
+  {
+   "group": "European Union",
+   "country": "CAN",
+   "action": "applied",
+   "status": "single-source",
+   "wikidata": "unknown",
+   "independent_outlets": 1,
+   "evidence": [
+    {
+     "source": "CBC World",
+     "domain": "cbc.ca",
+     "title": "Carney wraps meetings on security, trade with European leaders in Ireland",
+     "url": "https://www.cbc.ca/news/politics/carney-europe-ireland-meetings-9.7419715?cmp=rss",
+     "date": "2026-11-12T21:22:04+00:00",
+     "sentence": "Carney says, unequivocally, Canada seeking to become the EU's 1st associate member\nCarney told reporters that the summit can help advance his goal of boosting affordability and economic opportunities for Canadians through new partnerships with Europe.",
+     "hedged": false,
+     "syndicated_copy": false
+    }
+   ]
+  },
+  {
    "group": "NATO",
    "country": "UKR",
    "action": "joined",
    "status": "corroborated",
    "wikidata": "unknown",
-   "independent_outlets": 2,
+   "independent_outlets": 3,
    "evidence": [
     {
      "source": "CBC World",
@@ -1605,6 +1871,56 @@ window.TRAWLER_GROUPINGS = {
      "sentence": "Shortly before invading Ukraine, the Russian president, Vladimir Putin, demanded that Nato go back to its pre-1997 posture – before the Baltic states and nations in eastern Europe and the Balkans joined.",
      "hedged": false,
      "syndicated_copy": false
+    },
+    {
+     "source": "Al Jazeera",
+     "domain": "aljazeera.com",
+     "title": "Ukraine claims record 3,000 Russian casualties in one day as war drags on",
+     "url": "https://www.aljazeera.com/news/2026/11/13/russias-demands-come-from-different-reality-as-war-efforts-stagnates?traffic_source=rss",
+     "date": "2026-11-13T14:15:52+00:00",
+     "sentence": "Russia has demanded territory Ukraine is not willing to surrender, and said NATO needs to pull out of all the former Soviet bloc countries which joined it since 1997.",
+     "hedged": false,
+     "syndicated_copy": false
+    },
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "Europe should not walk into Russia’s ‘traps’ on Ukraine talks, EU’s foreign policy chief Kallas says – as it happened",
+     "url": "https://www.theguardian.com/world/live/2026/nov/13/eu-leaders-negotiations-ukraine-russia-dublin-ai-summit-kushner-witkoff-latest-news-updates",
+     "date": "2026-11-13T16:39:34+00:00",
+     "sentence": "We already knew about some of them – for example, Russia’s demand to keep the occupied Ukrainian territories and the entire Donbas region, demilitarise Ukrainian ports and keep Ukraine out of Nato – but there are also some new ones, including a reported request that Nato should not have any bases in the Baltics and that Finland, which only joined in 2023, should be made to leave the alliance.",
+     "hedged": false,
+     "syndicated_copy": false
+    },
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "Europe should not walk into Russia’s ‘traps’ on Ukraine talks, EU’s foreign policy chief Kallas says – as it happened",
+     "url": "https://www.theguardian.com/world/live/2026/nov/13/eu-leaders-negotiations-ukraine-russia-dublin-ai-summit-kushner-witkoff-latest-news-updates",
+     "date": "2026-11-13T16:39:34+00:00",
+     "sentence": "We already knew about some of them – for example, Russia’s demand to keep the occupied Ukrainian territories and the entire Donbas region, demilitarise Ukrainian ports and keep Ukraine out of Nato – but there are also some new ones, including a reported request that Nato should not have any bases in the Baltics and that Finland, which only joined in 2023, should be made to leave the alliance.",
+     "hedged": false,
+     "syndicated_copy": true
+    },
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "Europe should not walk into Russia’s ‘traps’ on Ukraine talks, EU’s foreign policy chief Kallas says – as it happened",
+     "url": "https://www.theguardian.com/world/live/2026/nov/13/eu-leaders-negotiations-ukraine-russia-dublin-ai-summit-kushner-witkoff-latest-news-updates",
+     "date": "2026-11-13T16:39:34+00:00",
+     "sentence": "We already knew about some of them – for example, Russia’s demand to keep the occupied Ukrainian territories and the entire Donbas region, demilitarise Ukrainian ports and keep Ukraine out of Nato – but there are also some new ones, including a reported request that Nato should not have any bases in the Baltics and that Finland, which only joined in 2023, should be made to leave the alliance.",
+     "hedged": false,
+     "syndicated_copy": true
+    },
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "Europe should not walk into Russia’s ‘traps’ on Ukraine talks, EU’s foreign policy chief Kallas says – as it happened",
+     "url": "https://www.theguardian.com/world/live/2026/nov/13/eu-leaders-negotiations-ukraine-russia-dublin-ai-summit-kushner-witkoff-latest-news-updates",
+     "date": "2026-11-13T16:39:34+00:00",
+     "sentence": "We already knew about some of them – for example, Russia’s demand to keep the occupied Ukrainian territories and the entire Donbas region, demilitarise Ukrainian ports and keep Ukraine out of Nato – but there are also some new ones, including a reported request that Nato should not have any bases in the Baltics and that Finland, which only joined in 2023, should be made to leave the alliance.",
+     "hedged": false,
+     "syndicated_copy": true
     }
    ]
   },
@@ -1775,6 +2091,66 @@ window.TRAWLER_GROUPINGS = {
      "sentence": "Over the past decade, Tokyo has proactively diversified its security partnerships, stepping up defense cooperation with European Union member states and NATO, forging a quasi-alliance with Australia, and joining a range of minilateral frameworks across the Indo-Pacific, including with the Philippines.",
      "hedged": false,
      "syndicated_copy": false
+    }
+   ]
+  },
+  {
+   "group": "NATO",
+   "country": "RUS",
+   "action": "joined",
+   "status": "corroborated",
+   "wikidata": "unknown",
+   "independent_outlets": 2,
+   "evidence": [
+    {
+     "source": "Al Jazeera",
+     "domain": "aljazeera.com",
+     "title": "Ukraine claims record 3,000 Russian casualties in one day as war drags on",
+     "url": "https://www.aljazeera.com/news/2026/11/13/russias-demands-come-from-different-reality-as-war-efforts-stagnates?traffic_source=rss",
+     "date": "2026-11-13T14:15:52+00:00",
+     "sentence": "Russia has demanded territory Ukraine is not willing to surrender, and said NATO needs to pull out of all the former Soviet bloc countries which joined it since 1997.",
+     "hedged": false,
+     "syndicated_copy": false
+    },
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "Europe should not walk into Russia’s ‘traps’ on Ukraine talks, EU’s foreign policy chief Kallas says – as it happened",
+     "url": "https://www.theguardian.com/world/live/2026/nov/13/eu-leaders-negotiations-ukraine-russia-dublin-ai-summit-kushner-witkoff-latest-news-updates",
+     "date": "2026-11-13T16:39:34+00:00",
+     "sentence": "We already knew about some of them – for example, Russia’s demand to keep the occupied Ukrainian territories and the entire Donbas region, demilitarise Ukrainian ports and keep Ukraine out of Nato – but there are also some new ones, including a reported request that Nato should not have any bases in the Baltics and that Finland, which only joined in 2023, should be made to leave the alliance.",
+     "hedged": false,
+     "syndicated_copy": false
+    },
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "Europe should not walk into Russia’s ‘traps’ on Ukraine talks, EU’s foreign policy chief Kallas says – as it happened",
+     "url": "https://www.theguardian.com/world/live/2026/nov/13/eu-leaders-negotiations-ukraine-russia-dublin-ai-summit-kushner-witkoff-latest-news-updates",
+     "date": "2026-11-13T16:39:34+00:00",
+     "sentence": "We already knew about some of them – for example, Russia’s demand to keep the occupied Ukrainian territories and the entire Donbas region, demilitarise Ukrainian ports and keep Ukraine out of Nato – but there are also some new ones, including a reported request that Nato should not have any bases in the Baltics and that Finland, which only joined in 2023, should be made to leave the alliance.",
+     "hedged": false,
+     "syndicated_copy": true
+    },
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "Europe should not walk into Russia’s ‘traps’ on Ukraine talks, EU’s foreign policy chief Kallas says – as it happened",
+     "url": "https://www.theguardian.com/world/live/2026/nov/13/eu-leaders-negotiations-ukraine-russia-dublin-ai-summit-kushner-witkoff-latest-news-updates",
+     "date": "2026-11-13T16:39:34+00:00",
+     "sentence": "We already knew about some of them – for example, Russia’s demand to keep the occupied Ukrainian territories and the entire Donbas region, demilitarise Ukrainian ports and keep Ukraine out of Nato – but there are also some new ones, including a reported request that Nato should not have any bases in the Baltics and that Finland, which only joined in 2023, should be made to leave the alliance.",
+     "hedged": false,
+     "syndicated_copy": true
+    },
+    {
+     "source": "The Guardian World",
+     "domain": "theguardian.com",
+     "title": "Europe should not walk into Russia’s ‘traps’ on Ukraine talks, EU’s foreign policy chief Kallas says – as it happened",
+     "url": "https://www.theguardian.com/world/live/2026/nov/13/eu-leaders-negotiations-ukraine-russia-dublin-ai-summit-kushner-witkoff-latest-news-updates",
+     "date": "2026-11-13T16:39:34+00:00",
+     "sentence": "We already knew about some of them – for example, Russia’s demand to keep the occupied Ukrainian territories and the entire Donbas region, demilitarise Ukrainian ports and keep Ukraine out of Nato – but there are also some new ones, including a reported request that Nato should not have any bases in the Baltics and that Finland, which only joined in 2023, should be made to leave the alliance.",
+     "hedged": false,
+     "syndicated_copy": true
     }
    ]
   },

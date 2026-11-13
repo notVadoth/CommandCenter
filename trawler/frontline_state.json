@@ -1646,6 +1646,262 @@
    "url": "https://en.ilsole24ore.com/art/israel-strikes-a-hospital-in-gaza-killing-six-people-it-was-a-hamas-operations-centre-AJxUqmDC",
    "date": "2026-11-11T16:00:00+00:00",
    "seen": "2026-11-12T19:07:19.382924+00:00"
+  },
+  {
+   "war": "myanmar",
+   "sides": [
+    "Military"
+   ],
+   "place": "Rakhine State",
+   "iso": "MMR",
+   "province": "Rakhine",
+   "province_id": "20573499B29373908448635",
+   "outlet": "France 24",
+   "host": "france24.com",
+   "partisan": false,
+   "title": "Myanmar: Junta carries out double-tap airstrikes targeting civilians",
+   "sentence": "Numerous civilian casualties have been documented in Rakhine State amid a renewed military offensive by the junta to regain control of the area.",
+   "url": "https://www.france24.com/en/tv-shows/the-observers/20261113-myanmar-junta-airstrikes-civilians",
+   "date": "2026-11-13T16:41:45+00:00",
+   "seen": "2026-11-13T18:46:18.329694+00:00"
+  },
+  {
+   "war": "israel-gaza",
+   "sides": [
+    "Israel"
+   ],
+   "place": "Palestinian",
+   "iso": "PSE",
+   "province": "West Bank",
+   "province_id": "83478781B28849486138516",
+   "outlet": "France 24",
+   "host": "france24.com",
+   "partisan": false,
+   "title": "West Bank: ‘Without international trade and financial support, large settlements would not exist’",
+   "sentence": "France is considering legislation to restrict trade with Israeli settlements in the occupied Palestinian territories, namely the West Bank.",
+   "url": "https://www.france24.com/en/video/20261113-west-bank-without-international-trade-and-financial-support-large-settlements-would-not-exist-1",
+   "date": "2026-11-13T16:15:44+00:00",
+   "seen": "2026-11-13T18:46:18.329694+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Oleshky",
+   "iso": "UKR",
+   "province": "Kherson Oblast",
+   "province_id": "14850775B65901307765467",
+   "outlet": "Ukrainska Pravda",
+   "host": "pravda.com.ua",
+   "partisan": false,
+   "title": "\"Literally fighting for their lives\": Human Rights Commissioner's Office shares stories of evacuees from Russian-occupied Oleshky",
+   "sentence": "\"Literally fighting for their lives\": Human Rights Commissioner's Office shares stories of evacuees from Russian-occupied Oleshky.",
+   "url": "https://www.pravda.com.ua/eng/news/2026/11/13/8062791/",
+   "date": "2026-11-13T17:22:00+00:00",
+   "seen": "2026-11-13T18:46:18.329694+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Zaporizhzhia",
+   "iso": "UKR",
+   "province": "Zaporizhia Oblast",
+   "province_id": "14850775B92888097715572",
+   "outlet": "Ukrainska Pravda",
+   "host": "pravda.com.ua",
+   "partisan": false,
+   "title": "Russian attack on Zaporizhzhia on 13 November: number injured rises to 50, including 8 children – photos",
+   "sentence": "Russian attack on Zaporizhzhia on 13 November: number injured rises to 50, including 8 children",
+   "url": "https://www.pravda.com.ua/eng/news/2026/11/13/8062775/",
+   "date": "2026-11-13T16:31:00+00:00",
+   "seen": "2026-11-13T18:46:18.329694+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "Institute",
+   "iso": "RUS",
+   "province": "Moscow Oblast",
+   "province_id": "28173009B74836580104791",
+   "outlet": "Ukrainska Pravda",
+   "host": "pravda.com.ua",
+   "partisan": false,
+   "title": "Russian attack on Institute of Traumatology and Orthopaedics in Kyiv injures three patients – photos",
+   "sentence": "Russian attack on Institute of Traumatology and Orthopaedics in Kyiv injures three patients",
+   "url": "https://www.pravda.com.ua/eng/news/2026/11/13/8062737/",
+   "date": "2026-11-13T13:21:00+00:00",
+   "seen": "2026-11-13T18:46:18.329694+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "Traumatology",
+   "iso": "RUS",
+   "province": "Kemerovo Oblast",
+   "province_id": "28173009B4400867918714",
+   "outlet": "Ukrainska Pravda",
+   "host": "pravda.com.ua",
+   "partisan": false,
+   "title": "Russian attack on Institute of Traumatology and Orthopaedics in Kyiv injures three patients – photos",
+   "sentence": "Russian attack on Institute of Traumatology and Orthopaedics in Kyiv injures three patients",
+   "url": "https://www.pravda.com.ua/eng/news/2026/11/13/8062737/",
+   "date": "2026-11-13T13:21:00+00:00",
+   "seen": "2026-11-13T18:46:18.329694+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Ukraine"
+   ],
+   "place": "Kherson Region",
+   "iso": "UKR",
+   "province": "Kherson Oblast",
+   "province_id": "14850775B65901307765467",
+   "outlet": "TASS",
+   "host": "tass.com",
+   "partisan": true,
+   "title": "Ukrainian attacks kill four civilians, injure 25 in Kherson Region in past week",
+   "sentence": "Ukrainian attacks kill four civilians, injure 25 in Kherson Region in past week.",
+   "url": "https://tass.com/politics/2217879",
+   "date": "2026-11-13T13:11:35+00:00",
+   "seen": "2026-11-13T18:46:18.329694+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis"
+   ],
+   "place": "Aden Province",
+   "iso": "YEM",
+   "province": "‘Adan Governorate",
+   "province_id": "18629408B11945654439238",
+   "outlet": "Tehran Times",
+   "host": "tehrantimes.com",
+   "partisan": false,
+   "title": "Yemeni forces complete Aden encirclement",
+   "sentence": "Forces loyal to Yemen’s Ansarallah movement have managed to make major advances against Saudi-backed militants south of the Bab el-Mandeb Strait, officially completing the encirclement of Aden Province.",
+   "url": "https://www.tehrantimes.com/news/532098/Yemeni-forces-complete-Aden-encirclement",
+   "date": "2026-11-13T16:03:45+00:00",
+   "seen": "2026-11-13T18:46:18.329694+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia",
+    "Ukraine"
+   ],
+   "place": "Odesa",
+   "iso": "UKR",
+   "province": "Odessa Oblast",
+   "province_id": "14850775B53240635394722",
+   "outlet": "Africanews",
+   "host": "africanews.com",
+   "partisan": false,
+   "title": "Ukraine: Russian drone attacks hit Kyiv hospital, leave two dead in Odesa",
+   "sentence": "Russian overnight attacks on Ukraine killed at least two person in Odesa and injured another at a hospital in Kyiv.",
+   "url": "http://www.africanews.com/2026/11/13/ukraine-russian-drone-attacks-hit-kyiv-hospital-leave-one-dead-in-odesa/",
+   "date": "2026-11-13T11:00:16+00:00",
+   "seen": "2026-11-13T18:46:18.329694+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Ukraine"
+   ],
+   "place": "Kharkiv",
+   "iso": "UKR",
+   "province": "Kharkiv Oblast",
+   "province_id": "14850775B15913324833724",
+   "outlet": "Voennoe Delo",
+   "host": "voennoedelo.com",
+   "partisan": false,
+   "title": "Ukraine Frontline Report for November 13: Fighting in Kharkiv, Zaporizhzhia, Siversk and Kupyansk Directions",
+   "sentence": "Ukraine Frontline Report for November 13: Fighting in Kharkiv, Zaporizhzhia, Siversk and Kupyansk Directions.",
+   "url": "https://voennoedelo.com/en/posts/id22149-ukraine-frontline-report-november-13-fighting-in-four-sectors",
+   "date": "2026-11-13T01:59:00+00:00",
+   "seen": "2026-11-13T18:46:18.329694+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Plavni",
+   "iso": "UKR",
+   "province": "Zaporizhia Oblast",
+   "province_id": "14850775B92888097715572",
+   "outlet": "Voennoe Delo",
+   "host": "voennoedelo.com",
+   "partisan": false,
+   "title": "Ukraine Frontline Report for November 13: Fighting in Kharkiv, Zaporizhzhia, Siversk and Kupyansk Directions",
+   "sentence": "Russian advances near Plavni and Sobolevka, heavy fighting around Kupyansk, Kazachya Lopan and Stepnogorsk.",
+   "url": "https://voennoedelo.com/en/posts/id22149-ukraine-frontline-report-november-13-fighting-in-four-sectors",
+   "date": "2026-11-13T01:59:00+00:00",
+   "seen": "2026-11-13T18:46:18.329694+00:00"
+  },
+  {
+   "war": "russia-ukraine",
+   "sides": [
+    "Russia"
+   ],
+   "place": "Kharkov",
+   "iso": "UKR",
+   "province": "Kharkiv Oblast",
+   "province_id": "14850775B15913324833724",
+   "outlet": "Voennoe Delo",
+   "host": "voennoedelo.com",
+   "partisan": false,
+   "title": "Russian Forces Liberate Kotovka in Kharkov Region After Month of Fighting",
+   "sentence": "Russia's Defense Ministry says troops captured Kotovka in the Kharkov region after more than a month of fighting, increasing pressure on a key regional road.",
+   "url": "https://voennoedelo.com/en/posts/id22159-russian-troops-take-kotovka-after-month-long-kharkov-battle",
+   "date": "2026-11-13T07:01:00+00:00",
+   "seen": "2026-11-13T18:46:18.329694+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis",
+    "Government"
+   ],
+   "place": "Taiz",
+   "iso": "YEM",
+   "province": "Ta'izz Governorate",
+   "province_id": "18629408B66245584752084",
+   "outlet": "Middle East Eye",
+   "host": "middleeasteye.net",
+   "partisan": false,
+   "title": "Yemeni forces say they repelled large-scale Houthi attack in Taiz",
+   "sentence": "Yemeni forces say they repelled large-scale Houthi attack in Taiz.",
+   "url": "https://www.middleeasteye.net/live-blog/live-blog-update/yemeni-forces-say-they-repelled-large-scale-houthi-attack-taiz",
+   "date": "2026-11-13T03:59:00+00:00",
+   "seen": "2026-11-13T18:46:18.329694+00:00"
+  },
+  {
+   "war": "yemen",
+   "sides": [
+    "Houthis"
+   ],
+   "place": "Aden",
+   "iso": "YEM",
+   "province": "‘Adan Governorate",
+   "province_id": "18629408B11945654439238",
+   "outlet": "T&#252;rkiye Today",
+   "host": "turkiyetoday.com",
+   "partisan": false,
+   "title": "Yemen's government braces for Houthi assault as fighters advance toward Aden",
+   "sentence": "Yemen's government braces for Houthi assault as fighters advance toward Aden.",
+   "url": "https://www.turkiyetoday.com/region/yemens-government-braces-for-houthi-assault-as-fighters-advance-toward-aden-3232326",
+   "date": "2026-11-13T08:28:00+00:00",
+   "seen": "2026-11-13T18:46:18.329694+00:00"
   }
  ],
  "truce": [
